@@ -34,7 +34,7 @@ cd /home/<your-name>
 
 //Install angular-cli and ng globaly
 sudo npm install -g angular-cli
-sudo apt install -g ng-common
+sudo npm install -g ng-common
 
 //Now clone my git repository from your home directory. In a terminal type pwd to confirm /home/<user-name>
 git clone https://github.com/prm5207/IST421.git
