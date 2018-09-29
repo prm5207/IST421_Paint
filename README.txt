@@ -1,6 +1,6 @@
 # IST421
 Author: Patrick
-GIT UPDATED ON: 9/14/18
+GIT UPDATED ON: 9/29/18
 // = comments
 
 //This document include a list of commands to get this MEAN stack applciation running.
