@@ -54,4 +54,4 @@ TERMINAL 1: nodemon //Server should start
 TERMINAL 2: cd IST421/angular-src
 TERMINAL 2: npm start //Angular should start compiling
 
-now open up a web browser and got to localhost:4200
+now open up a web browser and got to localhost:8080
