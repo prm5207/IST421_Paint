@@ -43,13 +43,13 @@ git clone https://github.com/prm5207/IST421_Paint.git
 ls
 
 //Geting Everything Working
-cd IST421
+cd IST421_Paint
 sudo npm install
 cd angular-src
 sudo npm install
 
 //OPEN TERMINAL
-TERMINAL 1: cd IST421
+TERMINAL 1: cd IST421_Paint
 TERMINAL 1: nodemon //Server should start
 
 now open up a web browser and got to localhost:8080
