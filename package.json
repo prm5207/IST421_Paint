@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "ng serve localhost 0.0.0.0 --port 4200"
+    "start": "node app"
   },
   "dependencies": {
     "express": "4.16.2",
