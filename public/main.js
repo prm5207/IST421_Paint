@@ -41,7 +41,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<app-navbar></app-navbar>\n<div class=\"container\">\n    <flash-messages></flash-messages>\n    <router-outlet></router-outlet>\n</div>\n"
+module.exports = "<app-navbar></app-navbar>\n<div class=\"\">\n    <flash-messages></flash-messages>\n    <router-outlet></router-outlet>\n</div>\n"
 
 /***/ }),
 
@@ -251,7 +251,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"jumbotron text-center\">\n  <h1>Smith's Paint Shop</h1>\n  <p class=\"lead\">Welcome to our custom Paint Company ERP</p>\n  <div>\n    <a class=\"btn btn-primary\" [routerLink]=\"['/register']\">Register</a>\n    <a class=\"btn btn-info\" [routerLink]=\"['/login']\">Login</a>\n  </div>\n</div>\n\n<div class=\"row\">\n  <div class=\"col-md-4\">\n    <h3>COL 1</h3>\n    <p>Text Filler</p>\n  </div>\n  <div class=\"col-md-4\">\n    <h3>COL 2</h3>\n    <p>Text Filler</p>  \n  </div>\n  <div class=\"col-md-4\">\n    <h3>COL 3</h3>\n    <p>Text Filler</p>  \n  </div>\n</div>"
+module.exports = "<div class=\"jumbotron text-center\">\n  <h1>Smith's Paint Shop</h1>\n  <p class=\"lead\">Welcome to our custom Paint Company ERP</p>\n  <div>\n    <a class=\"btn btn-primary\" [routerLink]=\"['/register']\">Register</a>\n    <a class=\"btn btn-info\" [routerLink]=\"['/login']\">Login</a>\n  </div>\n  <div>\n    <a class=\"btn btn-danger\" [routerLink]=\"['/managerLogin']\">MGR</a>\n  </div>\n</div>\n\n<div class=\"row\">\n  <div class=\"col-md-4\">\n    <h3>COL 1</h3>\n    <p>Text Filler</p>\n  </div>\n  <div class=\"col-md-4\">\n    <h3>COL 2</h3>\n    <p>Text Filler</p>  \n  </div>\n  <div class=\"col-md-4\">\n    <h3>COL 3</h3>\n    <p>Text Filler</p>  \n  </div>\n</div>"
 
 /***/ }),
 
@@ -407,7 +407,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-default\">\n    <div class=\"container\">\n      <div class=\"navbar-header\">\n        <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#navbar\" aria-expanded=\"false\" aria-controls=\"navbar\">\n          <span class=\"sr-only\">Toggle navigation</span>\n          <span class=\"icon-bar\"></span>\n          <span class=\"icon-bar\"></span>\n          <span class=\"icon-bar\"></span>\n        </button>\n        <a class=\"navbar-brand\" href=\"#\">Smith's Paint Shop</a>\n      </div>\n      <div id=\"navbar\" class=\"collapse navbar-collapse\">\n        <ul class=\"nav navbar-nav navbar-left\">\n          <li [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\"><a [routerLink] = \"['/']\">Home</a></li>\n        </ul>\n\n        <ul class=\"nav navbar-nav navbar-right\">\n          <li [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\"><a [routerLink] = \"['/login']\">Login</a></li>\n          <li [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\"><a [routerLink] = \"['/register']\">Register</a></li>\n        </ul>\n      </div><!--/.nav-collapse -->\n    </div>\n  </nav>"
+module.exports = "<nav class=\"navbar navbar-expand-lg navbar-dark bg-primary\">\n    <div class=\"container\">\n      <div class=\"navbar-header\">\n        <a class=\"navbar-brand\" href=\"#\">Smith's Paint Shop</a>\n      </div>\n      <div id=\"navbar\" class=\"collapse navbar-collapse\">\n        <ul class=\"navbar-nav mr-auto\">\n          <li class=\"nav-item\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\"><a class=\"nav-link\" [routerLink] = \"['/']\">Home</a></li>\n        </ul>\n        <ul class=\"navbar-nav navbar-right\">\n          <li class=\"nav-item\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\"><a class=\"nav-link\" [routerLink] = \"['/login']\">Login</a></li>\n          <li class=\"nav-item\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\"><a class=\"nav-link\" [routerLink] = \"['/register']\">Register</a></li>\n        </ul>\n      </div><!--/.nav-collapse -->\n    </div>\n  </nav>"
 
 /***/ }),
 
