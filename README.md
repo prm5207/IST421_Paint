@@ -33,7 +33,7 @@ sudo apt-get install -f
 cd /home/<your-name>
 
 //Install angular-cli and ng globaly
-sudo npm install -g angular-cli
+sudo npm install -g @angular/cli@latest
 sudo npm install -g ng-common
 
 //Now clone my git repository from your home directory. In a terminal type pwd to confirm /home/<user-name>
