@@ -104,7 +104,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /**
- * @license Angular v6.1.7
+ * @license Angular v6.1.10
  * (c) 2010-2018 Google, Inc. https://angular.io/
  * License: MIT
  */
@@ -248,7 +248,7 @@ var Location = /** @class */ (function () {
         this._subject = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
         this._platformStrategy = platformStrategy;
         var browserBaseHref = this._platformStrategy.getBaseHref();
-        this._baseHref = Location.stripTrailingSlash(_stripIndexHtml(browserBaseHref));
+        this._baseHref = Location_1.stripTrailingSlash(_stripIndexHtml(browserBaseHref));
         this._platformStrategy.onPopState(function (ev) {
             _this._subject.emit({
                 'url': _this.path(true),
@@ -258,6 +258,7 @@ var Location = /** @class */ (function () {
             });
         });
     }
+    Location_1 = Location;
     /**
      * Returns the normalized URL path.
      */
@@ -272,14 +273,14 @@ var Location = /** @class */ (function () {
      */
     Location.prototype.isCurrentPathEqualTo = function (path, query) {
         if (query === void 0) { query = ''; }
-        return this.path() == this.normalize(path + Location.normalizeQueryParams(query));
+        return this.path() == this.normalize(path + Location_1.normalizeQueryParams(query));
     };
     /**
      * Given a string representing a URL, returns the normalized URL path without leading or
      * trailing slashes.
      */
     Location.prototype.normalize = function (url) {
-        return Location.stripTrailingSlash(_stripBaseHref(this._baseHref, _stripIndexHtml(url)));
+        return Location_1.stripTrailingSlash(_stripBaseHref(this._baseHref, _stripIndexHtml(url)));
     };
     /**
      * Given a string representing a URL, returns the platform-specific external URL path.
@@ -369,13 +370,11 @@ var Location = /** @class */ (function () {
         var droppedSlashIdx = pathEndIdx - (url[pathEndIdx - 1] === '/' ? 1 : 0);
         return url.slice(0, droppedSlashIdx) + url.slice(pathEndIdx);
     };
-    Location.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"] }
-    ];
-    /** @nocollapse */
-    Location.ctorParameters = function () { return [
-        { type: LocationStrategy }
-    ]; };
+    var Location_1;
+    Location = Location_1 = Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])(),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__metadata"])("design:paramtypes", [LocationStrategy])
+    ], Location);
     return Location;
 }());
 function _stripBaseHref(baseHref, url) {
@@ -455,14 +454,11 @@ var HashLocationStrategy = /** @class */ (function (_super) {
     };
     HashLocationStrategy.prototype.forward = function () { this._platformLocation.forward(); };
     HashLocationStrategy.prototype.back = function () { this._platformLocation.back(); };
-    HashLocationStrategy.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"] }
-    ];
-    /** @nocollapse */
-    HashLocationStrategy.ctorParameters = function () { return [
-        { type: PlatformLocation },
-        { type: String, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Optional"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"], args: [APP_BASE_HREF,] }] }
-    ]; };
+    HashLocationStrategy = Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])(),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__param"])(1, Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Optional"])()), Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__param"])(1, Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"])(APP_BASE_HREF)),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__metadata"])("design:paramtypes", [PlatformLocation, String])
+    ], HashLocationStrategy);
     return HashLocationStrategy;
 }(LocationStrategy));
 
@@ -539,14 +535,11 @@ var PathLocationStrategy = /** @class */ (function (_super) {
     };
     PathLocationStrategy.prototype.forward = function () { this._platformLocation.forward(); };
     PathLocationStrategy.prototype.back = function () { this._platformLocation.back(); };
-    PathLocationStrategy.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"] }
-    ];
-    /** @nocollapse */
-    PathLocationStrategy.ctorParameters = function () { return [
-        { type: PlatformLocation },
-        { type: String, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Optional"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"], args: [APP_BASE_HREF,] }] }
-    ]; };
+    PathLocationStrategy = Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])(),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__param"])(1, Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Optional"])()), Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__param"])(1, Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"])(APP_BASE_HREF)),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__metadata"])("design:paramtypes", [PlatformLocation, String])
+    ], PathLocationStrategy);
     return PathLocationStrategy;
 }(LocationStrategy));
 
@@ -2393,14 +2386,12 @@ var NgLocaleLocalization = /** @class */ (function (_super) {
                 return 'other';
         }
     };
-    NgLocaleLocalization.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"] }
-    ];
-    /** @nocollapse */
-    NgLocaleLocalization.ctorParameters = function () { return [
-        { type: String, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"], args: [_angular_core__WEBPACK_IMPORTED_MODULE_0__["LOCALE_ID"],] }] },
-        { type: undefined, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Optional"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"], args: [DEPRECATED_PLURAL_FN,] }] }
-    ]; };
+    NgLocaleLocalization = Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])(),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__param"])(0, Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"])(_angular_core__WEBPACK_IMPORTED_MODULE_0__["LOCALE_ID"])),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__param"])(1, Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Optional"])()), Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__param"])(1, Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"])(DEPRECATED_PLURAL_FN)),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__metadata"])("design:paramtypes", [String, Object])
+    ], NgLocaleLocalization);
     return NgLocaleLocalization;
 }(NgLocalization));
 /**
@@ -2963,20 +2954,21 @@ var NgClass = /** @class */ (function () {
             });
         }
     };
-    NgClass.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Directive"], args: [{ selector: '[ngClass]' },] }
-    ];
-    /** @nocollapse */
-    NgClass.ctorParameters = function () { return [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["IterableDiffers"] },
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["KeyValueDiffers"] },
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"] },
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Renderer2"] }
-    ]; };
-    NgClass.propDecorators = {
-        klass: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"], args: ['class',] }],
-        ngClass: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }]
-    };
+    Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])('class'),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__metadata"])("design:type", String),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__metadata"])("design:paramtypes", [String])
+    ], NgClass.prototype, "klass", null);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__metadata"])("design:type", Object),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__metadata"])("design:paramtypes", [Object])
+    ], NgClass.prototype, "ngClass", null);
+    NgClass = Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Directive"])({ selector: '[ngClass]' }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__metadata"])("design:paramtypes", [_angular_core__WEBPACK_IMPORTED_MODULE_0__["IterableDiffers"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["KeyValueDiffers"],
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["Renderer2"]])
+    ], NgClass);
     return NgClass;
 }());
 
@@ -3044,6 +3036,7 @@ var NgClass = /** @class */ (function () {
  * {@example common/ngComponentOutlet/ts/module.ts region='NgModuleFactoryExample'}
  *
  * @experimental
+ * @ngModule CommonModule
  */
 var NgComponentOutlet = /** @class */ (function () {
     function NgComponentOutlet(_viewContainerRef) {
@@ -3077,19 +3070,26 @@ var NgComponentOutlet = /** @class */ (function () {
         if (this._moduleRef)
             this._moduleRef.destroy();
     };
-    NgComponentOutlet.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Directive"], args: [{ selector: '[ngComponentOutlet]' },] }
-    ];
-    /** @nocollapse */
-    NgComponentOutlet.ctorParameters = function () { return [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewContainerRef"] }
-    ]; };
-    NgComponentOutlet.propDecorators = {
-        ngComponentOutlet: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
-        ngComponentOutletInjector: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
-        ngComponentOutletContent: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
-        ngComponentOutletNgModuleFactory: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }]
-    };
+    Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_0__["Type"])
+    ], NgComponentOutlet.prototype, "ngComponentOutlet", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injector"])
+    ], NgComponentOutlet.prototype, "ngComponentOutletInjector", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__metadata"])("design:type", Array)
+    ], NgComponentOutlet.prototype, "ngComponentOutletContent", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModuleFactory"])
+    ], NgComponentOutlet.prototype, "ngComponentOutletNgModuleFactory", void 0);
+    NgComponentOutlet = Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Directive"])({ selector: '[ngComponentOutlet]' }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__metadata"])("design:paramtypes", [_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewContainerRef"]])
+    ], NgComponentOutlet);
     return NgComponentOutlet;
 }());
 
@@ -3199,7 +3199,7 @@ var NgForOfContext = /** @class */ (function () {
  * See a [live demo](http://plnkr.co/edit/KVuXxDp0qinGDyo307QW?p=preview) for a more detailed
  * example.
  *
- *
+ * @ngModule CommonModule
  */
 var NgForOf = /** @class */ (function () {
     function NgForOf(_viewContainer, _template, _differs) {
@@ -3300,20 +3300,26 @@ var NgForOf = /** @class */ (function () {
     NgForOf.prototype._perViewChange = function (view, record) {
         view.context.$implicit = record.item;
     };
-    NgForOf.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Directive"], args: [{ selector: '[ngFor][ngForOf]' },] }
-    ];
-    /** @nocollapse */
-    NgForOf.ctorParameters = function () { return [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewContainerRef"] },
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["TemplateRef"] },
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["IterableDiffers"] }
-    ]; };
-    NgForOf.propDecorators = {
-        ngForOf: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
-        ngForTrackBy: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
-        ngForTemplate: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }]
-    };
+    Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__metadata"])("design:type", Object),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__metadata"])("design:paramtypes", [Object])
+    ], NgForOf.prototype, "ngForOf", null);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__metadata"])("design:type", Function),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__metadata"])("design:paramtypes", [Function])
+    ], NgForOf.prototype, "ngForTrackBy", null);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_0__["TemplateRef"]),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__metadata"])("design:paramtypes", [_angular_core__WEBPACK_IMPORTED_MODULE_0__["TemplateRef"]])
+    ], NgForOf.prototype, "ngForTemplate", null);
+    NgForOf = Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Directive"])({ selector: '[ngFor][ngForOf]' }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__metadata"])("design:paramtypes", [_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["TemplateRef"],
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["IterableDiffers"]])
+    ], NgForOf);
     return NgForOf;
 }());
 var RecordViewTuple = /** @class */ (function () {
@@ -3424,7 +3430,7 @@ function getTypeNameForDebugging(type) {
  * <ng-template #elseBlock>...</ng-template>
  * ```
  *
- *
+ * @ngModule CommonModule
  */
 var NgIf = /** @class */ (function () {
     function NgIf(_viewContainer, templateRef) {
@@ -3486,19 +3492,25 @@ var NgIf = /** @class */ (function () {
             }
         }
     };
-    NgIf.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Directive"], args: [{ selector: '[ngIf]' },] }
-    ];
-    /** @nocollapse */
-    NgIf.ctorParameters = function () { return [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewContainerRef"] },
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["TemplateRef"] }
-    ]; };
-    NgIf.propDecorators = {
-        ngIf: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
-        ngIfThen: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
-        ngIfElse: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }]
-    };
+    Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__metadata"])("design:type", Object),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__metadata"])("design:paramtypes", [Object])
+    ], NgIf.prototype, "ngIf", null);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__metadata"])("design:type", Object),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__metadata"])("design:paramtypes", [Object])
+    ], NgIf.prototype, "ngIfThen", null);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__metadata"])("design:type", Object),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__metadata"])("design:paramtypes", [Object])
+    ], NgIf.prototype, "ngIfElse", null);
+    NgIf = Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Directive"])({ selector: '[ngIf]' }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__metadata"])("design:paramtypes", [_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["TemplateRef"]])
+    ], NgIf);
     return NgIf;
 }());
 var NgIfContext = /** @class */ (function () {
@@ -3633,12 +3645,14 @@ var NgSwitch = /** @class */ (function () {
             }
         }
     };
-    NgSwitch.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Directive"], args: [{ selector: '[ngSwitch]' },] }
-    ];
-    NgSwitch.propDecorators = {
-        ngSwitch: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }]
-    };
+    Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__metadata"])("design:type", Object),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__metadata"])("design:paramtypes", [Object])
+    ], NgSwitch.prototype, "ngSwitch", null);
+    NgSwitch = Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Directive"])({ selector: '[ngSwitch]' })
+    ], NgSwitch);
     return NgSwitch;
 }());
 /**
@@ -3672,18 +3686,16 @@ var NgSwitchCase = /** @class */ (function () {
         this._view = new SwitchView(viewContainer, templateRef);
     }
     NgSwitchCase.prototype.ngDoCheck = function () { this._view.enforceState(this.ngSwitch._matchCase(this.ngSwitchCase)); };
-    NgSwitchCase.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Directive"], args: [{ selector: '[ngSwitchCase]' },] }
-    ];
-    /** @nocollapse */
-    NgSwitchCase.ctorParameters = function () { return [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewContainerRef"] },
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["TemplateRef"] },
-        { type: NgSwitch, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Host"] }] }
-    ]; };
-    NgSwitchCase.propDecorators = {
-        ngSwitchCase: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }]
-    };
+    Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__metadata"])("design:type", Object)
+    ], NgSwitchCase.prototype, "ngSwitchCase", void 0);
+    NgSwitchCase = Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Directive"])({ selector: '[ngSwitchCase]' }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__param"])(2, Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Host"])()),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__metadata"])("design:paramtypes", [_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["TemplateRef"],
+            NgSwitch])
+    ], NgSwitchCase);
     return NgSwitchCase;
 }());
 /**
@@ -3712,15 +3724,12 @@ var NgSwitchDefault = /** @class */ (function () {
     function NgSwitchDefault(viewContainer, templateRef, ngSwitch) {
         ngSwitch._addDefault(new SwitchView(viewContainer, templateRef));
     }
-    NgSwitchDefault.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Directive"], args: [{ selector: '[ngSwitchDefault]' },] }
-    ];
-    /** @nocollapse */
-    NgSwitchDefault.ctorParameters = function () { return [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewContainerRef"] },
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["TemplateRef"] },
-        { type: NgSwitch, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Host"] }] }
-    ]; };
+    NgSwitchDefault = Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Directive"])({ selector: '[ngSwitchDefault]' }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__param"])(2, Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Host"])()),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__metadata"])("design:paramtypes", [_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["TemplateRef"],
+            NgSwitch])
+    ], NgSwitchDefault);
     return NgSwitchDefault;
 }());
 
@@ -3792,16 +3801,15 @@ var NgPlural = /** @class */ (function () {
             this._activeView.create();
         }
     };
-    NgPlural.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Directive"], args: [{ selector: '[ngPlural]' },] }
-    ];
-    /** @nocollapse */
-    NgPlural.ctorParameters = function () { return [
-        { type: NgLocalization }
-    ]; };
-    NgPlural.propDecorators = {
-        ngPlural: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }]
-    };
+    Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__metadata"])("design:type", Number),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__metadata"])("design:paramtypes", [Number])
+    ], NgPlural.prototype, "ngPlural", null);
+    NgPlural = Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Directive"])({ selector: '[ngPlural]' }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__metadata"])("design:paramtypes", [NgLocalization])
+    ], NgPlural);
     return NgPlural;
 }());
 /**
@@ -3830,16 +3838,13 @@ var NgPluralCase = /** @class */ (function () {
         var isANumber = !isNaN(Number(value));
         ngPlural.addCase(isANumber ? "=" + value : value, new SwitchView(viewContainer, template));
     }
-    NgPluralCase.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Directive"], args: [{ selector: '[ngPluralCase]' },] }
-    ];
-    /** @nocollapse */
-    NgPluralCase.ctorParameters = function () { return [
-        { type: String, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Attribute"], args: ['ngPluralCase',] }] },
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["TemplateRef"] },
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewContainerRef"] },
-        { type: NgPlural, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Host"] }] }
-    ]; };
+    NgPluralCase = Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Directive"])({ selector: '[ngPluralCase]' }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__param"])(0, Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Attribute"])('ngPluralCase')),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__param"])(3, Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Host"])()),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__metadata"])("design:paramtypes", [String, _angular_core__WEBPACK_IMPORTED_MODULE_0__["TemplateRef"],
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewContainerRef"], NgPlural])
+    ], NgPluralCase);
     return NgPluralCase;
 }());
 
@@ -3912,18 +3917,15 @@ var NgStyle = /** @class */ (function () {
             this._renderer.removeStyle(this._ngEl.nativeElement, name);
         }
     };
-    NgStyle.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Directive"], args: [{ selector: '[ngStyle]' },] }
-    ];
-    /** @nocollapse */
-    NgStyle.ctorParameters = function () { return [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["KeyValueDiffers"] },
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"] },
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Renderer2"] }
-    ]; };
-    NgStyle.propDecorators = {
-        ngStyle: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }]
-    };
+    Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__metadata"])("design:type", Object),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__metadata"])("design:paramtypes", [Object])
+    ], NgStyle.prototype, "ngStyle", null);
+    NgStyle = Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Directive"])({ selector: '[ngStyle]' }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__metadata"])("design:paramtypes", [_angular_core__WEBPACK_IMPORTED_MODULE_0__["KeyValueDiffers"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["Renderer2"]])
+    ], NgStyle);
     return NgStyle;
 }());
 
@@ -4033,17 +4035,18 @@ var NgTemplateOutlet = /** @class */ (function () {
             finally { if (e_2) throw e_2.error; }
         }
     };
-    NgTemplateOutlet.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Directive"], args: [{ selector: '[ngTemplateOutlet]' },] }
-    ];
-    /** @nocollapse */
-    NgTemplateOutlet.ctorParameters = function () { return [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewContainerRef"] }
-    ]; };
-    NgTemplateOutlet.propDecorators = {
-        ngTemplateOutletContext: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
-        ngTemplateOutlet: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }]
-    };
+    Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__metadata"])("design:type", Object)
+    ], NgTemplateOutlet.prototype, "ngTemplateOutletContext", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_0__["TemplateRef"])
+    ], NgTemplateOutlet.prototype, "ngTemplateOutlet", void 0);
+    NgTemplateOutlet = Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Directive"])({ selector: '[ngTemplateOutlet]' }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__metadata"])("design:paramtypes", [_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewContainerRef"]])
+    ], NgTemplateOutlet);
     return NgTemplateOutlet;
 }());
 
@@ -4337,6 +4340,7 @@ var DeprecatedDatePipe = /** @class */ (function () {
     function DeprecatedDatePipe(_locale) {
         this._locale = _locale;
     }
+    DeprecatedDatePipe_1 = DeprecatedDatePipe;
     DeprecatedDatePipe.prototype.transform = function (value, pattern) {
         if (pattern === void 0) { pattern = 'mediumDate'; }
         if (value == null || value === '' || value !== value)
@@ -4374,11 +4378,12 @@ var DeprecatedDatePipe = /** @class */ (function () {
                 date = isoStringToDate(match);
             }
             else {
-                throw invalidPipeArgumentError(DeprecatedDatePipe, value);
+                throw invalidPipeArgumentError(DeprecatedDatePipe_1, value);
             }
         }
-        return DateFormatter.format(date, this._locale, DeprecatedDatePipe._ALIASES[pattern] || pattern);
+        return DateFormatter.format(date, this._locale, DeprecatedDatePipe_1._ALIASES[pattern] || pattern);
     };
+    var DeprecatedDatePipe_1;
     /** @internal */
     DeprecatedDatePipe._ALIASES = {
         'medium': 'yMMMdjms',
@@ -4390,13 +4395,11 @@ var DeprecatedDatePipe = /** @class */ (function () {
         'mediumTime': 'jms',
         'shortTime': 'jm'
     };
-    DeprecatedDatePipe.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Pipe"], args: [{ name: 'date', pure: true },] }
-    ];
-    /** @nocollapse */
-    DeprecatedDatePipe.ctorParameters = function () { return [
-        { type: String, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"], args: [_angular_core__WEBPACK_IMPORTED_MODULE_0__["LOCALE_ID"],] }] }
-    ]; };
+    DeprecatedDatePipe = DeprecatedDatePipe_1 = Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Pipe"])({ name: 'date', pure: true }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__param"])(0, Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"])(_angular_core__WEBPACK_IMPORTED_MODULE_0__["LOCALE_ID"])),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__metadata"])("design:paramtypes", [String])
+    ], DeprecatedDatePipe);
     return DeprecatedDatePipe;
 }());
 function isDate$1(value) {
@@ -4453,8 +4456,6 @@ function formatNumber$1(pipe, locale, value, style, digits, currency, currencyAs
     });
 }
 /**
- * @ngModule CommonModule
- *
  * Formats a number as text. Group sizing and separator and other locale-specific
  * configurations are based on the active locale.
  *
@@ -4477,21 +4478,22 @@ function formatNumber$1(pipe, locale, value, style, digits, currency, currencyAs
  *
  * {@example common/pipes/ts/number_pipe.ts region='DeprecatedNumberPipe'}
  *
+ * @ngModule CommonModule
  */
 var DeprecatedDecimalPipe = /** @class */ (function () {
     function DeprecatedDecimalPipe(_locale) {
         this._locale = _locale;
     }
+    DeprecatedDecimalPipe_1 = DeprecatedDecimalPipe;
     DeprecatedDecimalPipe.prototype.transform = function (value, digits) {
-        return formatNumber$1(DeprecatedDecimalPipe, this._locale, value, NumberFormatStyle.Decimal, digits);
+        return formatNumber$1(DeprecatedDecimalPipe_1, this._locale, value, NumberFormatStyle.Decimal, digits);
     };
-    DeprecatedDecimalPipe.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Pipe"], args: [{ name: 'number' },] }
-    ];
-    /** @nocollapse */
-    DeprecatedDecimalPipe.ctorParameters = function () { return [
-        { type: String, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"], args: [_angular_core__WEBPACK_IMPORTED_MODULE_0__["LOCALE_ID"],] }] }
-    ]; };
+    var DeprecatedDecimalPipe_1;
+    DeprecatedDecimalPipe = DeprecatedDecimalPipe_1 = Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Pipe"])({ name: 'number' }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__param"])(0, Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"])(_angular_core__WEBPACK_IMPORTED_MODULE_0__["LOCALE_ID"])),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__metadata"])("design:paramtypes", [String])
+    ], DeprecatedDecimalPipe);
     return DeprecatedDecimalPipe;
 }());
 /**
@@ -4518,16 +4520,16 @@ var DeprecatedPercentPipe = /** @class */ (function () {
     function DeprecatedPercentPipe(_locale) {
         this._locale = _locale;
     }
+    DeprecatedPercentPipe_1 = DeprecatedPercentPipe;
     DeprecatedPercentPipe.prototype.transform = function (value, digits) {
-        return formatNumber$1(DeprecatedPercentPipe, this._locale, value, NumberFormatStyle.Percent, digits);
+        return formatNumber$1(DeprecatedPercentPipe_1, this._locale, value, NumberFormatStyle.Percent, digits);
     };
-    DeprecatedPercentPipe.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Pipe"], args: [{ name: 'percent' },] }
-    ];
-    /** @nocollapse */
-    DeprecatedPercentPipe.ctorParameters = function () { return [
-        { type: String, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"], args: [_angular_core__WEBPACK_IMPORTED_MODULE_0__["LOCALE_ID"],] }] }
-    ]; };
+    var DeprecatedPercentPipe_1;
+    DeprecatedPercentPipe = DeprecatedPercentPipe_1 = Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Pipe"])({ name: 'percent' }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__param"])(0, Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"])(_angular_core__WEBPACK_IMPORTED_MODULE_0__["LOCALE_ID"])),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__metadata"])("design:paramtypes", [String])
+    ], DeprecatedPercentPipe);
     return DeprecatedPercentPipe;
 }());
 /**
@@ -4560,18 +4562,18 @@ var DeprecatedCurrencyPipe = /** @class */ (function () {
     function DeprecatedCurrencyPipe(_locale) {
         this._locale = _locale;
     }
+    DeprecatedCurrencyPipe_1 = DeprecatedCurrencyPipe;
     DeprecatedCurrencyPipe.prototype.transform = function (value, currencyCode, symbolDisplay, digits) {
         if (currencyCode === void 0) { currencyCode = 'USD'; }
         if (symbolDisplay === void 0) { symbolDisplay = false; }
-        return formatNumber$1(DeprecatedCurrencyPipe, this._locale, value, NumberFormatStyle.Currency, digits, currencyCode, symbolDisplay);
+        return formatNumber$1(DeprecatedCurrencyPipe_1, this._locale, value, NumberFormatStyle.Currency, digits, currencyCode, symbolDisplay);
     };
-    DeprecatedCurrencyPipe.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Pipe"], args: [{ name: 'currency' },] }
-    ];
-    /** @nocollapse */
-    DeprecatedCurrencyPipe.ctorParameters = function () { return [
-        { type: String, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"], args: [_angular_core__WEBPACK_IMPORTED_MODULE_0__["LOCALE_ID"],] }] }
-    ]; };
+    var DeprecatedCurrencyPipe_1;
+    DeprecatedCurrencyPipe = DeprecatedCurrencyPipe_1 = Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Pipe"])({ name: 'currency' }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__param"])(0, Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"])(_angular_core__WEBPACK_IMPORTED_MODULE_0__["LOCALE_ID"])),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__metadata"])("design:paramtypes", [String])
+    ], DeprecatedCurrencyPipe);
     return DeprecatedCurrencyPipe;
 }());
 
@@ -4653,6 +4655,7 @@ var AsyncPipe = /** @class */ (function () {
         this._obj = null;
         this._strategy = null;
     }
+    AsyncPipe_1 = AsyncPipe;
     AsyncPipe.prototype.ngOnDestroy = function () {
         if (this._subscription) {
             this._dispose();
@@ -4689,7 +4692,7 @@ var AsyncPipe = /** @class */ (function () {
         if (Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵisObservable"])(obj)) {
             return _observableStrategy;
         }
-        throw invalidPipeArgumentError(AsyncPipe, obj);
+        throw invalidPipeArgumentError(AsyncPipe_1, obj);
     };
     AsyncPipe.prototype._dispose = function () {
         this._strategy.dispose(this._subscription);
@@ -4704,13 +4707,11 @@ var AsyncPipe = /** @class */ (function () {
             this._ref.markForCheck();
         }
     };
-    AsyncPipe.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Pipe"], args: [{ name: 'async', pure: false },] }
-    ];
-    /** @nocollapse */
-    AsyncPipe.ctorParameters = function () { return [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ChangeDetectorRef"] }
-    ]; };
+    var AsyncPipe_1;
+    AsyncPipe = AsyncPipe_1 = Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Pipe"])({ name: 'async', pure: false }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__metadata"])("design:paramtypes", [_angular_core__WEBPACK_IMPORTED_MODULE_0__["ChangeDetectorRef"]])
+    ], AsyncPipe);
     return AsyncPipe;
 }());
 
@@ -4733,11 +4734,12 @@ var AsyncPipe = /** @class */ (function () {
  *
  * <code-example path="common/pipes/ts/lowerupper_pipe.ts" region='LowerUpperPipe'></code-example>
  *
- *
+ * @ngModule CommonModule
  */
 var LowerCasePipe = /** @class */ (function () {
     function LowerCasePipe() {
     }
+    LowerCasePipe_1 = LowerCasePipe;
     /**
      * @param value The string to transform to lower case.
      */
@@ -4745,13 +4747,14 @@ var LowerCasePipe = /** @class */ (function () {
         if (!value)
             return value;
         if (typeof value !== 'string') {
-            throw invalidPipeArgumentError(LowerCasePipe, value);
+            throw invalidPipeArgumentError(LowerCasePipe_1, value);
         }
         return value.toLowerCase();
     };
-    LowerCasePipe.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Pipe"], args: [{ name: 'lowercase' },] }
-    ];
+    var LowerCasePipe_1;
+    LowerCasePipe = LowerCasePipe_1 = Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Pipe"])({ name: 'lowercase' })
+    ], LowerCasePipe);
     return LowerCasePipe;
 }());
 //
@@ -4777,11 +4780,12 @@ var unicodeWordMatch = /(?:[A-Za-z\xAA\xB5\xBA\xC0-\xD6\xD8-\xF6\xF8-\u02C1\u02C
  *
  * <code-example path="common/pipes/ts/titlecase_pipe.ts" region='TitleCasePipe'></code-example>
  *
- *
+ * @ngModule CommonModule
  */
 var TitleCasePipe = /** @class */ (function () {
     function TitleCasePipe() {
     }
+    TitleCasePipe_1 = TitleCasePipe;
     /**
      * @param value The string to transform to title case.
      */
@@ -4789,23 +4793,27 @@ var TitleCasePipe = /** @class */ (function () {
         if (!value)
             return value;
         if (typeof value !== 'string') {
-            throw invalidPipeArgumentError(TitleCasePipe, value);
+            throw invalidPipeArgumentError(TitleCasePipe_1, value);
         }
         return value.replace(unicodeWordMatch, (function (txt) { return txt[0].toUpperCase() + txt.substr(1).toLowerCase(); }));
     };
-    TitleCasePipe.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Pipe"], args: [{ name: 'titlecase' },] }
-    ];
+    var TitleCasePipe_1;
+    TitleCasePipe = TitleCasePipe_1 = Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Pipe"])({ name: 'titlecase' })
+    ], TitleCasePipe);
     return TitleCasePipe;
 }());
 /**
  * Transforms text to all upper case.
  * @see `LowerCasePipe`
  * @see `TitleCasePipe`
+ *
+ * @ngModule CommonModule
  */
 var UpperCasePipe = /** @class */ (function () {
     function UpperCasePipe() {
     }
+    UpperCasePipe_1 = UpperCasePipe;
     /**
      * @param value The string to transform to upper case.
      */
@@ -4813,13 +4821,14 @@ var UpperCasePipe = /** @class */ (function () {
         if (!value)
             return value;
         if (typeof value !== 'string') {
-            throw invalidPipeArgumentError(UpperCasePipe, value);
+            throw invalidPipeArgumentError(UpperCasePipe_1, value);
         }
         return value.toUpperCase();
     };
-    UpperCasePipe.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Pipe"], args: [{ name: 'uppercase' },] }
-    ];
+    var UpperCasePipe_1;
+    UpperCasePipe = UpperCasePipe_1 = Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Pipe"])({ name: 'uppercase' })
+    ], UpperCasePipe);
     return UpperCasePipe;
 }());
 
@@ -4973,6 +4982,7 @@ var DatePipe = /** @class */ (function () {
     function DatePipe(locale) {
         this.locale = locale;
     }
+    DatePipe_1 = DatePipe;
     /**
      * @param value The date expression: a `Date` object,  a number
      * (milliseconds since UTC epoch), or an ISO string (https://www.w3.org/TR/NOTE-datetime).
@@ -4994,16 +5004,15 @@ var DatePipe = /** @class */ (function () {
             return formatDate(value, format, locale || this.locale, timezone);
         }
         catch (error) {
-            throw invalidPipeArgumentError(DatePipe, error.message);
+            throw invalidPipeArgumentError(DatePipe_1, error.message);
         }
     };
-    DatePipe.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Pipe"], args: [{ name: 'date', pure: true },] }
-    ];
-    /** @nocollapse */
-    DatePipe.ctorParameters = function () { return [
-        { type: String, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"], args: [_angular_core__WEBPACK_IMPORTED_MODULE_0__["LOCALE_ID"],] }] }
-    ]; };
+    var DatePipe_1;
+    DatePipe = DatePipe_1 = Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Pipe"])({ name: 'date', pure: true }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__param"])(0, Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"])(_angular_core__WEBPACK_IMPORTED_MODULE_0__["LOCALE_ID"])),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__metadata"])("design:paramtypes", [String])
+    ], DatePipe);
     return DatePipe;
 }());
 
@@ -5033,6 +5042,7 @@ var I18nPluralPipe = /** @class */ (function () {
     function I18nPluralPipe(_localization) {
         this._localization = _localization;
     }
+    I18nPluralPipe_1 = I18nPluralPipe;
     /**
      * @param value the number to be formatted
      * @param pluralMap an object that mimics the ICU format, see
@@ -5044,18 +5054,16 @@ var I18nPluralPipe = /** @class */ (function () {
         if (value == null)
             return '';
         if (typeof pluralMap !== 'object' || pluralMap === null) {
-            throw invalidPipeArgumentError(I18nPluralPipe, pluralMap);
+            throw invalidPipeArgumentError(I18nPluralPipe_1, pluralMap);
         }
         var key = getPluralCategory(value, Object.keys(pluralMap), this._localization, locale);
         return pluralMap[key].replace(_INTERPOLATION_REGEXP, value.toString());
     };
-    I18nPluralPipe.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Pipe"], args: [{ name: 'i18nPlural', pure: true },] }
-    ];
-    /** @nocollapse */
-    I18nPluralPipe.ctorParameters = function () { return [
-        { type: NgLocalization }
-    ]; };
+    var I18nPluralPipe_1;
+    I18nPluralPipe = I18nPluralPipe_1 = Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Pipe"])({ name: 'i18nPlural', pure: true }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__metadata"])("design:paramtypes", [NgLocalization])
+    ], I18nPluralPipe);
     return I18nPluralPipe;
 }());
 
@@ -5086,6 +5094,7 @@ var I18nPluralPipe = /** @class */ (function () {
 var I18nSelectPipe = /** @class */ (function () {
     function I18nSelectPipe() {
     }
+    I18nSelectPipe_1 = I18nSelectPipe;
     /**
      * @param value a string to be internationalized.
      * @param mapping an object that indicates the text that should be displayed
@@ -5095,7 +5104,7 @@ var I18nSelectPipe = /** @class */ (function () {
         if (value == null)
             return '';
         if (typeof mapping !== 'object' || typeof value !== 'string') {
-            throw invalidPipeArgumentError(I18nSelectPipe, mapping);
+            throw invalidPipeArgumentError(I18nSelectPipe_1, mapping);
         }
         if (mapping.hasOwnProperty(value)) {
             return mapping[value];
@@ -5105,9 +5114,10 @@ var I18nSelectPipe = /** @class */ (function () {
         }
         return '';
     };
-    I18nSelectPipe.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Pipe"], args: [{ name: 'i18nSelect', pure: true },] }
-    ];
+    var I18nSelectPipe_1;
+    I18nSelectPipe = I18nSelectPipe_1 = Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Pipe"])({ name: 'i18nSelect', pure: true })
+    ], I18nSelectPipe);
     return I18nSelectPipe;
 }());
 
@@ -5139,9 +5149,9 @@ var JsonPipe = /** @class */ (function () {
      * @param value A value of any type to convert into a JSON-format string.
      */
     JsonPipe.prototype.transform = function (value) { return JSON.stringify(value, null, 2); };
-    JsonPipe.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Pipe"], args: [{ name: 'json', pure: false },] }
-    ];
+    JsonPipe = Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Pipe"])({ name: 'json', pure: false })
+    ], JsonPipe);
     return JsonPipe;
 }());
 
@@ -5165,7 +5175,8 @@ function makeKeyValuePair(key, value) {
  * By default the comparator will be by Unicode point value.
  * You can optionally pass a compareFn if your keys are complex types.
  *
- * ## Examples
+ * @usageNotes
+ * ### Examples
  *
  * This examples show how an Object or a Map and be iterated by ngFor with the use of this keyvalue
  * pipe.
@@ -5196,13 +5207,10 @@ var KeyValuePipe = /** @class */ (function () {
         }
         return this.keyValues;
     };
-    KeyValuePipe.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Pipe"], args: [{ name: 'keyvalue', pure: false },] }
-    ];
-    /** @nocollapse */
-    KeyValuePipe.ctorParameters = function () { return [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["KeyValueDiffers"] }
-    ]; };
+    KeyValuePipe = Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Pipe"])({ name: 'keyvalue', pure: false }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__metadata"])("design:paramtypes", [_angular_core__WEBPACK_IMPORTED_MODULE_0__["KeyValueDiffers"]])
+    ], KeyValuePipe);
     return KeyValuePipe;
 }());
 function defaultComparator(keyValueA, keyValueB) {
@@ -5281,6 +5289,7 @@ var DecimalPipe = /** @class */ (function () {
     function DecimalPipe(_locale) {
         this._locale = _locale;
     }
+    DecimalPipe_1 = DecimalPipe;
     /**
      * @param value The number to be formatted.
      * @param digitsInfo Decimal representation options, specified by a string
@@ -5305,16 +5314,15 @@ var DecimalPipe = /** @class */ (function () {
             return formatNumber(num, locale, digitsInfo);
         }
         catch (error) {
-            throw invalidPipeArgumentError(DecimalPipe, error.message);
+            throw invalidPipeArgumentError(DecimalPipe_1, error.message);
         }
     };
-    DecimalPipe.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Pipe"], args: [{ name: 'number' },] }
-    ];
-    /** @nocollapse */
-    DecimalPipe.ctorParameters = function () { return [
-        { type: String, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"], args: [_angular_core__WEBPACK_IMPORTED_MODULE_0__["LOCALE_ID"],] }] }
-    ]; };
+    var DecimalPipe_1;
+    DecimalPipe = DecimalPipe_1 = Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Pipe"])({ name: 'number' }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__param"])(0, Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"])(_angular_core__WEBPACK_IMPORTED_MODULE_0__["LOCALE_ID"])),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__metadata"])("design:paramtypes", [String])
+    ], DecimalPipe);
     return DecimalPipe;
 }());
 /**
@@ -5341,6 +5349,7 @@ var PercentPipe = /** @class */ (function () {
     function PercentPipe(_locale) {
         this._locale = _locale;
     }
+    PercentPipe_1 = PercentPipe;
     /**
      *
      * @param value The number to be formatted as a percentage.
@@ -5366,16 +5375,15 @@ var PercentPipe = /** @class */ (function () {
             return formatPercent(num, locale, digitsInfo);
         }
         catch (error) {
-            throw invalidPipeArgumentError(PercentPipe, error.message);
+            throw invalidPipeArgumentError(PercentPipe_1, error.message);
         }
     };
-    PercentPipe.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Pipe"], args: [{ name: 'percent' },] }
-    ];
-    /** @nocollapse */
-    PercentPipe.ctorParameters = function () { return [
-        { type: String, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"], args: [_angular_core__WEBPACK_IMPORTED_MODULE_0__["LOCALE_ID"],] }] }
-    ]; };
+    var PercentPipe_1;
+    PercentPipe = PercentPipe_1 = Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Pipe"])({ name: 'percent' }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__param"])(0, Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"])(_angular_core__WEBPACK_IMPORTED_MODULE_0__["LOCALE_ID"])),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__metadata"])("design:paramtypes", [String])
+    ], PercentPipe);
     return PercentPipe;
 }());
 /**
@@ -5402,6 +5410,7 @@ var CurrencyPipe = /** @class */ (function () {
     function CurrencyPipe(_locale) {
         this._locale = _locale;
     }
+    CurrencyPipe_1 = CurrencyPipe;
     /**
      *
      * @param value The number to be formatted as currency.
@@ -5415,6 +5424,7 @@ var CurrencyPipe = /** @class */ (function () {
      * For example, the Canadian dollar CAD has the symbol `CA$` and the symbol-narrow `$`. If the
      * locale has no narrow symbol, uses the standard symbol for the locale.
      *   - String: Use the given string value instead of a code or a symbol.
+     * For example, an empty string will suppress the currency & symbol.
      *   - Boolean (marked deprecated in v5): `true` for symbol and false for `code`.
      *
      * @param digitsInfo Decimal representation options, specified by a string
@@ -5458,16 +5468,15 @@ var CurrencyPipe = /** @class */ (function () {
             return formatCurrency(num, locale, currency, currencyCode, digitsInfo);
         }
         catch (error) {
-            throw invalidPipeArgumentError(CurrencyPipe, error.message);
+            throw invalidPipeArgumentError(CurrencyPipe_1, error.message);
         }
     };
-    CurrencyPipe.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Pipe"], args: [{ name: 'currency' },] }
-    ];
-    /** @nocollapse */
-    CurrencyPipe.ctorParameters = function () { return [
-        { type: String, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"], args: [_angular_core__WEBPACK_IMPORTED_MODULE_0__["LOCALE_ID"],] }] }
-    ]; };
+    var CurrencyPipe_1;
+    CurrencyPipe = CurrencyPipe_1 = Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Pipe"])({ name: 'currency' }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__param"])(0, Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"])(_angular_core__WEBPACK_IMPORTED_MODULE_0__["LOCALE_ID"])),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__metadata"])("design:paramtypes", [String])
+    ], CurrencyPipe);
     return CurrencyPipe;
 }());
 function isEmpty(value) {
@@ -5531,6 +5540,7 @@ function strToNumber(value) {
 var SlicePipe = /** @class */ (function () {
     function SlicePipe() {
     }
+    SlicePipe_1 = SlicePipe;
     /**
      * @param value a list or a string to be sliced.
      * @param start the starting index of the subset to return:
@@ -5550,14 +5560,15 @@ var SlicePipe = /** @class */ (function () {
         if (value == null)
             return value;
         if (!this.supports(value)) {
-            throw invalidPipeArgumentError(SlicePipe, value);
+            throw invalidPipeArgumentError(SlicePipe_1, value);
         }
         return value.slice(start, end);
     };
     SlicePipe.prototype.supports = function (obj) { return typeof obj === 'string' || Array.isArray(obj); };
-    SlicePipe.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Pipe"], args: [{ name: 'slice', pure: false },] }
-    ];
+    var SlicePipe_1;
+    SlicePipe = SlicePipe_1 = Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Pipe"])({ name: 'slice', pure: false })
+    ], SlicePipe);
     return SlicePipe;
 }());
 
@@ -5597,22 +5608,29 @@ var COMMON_PIPES = [
 // Note: This does not contain the location providers,
 // as they need some platform specific implementations to work.
 /**
- * The module that includes all the basic Angular directives like {@link NgIf}, {@link NgForOf}, ...
+ * Exports all the basic Angular directives and pipes,
+ * such as `NgIf`, `NgForOf`, `DecimalPipe`, and so on.
+ * Re-exported by `BrowserModule`, which is included automatically in the root
+ * `AppModule` when you create a new app with the CLI `new` command.
  *
+ * * The `providers` options configure the NgModule's injector to provide
+ * localization dependencies to members.
+ * * The `exports` options make the declared directives and pipes available for import
+ * by other NgModules.
  *
  */
 var CommonModule = /** @class */ (function () {
     function CommonModule() {
     }
-    CommonModule.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"], args: [{
-                    declarations: [COMMON_DIRECTIVES, COMMON_PIPES],
-                    exports: [COMMON_DIRECTIVES, COMMON_PIPES],
-                    providers: [
-                        { provide: NgLocalization, useClass: NgLocaleLocalization },
-                    ],
-                },] }
-    ];
+    CommonModule = Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
+            declarations: [COMMON_DIRECTIVES, COMMON_PIPES],
+            exports: [COMMON_DIRECTIVES, COMMON_PIPES],
+            providers: [
+                { provide: NgLocalization, useClass: NgLocaleLocalization },
+            ],
+        })
+    ], CommonModule);
     return CommonModule;
 }());
 var ɵ0 = getPluralCase;
@@ -5624,13 +5642,13 @@ var ɵ0 = getPluralCase;
 var DeprecatedI18NPipesModule = /** @class */ (function () {
     function DeprecatedI18NPipesModule() {
     }
-    DeprecatedI18NPipesModule.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"], args: [{
-                    declarations: [COMMON_DEPRECATED_I18N_PIPES],
-                    exports: [COMMON_DEPRECATED_I18N_PIPES],
-                    providers: [{ provide: DEPRECATED_PLURAL_FN, useValue: ɵ0 }],
-                },] }
-    ];
+    DeprecatedI18NPipesModule = Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
+            declarations: [COMMON_DEPRECATED_I18N_PIPES],
+            exports: [COMMON_DEPRECATED_I18N_PIPES],
+            providers: [{ provide: DEPRECATED_PLURAL_FN, useValue: ɵ0 }],
+        })
+    ], DeprecatedI18NPipesModule);
     return DeprecatedI18NPipesModule;
 }());
 
@@ -5698,7 +5716,7 @@ function isPlatformWorkerUi(platformId) {
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-var VERSION = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["Version"]('6.1.7');
+var VERSION = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["Version"]('6.1.10');
 
 /**
  * @license
@@ -5708,7 +5726,7 @@ var VERSION = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["Version"]('6.1.7')
  * found in the LICENSE file at https://angular.io/license
  */
 /**
- * @whatItDoes Manages the scroll position.
+ * Manages the scroll position.
  */
 var ViewportScroller = /** @class */ (function () {
     function ViewportScroller() {
@@ -5720,7 +5738,7 @@ var ViewportScroller = /** @class */ (function () {
     return ViewportScroller;
 }());
 /**
- * @whatItDoes Manages the scroll position.
+ * Manages the scroll position.
  */
 var BrowserViewportScroller = /** @class */ (function () {
     function BrowserViewportScroller(document, window) {
@@ -5729,7 +5747,7 @@ var BrowserViewportScroller = /** @class */ (function () {
         this.offset = function () { return [0, 0]; };
     }
     /**
-     * @whatItDoes Configures the top offset used when scrolling to an anchor.
+     * Configures the top offset used when scrolling to an anchor.
      *
      * * When given a number, the service will always use the number.
      * * When given a function, the service will invoke the function every time it restores scroll
@@ -5744,7 +5762,7 @@ var BrowserViewportScroller = /** @class */ (function () {
         }
     };
     /**
-     * @whatItDoes Returns the current scroll position.
+     * Returns the current scroll position.
      */
     BrowserViewportScroller.prototype.getScrollPosition = function () {
         if (this.supportScrollRestoration()) {
@@ -5755,7 +5773,7 @@ var BrowserViewportScroller = /** @class */ (function () {
         }
     };
     /**
-     * @whatItDoes Sets the scroll position.
+     * Sets the scroll position.
      */
     BrowserViewportScroller.prototype.scrollToPosition = function (position) {
         if (this.supportScrollRestoration()) {
@@ -5763,7 +5781,7 @@ var BrowserViewportScroller = /** @class */ (function () {
         }
     };
     /**
-     * @whatItDoes Scrolls to the provided anchor.
+     * Scrolls to the provided anchor.
      */
     BrowserViewportScroller.prototype.scrollToAnchor = function (anchor) {
         if (this.supportScrollRestoration()) {
@@ -5780,7 +5798,7 @@ var BrowserViewportScroller = /** @class */ (function () {
         }
     };
     /**
-     * @whatItDoes Disables automatic scroll restoration provided by the browser.
+     * Disables automatic scroll restoration provided by the browser.
      */
     BrowserViewportScroller.prototype.setHistoryScrollRestoration = function (scrollRestoration) {
         if (this.supportScrollRestoration()) {
@@ -5816,30 +5834,30 @@ var BrowserViewportScroller = /** @class */ (function () {
     return BrowserViewportScroller;
 }());
 /**
- * @whatItDoes Provides an empty implementation of the viewport scroller. This will
+ * Provides an empty implementation of the viewport scroller. This will
  * live in @angular/common as it will be used by both platform-server and platform-webworker.
  */
 var NullViewportScroller = /** @class */ (function () {
     function NullViewportScroller() {
     }
     /**
-     * @whatItDoes empty implementation
+     * Empty implementation
      */
     NullViewportScroller.prototype.setOffset = function (offset) { };
     /**
-     * @whatItDoes empty implementation
+     * Empty implementation
      */
     NullViewportScroller.prototype.getScrollPosition = function () { return [0, 0]; };
     /**
-     * @whatItDoes empty implementation
+     * Empty implementation
      */
     NullViewportScroller.prototype.scrollToPosition = function (position) { };
     /**
-     * @whatItDoes empty implementation
+     * Empty implementation
      */
     NullViewportScroller.prototype.scrollToAnchor = function (anchor) { };
     /**
-     * @whatItDoes empty implementation
+     * Empty implementation
      */
     NullViewportScroller.prototype.setHistoryScrollRestoration = function (scrollRestoration) { };
     return NullViewportScroller;
@@ -5925,7 +5943,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
 /**
- * @license Angular v6.1.7
+ * @license Angular v6.1.10
  * (c) 2010-2018 Google, Inc. https://angular.io/
  * License: MIT
  */
@@ -7032,13 +7050,10 @@ var HttpClient = /** @class */ (function () {
         if (options === void 0) { options = {}; }
         return this.request('PUT', url, addBody(options, body));
     };
-    HttpClient.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"] }
-    ];
-    /** @nocollapse */
-    HttpClient.ctorParameters = function () { return [
-        { type: HttpHandler }
-    ]; };
+    HttpClient = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])(),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [HttpHandler])
+    ], HttpClient);
     return HttpClient;
 }());
 
@@ -7077,9 +7092,9 @@ var NoopInterceptor = /** @class */ (function () {
     NoopInterceptor.prototype.intercept = function (req, next) {
         return next.handle(req);
     };
-    NoopInterceptor.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"] }
-    ];
+    NoopInterceptor = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])()
+    ], NoopInterceptor);
     return NoopInterceptor;
 }());
 
@@ -7255,14 +7270,11 @@ var JsonpClientBackend = /** @class */ (function () {
             };
         });
     };
-    JsonpClientBackend.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"] }
-    ];
-    /** @nocollapse */
-    JsonpClientBackend.ctorParameters = function () { return [
-        { type: JsonpCallbackContext },
-        { type: undefined, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"], args: [_angular_common__WEBPACK_IMPORTED_MODULE_4__["DOCUMENT"],] }] }
-    ]; };
+    JsonpClientBackend = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])(),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(1, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(_angular_common__WEBPACK_IMPORTED_MODULE_4__["DOCUMENT"])),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [JsonpCallbackContext, Object])
+    ], JsonpClientBackend);
     return JsonpClientBackend;
 }());
 /**
@@ -7282,13 +7294,10 @@ var JsonpInterceptor = /** @class */ (function () {
         // Fall through for normal HTTP requests.
         return next.handle(req);
     };
-    JsonpInterceptor.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"] }
-    ];
-    /** @nocollapse */
-    JsonpInterceptor.ctorParameters = function () { return [
-        { type: JsonpClientBackend }
-    ]; };
+    JsonpInterceptor = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])(),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [JsonpClientBackend])
+    ], JsonpInterceptor);
     return JsonpInterceptor;
 }());
 
@@ -7332,11 +7341,10 @@ var BrowserXhr = /** @class */ (function () {
     function BrowserXhr() {
     }
     BrowserXhr.prototype.build = function () { return (new XMLHttpRequest()); };
-    BrowserXhr.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"] }
-    ];
-    /** @nocollapse */
-    BrowserXhr.ctorParameters = function () { return []; };
+    BrowserXhr = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])(),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [])
+    ], BrowserXhr);
     return BrowserXhr;
 }());
 /**
@@ -7581,13 +7589,10 @@ var HttpXhrBackend = /** @class */ (function () {
             };
         });
     };
-    HttpXhrBackend.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"] }
-    ];
-    /** @nocollapse */
-    HttpXhrBackend.ctorParameters = function () { return [
-        { type: XhrFactory }
-    ]; };
+    HttpXhrBackend = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])(),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [XhrFactory])
+    ], HttpXhrBackend);
     return HttpXhrBackend;
 }());
 
@@ -7637,15 +7642,12 @@ var HttpXsrfCookieExtractor = /** @class */ (function () {
         }
         return this.lastToken;
     };
-    HttpXsrfCookieExtractor.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"] }
-    ];
-    /** @nocollapse */
-    HttpXsrfCookieExtractor.ctorParameters = function () { return [
-        { type: undefined, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"], args: [_angular_common__WEBPACK_IMPORTED_MODULE_4__["DOCUMENT"],] }] },
-        { type: String, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"], args: [_angular_core__WEBPACK_IMPORTED_MODULE_1__["PLATFORM_ID"],] }] },
-        { type: String, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"], args: [XSRF_COOKIE_NAME,] }] }
-    ]; };
+    HttpXsrfCookieExtractor = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])(),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(0, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(_angular_common__WEBPACK_IMPORTED_MODULE_4__["DOCUMENT"])), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(1, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(_angular_core__WEBPACK_IMPORTED_MODULE_1__["PLATFORM_ID"])),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(2, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(XSRF_COOKIE_NAME)),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [Object, String, String])
+    ], HttpXsrfCookieExtractor);
     return HttpXsrfCookieExtractor;
 }());
 /**
@@ -7673,14 +7675,11 @@ var HttpXsrfInterceptor = /** @class */ (function () {
         }
         return next.handle(req);
     };
-    HttpXsrfInterceptor.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"] }
-    ];
-    /** @nocollapse */
-    HttpXsrfInterceptor.ctorParameters = function () { return [
-        { type: HttpXsrfTokenExtractor },
-        { type: String, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"], args: [XSRF_HEADER_NAME,] }] }
-    ]; };
+    HttpXsrfInterceptor = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])(),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(1, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(XSRF_HEADER_NAME)),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [HttpXsrfTokenExtractor, String])
+    ], HttpXsrfInterceptor);
     return HttpXsrfInterceptor;
 }());
 
@@ -7713,14 +7712,10 @@ var HttpInterceptingHandler = /** @class */ (function () {
         }
         return this.chain.handle(req);
     };
-    HttpInterceptingHandler.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"] }
-    ];
-    /** @nocollapse */
-    HttpInterceptingHandler.ctorParameters = function () { return [
-        { type: HttpBackend },
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Injector"] }
-    ]; };
+    HttpInterceptingHandler = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])(),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [HttpBackend, _angular_core__WEBPACK_IMPORTED_MODULE_1__["Injector"]])
+    ], HttpInterceptingHandler);
     return HttpInterceptingHandler;
 }());
 /**
@@ -7738,7 +7733,7 @@ function jsonpCallbackContext() {
     return {};
 }
 /**
- * An NgModule that adds XSRF protection support to outgoing requests.
+ * Configures XSRF protection support for outgoing requests.
  *
  * For a server that supports a cookie-based XSRF protection system,
  * use directly to configure XSRF protection with the correct
@@ -7752,12 +7747,13 @@ function jsonpCallbackContext() {
 var HttpClientXsrfModule = /** @class */ (function () {
     function HttpClientXsrfModule() {
     }
+    HttpClientXsrfModule_1 = HttpClientXsrfModule;
     /**
      * Disable the default XSRF protection.
      */
     HttpClientXsrfModule.disable = function () {
         return {
-            ngModule: HttpClientXsrfModule,
+            ngModule: HttpClientXsrfModule_1,
             providers: [
                 { provide: HttpXsrfInterceptor, useClass: NoopInterceptor },
             ],
@@ -7774,83 +7770,89 @@ var HttpClientXsrfModule = /** @class */ (function () {
     HttpClientXsrfModule.withOptions = function (options) {
         if (options === void 0) { options = {}; }
         return {
-            ngModule: HttpClientXsrfModule,
+            ngModule: HttpClientXsrfModule_1,
             providers: [
                 options.cookieName ? { provide: XSRF_COOKIE_NAME, useValue: options.cookieName } : [],
                 options.headerName ? { provide: XSRF_HEADER_NAME, useValue: options.headerName } : [],
             ],
         };
     };
-    HttpClientXsrfModule.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"], args: [{
-                    providers: [
-                        HttpXsrfInterceptor,
-                        { provide: HTTP_INTERCEPTORS, useExisting: HttpXsrfInterceptor, multi: true },
-                        { provide: HttpXsrfTokenExtractor, useClass: HttpXsrfCookieExtractor },
-                        { provide: XSRF_COOKIE_NAME, useValue: 'XSRF-TOKEN' },
-                        { provide: XSRF_HEADER_NAME, useValue: 'X-XSRF-TOKEN' },
-                    ],
-                },] }
-    ];
+    var HttpClientXsrfModule_1;
+    HttpClientXsrfModule = HttpClientXsrfModule_1 = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
+            providers: [
+                HttpXsrfInterceptor,
+                { provide: HTTP_INTERCEPTORS, useExisting: HttpXsrfInterceptor, multi: true },
+                { provide: HttpXsrfTokenExtractor, useClass: HttpXsrfCookieExtractor },
+                { provide: XSRF_COOKIE_NAME, useValue: 'XSRF-TOKEN' },
+                { provide: XSRF_HEADER_NAME, useValue: 'X-XSRF-TOKEN' },
+            ],
+        })
+    ], HttpClientXsrfModule);
     return HttpClientXsrfModule;
 }());
 /**
- * An NgModule that provides the `HttpClient` and associated services.
+ * Configures the [dependency injector](guide/glossary#injector) for `HttpClient`
+ * with supporting services for XSRF. Automatically imported by `HttpClientModule`.
  *
- * Interceptors can be added to the chain behind `HttpClient` by binding them
- * to the multiprovider for `HTTP_INTERCEPTORS`.
+ * You can add interceptors to the chain behind `HttpClient` by binding them to the
+ * multiprovider for built-in [DI token](guide/glossary#di-token) `HTTP_INTERCEPTORS`.
  *
  *
  */
 var HttpClientModule = /** @class */ (function () {
     function HttpClientModule() {
     }
-    HttpClientModule.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"], args: [{
-                    /**
-                     * Optional configuration for XSRF protection.
-                     */
-                    imports: [
-                        HttpClientXsrfModule.withOptions({
-                            cookieName: 'XSRF-TOKEN',
-                            headerName: 'X-XSRF-TOKEN',
-                        }),
-                    ],
-                    /**
-                     * The module provides `HttpClient` itself, and supporting services.
-                     */
-                    providers: [
-                        HttpClient,
-                        { provide: HttpHandler, useClass: HttpInterceptingHandler },
-                        HttpXhrBackend,
-                        { provide: HttpBackend, useExisting: HttpXhrBackend },
-                        BrowserXhr,
-                        { provide: XhrFactory, useExisting: BrowserXhr },
-                    ],
-                },] }
-    ];
+    HttpClientModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
+            /**
+             * Optional configuration for XSRF protection.
+             */
+            imports: [
+                HttpClientXsrfModule.withOptions({
+                    cookieName: 'XSRF-TOKEN',
+                    headerName: 'X-XSRF-TOKEN',
+                }),
+            ],
+            /**
+             * Configures the [dependency injector](guide/glossary#injector) where it is imported
+             * with supporting services for HTTP communications.
+             */
+            providers: [
+                HttpClient,
+                { provide: HttpHandler, useClass: HttpInterceptingHandler },
+                HttpXhrBackend,
+                { provide: HttpBackend, useExisting: HttpXhrBackend },
+                BrowserXhr,
+                { provide: XhrFactory, useExisting: BrowserXhr },
+            ],
+        })
+    ], HttpClientModule);
     return HttpClientModule;
 }());
 /**
- * An NgModule that enables JSONP support in `HttpClient`.
+ * Configures the [dependency injector](guide/glossary#injector) for `HttpClient`
+ * with supporting services for JSONP.
+ * Without this module, Jsonp requests reach the backend
+ * with method JSONP, where they are rejected.
  *
- * Without this module, Jsonp requests will reach the backend
- * with method JSONP, where they'll be rejected.
+ * You can add interceptors to the chain behind `HttpClient` by binding them to the
+ * multiprovider for built-in [DI token](guide/glossary#di-token) `HTTP_INTERCEPTORS`.
  *
  *
  */
 var HttpClientJsonpModule = /** @class */ (function () {
     function HttpClientJsonpModule() {
     }
-    HttpClientJsonpModule.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"], args: [{
-                    providers: [
-                        JsonpClientBackend,
-                        { provide: JsonpCallbackContext, useFactory: jsonpCallbackContext },
-                        { provide: HTTP_INTERCEPTORS, useClass: JsonpInterceptor, multi: true },
-                    ],
-                },] }
-    ];
+    HttpClientJsonpModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
+            providers: [
+                JsonpClientBackend,
+                { provide: JsonpCallbackContext, useFactory: jsonpCallbackContext },
+                { provide: HTTP_INTERCEPTORS, useClass: JsonpInterceptor, multi: true },
+            ],
+        })
+    ], HttpClientJsonpModule);
     return HttpClientJsonpModule;
 }());
 
@@ -8143,7 +8145,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "compileInjectable", function() { return compileInjectable; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /**
- * @license Angular v6.1.7
+ * @license Angular v6.1.10
  * (c) 2010-2018 Google, Inc. https://angular.io/
  * License: MIT
  */
@@ -9274,7 +9276,7 @@ var Version = /** @class */ (function () {
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-var VERSION = new Version('6.1.7');
+var VERSION = new Version('6.1.10');
 
 /**
  * @license
@@ -32083,7 +32085,7 @@ var JitCompiler = /** @class */ (function () {
                 }
             });
             localModuleMeta.entryComponents.forEach(function (entryComponentType) {
-                if (!_this.hasAotSummary(entryComponentType.componentType.reference)) {
+                if (!_this.hasAotSummary(entryComponentType.componentType)) {
                     var moduleMeta = moduleByJitDirective.get(entryComponentType.componentType);
                     templates.add(_this._createCompiledHostTemplate(entryComponentType.componentType, moduleMeta));
                 }
@@ -33102,7 +33104,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
 /* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
 /**
- * @license Angular v6.1.7
+ * @license Angular v6.1.10
  * (c) 2010-2018 Google, Inc. https://angular.io/
  * License: MIT
  */
@@ -33201,11 +33203,11 @@ function defineInjector(options) {
  * @usageNotes
  * ### Basic Example
  *
- * #### Plain InjectionToken
+ * ### Plain InjectionToken
  *
  * {@example core/di/ts/injector_spec.ts region='InjectionToken'}
  *
- * #### Tree-shakable InjectionToken
+ * ### Tree-shakable InjectionToken
  *
  * {@example core/di/ts/injector_spec.ts region='ShakableInjectionToken'}
  *
@@ -34680,6 +34682,9 @@ function (type, meta) { return (preR3NgModuleCompile)(type, meta); });
  *
  * See {@link Component#encapsulation encapsulation}.
  *
+ * @usageNotes
+ * ### Example
+ * {@example core/ts/metadata/encapsulation.ts region='longform'}
  */
 var ViewEncapsulation;
 (function (ViewEncapsulation) {
@@ -34711,9 +34716,6 @@ var ViewEncapsulation;
      * For the DOM this means using modern [Shadow
      * DOM](https://w3c.github.io/webcomponents/spec/shadow/) and
      * creating a ShadowRoot for Component's Host Element.
-     *
-     * ### Example
-     * {@example core/ts/metadata/encapsulation.ts region='longform'}
      */
     ViewEncapsulation[ViewEncapsulation["ShadowDom"] = 3] = "ShadowDom";
 })(ViewEncapsulation || (ViewEncapsulation = {}));
@@ -34747,7 +34749,7 @@ var Version = /** @class */ (function () {
     }
     return Version;
 }());
-var VERSION = new Version('6.1.7');
+var VERSION = new Version('6.1.10');
 
 /**
  * @license
@@ -36143,13 +36145,11 @@ var ApplicationInitStatus = /** @class */ (function () {
         }
         this.initialized = true;
     };
-    ApplicationInitStatus.decorators = [
-        { type: Injectable }
-    ];
-    /** @nocollapse */
-    ApplicationInitStatus.ctorParameters = function () { return [
-        { type: Array, decorators: [{ type: Inject, args: [APP_INITIALIZER,] }, { type: Optional }] }
-    ]; };
+    ApplicationInitStatus = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Injectable(),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(0, Inject(APP_INITIALIZER)), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(0, Optional()),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [Array])
+    ], ApplicationInitStatus);
     return ApplicationInitStatus;
 }());
 
@@ -36230,9 +36230,9 @@ var Console = /** @class */ (function () {
         // tslint:disable-next-line:no-console
         console.warn(message);
     };
-    Console.decorators = [
-        { type: Injectable }
-    ];
+    Console = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Injectable()
+    ], Console);
     return Console;
 }());
 
@@ -36304,9 +36304,9 @@ var Compiler = /** @class */ (function () {
      * Returns the id for a given NgModule, if one is defined and known to the compiler.
      */
     Compiler.prototype.getModuleId = function (moduleType) { return undefined; };
-    Compiler.decorators = [
-        { type: Injectable }
-    ];
+    Compiler = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Injectable()
+    ], Compiler);
     return Compiler;
 }());
 /**
@@ -36334,11 +36334,9 @@ var CompilerFactory = /** @class */ (function () {
  * found in the LICENSE file at https://angular.io/license
  */
 /**
- * Represents an instance of a Component created via a {@link ComponentFactory}.
- *
- * `ComponentRef` provides access to the Component Instance as well other objects related to this
- * Component Instance and allows you to destroy the Component Instance via the {@link #destroy}
- * method.
+ * Represents a component created by a `ComponentFactory`.
+ * Provides access to the component instance and related objects,
+ * and provides the means of destroying the instance.
  *
  */
 var ComponentRef = /** @class */ (function () {
@@ -37151,13 +37149,10 @@ var Testability = /** @class */ (function () {
         // TODO(juliemr): implement.
         return [];
     };
-    Testability.decorators = [
-        { type: Injectable }
-    ];
-    /** @nocollapse */
-    Testability.ctorParameters = function () { return [
-        { type: NgZone }
-    ]; };
+    Testability = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Injectable(),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [NgZone])
+    ], Testability);
     return Testability;
 }());
 /**
@@ -37210,11 +37205,10 @@ var TestabilityRegistry = /** @class */ (function () {
         if (findInAncestors === void 0) { findInAncestors = true; }
         return _testabilityGetter.findTestabilityInTree(this, elem, findInAncestors);
     };
-    TestabilityRegistry.decorators = [
-        { type: Injectable }
-    ];
-    /** @nocollapse */
-    TestabilityRegistry.ctorParameters = function () { return []; };
+    TestabilityRegistry = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Injectable(),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [])
+    ], TestabilityRegistry);
     return TestabilityRegistry;
 }());
 var _NoopGetTestability = /** @class */ (function () {
@@ -37498,13 +37492,10 @@ var PlatformRef = /** @class */ (function () {
         enumerable: true,
         configurable: true
     });
-    PlatformRef.decorators = [
-        { type: Injectable }
-    ];
-    /** @nocollapse */
-    PlatformRef.ctorParameters = function () { return [
-        { type: Injector }
-    ]; };
+    PlatformRef = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Injectable(),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [Injector])
+    ], PlatformRef);
     return PlatformRef;
 }());
 function getNgZone(ngZoneOption) {
@@ -37615,6 +37606,7 @@ var ApplicationRef = /** @class */ (function () {
         this.isStable =
             Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["merge"])(isCurrentlyStable, isStable.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["share"])()));
     }
+    ApplicationRef_1 = ApplicationRef;
     /**
      * Bootstrap a new component at the root level of the application.
      *
@@ -37678,7 +37670,7 @@ var ApplicationRef = /** @class */ (function () {
         if (this._runningTick) {
             throw new Error('ApplicationRef.tick is called recursively');
         }
-        var scope = ApplicationRef._tickScope();
+        var scope = ApplicationRef_1._tickScope();
         try {
             this._runningTick = true;
             this._views.forEach(function (view) { return view.detectChanges(); });
@@ -37738,20 +37730,16 @@ var ApplicationRef = /** @class */ (function () {
         enumerable: true,
         configurable: true
     });
+    var ApplicationRef_1;
     /** @internal */
     ApplicationRef._tickScope = wtfCreateScope('ApplicationRef#tick()');
-    ApplicationRef.decorators = [
-        { type: Injectable }
-    ];
-    /** @nocollapse */
-    ApplicationRef.ctorParameters = function () { return [
-        { type: NgZone },
-        { type: Console },
-        { type: Injector },
-        { type: ErrorHandler },
-        { type: ComponentFactoryResolver },
-        { type: ApplicationInitStatus }
-    ]; };
+    ApplicationRef = ApplicationRef_1 = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Injectable(),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [NgZone, Console, Injector,
+            ErrorHandler,
+            ComponentFactoryResolver,
+            ApplicationInitStatus])
+    ], ApplicationRef);
     return ApplicationRef;
 }());
 function remove(list, el) {
@@ -38112,14 +38100,11 @@ var SystemJsNgModuleLoader = /** @class */ (function () {
             .then(function (module) { return module[exportName + factoryClassSuffix]; })
             .then(function (factory) { return checkNotEmpty(factory, module, exportName); });
     };
-    SystemJsNgModuleLoader.decorators = [
-        { type: Injectable }
-    ];
-    /** @nocollapse */
-    SystemJsNgModuleLoader.ctorParameters = function () { return [
-        { type: Compiler },
-        { type: SystemJsNgModuleLoaderConfig, decorators: [{ type: Optional }] }
-    ]; };
+    SystemJsNgModuleLoader = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Injectable(),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(1, Optional()),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [Compiler, SystemJsNgModuleLoaderConfig])
+    ], SystemJsNgModuleLoader);
     return SystemJsNgModuleLoader;
 }());
 function checkNotEmpty(value, modulePath, exportName) {
@@ -38137,15 +38122,20 @@ function checkNotEmpty(value, modulePath, exportName) {
  * found in the LICENSE file at https://angular.io/license
  */
 /**
- * Represents an Embedded Template that can be used to instantiate Embedded Views.
+ * Represents an embedded template that can be used to instantiate embedded views.
+ * To instantiate embedded views based on a template, use the `ViewContainerRef`
+ * method `createEmbeddedView()`.
  *
- * You can access a `TemplateRef`, in two ways. Via a directive placed on a `<ng-template>` element
- * (or directive prefixed with `*`) and have the `TemplateRef` for this Embedded View injected into
- * the constructor of the directive using the `TemplateRef` Token. Alternatively you can query for
- * the `TemplateRef` from a Component or a Directive via {@link Query}.
+ * Access a `TemplateRef` instance by placing a directive on an `<ng-template>`
+ * element (or directive prefixed with `*`). The `TemplateRef` for the embedded view
+ * is injected into the constructor of the directive,
+ * using the `TemplateRef` token.
  *
- * To instantiate Embedded Views based on a Template, use {@link ViewContainerRef#
- * createEmbeddedView}, which will create the View and attach it to the View Container.
+ * You can also use a `Query` to find a `TemplateRef` associated with
+ * a component or a directive.
+ *
+ * @see `ViewContainerRef`
+ * @see [Navigate the Component Tree with DI](guide/dependency-injection-navtree)
  *
  */
 var TemplateRef = /** @class */ (function () {
@@ -38162,21 +38152,17 @@ var TemplateRef = /** @class */ (function () {
  * found in the LICENSE file at https://angular.io/license
  */
 /**
- * Represents a container where one or more Views can be attached.
+ * Represents a container where one or more views can be attached to a component.
  *
- * The container can contain two kinds of Views. Host Views, created by instantiating a
- * {@link Component} via {@link #createComponent}, and Embedded Views, created by instantiating an
- * {@link TemplateRef Embedded Template} via {@link #createEmbeddedView}.
+ * Can contain *host views* (created by instantiating a
+ * component with the `createComponent()` method), and *embedded views*
+ * (created by instantiating a `TemplateRef` with the `createEmbeddedView()` method).
  *
- * The location of the View Container within the containing View is specified by the Anchor
- * `element`. Each View Container can have only one Anchor Element and each Anchor Element can only
- * have a single View Container.
+ * A view container instance can contain other view containers,
+ * creating a [view hierarchy](guide/glossary#view-tree).
  *
- * Root elements of Views attached to this container become siblings of the Anchor Element in
- * the Rendered View.
- *
- * To access a `ViewContainerRef` of an Element, you can either place a {@link Directive} injected
- * with `ViewContainerRef` on the Element, or you obtain it via a {@link ViewChild} query.
+ * @see `ComponentRef`
+ * @see `EmbeddedViewRef`
  *
  */
 var ViewContainerRef = /** @class */ (function () {
@@ -38230,7 +38216,7 @@ var ViewContainerRef = /** @class */ (function () {
  * when the `live` property is set to false, and reattaches it when the property
  * becomes true.
  *
- * <code-example path="core/ts/change_detect/change-detection.ts" region="detach"></code-example>
+ * <code-example path="core/ts/change_detect/change-detection.ts" region="reattach"></code-example>
  *
  */
 var ChangeDetectorRef = /** @class */ (function () {
@@ -38246,6 +38232,14 @@ var ChangeDetectorRef = /** @class */ (function () {
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
+/**
+ * Represents an Angular [view](guide/glossary#view),
+ * specifically the [host view](guide/glossary#view-tree) that is defined by a component.
+ * Also serves as the base class
+ * that adds destroy methods for [embedded views](guide/glossary#view-tree).
+ *
+ * @see `EmbeddedViewRef`
+ */
 var ViewRef = /** @class */ (function (_super) {
     Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"])(ViewRef, _super);
     function ViewRef() {
@@ -38254,21 +38248,21 @@ var ViewRef = /** @class */ (function (_super) {
     return ViewRef;
 }(ChangeDetectorRef));
 /**
- * Represents an Angular View.
+ * Represents an Angular [view](guide/glossary#view) in a view container.
+ * An [embedded view](guide/glossary#view-tree) can be referenced from a component
+ * other than the hosting component whose template defines it, or it can be defined
+ * independently by a `TemplateRef`.
  *
- * <!-- TODO: move the next two paragraphs to the dev guide -->
- * A View is a fundamental building block of the application UI. It is the smallest grouping of
- * Elements which are created and destroyed together.
+ * Properties of elements in a view can change, but the structure (number and order) of elements in
+ * a view cannot. Change the structure of elements by inserting, moving, or
+ * removing nested views in a view container.
  *
- * Properties of elements in a View can change, but the structure (number and order) of elements in
- * a View cannot. Changing the structure of Elements can only be done by inserting, moving or
- * removing nested Views via a `ViewContainerRef`. Each View can contain many View Containers.
- * <!-- /TODO -->
+ * @see `ViewContainerRef`
  *
  * @usageNotes
- * ### Example
  *
- * Given this template...
+ * The following template breaks down into two separate `TemplateRef` instances,
+ * an outer one and an inner one.
  *
  * ```
  * Count: {{items.length}}
@@ -38277,9 +38271,7 @@ var ViewRef = /** @class */ (function (_super) {
  * </ul>
  * ```
  *
- * We have two `TemplateRef`s:
- *
- * Outer `TemplateRef`:
+ * This is the outer `TemplateRef`:
  *
  * ```
  * Count: {{items.length}}
@@ -38288,15 +38280,13 @@ var ViewRef = /** @class */ (function (_super) {
  * </ul>
  * ```
  *
- * Inner `TemplateRef`:
+ * This is the inner `TemplateRef`:
  *
  * ```
  *   <li>{{item}}</li>
  * ```
  *
- * Notice that the original template is broken down into two separate `TemplateRef`s.
- *
- * The outer/inner `TemplateRef`s are then assembled into views like so:
+ * The outer and inner `TemplateRef` instances are assembled into views as follows:
  *
  * ```
  * <!-- ViewRef: outer-0 -->
@@ -39866,6 +39856,10 @@ function _keyValueDiffersFactory() {
 function _localeFactory(locale) {
     return locale || 'en-US';
 }
+/**
+ * A built-in [dependency injection token](guide/glossary#di-token)
+ * that is used to configure the root injector for bootstrapping.
+ */
 var APPLICATION_MODULE_PROVIDERS = [
     {
         provide: ApplicationRef,
@@ -39888,8 +39882,12 @@ var APPLICATION_MODULE_PROVIDERS = [
     },
 ];
 /**
- * This module includes the providers of @angular/core that are needed
- * to bootstrap components via `ApplicationRef`.
+ * Configures the root injector for an app with
+ * providers of `@angular/core` dependencies that `ApplicationRef` needs
+ * to bootstrap components.
+ *
+ * Re-exported by `BrowserModule`, which is included automatically in the root
+ * `AppModule` when you create a new app with the CLI `new` command.
  *
  * @experimental
  */
@@ -39897,13 +39895,10 @@ var ApplicationModule = /** @class */ (function () {
     // Inject ApplicationRef to make it eager...
     function ApplicationModule(appRef) {
     }
-    ApplicationModule.decorators = [
-        { type: NgModule, args: [{ providers: APPLICATION_MODULE_PROVIDERS },] }
-    ];
-    /** @nocollapse */
-    ApplicationModule.ctorParameters = function () { return [
-        { type: ApplicationRef }
-    ]; };
+    ApplicationModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        NgModule({ providers: APPLICATION_MODULE_PROVIDERS }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [ApplicationRef])
+    ], ApplicationModule);
     return ApplicationModule;
 }());
 
@@ -44900,34 +44895,55 @@ function callHooks(data, arr) {
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-var ngDevModeResetPerfCounters = (typeof ngDevMode == 'undefined' && (function (global) {
-    function ngDevModeResetPerfCounters() {
-        global['ngDevMode'] = {
-            firstTemplatePass: 0,
-            tNode: 0,
-            tView: 0,
-            rendererCreateTextNode: 0,
-            rendererSetText: 0,
-            rendererCreateElement: 0,
-            rendererAddEventListener: 0,
-            rendererSetAttribute: 0,
-            rendererRemoveAttribute: 0,
-            rendererSetProperty: 0,
-            rendererSetClassName: 0,
-            rendererAddClass: 0,
-            rendererRemoveClass: 0,
-            rendererSetStyle: 0,
-            rendererRemoveStyle: 0,
-            rendererDestroy: 0,
-            rendererDestroyNode: 0,
-            rendererMoveNode: 0,
-            rendererRemoveNode: 0,
-        };
+function ngDevModeResetPerfCounters() {
+    var newCounters = {
+        firstTemplatePass: 0,
+        tNode: 0,
+        tView: 0,
+        rendererCreateTextNode: 0,
+        rendererSetText: 0,
+        rendererCreateElement: 0,
+        rendererAddEventListener: 0,
+        rendererSetAttribute: 0,
+        rendererRemoveAttribute: 0,
+        rendererSetProperty: 0,
+        rendererSetClassName: 0,
+        rendererAddClass: 0,
+        rendererRemoveClass: 0,
+        rendererSetStyle: 0,
+        rendererRemoveStyle: 0,
+        rendererDestroy: 0,
+        rendererDestroyNode: 0,
+        rendererMoveNode: 0,
+        rendererRemoveNode: 0,
+    };
+    // NOTE: Under Ivy we may have both window & global defined in the Node
+    //    environment since ensureDocument() in render3.ts sets global.window.
+    if (typeof window != 'undefined') {
+        // Make sure to refer to ngDevMode as ['ngDevMode'] for closure.
+        window['ngDevMode'] = newCounters;
     }
+    if (typeof global != 'undefined') {
+        // Make sure to refer to ngDevMode as ['ngDevMode'] for closure.
+        global['ngDevMode'] = newCounters;
+    }
+    if (typeof self != 'undefined') {
+        // Make sure to refer to ngDevMode as ['ngDevMode'] for closure.
+        self['ngDevMode'] = newCounters;
+    }
+    return newCounters;
+}
+/**
+ * This checks to see if the `ngDevMode` has been set. If yes,
+ * than we honor it, otherwise we default to dev mode with additional checks.
+ *
+ * The idea is that unless we are doing production build where we explicitly
+ * set `ngDevMode == false` we should be helping the developer by providing
+ * as much early warning and errors as possible.
+ */
+if (typeof ngDevMode === 'undefined' || ngDevMode) {
     ngDevModeResetPerfCounters();
-    return ngDevModeResetPerfCounters;
-})(typeof window != 'undefined' && window || typeof self != 'undefined' && self ||
-    typeof global != 'undefined' && global));
+}
 
 /** Called when directives inject each other (creating a circular dependency) */
 function throwCyclicDependencyError(token) {
@@ -51914,7 +51930,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
 /**
- * @license Angular v6.1.7
+ * @license Angular v6.1.10
  * (c) 2010-2018 Google, Inc. https://angular.io/
  * License: MIT
  */
@@ -51933,27 +51949,30 @@ __webpack_require__.r(__webpack_exports__);
  * found in the LICENSE file at https://angular.io/license
  */
 /**
+ * @description
  * Base class for control directives.
  *
- * Only used internally in the forms module.
- *
+ * This class is only used internally in the `ReactiveFormsModule` and the `FormsModule`.
  *
  */
 var AbstractControlDirective = /** @class */ (function () {
     function AbstractControlDirective() {
     }
     Object.defineProperty(AbstractControlDirective.prototype, "value", {
-        /** The value of the control. */
+        /**
+         * @description
+         * Reports the value of the control if it is present, otherwise null.
+         */
         get: function () { return this.control ? this.control.value : null; },
         enumerable: true,
         configurable: true
     });
     Object.defineProperty(AbstractControlDirective.prototype, "valid", {
         /**
-         * A control is `valid` when its `status === VALID`.
-         *
-         * In order to have this status, the control must have passed all its
-         * validation checks.
+         * @description
+         * Reports whether the control is valid. A control is considered valid if no
+         * validation errors exist with the current value.
+         * If the control is not present, null is returned.
          */
         get: function () { return this.control ? this.control.valid : null; },
         enumerable: true,
@@ -51961,10 +51980,9 @@ var AbstractControlDirective = /** @class */ (function () {
     });
     Object.defineProperty(AbstractControlDirective.prototype, "invalid", {
         /**
-         * A control is `invalid` when its `status === INVALID`.
-         *
-         * In order to have this status, the control must have failed
-         * at least one of its validation checks.
+         * @description
+         * Reports whether the control is invalid, meaning that an error exists in the input value.
+         * If the control is not present, null is returned.
          */
         get: function () { return this.control ? this.control.invalid : null; },
         enumerable: true,
@@ -51972,10 +51990,10 @@ var AbstractControlDirective = /** @class */ (function () {
     });
     Object.defineProperty(AbstractControlDirective.prototype, "pending", {
         /**
-         * A control is `pending` when its `status === PENDING`.
-         *
-         * In order to have this status, the control must be in the
-         * middle of conducting a validation check.
+         * @description
+         * Reports whether a control is pending, meaning that that async validation is occurring and
+         * errors are not yet available for the input value. If the control is not present, null is
+         * returned.
          */
         get: function () { return this.control ? this.control.pending : null; },
         enumerable: true,
@@ -51983,11 +52001,10 @@ var AbstractControlDirective = /** @class */ (function () {
     });
     Object.defineProperty(AbstractControlDirective.prototype, "disabled", {
         /**
-         * A control is `disabled` when its `status === DISABLED`.
-         *
-         * Disabled controls are exempt from validation checks and
-         * are not included in the aggregate value of their ancestor
-         * controls.
+         * @description
+         * Reports whether the control is disabled, meaning that the control is disabled
+         * in the UI and is exempt from validation checks and excluded from aggregate
+         * values of ancestor controls. If the control is not present, null is returned.
          */
         get: function () { return this.control ? this.control.disabled : null; },
         enumerable: true,
@@ -51995,10 +52012,9 @@ var AbstractControlDirective = /** @class */ (function () {
     });
     Object.defineProperty(AbstractControlDirective.prototype, "enabled", {
         /**
-         * A control is `enabled` as long as its `status !== DISABLED`.
-         *
-         * In other words, it has a status of `VALID`, `INVALID`, or
-         * `PENDING`.
+         * @description
+         * Reports whether the control is enabled, meaning that the control is included in ancestor
+         * calculations of validity or value. If the control is not present, null is returned.
          */
         get: function () { return this.control ? this.control.enabled : null; },
         enumerable: true,
@@ -52006,8 +52022,8 @@ var AbstractControlDirective = /** @class */ (function () {
     });
     Object.defineProperty(AbstractControlDirective.prototype, "errors", {
         /**
-         * Returns any errors generated by failing validation. If there
-         * are no errors, it will return null.
+         * @description
+         * Reports the control's validation errors. If the control is not present, null is returned.
          */
         get: function () { return this.control ? this.control.errors : null; },
         enumerable: true,
@@ -52015,11 +52031,9 @@ var AbstractControlDirective = /** @class */ (function () {
     });
     Object.defineProperty(AbstractControlDirective.prototype, "pristine", {
         /**
-         * A control is `pristine` if the user has not yet changed
-         * the value in the UI.
-         *
-         * Note that programmatic changes to a control's value will
-         * *not* mark it dirty.
+         * @description
+         * Reports whether the control is pristine, meaning that the user has not yet changed
+         * the value in the UI. If the control is not present, null is returned.
          */
         get: function () { return this.control ? this.control.pristine : null; },
         enumerable: true,
@@ -52027,11 +52041,9 @@ var AbstractControlDirective = /** @class */ (function () {
     });
     Object.defineProperty(AbstractControlDirective.prototype, "dirty", {
         /**
-         * A control is `dirty` if the user has changed the value
-         * in the UI.
-         *
-         * Note that programmatic changes to a control's value will
-         * *not* mark it dirty.
+         * @description
+         * Reports whether the control is dirty, meaning that the user has changed
+         * the value in the UI. If the control is not present, null is returned.
          */
         get: function () { return this.control ? this.control.dirty : null; },
         enumerable: true,
@@ -52039,22 +52051,30 @@ var AbstractControlDirective = /** @class */ (function () {
     });
     Object.defineProperty(AbstractControlDirective.prototype, "touched", {
         /**
-         * A control is marked `touched` once the user has triggered
-         * a `blur` event on it.
+         * @description
+         * Reports whether the control is touched, meaning that the user has triggered
+         * a `blur` event on it. If the control is not present, null is returned.
          */
         get: function () { return this.control ? this.control.touched : null; },
         enumerable: true,
         configurable: true
     });
     Object.defineProperty(AbstractControlDirective.prototype, "status", {
+        /**
+         * @description
+         * Reports the validation status of the control. Possible values include:
+         * 'VALID', 'INVALID', 'DISABLED', and 'PENDING'.
+         * If the control is not present, null is returned.
+         */
         get: function () { return this.control ? this.control.status : null; },
         enumerable: true,
         configurable: true
     });
     Object.defineProperty(AbstractControlDirective.prototype, "untouched", {
         /**
-         * A control is `untouched` if the user has not yet triggered
-         * a `blur` event on it.
+         * @description
+         * Reports whether the control is untouched, meaning that the user has not yet triggered
+         * a `blur` event on it. If the control is not present, null is returned.
          */
         get: function () { return this.control ? this.control.untouched : null; },
         enumerable: true,
@@ -52062,8 +52082,9 @@ var AbstractControlDirective = /** @class */ (function () {
     });
     Object.defineProperty(AbstractControlDirective.prototype, "statusChanges", {
         /**
-         * Emits an event every time the validation status of the control
-         * is re-calculated.
+         * @description
+         * Returns a multicasting observable that emits a validation status whenever it is
+         * calculated for the control. If the control is not present, null is returned.
          */
         get: function () {
             return this.control ? this.control.statusChanges : null;
@@ -52073,8 +52094,10 @@ var AbstractControlDirective = /** @class */ (function () {
     });
     Object.defineProperty(AbstractControlDirective.prototype, "valueChanges", {
         /**
-         * Emits an event every time the value of the control changes, in
-         * the UI or programmatically.
+         * @description
+         * Returns a multicasting observable of value changes for the control that emits every time the
+         * value of the control changes in the UI or programmatically.
+         * If the control is not present, null is returned.
          */
         get: function () {
             return this.control ? this.control.valueChanges : null;
@@ -52084,22 +52107,17 @@ var AbstractControlDirective = /** @class */ (function () {
     });
     Object.defineProperty(AbstractControlDirective.prototype, "path", {
         /**
-         * Returns an array that represents the path from the top-level form
-         * to this control. Each index is the string name of the control on
-         * that level.
+         * @description
+         * Returns an array that represents the path from the top-level form to this control.
+         * Each index is the string name of the control on that level.
          */
         get: function () { return null; },
         enumerable: true,
         configurable: true
     });
     /**
-     * Resets the form control. This means by default:
-     *
-     * * it is marked as `pristine`
-     * * it is marked as `untouched`
-     * * value is set to null
-     *
-     * For more information, see `AbstractControl`.
+     * @description
+     * Resets the control with the provided value if the control is present.
      */
     AbstractControlDirective.prototype.reset = function (value) {
         if (value === void 0) { value = undefined; }
@@ -52107,19 +52125,18 @@ var AbstractControlDirective = /** @class */ (function () {
             this.control.reset(value);
     };
     /**
-     * Returns true if the control with the given path has the error specified. Otherwise
-     * returns false.
-     *
+     * @description
+     * Reports whether the control with the given path has the error specified.
      * If no path is given, it checks for the error on the present control.
+     * If the control is not present, false is returned.
      */
     AbstractControlDirective.prototype.hasError = function (errorCode, path) {
         return this.control ? this.control.hasError(errorCode, path) : false;
     };
     /**
-     * Returns error data if the control with the given path has the error specified. Otherwise
-     * returns null or undefined.
-     *
-     * If no path is given, it checks for the error on the present control.
+     * @description
+     * Reports error data for the control with the given path.
+     * If the control is not present, null is returned.
      */
     AbstractControlDirective.prototype.getError = function (errorCode, path) {
         return this.control ? this.control.getError(errorCode, path) : null;
@@ -52135,11 +52152,9 @@ var AbstractControlDirective = /** @class */ (function () {
  * found in the LICENSE file at https://angular.io/license
  */
 /**
- * A directive that contains multiple `NgControl`s.
- *
+ * @description
+ * A base class for directives that contain multiple registered instances of `NgControl`.
  * Only used by the forms module.
- *
- *
  */
 var ControlContainer = /** @class */ (function (_super) {
     Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"])(ControlContainer, _super);
@@ -52148,7 +52163,8 @@ var ControlContainer = /** @class */ (function (_super) {
     }
     Object.defineProperty(ControlContainer.prototype, "formDirective", {
         /**
-         * Get the form to which this container belongs.
+         * @description
+         * The top-level form directive for the control.
          */
         get: function () { return null; },
         enumerable: true,
@@ -52156,7 +52172,8 @@ var ControlContainer = /** @class */ (function (_super) {
     });
     Object.defineProperty(ControlContainer.prototype, "path", {
         /**
-         * Get the path to this container.
+         * @description
+         * The path to this group.
          */
         get: function () { return null; },
         enumerable: true,
@@ -52470,7 +52487,7 @@ var Validators = /** @class */ (function () {
      * @description
      * Validator that performs no operation.
      */
-    Validators.nullValidator = function (c) { return null; };
+    Validators.nullValidator = function (control) { return null; };
     Validators.compose = function (validators) {
         if (!validators)
             return null;
@@ -52555,12 +52572,15 @@ var CHECKBOX_VALUE_ACCESSOR = {
 /**
  * The accessor for writing a value and listening to changes on a checkbox input element.
  *
- *  ### Example
- *  ```
- *  <input type="checkbox" name="rememberLogin" ngModel>
- *  ```
+ * @usageNotes
+ * ### Example
  *
+ * ```
+ * <input type="checkbox" name="rememberLogin" ngModel>
+ * ```
  *
+ * @ngModule FormsModule
+ * @ngModule ReactiveFormsModule
  */
 var CheckboxControlValueAccessor = /** @class */ (function () {
     function CheckboxControlValueAccessor(_renderer, _elementRef) {
@@ -52577,18 +52597,14 @@ var CheckboxControlValueAccessor = /** @class */ (function () {
     CheckboxControlValueAccessor.prototype.setDisabledState = function (isDisabled) {
         this._renderer.setProperty(this._elementRef.nativeElement, 'disabled', isDisabled);
     };
-    CheckboxControlValueAccessor.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"], args: [{
-                    selector: 'input[type=checkbox][formControlName],input[type=checkbox][formControl],input[type=checkbox][ngModel]',
-                    host: { '(change)': 'onChange($event.target.checked)', '(blur)': 'onTouched()' },
-                    providers: [CHECKBOX_VALUE_ACCESSOR]
-                },] }
-    ];
-    /** @nocollapse */
-    CheckboxControlValueAccessor.ctorParameters = function () { return [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"] },
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"] }
-    ]; };
+    CheckboxControlValueAccessor = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"])({
+            selector: 'input[type=checkbox][formControlName],input[type=checkbox][formControl],input[type=checkbox][ngModel]',
+            host: { '(change)': 'onChange($event.target.checked)', '(blur)': 'onTouched()' },
+            providers: [CHECKBOX_VALUE_ACCESSOR]
+        }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"]])
+    ], CheckboxControlValueAccessor);
     return CheckboxControlValueAccessor;
 }());
 
@@ -52621,12 +52637,15 @@ var COMPOSITION_BUFFER_MODE = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["In
  * The default accessor for writing a value and listening to changes that is used by the
  * `NgModel`, `FormControlDirective`, and `FormControlName` directives.
  *
- *  ### Example
- *  ```
- *  <input type="text" name="searchQuery" ngModel>
- *  ```
+ * @usageNotes
+ * ### Example
  *
+ * ```
+ * <input type="text" name="searchQuery" ngModel>
+ * ```
  *
+ * @ngModule FormsModule
+ * @ngModule ReactiveFormsModule
  */
 var DefaultValueAccessor = /** @class */ (function () {
     function DefaultValueAccessor(_renderer, _elementRef, _compositionMode) {
@@ -52663,27 +52682,23 @@ var DefaultValueAccessor = /** @class */ (function () {
         this._composing = false;
         this._compositionMode && this.onChange(value);
     };
-    DefaultValueAccessor.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"], args: [{
-                    selector: 'input:not([type=checkbox])[formControlName],textarea[formControlName],input:not([type=checkbox])[formControl],textarea[formControl],input:not([type=checkbox])[ngModel],textarea[ngModel],[ngDefaultControl]',
-                    // TODO: vsavkin replace the above selector with the one below it once
-                    // https://github.com/angular/angular/issues/3011 is implemented
-                    // selector: '[ngModel],[formControl],[formControlName]',
-                    host: {
-                        '(input)': '$any(this)._handleInput($event.target.value)',
-                        '(blur)': 'onTouched()',
-                        '(compositionstart)': '$any(this)._compositionStart()',
-                        '(compositionend)': '$any(this)._compositionEnd($event.target.value)'
-                    },
-                    providers: [DEFAULT_VALUE_ACCESSOR]
-                },] }
-    ];
-    /** @nocollapse */
-    DefaultValueAccessor.ctorParameters = function () { return [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"] },
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"] },
-        { type: Boolean, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Optional"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"], args: [COMPOSITION_BUFFER_MODE,] }] }
-    ]; };
+    DefaultValueAccessor = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"])({
+            selector: 'input:not([type=checkbox])[formControlName],textarea[formControlName],input:not([type=checkbox])[formControl],textarea[formControl],input:not([type=checkbox])[ngModel],textarea[ngModel],[ngDefaultControl]',
+            // TODO: vsavkin replace the above selector with the one below it once
+            // https://github.com/angular/angular/issues/3011 is implemented
+            // selector: '[ngModel],[formControl],[formControlName]',
+            host: {
+                '(input)': '$any(this)._handleInput($event.target.value)',
+                '(blur)': 'onTouched()',
+                '(compositionstart)': '$any(this)._compositionStart()',
+                '(compositionend)': '$any(this)._compositionEnd($event.target.value)'
+            },
+            providers: [DEFAULT_VALUE_ACCESSOR]
+        }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(2, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Optional"])()), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(2, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(COMPOSITION_BUFFER_MODE)),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], Boolean])
+    ], DefaultValueAccessor);
     return DefaultValueAccessor;
 }());
 
@@ -52727,10 +52742,15 @@ var NUMBER_VALUE_ACCESSOR = {
  * The accessor for writing a number value and listening to changes that is used by the
  * `NgModel`, `FormControlDirective`, and `FormControlName` directives.
  *
- *  ### Example
- *  ```
- *  <input type="number" [(ngModel)]="age">
- *  ```
+ * @usageNotes
+ * ### Example
+ *
+ * ```
+ * <input type="number" [(ngModel)]="age">
+ * ```
+ *
+ * @ngModule FormsModule
+ * @ngModule ReactiveFormsModule
  */
 var NumberValueAccessor = /** @class */ (function () {
     function NumberValueAccessor(_renderer, _elementRef) {
@@ -52751,22 +52771,18 @@ var NumberValueAccessor = /** @class */ (function () {
     NumberValueAccessor.prototype.setDisabledState = function (isDisabled) {
         this._renderer.setProperty(this._elementRef.nativeElement, 'disabled', isDisabled);
     };
-    NumberValueAccessor.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"], args: [{
-                    selector: 'input[type=number][formControlName],input[type=number][formControl],input[type=number][ngModel]',
-                    host: {
-                        '(change)': 'onChange($event.target.value)',
-                        '(input)': 'onChange($event.target.value)',
-                        '(blur)': 'onTouched()'
-                    },
-                    providers: [NUMBER_VALUE_ACCESSOR]
-                },] }
-    ];
-    /** @nocollapse */
-    NumberValueAccessor.ctorParameters = function () { return [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"] },
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"] }
-    ]; };
+    NumberValueAccessor = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"])({
+            selector: 'input[type=number][formControlName],input[type=number][formControl],input[type=number][ngModel]',
+            host: {
+                '(change)': 'onChange($event.target.value)',
+                '(input)': 'onChange($event.target.value)',
+                '(blur)': 'onTouched()'
+            },
+            providers: [NUMBER_VALUE_ACCESSOR]
+        }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"]])
+    ], NumberValueAccessor);
     return NumberValueAccessor;
 }());
 
@@ -52781,33 +52797,65 @@ function unimplemented() {
     throw new Error('unimplemented');
 }
 /**
- * A base class that all control directive extend.
- * It binds a `FormControl` object to a DOM element.
- *
- * Used internally by Angular forms.
- *
- *
+ * @description
+ * A base class that all control `FormControl`-based directives extend. It binds a `FormControl`
+ * object to a DOM element.
  */
 var NgControl = /** @class */ (function (_super) {
     Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"])(NgControl, _super);
     function NgControl() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
-        /** @internal */
+        /**
+         * @description
+         * The parent form for the control.
+         *
+         * @internal
+         */
         _this._parent = null;
+        /**
+         * @description
+         * The name for the control
+         */
         _this.name = null;
+        /**
+         * @description
+         * The value accessor for the control
+         */
         _this.valueAccessor = null;
-        /** @internal */
+        /**
+         * @description
+         * The uncomposed array of synchronous validators for the control
+         *
+         * @internal
+         */
         _this._rawValidators = [];
-        /** @internal */
+        /**
+         * @description
+         * The uncomposed array of async validators for the control
+         *
+         * @internal
+         */
         _this._rawAsyncValidators = [];
         return _this;
     }
     Object.defineProperty(NgControl.prototype, "validator", {
+        /**
+         * @description
+         * The registered synchronous validator function for the control
+         *
+         * @throws An exception that this method is not implemented
+         */
         get: function () { return unimplemented(); },
         enumerable: true,
         configurable: true
     });
     Object.defineProperty(NgControl.prototype, "asyncValidator", {
+        /**
+         * @description
+         * The registered async validator function for the control
+         *
+         * @throws An exception that this method is not implemented
+         */
         get: function () { return unimplemented(); },
         enumerable: true,
         configurable: true
@@ -52859,9 +52907,9 @@ var RadioControlRegistry = /** @class */ (function () {
         return controlPair[0]._parent === accessor._control._parent &&
             controlPair[1].name === accessor.name;
     };
-    RadioControlRegistry.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"] }
-    ];
+    RadioControlRegistry = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])()
+    ], RadioControlRegistry);
     return RadioControlRegistry;
 }());
 /**
@@ -52876,6 +52924,7 @@ var RadioControlRegistry = /** @class */ (function () {
  * value accessor will be active on any radio control that has a form directive. You do
  * **not** need to add a special selector to activate it.
  *
+ * @usageNotes
  * ### How to use radio buttons with form directives
  *
  * To use radio buttons in a template-driven form, you'll want to ensure that radio buttons
@@ -52889,9 +52938,8 @@ var RadioControlRegistry = /** @class */ (function () {
  *
  * {@example forms/ts/reactiveRadioButtons/reactive_radio_button_example.ts region='Reactive'}
  *
- *  * **npm package**: `@angular/forms`
- *
- *
+ * @ngModule FormsModule
+ * @ngModule ReactiveFormsModule
  */
 var RadioControlValueAccessor = /** @class */ (function () {
     function RadioControlValueAccessor(_renderer, _elementRef, _registry, _injector) {
@@ -52935,25 +52983,27 @@ var RadioControlValueAccessor = /** @class */ (function () {
     RadioControlValueAccessor.prototype._throwNameError = function () {
         throw new Error("\n      If you define both a name and a formControlName attribute on your radio button, their values\n      must match. Ex: <input type=\"radio\" formControlName=\"food\" name=\"food\">\n    ");
     };
-    RadioControlValueAccessor.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"], args: [{
-                    selector: 'input[type=radio][formControlName],input[type=radio][formControl],input[type=radio][ngModel]',
-                    host: { '(change)': 'onChange()', '(blur)': 'onTouched()' },
-                    providers: [RADIO_VALUE_ACCESSOR]
-                },] }
-    ];
-    /** @nocollapse */
-    RadioControlValueAccessor.ctorParameters = function () { return [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"] },
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"] },
-        { type: RadioControlRegistry },
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Injector"] }
-    ]; };
-    RadioControlValueAccessor.propDecorators = {
-        name: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"] }],
-        formControlName: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"] }],
-        value: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"] }]
-    };
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)
+    ], RadioControlValueAccessor.prototype, "name", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)
+    ], RadioControlValueAccessor.prototype, "formControlName", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)
+    ], RadioControlValueAccessor.prototype, "value", void 0);
+    RadioControlValueAccessor = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"])({
+            selector: 'input[type=radio][formControlName],input[type=radio][formControl],input[type=radio][ngModel]',
+            host: { '(change)': 'onChange()', '(blur)': 'onTouched()' },
+            providers: [RADIO_VALUE_ACCESSOR]
+        }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"],
+            RadioControlRegistry, _angular_core__WEBPACK_IMPORTED_MODULE_1__["Injector"]])
+    ], RadioControlValueAccessor);
     return RadioControlValueAccessor;
 }());
 
@@ -52973,10 +53023,15 @@ var RANGE_VALUE_ACCESSOR = {
  * The accessor for writing a range value and listening to changes that is used by the
  * `NgModel`, `FormControlDirective`, and `FormControlName` directives.
  *
- *  ### Example
- *  ```
- *  <input type="range" [(ngModel)]="age" >
- *  ```
+ * @usageNotes
+ * ### Example
+ *
+ * ```
+ * <input type="range" [(ngModel)]="age" >
+ * ```
+ *
+ * @ngModule FormsModule
+ * @ngModule ReactiveFormsModule
  */
 var RangeValueAccessor = /** @class */ (function () {
     function RangeValueAccessor(_renderer, _elementRef) {
@@ -52995,22 +53050,18 @@ var RangeValueAccessor = /** @class */ (function () {
     RangeValueAccessor.prototype.setDisabledState = function (isDisabled) {
         this._renderer.setProperty(this._elementRef.nativeElement, 'disabled', isDisabled);
     };
-    RangeValueAccessor.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"], args: [{
-                    selector: 'input[type=range][formControlName],input[type=range][formControl],input[type=range][ngModel]',
-                    host: {
-                        '(change)': 'onChange($event.target.value)',
-                        '(input)': 'onChange($event.target.value)',
-                        '(blur)': 'onTouched()'
-                    },
-                    providers: [RANGE_VALUE_ACCESSOR]
-                },] }
-    ];
-    /** @nocollapse */
-    RangeValueAccessor.ctorParameters = function () { return [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"] },
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"] }
-    ]; };
+    RangeValueAccessor = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"])({
+            selector: 'input[type=range][formControlName],input[type=range][formControl],input[type=range][ngModel]',
+            host: {
+                '(change)': 'onChange($event.target.value)',
+                '(input)': 'onChange($event.target.value)',
+                '(blur)': 'onTouched()'
+            },
+            providers: [RANGE_VALUE_ACCESSOR]
+        }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"]])
+    ], RangeValueAccessor);
     return RangeValueAccessor;
 }());
 
@@ -53098,6 +53149,7 @@ function _extractId(valueString) {
  * value accessor will be active on any select control that has a form directive. You do
  * **not** need to add a special selector to activate it.
  *
+ * @usageNotes
  * ### How to use select controls with form directives
  *
  * To use a select in a template-driven form, simply add an `ngModel` and a `name`
@@ -53126,7 +53178,7 @@ function _extractId(valueString) {
  * `compareWith` takes a **function** which has two arguments: `option1` and `option2`.
  * If `compareWith` is given, Angular selects option by the return value of the function.
  *
- * #### Syntax
+ * ### Syntax
  *
  * ```
  * <select [compareWith]="compareFn"  [(ngModel)]="selectedCountries">
@@ -53145,9 +53197,8 @@ function _extractId(valueString) {
  * https://bugzilla.mozilla.org/show_bug.cgi?id=1024350
  * https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/4660045/
  *
- * * **npm package**: `@angular/forms`
- *
- *
+ * @ngModule FormsModule
+ * @ngModule ReactiveFormsModule
  */
 var SelectControlValueAccessor = /** @class */ (function () {
     function SelectControlValueAccessor(_renderer, _elementRef) {
@@ -53217,21 +53268,19 @@ var SelectControlValueAccessor = /** @class */ (function () {
         var id = _extractId(valueString);
         return this._optionMap.has(id) ? this._optionMap.get(id) : valueString;
     };
-    SelectControlValueAccessor.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"], args: [{
-                    selector: 'select:not([multiple])[formControlName],select:not([multiple])[formControl],select:not([multiple])[ngModel]',
-                    host: { '(change)': 'onChange($event.target.value)', '(blur)': 'onTouched()' },
-                    providers: [SELECT_VALUE_ACCESSOR]
-                },] }
-    ];
-    /** @nocollapse */
-    SelectControlValueAccessor.ctorParameters = function () { return [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"] },
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"] }
-    ]; };
-    SelectControlValueAccessor.propDecorators = {
-        compareWith: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"] }]
-    };
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Function),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [Function])
+    ], SelectControlValueAccessor.prototype, "compareWith", null);
+    SelectControlValueAccessor = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"])({
+            selector: 'select:not([multiple])[formControlName],select:not([multiple])[formControl],select:not([multiple])[ngModel]',
+            host: { '(change)': 'onChange($event.target.value)', '(blur)': 'onTouched()' },
+            providers: [SELECT_VALUE_ACCESSOR]
+        }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"]])
+    ], SelectControlValueAccessor);
     return SelectControlValueAccessor;
 }());
 /**
@@ -53241,7 +53290,8 @@ var SelectControlValueAccessor = /** @class */ (function () {
  *
  * See docs for `SelectControlValueAccessor` for usage examples.
  *
- *
+ * @ngModule FormsModule
+ * @ngModule ReactiveFormsModule
  */
 var NgSelectOption = /** @class */ (function () {
     function NgSelectOption(_element, _renderer, _select) {
@@ -53281,19 +53331,22 @@ var NgSelectOption = /** @class */ (function () {
             this._select.writeValue(this._select.value);
         }
     };
-    NgSelectOption.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"], args: [{ selector: 'option' },] }
-    ];
-    /** @nocollapse */
-    NgSelectOption.ctorParameters = function () { return [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"] },
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"] },
-        { type: SelectControlValueAccessor, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Optional"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Host"] }] }
-    ]; };
-    NgSelectOption.propDecorators = {
-        ngValue: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"], args: ['ngValue',] }],
-        value: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"], args: ['value',] }]
-    };
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])('ngValue'),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [Object])
+    ], NgSelectOption.prototype, "ngValue", null);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])('value'),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [Object])
+    ], NgSelectOption.prototype, "value", null);
+    NgSelectOption = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"])({ selector: 'option' }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(2, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Optional"])()), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(2, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Host"])()),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"],
+            SelectControlValueAccessor])
+    ], NgSelectOption);
     return NgSelectOption;
 }());
 
@@ -53324,7 +53377,8 @@ function _extractId$1(valueString) {
 /**
  * The accessor for writing a value and listening to changes on a select element.
  *
- *  ### Caveat: Options selection
+ * @usageNotes
+ * ### Caveat: Options selection
  *
  * Angular uses object identity to select options. It's possible for the identities of items
  * to change while the data does not. This can happen, for example, if the items are produced
@@ -53335,7 +53389,7 @@ function _extractId$1(valueString) {
  * input. `compareWith` takes a **function** which has two arguments: `option1` and `option2`.
  * If `compareWith` is given, Angular selects options by the return value of the function.
  *
- * #### Syntax
+ * ### Syntax
  *
  * ```
  * <select multiple [compareWith]="compareFn"  [(ngModel)]="selectedCountries">
@@ -53349,7 +53403,8 @@ function _extractId$1(valueString) {
  * }
  * ```
  *
- *
+ * @ngModule ReactiveFormsModule
+ * @ngModule FormsModule
  */
 var SelectMultipleControlValueAccessor = /** @class */ (function () {
     function SelectMultipleControlValueAccessor(_renderer, _elementRef) {
@@ -53448,26 +53503,25 @@ var SelectMultipleControlValueAccessor = /** @class */ (function () {
         var id = _extractId$1(valueString);
         return this._optionMap.has(id) ? this._optionMap.get(id)._value : valueString;
     };
-    SelectMultipleControlValueAccessor.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"], args: [{
-                    selector: 'select[multiple][formControlName],select[multiple][formControl],select[multiple][ngModel]',
-                    host: { '(change)': 'onChange($event.target)', '(blur)': 'onTouched()' },
-                    providers: [SELECT_MULTIPLE_VALUE_ACCESSOR]
-                },] }
-    ];
-    /** @nocollapse */
-    SelectMultipleControlValueAccessor.ctorParameters = function () { return [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"] },
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"] }
-    ]; };
-    SelectMultipleControlValueAccessor.propDecorators = {
-        compareWith: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"] }]
-    };
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Function),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [Function])
+    ], SelectMultipleControlValueAccessor.prototype, "compareWith", null);
+    SelectMultipleControlValueAccessor = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"])({
+            selector: 'select[multiple][formControlName],select[multiple][formControl],select[multiple][ngModel]',
+            host: { '(change)': 'onChange($event.target)', '(blur)': 'onTouched()' },
+            providers: [SELECT_MULTIPLE_VALUE_ACCESSOR]
+        }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"]])
+    ], SelectMultipleControlValueAccessor);
     return SelectMultipleControlValueAccessor;
 }());
 /**
  * Marks `<option>` as dynamic, so Angular can be notified when options change.
  *
+ * @usageNotes
  * ### Example
  *
  * ```
@@ -53475,6 +53529,8 @@ var SelectMultipleControlValueAccessor = /** @class */ (function () {
  *   <option *ngFor="let c of cities" [value]="c"></option>
  * </select>
  * ```
+ * @ngModule FormsModule
+ * @ngModule ReactiveFormsModule
  */
 var NgSelectMultipleOption = /** @class */ (function () {
     function NgSelectMultipleOption(_element, _renderer, _select) {
@@ -53524,19 +53580,22 @@ var NgSelectMultipleOption = /** @class */ (function () {
             this._select.writeValue(this._select.value);
         }
     };
-    NgSelectMultipleOption.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"], args: [{ selector: 'option' },] }
-    ];
-    /** @nocollapse */
-    NgSelectMultipleOption.ctorParameters = function () { return [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"] },
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"] },
-        { type: SelectMultipleControlValueAccessor, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Optional"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Host"] }] }
-    ]; };
-    NgSelectMultipleOption.propDecorators = {
-        ngValue: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"], args: ['ngValue',] }],
-        value: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"], args: ['value',] }]
-    };
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])('ngValue'),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [Object])
+    ], NgSelectMultipleOption.prototype, "ngValue", null);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])('value'),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [Object])
+    ], NgSelectMultipleOption.prototype, "value", null);
+    NgSelectMultipleOption = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"])({ selector: 'option' }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(2, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Optional"])()), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(2, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Host"])()),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"],
+            SelectMultipleControlValueAccessor])
+    ], NgSelectMultipleOption);
     return NgSelectMultipleOption;
 }());
 
@@ -53740,8 +53799,8 @@ function _ngModelWarning(name, type, instance, warningConfig) {
  * found in the LICENSE file at https://angular.io/license
  */
 /**
- * This is a base class for code shared between `NgModelGroup` and `FormGroupName`.
- *
+ * @description
+ * A base class for code shared between the `NgModelGroup` and `FormGroupName` directives.
  *
  */
 var AbstractFormGroupDirective = /** @class */ (function (_super) {
@@ -53749,10 +53808,20 @@ var AbstractFormGroupDirective = /** @class */ (function (_super) {
     function AbstractFormGroupDirective() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
+    /**
+     * @description
+     * An internal callback method triggered on the instance after the inputs are set.
+     * Registers the group with its parent group.
+     */
     AbstractFormGroupDirective.prototype.ngOnInit = function () {
         this._checkParentType();
         this.formDirective.addFormGroup(this);
     };
+    /**
+     * @description
+     * An internal callback method triggered before the instance is destroyed.
+     * Removes the group from its parent group.
+     */
     AbstractFormGroupDirective.prototype.ngOnDestroy = function () {
         if (this.formDirective) {
             this.formDirective.removeFormGroup(this);
@@ -53760,7 +53829,8 @@ var AbstractFormGroupDirective = /** @class */ (function (_super) {
     };
     Object.defineProperty(AbstractFormGroupDirective.prototype, "control", {
         /**
-         * Get the `FormGroup` backing this binding.
+         * @description
+         * The `FormGroup` bound to this directive.
          */
         get: function () { return this.formDirective.getFormGroup(this); },
         enumerable: true,
@@ -53768,7 +53838,8 @@ var AbstractFormGroupDirective = /** @class */ (function (_super) {
     });
     Object.defineProperty(AbstractFormGroupDirective.prototype, "path", {
         /**
-         * Get the path to this control group.
+         * @description
+         * The path to this group from the top-level directive.
          */
         get: function () { return controlPath(this.name, this._parent); },
         enumerable: true,
@@ -53776,18 +53847,27 @@ var AbstractFormGroupDirective = /** @class */ (function (_super) {
     });
     Object.defineProperty(AbstractFormGroupDirective.prototype, "formDirective", {
         /**
-         * Get the `Form` to which this group belongs.
+         * @description
+         * The top-level directive for this group if present, otherwise null.
          */
         get: function () { return this._parent ? this._parent.formDirective : null; },
         enumerable: true,
         configurable: true
     });
     Object.defineProperty(AbstractFormGroupDirective.prototype, "validator", {
+        /**
+         * @description
+         * The synchronous validators registered with this group.
+         */
         get: function () { return composeValidators(this._validators); },
         enumerable: true,
         configurable: true
     });
     Object.defineProperty(AbstractFormGroupDirective.prototype, "asyncValidator", {
+        /**
+         * @description
+         * The async validators registered with this group.
+         */
         get: function () {
             return composeAsyncValidators(this._asyncValidators);
         },
@@ -53869,43 +53949,41 @@ var ngControlStatusHost = {
  * * ng-untouched
  * * ng-touched
  *
- *
+ * @ngModule FormsModule
+ * @ngModule ReactiveFormsModule
  */
 var NgControlStatus = /** @class */ (function (_super) {
     Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"])(NgControlStatus, _super);
     function NgControlStatus(cd) {
         return _super.call(this, cd) || this;
     }
-    NgControlStatus.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"], args: [{ selector: '[formControlName],[ngModel],[formControl]', host: ngControlStatusHost },] }
-    ];
-    /** @nocollapse */
-    NgControlStatus.ctorParameters = function () { return [
-        { type: NgControl, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Self"] }] }
-    ]; };
+    NgControlStatus = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"])({ selector: '[formControlName],[ngModel],[formControl]', host: ngControlStatusHost }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(0, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Self"])()),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [NgControl])
+    ], NgControlStatus);
     return NgControlStatus;
 }(AbstractControlStatus));
 /**
  * Directive automatically applied to Angular form groups that sets CSS classes
  * based on control status (valid/invalid/dirty/etc).
  *
- *
+ * @ngModule FormsModule
+ * @ngModule ReactiveFormsModule
  */
 var NgControlStatusGroup = /** @class */ (function (_super) {
     Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"])(NgControlStatusGroup, _super);
     function NgControlStatusGroup(cd) {
         return _super.call(this, cd) || this;
     }
-    NgControlStatusGroup.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"], args: [{
-                    selector: '[formGroupName],[formArrayName],[ngModelGroup],[formGroup],form:not([ngNoForm]),[ngForm]',
-                    host: ngControlStatusHost
-                },] }
-    ];
-    /** @nocollapse */
-    NgControlStatusGroup.ctorParameters = function () { return [
-        { type: ControlContainer, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Self"] }] }
-    ]; };
+    NgControlStatusGroup = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"])({
+            selector: '[formGroupName],[formArrayName],[ngModelGroup],[formGroup],form:not([ngNoForm]),[ngForm]',
+            host: ngControlStatusHost
+        }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(0, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Self"])()),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [ControlContainer])
+    ], NgControlStatusGroup);
     return NgControlStatusGroup;
 }(AbstractControlStatus));
 
@@ -54381,6 +54459,7 @@ var AbstractControl = /** @class */ (function () {
      *
      * Calling `setErrors` also updates the validity of the parent control.
      *
+     * @usageNotes
      * ### Manually set the errors for a control
      *
      * ```
@@ -54408,6 +54487,7 @@ var AbstractControl = /** @class */ (function () {
      * @param path A dot-delimited string or array of string/number values that define the path to the
      * control.
      *
+     * @usageNotes
      * ### Retrieve a nested control
      *
      * For example, to get a `name` control nested within a `person` sub-group:
@@ -54950,6 +55030,7 @@ var FormGroup = /** @class */ (function (_super) {
      * Sets the value of the `FormGroup`. It accepts an object that matches
      * the structure of the group, with control names as keys.
      *
+     * @usageNotes
      * ### Set the complete value for the form group
      *
      * ```
@@ -54962,8 +55043,8 @@ var FormGroup = /** @class */ (function (_super) {
      *
      * form.setValue({first: 'Nancy', last: 'Drew'});
      * console.log(form.value);   // {first: 'Nancy', last: 'Drew'}
-     *
      * ```
+     *
      * @throws When strict checks fail, such as setting the value of a control
      * that doesn't exist or if you excluding the value of a control.
      *
@@ -54997,24 +55078,24 @@ var FormGroup = /** @class */ (function (_super) {
      *
      * It accepts both super-sets and sub-sets of the group without throwing an error.
      *
+     * @usageNotes
      * ### Patch the value for a form group
      *
-     *  ```
-     *  const form = new FormGroup({
-     *     first: new FormControl(),
-     *     last: new FormControl()
-     *  });
-     *  console.log(form.value);   // {first: null, last: null}
+     * ```
+     * const form = new FormGroup({
+     *    first: new FormControl(),
+     *    last: new FormControl()
+     * });
+     * console.log(form.value);   // {first: null, last: null}
      *
-     *  form.patchValue({first: 'Nancy'});
-     *  console.log(form.value);   // {first: 'Nancy', last: null}
+     * form.patchValue({first: 'Nancy'});
+     * console.log(form.value);   // {first: 'Nancy', last: null}
+     * ```
      *
-     *  ```
-     *
-     * @param value The object that matches the structure of the group
-     * @param options Configure options that determines how the control propagates changes and
-     * emits events after the value is patched
-     * * `onlySelf`: When true, each change only affects this control, and not its parent. Default is
+     * @param value The object that matches the structure of the group.
+     * @param options Configuration options that determine how the control propagates changes and
+     * emits events after the value is patched.
+     * * `onlySelf`: When true, each change only affects this control and not its parent. Default is
      * true.
      * * `emitEvent`: When true or not supplied (the default), both the `statusChanges` and
      * `valueChanges`
@@ -55271,7 +55352,7 @@ var FormArray = /** @class */ (function (_super) {
     * Creates a new `FormArray` instance.
     *
     * @param controls An array of child controls. Each child control is given an index
-    * wheh it is registered.
+    * where it is registered.
     *
     * @param validatorOrOpts A synchronous validator function, or an array of
     * such functions, or an `AbstractControlOptions` object that contains validation functions
@@ -55361,6 +55442,7 @@ var FormArray = /** @class */ (function (_super) {
      * to set the value of a control that doesn't exist or if you exclude the
      * value of a control.
      *
+     * @usageNotes
      * ### Set the values for the controls in the form array
      *
      * ```
@@ -55404,6 +55486,7 @@ var FormArray = /** @class */ (function (_super) {
      *
      * It accepts both super-sets and sub-sets of the array without throwing an error.
      *
+     * @usageNotes
      * ### Patch the values for controls in a form array
      *
      * ```
@@ -55448,6 +55531,7 @@ var FormArray = /** @class */ (function (_super) {
      * that matches the structure of the control. The state is a standalone value
      * or a form state object with both a value and a disabled status.
      *
+     * @usageNotes
      * ### Reset the values in a form array
      *
      * ```ts
@@ -55622,11 +55706,9 @@ var resolvedPromise = Promise.resolve(null);
  *
  * {@example forms/ts/simpleForm/simple_form_example.ts region='Component'}
  *
- * * **npm package**: `@angular/forms`
+ * **npm package**: `@angular/forms`
  *
- * * **NgModule**: `FormsModule`
- *
- *
+ * @ngModule FormsModule
  */
 var NgForm = /** @class */ (function (_super) {
     Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"])(NgForm, _super);
@@ -55732,23 +55814,22 @@ var NgForm = /** @class */ (function (_super) {
         path.pop();
         return path.length ? this.form.get(path) : this.form;
     };
-    NgForm.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"], args: [{
-                    selector: 'form:not([ngNoForm]):not([formGroup]),ngForm,[ngForm]',
-                    providers: [formDirectiveProvider],
-                    host: { '(submit)': 'onSubmit($event)', '(reset)': 'onReset()' },
-                    outputs: ['ngSubmit'],
-                    exportAs: 'ngForm'
-                },] }
-    ];
-    /** @nocollapse */
-    NgForm.ctorParameters = function () { return [
-        { type: Array, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Optional"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Self"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"], args: [NG_VALIDATORS,] }] },
-        { type: Array, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Optional"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Self"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"], args: [NG_ASYNC_VALIDATORS,] }] }
-    ]; };
-    NgForm.propDecorators = {
-        options: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"], args: ['ngFormOptions',] }]
-    };
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])('ngFormOptions'),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)
+    ], NgForm.prototype, "options", void 0);
+    NgForm = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"])({
+            selector: 'form:not([ngNoForm]):not([formGroup]),ngForm,[ngForm]',
+            providers: [formDirectiveProvider],
+            host: { '(submit)': 'onSubmit($event)', '(reset)': 'onReset()' },
+            outputs: ['ngSubmit'],
+            exportAs: 'ngForm'
+        }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(0, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Optional"])()), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(0, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Self"])()), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(0, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(NG_VALIDATORS)),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(1, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Optional"])()), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(1, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Self"])()), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(1, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(NG_ASYNC_VALIDATORS)),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [Array, Array])
+    ], NgForm);
     return NgForm;
 }(ControlContainer));
 
@@ -55807,11 +55888,7 @@ var modelGroupProvider = {
  *
  * {@example forms/ts/ngModelGroup/ng_model_group_example.ts region='Component'}
  *
- * * **npm package**: `@angular/forms`
- *
- * * **NgModule**: `FormsModule`
- *
- *
+ * @ngModule FormsModule
  */
 var NgModelGroup = /** @class */ (function (_super) {
     Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"])(NgModelGroup, _super);
@@ -55822,24 +55899,25 @@ var NgModelGroup = /** @class */ (function (_super) {
         _this._asyncValidators = asyncValidators;
         return _this;
     }
+    NgModelGroup_1 = NgModelGroup;
     /** @internal */
     NgModelGroup.prototype._checkParentType = function () {
-        if (!(this._parent instanceof NgModelGroup) && !(this._parent instanceof NgForm)) {
+        if (!(this._parent instanceof NgModelGroup_1) && !(this._parent instanceof NgForm)) {
             TemplateDrivenErrors.modelGroupParentException();
         }
     };
-    NgModelGroup.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"], args: [{ selector: '[ngModelGroup]', providers: [modelGroupProvider], exportAs: 'ngModelGroup' },] }
-    ];
-    /** @nocollapse */
-    NgModelGroup.ctorParameters = function () { return [
-        { type: ControlContainer, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Host"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["SkipSelf"] }] },
-        { type: Array, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Optional"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Self"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"], args: [NG_VALIDATORS,] }] },
-        { type: Array, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Optional"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Self"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"], args: [NG_ASYNC_VALIDATORS,] }] }
-    ]; };
-    NgModelGroup.propDecorators = {
-        name: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"], args: ['ngModelGroup',] }]
-    };
+    var NgModelGroup_1;
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])('ngModelGroup'),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)
+    ], NgModelGroup.prototype, "name", void 0);
+    NgModelGroup = NgModelGroup_1 = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"])({ selector: '[ngModelGroup]', providers: [modelGroupProvider], exportAs: 'ngModelGroup' }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(0, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Host"])()), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(0, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["SkipSelf"])()),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(1, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Optional"])()), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(1, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Self"])()), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(1, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(NG_VALIDATORS)),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(2, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Optional"])()), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(2, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Self"])()), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(2, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(NG_ASYNC_VALIDATORS)),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [ControlContainer, Array, Array])
+    ], NgModelGroup);
     return NgModelGroup;
 }(AbstractFormGroupDirective));
 
@@ -55924,11 +56002,7 @@ var resolvedPromise$1 = Promise.resolve(null);
  * * Radio buttons: `RadioControlValueAccessor`
  * * Selects: `SelectControlValueAccessor`
  *
- * **npm package**: `@angular/forms`
- *
- * **NgModule**: `FormsModule`
- *
- *
+ * @ngModule FormsModule
  */
 var NgModel = /** @class */ (function (_super) {
     Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"])(NgModel, _super);
@@ -56042,27 +56116,40 @@ var NgModel = /** @class */ (function (_super) {
             }
         });
     };
-    NgModel.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"], args: [{
-                    selector: '[ngModel]:not([formControlName]):not([formControl])',
-                    providers: [formControlBinding],
-                    exportAs: 'ngModel'
-                },] }
-    ];
-    /** @nocollapse */
-    NgModel.ctorParameters = function () { return [
-        { type: ControlContainer, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Optional"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Host"] }] },
-        { type: Array, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Optional"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Self"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"], args: [NG_VALIDATORS,] }] },
-        { type: Array, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Optional"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Self"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"], args: [NG_ASYNC_VALIDATORS,] }] },
-        { type: Array, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Optional"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Self"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"], args: [NG_VALUE_ACCESSOR,] }] }
-    ]; };
-    NgModel.propDecorators = {
-        name: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"] }],
-        isDisabled: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"], args: ['disabled',] }],
-        model: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"], args: ['ngModel',] }],
-        options: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"], args: ['ngModelOptions',] }],
-        update: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"], args: ['ngModelChange',] }]
-    };
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)
+    ], NgModel.prototype, "name", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])('disabled'),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Boolean)
+    ], NgModel.prototype, "isDisabled", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])('ngModel'),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)
+    ], NgModel.prototype, "model", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])('ngModelOptions'),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)
+    ], NgModel.prototype, "options", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])('ngModelChange'),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)
+    ], NgModel.prototype, "update", void 0);
+    NgModel = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"])({
+            selector: '[ngModel]:not([formControlName]):not([formControl])',
+            providers: [formControlBinding],
+            exportAs: 'ngModel'
+        }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(0, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Optional"])()), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(0, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Host"])()),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(1, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Optional"])()), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(1, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Self"])()), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(1, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(NG_VALIDATORS)),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(2, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Optional"])()), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(2, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Self"])()), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(2, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(NG_ASYNC_VALIDATORS)),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(3, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Optional"])()), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(3, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Self"])()), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(3, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(NG_VALUE_ACCESSOR)),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [ControlContainer,
+            Array,
+            Array, Array])
+    ], NgModel);
     return NgModel;
 }(NgControl));
 
@@ -56091,6 +56178,7 @@ var formControlBinding$1 = {
  * any values written to the DOM element through user input will be reflected in the
  * `FormControl` instance (view -> model).
  *
+ * @usageNotes
  * Use this directive if you'd like to create and manage a `FormControl` instance directly.
  * Simply create a `FormControl`, save it to your component class, and pass it into the
  * `FormControlDirective`.
@@ -56117,16 +56205,13 @@ var formControlBinding$1 = {
  *
  * {@example forms/ts/simpleFormControl/simple_form_control_example.ts region='Component'}
  *
- * * **npm package**: `@angular/forms`
- *
- * * **NgModule**: `ReactiveFormsModule`
- *
  * ### Use with ngModel
  *
  * Support for using the `ngModel` input property and `ngModelChange` event with reactive
  * form directives has been deprecated in Angular v6 and will be removed in Angular v7.
  *
  * Now deprecated:
+ *
  * ```html
  * <input [formControl]="control" [(ngModel)]="value">
  * ```
@@ -56187,7 +56272,7 @@ var formControlBinding$1 = {
  * pattern with a config value of `"always"`. This may help to track down where in the code
  * the pattern is being used as the code is being updated.
  *
- *
+ * @ngModule ReactiveFormsModule
  */
 var FormControlDirective = /** @class */ (function (_super) {
     Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"])(FormControlDirective, _super);
@@ -56208,6 +56293,7 @@ var FormControlDirective = /** @class */ (function (_super) {
         _this.valueAccessor = selectValueAccessor(_this, valueAccessors);
         return _this;
     }
+    FormControlDirective_1 = FormControlDirective;
     Object.defineProperty(FormControlDirective.prototype, "isDisabled", {
         set: function (isDisabled) { ReactiveErrors.disabledAttrWarning(); },
         enumerable: true,
@@ -56222,7 +56308,7 @@ var FormControlDirective = /** @class */ (function (_super) {
             this.form.updateValueAndValidity({ emitEvent: false });
         }
         if (isPropertyUpdated(changes, this.viewModel)) {
-            _ngModelWarning('formControl', FormControlDirective, this, this._ngModelWarningConfig);
+            _ngModelWarning('formControl', FormControlDirective_1, this, this._ngModelWarningConfig);
             this.form.setValue(this.model);
             this.viewModel = this.model;
         }
@@ -56256,6 +56342,7 @@ var FormControlDirective = /** @class */ (function (_super) {
     FormControlDirective.prototype._isControlChanged = function (changes) {
         return changes.hasOwnProperty('form');
     };
+    var FormControlDirective_1;
     /**
      * Static property used to track whether any ngModel warnings have been sent across
      * all instances of FormControlDirective. Used to support warning config of "once".
@@ -56263,22 +56350,32 @@ var FormControlDirective = /** @class */ (function (_super) {
      * @internal
      */
     FormControlDirective._ngModelWarningSentOnce = false;
-    FormControlDirective.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"], args: [{ selector: '[formControl]', providers: [formControlBinding$1], exportAs: 'ngForm' },] }
-    ];
-    /** @nocollapse */
-    FormControlDirective.ctorParameters = function () { return [
-        { type: Array, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Optional"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Self"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"], args: [NG_VALIDATORS,] }] },
-        { type: Array, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Optional"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Self"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"], args: [NG_ASYNC_VALIDATORS,] }] },
-        { type: Array, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Optional"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Self"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"], args: [NG_VALUE_ACCESSOR,] }] },
-        { type: undefined, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Optional"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"], args: [NG_MODEL_WITH_FORM_CONTROL_WARNING,] }] }
-    ]; };
-    FormControlDirective.propDecorators = {
-        form: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"], args: ['formControl',] }],
-        isDisabled: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"], args: ['disabled',] }],
-        model: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"], args: ['ngModel',] }],
-        update: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"], args: ['ngModelChange',] }]
-    };
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])('formControl'),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", FormControl)
+    ], FormControlDirective.prototype, "form", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])('disabled'),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Boolean),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [Boolean])
+    ], FormControlDirective.prototype, "isDisabled", null);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])('ngModel'),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)
+    ], FormControlDirective.prototype, "model", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])('ngModelChange'),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)
+    ], FormControlDirective.prototype, "update", void 0);
+    FormControlDirective = FormControlDirective_1 = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"])({ selector: '[formControl]', providers: [formControlBinding$1], exportAs: 'ngForm' }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(0, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Optional"])()), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(0, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Self"])()), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(0, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(NG_VALIDATORS)),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(1, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Optional"])()), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(1, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Self"])()), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(1, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(NG_ASYNC_VALIDATORS)),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(2, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Optional"])()), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(2, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Self"])()), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(2, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(NG_VALUE_ACCESSOR)),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(3, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Optional"])()), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(3, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(NG_MODEL_WITH_FORM_CONTROL_WARNING)),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [Array,
+            Array, Array, Object])
+    ], FormControlDirective);
     return FormControlDirective;
 }(NgControl));
 
@@ -56303,6 +56400,7 @@ var formDirectiveProvider$1 = {
  * and `FormArray` instances to child `FormControlName`, `FormGroupName`,
  * and `FormArrayName` directives.
  *
+ * @usageNotes
  * **Set value**: You can set the form's initial value when instantiating the
  * `FormGroup`, or you can set it programmatically later using the `FormGroup`'s
  * {@link AbstractControl#setValue setValue} or {@link AbstractControl#patchValue patchValue}
@@ -56323,11 +56421,7 @@ var formDirectiveProvider$1 = {
  *
  * {@example forms/ts/simpleFormGroup/simple_form_group_example.ts region='Component'}
  *
- * **npm package**: `@angular/forms`
- *
- * **NgModule**: `ReactiveFormsModule`
- *
- *
+ * @ngModule ReactiveFormsModule
  */
 var FormGroupDirective = /** @class */ (function (_super) {
     Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"])(FormGroupDirective, _super);
@@ -56435,23 +56529,25 @@ var FormGroupDirective = /** @class */ (function (_super) {
             ReactiveErrors.missingFormException();
         }
     };
-    FormGroupDirective.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"], args: [{
-                    selector: '[formGroup]',
-                    providers: [formDirectiveProvider$1],
-                    host: { '(submit)': 'onSubmit($event)', '(reset)': 'onReset()' },
-                    exportAs: 'ngForm'
-                },] }
-    ];
-    /** @nocollapse */
-    FormGroupDirective.ctorParameters = function () { return [
-        { type: Array, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Optional"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Self"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"], args: [NG_VALIDATORS,] }] },
-        { type: Array, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Optional"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Self"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"], args: [NG_ASYNC_VALIDATORS,] }] }
-    ]; };
-    FormGroupDirective.propDecorators = {
-        form: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"], args: ['formGroup',] }],
-        ngSubmit: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"] }]
-    };
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])('formGroup'),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", FormGroup)
+    ], FormGroupDirective.prototype, "form", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)
+    ], FormGroupDirective.prototype, "ngSubmit", void 0);
+    FormGroupDirective = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"])({
+            selector: '[formGroup]',
+            providers: [formDirectiveProvider$1],
+            host: { '(submit)': 'onSubmit($event)', '(reset)': 'onReset()' },
+            exportAs: 'ngForm'
+        }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(0, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Optional"])()), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(0, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Self"])()), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(0, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(NG_VALIDATORS)),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(1, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Optional"])()), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(1, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Self"])()), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(1, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(NG_ASYNC_VALIDATORS)),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [Array, Array])
+    ], FormGroupDirective);
     return FormGroupDirective;
 }(ControlContainer));
 
@@ -56482,6 +56578,7 @@ var formGroupNameProvider = {
  * form separately from the rest or when you'd like to group the values of certain
  * controls into their own nested object.
  *
+ * @usageNotes
  * **Access the group**: You can access the associated `FormGroup` using the
  * {@link AbstractControl#get get} method. Ex: `this.form.get('name')`.
  *
@@ -56504,11 +56601,7 @@ var formGroupNameProvider = {
  *
  * {@example forms/ts/nestedFormGroup/nested_form_group_example.ts region='Component'}
  *
- * * **npm package**: `@angular/forms`
- *
- * * **NgModule**: `ReactiveFormsModule`
- *
- *
+ * @ngModule ReactiveFormsModule
  */
 var FormGroupName = /** @class */ (function (_super) {
     Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"])(FormGroupName, _super);
@@ -56525,18 +56618,17 @@ var FormGroupName = /** @class */ (function (_super) {
             ReactiveErrors.groupParentException();
         }
     };
-    FormGroupName.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"], args: [{ selector: '[formGroupName]', providers: [formGroupNameProvider] },] }
-    ];
-    /** @nocollapse */
-    FormGroupName.ctorParameters = function () { return [
-        { type: ControlContainer, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Optional"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Host"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["SkipSelf"] }] },
-        { type: Array, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Optional"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Self"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"], args: [NG_VALIDATORS,] }] },
-        { type: Array, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Optional"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Self"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"], args: [NG_ASYNC_VALIDATORS,] }] }
-    ]; };
-    FormGroupName.propDecorators = {
-        name: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"], args: ['formGroupName',] }]
-    };
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])('formGroupName'),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)
+    ], FormGroupName.prototype, "name", void 0);
+    FormGroupName = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"])({ selector: '[formGroupName]', providers: [formGroupNameProvider] }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(0, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Optional"])()), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(0, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Host"])()), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(0, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["SkipSelf"])()),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(1, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Optional"])()), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(1, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Self"])()), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(1, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(NG_VALIDATORS)),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(2, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Optional"])()), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(2, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Self"])()), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(2, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(NG_ASYNC_VALIDATORS)),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [ControlContainer, Array, Array])
+    ], FormGroupName);
     return FormGroupName;
 }(AbstractFormGroupDirective));
 var formArrayNameProvider = {
@@ -56559,6 +56651,7 @@ var formArrayNameProvider = {
  * you're not sure how many there will be. Form arrays allow you to create new
  * form controls dynamically.
  *
+ * @usageNotes
  * **Access the array**: You can access the associated `FormArray` using the
  * {@link AbstractControl#get get} method on the parent `FormGroup`.
  * Ex: `this.form.get('cities')`.
@@ -56584,11 +56677,7 @@ var formArrayNameProvider = {
  *
  * {@example forms/ts/nestedFormArray/nested_form_array_example.ts region='Component'}
  *
- * * **npm package**: `@angular/forms`
- *
- * * **NgModule**: `ReactiveFormsModule`
- *
- *
+ * @ngModule ReactiveFormsModule
  */
 var FormArrayName = /** @class */ (function (_super) {
     Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"])(FormArrayName, _super);
@@ -56642,18 +56731,17 @@ var FormArrayName = /** @class */ (function (_super) {
             ReactiveErrors.arrayParentException();
         }
     };
-    FormArrayName.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"], args: [{ selector: '[formArrayName]', providers: [formArrayNameProvider] },] }
-    ];
-    /** @nocollapse */
-    FormArrayName.ctorParameters = function () { return [
-        { type: ControlContainer, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Optional"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Host"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["SkipSelf"] }] },
-        { type: Array, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Optional"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Self"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"], args: [NG_VALIDATORS,] }] },
-        { type: Array, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Optional"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Self"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"], args: [NG_ASYNC_VALIDATORS,] }] }
-    ]; };
-    FormArrayName.propDecorators = {
-        name: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"], args: ['formArrayName',] }]
-    };
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])('formArrayName'),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)
+    ], FormArrayName.prototype, "name", void 0);
+    FormArrayName = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"])({ selector: '[formArrayName]', providers: [formArrayNameProvider] }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(0, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Optional"])()), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(0, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Host"])()), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(0, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["SkipSelf"])()),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(1, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Optional"])()), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(1, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Self"])()), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(1, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(NG_VALIDATORS)),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(2, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Optional"])()), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(2, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Self"])()), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(2, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(NG_ASYNC_VALIDATORS)),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [ControlContainer, Array, Array])
+    ], FormArrayName);
     return FormArrayName;
 }(ControlContainer));
 function _hasInvalidParent(parent) {
@@ -56683,6 +56771,7 @@ var controlNameBinding = {
  * any values written to the DOM element through user input will be reflected in the
  * `FormControl` instance (view -> model).
  *
+ * @usageNotes
  * This directive is designed to be used with a parent `FormGroupDirective` (selector:
  * `[formGroup]`).
  *
@@ -56717,16 +56806,13 @@ var controlNameBinding = {
  * * Radio buttons: `RadioControlValueAccessor`
  * * Selects: `SelectControlValueAccessor`
  *
- * **npm package**: `@angular/forms`
- *
- * **NgModule**: `ReactiveFormsModule`
- *
  * ### Use with ngModel
  *
  * Support for using the `ngModel` input property and `ngModelChange` event with reactive
  * form directives has been deprecated in Angular v6 and will be removed in Angular v7.
  *
  * Now deprecated:
+ *
  * ```html
  * <form [formGroup]="form">
  *   <input formControlName="first" [(ngModel)]="value">
@@ -56791,7 +56877,7 @@ var controlNameBinding = {
  * pattern with a config value of `"always"`. This may help to track down where in the code
  * the pattern is being used as the code is being updated.
  *
- *
+ * @ngModule ReactiveFormsModule
  */
 var FormControlName = /** @class */ (function (_super) {
     Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"])(FormControlName, _super);
@@ -56814,6 +56900,7 @@ var FormControlName = /** @class */ (function (_super) {
         _this.valueAccessor = selectValueAccessor(_this, valueAccessors);
         return _this;
     }
+    FormControlName_1 = FormControlName;
     Object.defineProperty(FormControlName.prototype, "isDisabled", {
         set: function (isDisabled) { ReactiveErrors.disabledAttrWarning(); },
         enumerable: true,
@@ -56823,7 +56910,7 @@ var FormControlName = /** @class */ (function (_super) {
         if (!this._added)
             this._setUpControl();
         if (isPropertyUpdated(changes, this.viewModel)) {
-            _ngModelWarning('formControlName', FormControlName, this, this._ngModelWarningConfig);
+            _ngModelWarning('formControlName', FormControlName_1, this, this._ngModelWarningConfig);
             this.viewModel = this.model;
             this.formDirective.updateModel(this, this.model);
         }
@@ -56877,6 +56964,7 @@ var FormControlName = /** @class */ (function (_super) {
         }
         this._added = true;
     };
+    var FormControlName_1;
     /**
      * Static property used to track whether any ngModel warnings have been sent across
      * all instances of FormControlName. Used to support warning config of "once".
@@ -56884,23 +56972,34 @@ var FormControlName = /** @class */ (function (_super) {
      * @internal
      */
     FormControlName._ngModelWarningSentOnce = false;
-    FormControlName.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"], args: [{ selector: '[formControlName]', providers: [controlNameBinding] },] }
-    ];
-    /** @nocollapse */
-    FormControlName.ctorParameters = function () { return [
-        { type: ControlContainer, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Optional"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Host"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["SkipSelf"] }] },
-        { type: Array, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Optional"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Self"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"], args: [NG_VALIDATORS,] }] },
-        { type: Array, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Optional"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Self"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"], args: [NG_ASYNC_VALIDATORS,] }] },
-        { type: Array, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Optional"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Self"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"], args: [NG_VALUE_ACCESSOR,] }] },
-        { type: undefined, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Optional"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"], args: [NG_MODEL_WITH_FORM_CONTROL_WARNING,] }] }
-    ]; };
-    FormControlName.propDecorators = {
-        name: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"], args: ['formControlName',] }],
-        isDisabled: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"], args: ['disabled',] }],
-        model: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"], args: ['ngModel',] }],
-        update: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"], args: ['ngModelChange',] }]
-    };
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])('formControlName'),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)
+    ], FormControlName.prototype, "name", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])('disabled'),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Boolean),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [Boolean])
+    ], FormControlName.prototype, "isDisabled", null);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])('ngModel'),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)
+    ], FormControlName.prototype, "model", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])('ngModelChange'),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)
+    ], FormControlName.prototype, "update", void 0);
+    FormControlName = FormControlName_1 = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"])({ selector: '[formControlName]', providers: [controlNameBinding] }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(0, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Optional"])()), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(0, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Host"])()), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(0, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["SkipSelf"])()),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(1, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Optional"])()), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(1, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Self"])()), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(1, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(NG_VALIDATORS)),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(2, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Optional"])()), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(2, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Self"])()), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(2, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(NG_ASYNC_VALIDATORS)),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(3, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Optional"])()), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(3, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Self"])()), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(3, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(NG_VALUE_ACCESSOR)),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(4, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Optional"])()), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(4, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(NG_MODEL_WITH_FORM_CONTROL_WARNING)),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [ControlContainer,
+            Array,
+            Array, Array, Object])
+    ], FormControlName);
     return FormControlName;
 }(NgControl));
 
@@ -56925,13 +57024,15 @@ var CHECKBOX_REQUIRED_VALIDATOR = {
  * A Directive that adds the `required` validator to any controls marked with the
  * `required` attribute, via the `NG_VALIDATORS` binding.
  *
+ * @usageNotes
  * ### Example
  *
  * ```
  * <input name="fullName" ngModel required>
  * ```
  *
- *
+ * @ngModule FormsModule
+ * @ngModule ReactiveFormsModule
  */
 var RequiredValidator = /** @class */ (function () {
     function RequiredValidator() {
@@ -56946,26 +57047,29 @@ var RequiredValidator = /** @class */ (function () {
         enumerable: true,
         configurable: true
     });
-    RequiredValidator.prototype.validate = function (c) {
-        return this.required ? Validators.required(c) : null;
+    RequiredValidator.prototype.validate = function (control) {
+        return this.required ? Validators.required(control) : null;
     };
     RequiredValidator.prototype.registerOnValidatorChange = function (fn) { this._onChange = fn; };
-    RequiredValidator.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"], args: [{
-                    selector: ':not([type=checkbox])[required][formControlName],:not([type=checkbox])[required][formControl],:not([type=checkbox])[required][ngModel]',
-                    providers: [REQUIRED_VALIDATOR],
-                    host: { '[attr.required]': 'required ? "" : null' }
-                },] }
-    ];
-    RequiredValidator.propDecorators = {
-        required: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"] }]
-    };
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [Object])
+    ], RequiredValidator.prototype, "required", null);
+    RequiredValidator = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"])({
+            selector: ':not([type=checkbox])[required][formControlName],:not([type=checkbox])[required][formControl],:not([type=checkbox])[required][ngModel]',
+            providers: [REQUIRED_VALIDATOR],
+            host: { '[attr.required]': 'required ? "" : null' }
+        })
+    ], RequiredValidator);
     return RequiredValidator;
 }());
 /**
  * A Directive that adds the `required` validator to checkbox controls marked with the
  * `required` attribute, via the `NG_VALIDATORS` binding.
  *
+ * @usageNotes
  * ### Example
  *
  * ```
@@ -56973,22 +57077,24 @@ var RequiredValidator = /** @class */ (function () {
  * ```
  *
  * @experimental
+ * @ngModule FormsModule
+ * @ngModule ReactiveFormsModule
  */
 var CheckboxRequiredValidator = /** @class */ (function (_super) {
     Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"])(CheckboxRequiredValidator, _super);
     function CheckboxRequiredValidator() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
-    CheckboxRequiredValidator.prototype.validate = function (c) {
-        return this.required ? Validators.requiredTrue(c) : null;
+    CheckboxRequiredValidator.prototype.validate = function (control) {
+        return this.required ? Validators.requiredTrue(control) : null;
     };
-    CheckboxRequiredValidator.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"], args: [{
-                    selector: 'input[type=checkbox][required][formControlName],input[type=checkbox][required][formControl],input[type=checkbox][required][ngModel]',
-                    providers: [CHECKBOX_REQUIRED_VALIDATOR],
-                    host: { '[attr.required]': 'required ? "" : null' }
-                },] }
-    ];
+    CheckboxRequiredValidator = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"])({
+            selector: 'input[type=checkbox][required][formControlName],input[type=checkbox][required][formControl],input[type=checkbox][required][ngModel]',
+            providers: [CHECKBOX_REQUIRED_VALIDATOR],
+            host: { '[attr.required]': 'required ? "" : null' }
+        })
+    ], CheckboxRequiredValidator);
     return CheckboxRequiredValidator;
 }(RequiredValidator));
 /**
@@ -57003,6 +57109,7 @@ var EMAIL_VALIDATOR = {
  * A Directive that adds the `email` validator to controls marked with the
  * `email` attribute, via the `NG_VALIDATORS` binding.
  *
+ * @usageNotes
  * ### Example
  *
  * ```
@@ -57012,6 +57119,8 @@ var EMAIL_VALIDATOR = {
  * ```
  *
  * @experimental
+ * @ngModule FormsModule
+ * @ngModule ReactiveFormsModule
  */
 var EmailValidator = /** @class */ (function () {
     function EmailValidator() {
@@ -57025,25 +57134,28 @@ var EmailValidator = /** @class */ (function () {
         enumerable: true,
         configurable: true
     });
-    EmailValidator.prototype.validate = function (c) {
-        return this._enabled ? Validators.email(c) : null;
+    EmailValidator.prototype.validate = function (control) {
+        return this._enabled ? Validators.email(control) : null;
     };
     EmailValidator.prototype.registerOnValidatorChange = function (fn) { this._onChange = fn; };
-    EmailValidator.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"], args: [{
-                    selector: '[email][formControlName],[email][formControl],[email][ngModel]',
-                    providers: [EMAIL_VALIDATOR]
-                },] }
-    ];
-    EmailValidator.propDecorators = {
-        email: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"] }]
-    };
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [Object])
+    ], EmailValidator.prototype, "email", null);
+    EmailValidator = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"])({
+            selector: '[email][formControlName],[email][formControl],[email][ngModel]',
+            providers: [EMAIL_VALIDATOR]
+        })
+    ], EmailValidator);
     return EmailValidator;
 }());
 /**
  * Provider which adds `MinLengthValidator` to `NG_VALIDATORS`.
  *
- * ## Example:
+ * @usageNotes
+ * ### Example:
  *
  * {@example common/forms/ts/validators/validators.ts region='min'}
  */
@@ -57056,7 +57168,8 @@ var MIN_LENGTH_VALIDATOR = {
  * A directive which installs the `MinLengthValidator` for any `formControlName`,
  * `formControl`, or control with `ngModel` that also has a `minlength` attribute.
  *
- *
+ * @ngModule FormsModule
+ * @ngModule ReactiveFormsModule
  */
 var MinLengthValidator = /** @class */ (function () {
     function MinLengthValidator() {
@@ -57068,29 +57181,31 @@ var MinLengthValidator = /** @class */ (function () {
                 this._onChange();
         }
     };
-    MinLengthValidator.prototype.validate = function (c) {
-        return this.minlength == null ? null : this._validator(c);
+    MinLengthValidator.prototype.validate = function (control) {
+        return this.minlength == null ? null : this._validator(control);
     };
     MinLengthValidator.prototype.registerOnValidatorChange = function (fn) { this._onChange = fn; };
     MinLengthValidator.prototype._createValidator = function () {
         this._validator = Validators.minLength(parseInt(this.minlength, 10));
     };
-    MinLengthValidator.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"], args: [{
-                    selector: '[minlength][formControlName],[minlength][formControl],[minlength][ngModel]',
-                    providers: [MIN_LENGTH_VALIDATOR],
-                    host: { '[attr.minlength]': 'minlength ? minlength : null' }
-                },] }
-    ];
-    MinLengthValidator.propDecorators = {
-        minlength: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"] }]
-    };
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)
+    ], MinLengthValidator.prototype, "minlength", void 0);
+    MinLengthValidator = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"])({
+            selector: '[minlength][formControlName],[minlength][formControl],[minlength][ngModel]',
+            providers: [MIN_LENGTH_VALIDATOR],
+            host: { '[attr.minlength]': 'minlength ? minlength : null' }
+        })
+    ], MinLengthValidator);
     return MinLengthValidator;
 }());
 /**
  * Provider which adds `MaxLengthValidator` to `NG_VALIDATORS`.
  *
- * ## Example:
+ * @usageNotes
+ * ### Example:
  *
  * {@example common/forms/ts/validators/validators.ts region='max'}
  */
@@ -57103,7 +57218,8 @@ var MAX_LENGTH_VALIDATOR = {
  * A directive which installs the `MaxLengthValidator` for any `formControlName`,
  * `formControl`, or control with `ngModel` that also has a `maxlength` attribute.
  *
- *
+ * @ngModule FormsModule
+ * @ngModule ReactiveFormsModule
  */
 var MaxLengthValidator = /** @class */ (function () {
     function MaxLengthValidator() {
@@ -57115,23 +57231,24 @@ var MaxLengthValidator = /** @class */ (function () {
                 this._onChange();
         }
     };
-    MaxLengthValidator.prototype.validate = function (c) {
-        return this.maxlength != null ? this._validator(c) : null;
+    MaxLengthValidator.prototype.validate = function (control) {
+        return this.maxlength != null ? this._validator(control) : null;
     };
     MaxLengthValidator.prototype.registerOnValidatorChange = function (fn) { this._onChange = fn; };
     MaxLengthValidator.prototype._createValidator = function () {
         this._validator = Validators.maxLength(parseInt(this.maxlength, 10));
     };
-    MaxLengthValidator.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"], args: [{
-                    selector: '[maxlength][formControlName],[maxlength][formControl],[maxlength][ngModel]',
-                    providers: [MAX_LENGTH_VALIDATOR],
-                    host: { '[attr.maxlength]': 'maxlength ? maxlength : null' }
-                },] }
-    ];
-    MaxLengthValidator.propDecorators = {
-        maxlength: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"] }]
-    };
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)
+    ], MaxLengthValidator.prototype, "maxlength", void 0);
+    MaxLengthValidator = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"])({
+            selector: '[maxlength][formControlName],[maxlength][formControl],[maxlength][ngModel]',
+            providers: [MAX_LENGTH_VALIDATOR],
+            host: { '[attr.maxlength]': 'maxlength ? maxlength : null' }
+        })
+    ], MaxLengthValidator);
     return MaxLengthValidator;
 }());
 var PATTERN_VALIDATOR = {
@@ -57145,12 +57262,15 @@ var PATTERN_VALIDATOR = {
  * as the regex to validate Control value against.  Follows pattern attribute
  * semantics; i.e. regex must match entire Control value.
  *
+ * @usageNotes
  * ### Example
  *
  * ```
  * <input [name]="fullName" pattern="[a-zA-Z ]*" ngModel>
  * ```
  *
+ * @ngModule FormsModule
+ * @ngModule ReactiveFormsModule
  */
 var PatternValidator = /** @class */ (function () {
     function PatternValidator() {
@@ -57162,19 +57282,20 @@ var PatternValidator = /** @class */ (function () {
                 this._onChange();
         }
     };
-    PatternValidator.prototype.validate = function (c) { return this._validator(c); };
+    PatternValidator.prototype.validate = function (control) { return this._validator(control); };
     PatternValidator.prototype.registerOnValidatorChange = function (fn) { this._onChange = fn; };
     PatternValidator.prototype._createValidator = function () { this._validator = Validators.pattern(this.pattern); };
-    PatternValidator.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"], args: [{
-                    selector: '[pattern][formControlName],[pattern][formControl],[pattern][ngModel]',
-                    providers: [PATTERN_VALIDATOR],
-                    host: { '[attr.pattern]': 'pattern ? pattern : null' }
-                },] }
-    ];
-    PatternValidator.propDecorators = {
-        pattern: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"] }]
-    };
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)
+    ], PatternValidator.prototype, "pattern", void 0);
+    PatternValidator = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"])({
+            selector: '[pattern][formControlName],[pattern][formControl],[pattern][ngModel]',
+            providers: [PATTERN_VALIDATOR],
+            host: { '[attr.pattern]': 'pattern ? pattern : null' }
+        })
+    ], PatternValidator);
     return PatternValidator;
 }());
 
@@ -57286,9 +57407,9 @@ var FormBuilder = /** @class */ (function () {
             return this.control(controlConfig);
         }
     };
-    FormBuilder.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"] }
-    ];
+    FormBuilder = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])()
+    ], FormBuilder);
     return FormBuilder;
 }());
 
@@ -57299,7 +57420,7 @@ var FormBuilder = /** @class */ (function () {
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-var VERSION = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["Version"]('6.1.7');
+var VERSION = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["Version"]('6.1.10');
 
 /**
  * @license
@@ -57322,16 +57443,18 @@ var VERSION = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["Version"]('6.1.7')
  * ```
  *
  * @experimental
+ * @ngModule ReactiveFormsModule
+ * @ngModule FormsModule
  */
 var NgNoValidate = /** @class */ (function () {
     function NgNoValidate() {
     }
-    NgNoValidate.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"], args: [{
-                    selector: 'form:not([ngNoForm]):not([ngNativeValidate])',
-                    host: { 'novalidate': '' },
-                },] }
-    ];
+    NgNoValidate = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"])({
+            selector: 'form:not([ngNoForm]):not([ngNativeValidate])',
+            host: { 'novalidate': '' },
+        })
+    ], NgNoValidate);
     return NgNoValidate;
 }());
 
@@ -57370,12 +57493,12 @@ var REACTIVE_DRIVEN_DIRECTIVES = [FormControlDirective, FormGroupDirective, Form
 var InternalFormsSharedModule = /** @class */ (function () {
     function InternalFormsSharedModule() {
     }
-    InternalFormsSharedModule.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"], args: [{
-                    declarations: SHARED_FORM_DIRECTIVES,
-                    exports: SHARED_FORM_DIRECTIVES,
-                },] }
-    ];
+    InternalFormsSharedModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
+            declarations: SHARED_FORM_DIRECTIVES,
+            exports: SHARED_FORM_DIRECTIVES,
+        })
+    ], InternalFormsSharedModule);
     return InternalFormsSharedModule;
 }());
 
@@ -57387,26 +57510,28 @@ var InternalFormsSharedModule = /** @class */ (function () {
  * found in the LICENSE file at https://angular.io/license
  */
 /**
- * @description
- * An `NgModule` that registers the directives and providers for template-driven forms.
+ * Exports the required providers and directives for template-driven forms,
+ * making them available for import by NgModules that import this module.
+ * @see [Forms](guide/forms)
  *
  * @see [Forms Guide](/guide/forms)
  */
 var FormsModule = /** @class */ (function () {
     function FormsModule() {
     }
-    FormsModule.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"], args: [{
-                    declarations: TEMPLATE_DRIVEN_DIRECTIVES,
-                    providers: [RadioControlRegistry],
-                    exports: [InternalFormsSharedModule, TEMPLATE_DRIVEN_DIRECTIVES]
-                },] }
-    ];
+    FormsModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
+            declarations: TEMPLATE_DRIVEN_DIRECTIVES,
+            providers: [RadioControlRegistry],
+            exports: [InternalFormsSharedModule, TEMPLATE_DRIVEN_DIRECTIVES]
+        })
+    ], FormsModule);
     return FormsModule;
 }());
 /**
- * @description
- * An `NgModule` that registers the directives and providers for reactive forms.
+ * Exports the required infrastructure and directives for reactive forms,
+ * making them available for import by NgModules that import this module.
+ * @see [Forms](guide/reactive-forms)
  *
  * @see [Reactive Forms Guide](/guide/reactive-forms)
  *
@@ -57414,6 +57539,7 @@ var FormsModule = /** @class */ (function () {
 var ReactiveFormsModule = /** @class */ (function () {
     function ReactiveFormsModule() {
     }
+    ReactiveFormsModule_1 = ReactiveFormsModule;
     /**
      * @description
      * Provides options for configuring the reactive forms module.
@@ -57423,20 +57549,21 @@ var ReactiveFormsModule = /** @class */ (function () {
      */
     ReactiveFormsModule.withConfig = function (opts) {
         return {
-            ngModule: ReactiveFormsModule,
+            ngModule: ReactiveFormsModule_1,
             providers: [{
                     provide: NG_MODEL_WITH_FORM_CONTROL_WARNING,
                     useValue: opts.warnOnNgModelWithFormControl
                 }]
         };
     };
-    ReactiveFormsModule.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"], args: [{
-                    declarations: [REACTIVE_DRIVEN_DIRECTIVES],
-                    providers: [FormBuilder, RadioControlRegistry],
-                    exports: [InternalFormsSharedModule, REACTIVE_DRIVEN_DIRECTIVES]
-                },] }
-    ];
+    var ReactiveFormsModule_1;
+    ReactiveFormsModule = ReactiveFormsModule_1 = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
+            declarations: [REACTIVE_DRIVEN_DIRECTIVES],
+            providers: [FormBuilder, RadioControlRegistry],
+            exports: [InternalFormsSharedModule, REACTIVE_DRIVEN_DIRECTIVES]
+        })
+    ], ReactiveFormsModule);
     return ReactiveFormsModule;
 }());
 
@@ -57516,12 +57643,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "QueryEncoder", function() { return QueryEncoder; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "URLSearchParams", function() { return URLSearchParams; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VERSION", function() { return VERSION; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
 /**
- * @license Angular v6.1.7
+ * @license Angular v6.1.10
  * (c) 2010-2018 Google, Inc. https://angular.io/
  * License: MIT
  */
@@ -57549,11 +57676,10 @@ var BrowserXhr = /** @class */ (function () {
     function BrowserXhr() {
     }
     BrowserXhr.prototype.build = function () { return (new XMLHttpRequest()); };
-    BrowserXhr.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"] }
-    ];
-    /** @nocollapse */
-    BrowserXhr.ctorParameters = function () { return []; };
+    BrowserXhr = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])(),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [])
+    ], BrowserXhr);
     return BrowserXhr;
 }());
 
@@ -57646,6 +57772,7 @@ var ResponseContentType;
  * The only known difference between this `Headers` implementation and the spec is the
  * lack of an `entries` method.
  *
+ * @usageNotes
  * ### Example
  *
  * ```
@@ -57774,7 +57901,7 @@ var Headers = /** @class */ (function () {
         var serialized = {};
         this._headers.forEach(function (values, name) {
             var split = [];
-            values.forEach(function (v) { return split.push.apply(split, Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__spread"])(v.split(','))); });
+            values.forEach(function (v) { return split.push.apply(split, Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__spread"])(v.split(','))); });
             serialized[_this._normalizedNames.get(name)] = split;
         });
         return serialized;
@@ -57818,6 +57945,7 @@ var Headers = /** @class */ (function () {
  * This class may be used in tests to build {@link Response Responses} for
  * mock responses (see {@link MockBackend}).
  *
+ * @usageNotes
  * ### Example
  *
  * ```typescript
@@ -57853,6 +57981,7 @@ var ResponseOptions = /** @class */ (function () {
      * This may be useful when sharing a base `ResponseOptions` object inside tests,
      * where certain properties may change from test to test.
      *
+     * @usageNotes
      * ### Example
      *
      * ```typescript
@@ -57892,6 +58021,7 @@ var ResponseOptions = /** @class */ (function () {
  * when configuring an {@link Injector}, in order to override the default options
  * used by {@link Http} to create {@link Response Responses}.
  *
+ * @usageNotes
  * ### Example
  *
  * ```typescript
@@ -57928,15 +58058,14 @@ var ResponseOptions = /** @class */ (function () {
  * @deprecated see https://angular.io/guide/http
  */
 var BaseResponseOptions = /** @class */ (function (_super) {
-    Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__extends"])(BaseResponseOptions, _super);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"])(BaseResponseOptions, _super);
     function BaseResponseOptions() {
         return _super.call(this, { status: 200, statusText: 'Ok', type: ResponseType.Default, headers: new Headers() }) || this;
     }
-    BaseResponseOptions.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"] }
-    ];
-    /** @nocollapse */
-    BaseResponseOptions.ctorParameters = function () { return []; };
+    BaseResponseOptions = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])(),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [])
+    ], BaseResponseOptions);
     return BaseResponseOptions;
 }(ResponseOptions));
 
@@ -58041,7 +58170,7 @@ function paramParser(rawParams) {
         var params = rawParams.split('&');
         params.forEach(function (param) {
             var eqIdx = param.indexOf('=');
-            var _a = Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__read"])(eqIdx == -1 ? [param, ''] : [param.slice(0, eqIdx), param.slice(eqIdx + 1)], 2), key = _a[0], val = _a[1];
+            var _a = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__read"])(eqIdx == -1 ? [param, ''] : [param.slice(0, eqIdx), param.slice(eqIdx + 1)], 2), key = _a[0], val = _a[1];
             var list = map.get(key) || [];
             list.push(val);
             map.set(key, list);
@@ -58055,8 +58184,8 @@ function paramParser(rawParams) {
 var QueryEncoder = /** @class */ (function () {
     function QueryEncoder() {
     }
-    QueryEncoder.prototype.encodeKey = function (k) { return standardEncoding(k); };
-    QueryEncoder.prototype.encodeValue = function (v) { return standardEncoding(v); };
+    QueryEncoder.prototype.encodeKey = function (key) { return standardEncoding(key); };
+    QueryEncoder.prototype.encodeValue = function (value) { return standardEncoding(value); };
     return QueryEncoder;
 }());
 function standardEncoding(v) {
@@ -58305,6 +58434,7 @@ var Body = /** @class */ (function () {
  * usually instantiated by end-users, it is the primary object interacted with when it comes time to
  * add data to a view.
  *
+ * @usageNotes
  * ### Example
  *
  * ```
@@ -58319,7 +58449,7 @@ var Body = /** @class */ (function () {
  * @deprecated see https://angular.io/guide/http
  */
 var Response = /** @class */ (function (_super) {
-    Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__extends"])(Response, _super);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"])(Response, _super);
     function Response(responseOptions) {
         var _this = _super.call(this) || this;
         _this._body = responseOptions.body;
@@ -58382,9 +58512,9 @@ var BrowserJsonp = /** @class */ (function () {
             node.parentNode.removeChild((node));
         }
     };
-    BrowserJsonp.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"] }
-    ];
+    BrowserJsonp = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])()
+    ], BrowserJsonp);
     return BrowserJsonp;
 }());
 
@@ -58490,7 +58620,7 @@ var JSONPConnection = /** @class */ (function () {
  * @deprecated see https://angular.io/guide/http
  */
 var JSONPBackend = /** @class */ (function (_super) {
-    Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__extends"])(JSONPBackend, _super);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"])(JSONPBackend, _super);
     /** @internal */
     function JSONPBackend(_browserJSONP, _baseResponseOptions) {
         var _this = _super.call(this) || this;
@@ -58501,14 +58631,10 @@ var JSONPBackend = /** @class */ (function (_super) {
     JSONPBackend.prototype.createConnection = function (request) {
         return new JSONPConnection(request, this._browserJSONP, this._baseResponseOptions);
     };
-    JSONPBackend.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"] }
-    ];
-    /** @nocollapse */
-    JSONPBackend.ctorParameters = function () { return [
-        { type: BrowserJsonp },
-        { type: ResponseOptions }
-    ]; };
+    JSONPBackend = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])(),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [BrowserJsonp, ResponseOptions])
+    ], JSONPBackend);
     return JSONPBackend;
 }(ConnectionBackend));
 
@@ -58691,6 +58817,7 @@ var CookieXSRFStrategy = /** @class */ (function () {
  * overridden if a different backend implementation should be used,
  * such as in a node backend.
  *
+ * @usageNotes
  * ### Example
  *
  * ```
@@ -58720,15 +58847,11 @@ var XHRBackend = /** @class */ (function () {
         this._xsrfStrategy.configureRequest(request);
         return new XHRConnection(request, this._browserXHR, this._baseResponseOptions);
     };
-    XHRBackend.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"] }
-    ];
-    /** @nocollapse */
-    XHRBackend.ctorParameters = function () { return [
-        { type: BrowserXhr },
-        { type: ResponseOptions },
-        { type: XSRFStrategy }
-    ]; };
+    XHRBackend = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])(),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [BrowserXhr, ResponseOptions,
+            XSRFStrategy])
+    ], XHRBackend);
     return XHRBackend;
 }());
 
@@ -58898,15 +59021,14 @@ var RequestOptions = /** @class */ (function () {
  * @deprecated see https://angular.io/guide/http
  */
 var BaseRequestOptions = /** @class */ (function (_super) {
-    Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__extends"])(BaseRequestOptions, _super);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"])(BaseRequestOptions, _super);
     function BaseRequestOptions() {
         return _super.call(this, { method: RequestMethod.Get, headers: new Headers() }) || this;
     }
-    BaseRequestOptions.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"] }
-    ];
-    /** @nocollapse */
-    BaseRequestOptions.ctorParameters = function () { return []; };
+    BaseRequestOptions = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])(),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [])
+    ], BaseRequestOptions);
     return BaseRequestOptions;
 }(RequestOptions));
 
@@ -58958,7 +59080,7 @@ var BaseRequestOptions = /** @class */ (function (_super) {
  * @deprecated see https://angular.io/guide/http
  */
 var Request = /** @class */ (function (_super) {
-    Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__extends"])(Request, _super);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"])(Request, _super);
     function Request(requestOptions) {
         var _this = _super.call(this) || this;
         // TODO: assert that url is present
@@ -59115,6 +59237,7 @@ function mergeOptions(defaultOpts, providedOpts, method, url) {
  * `request` returns an `Observable` which will emit a single {@link Response} when a
  * response is received.
  *
+ * @usageNotes
  * ### Example
  *
  * ```typescript
@@ -59235,21 +59358,17 @@ var Http = /** @class */ (function () {
     Http.prototype.options = function (url, options) {
         return this.request(new Request(mergeOptions(this._defaultOptions, options, RequestMethod.Options, url)));
     };
-    Http.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"] }
-    ];
-    /** @nocollapse */
-    Http.ctorParameters = function () { return [
-        { type: ConnectionBackend },
-        { type: RequestOptions }
-    ]; };
+    Http = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])(),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [ConnectionBackend, RequestOptions])
+    ], Http);
     return Http;
 }());
 /**
  * @deprecated see https://angular.io/guide/http
  */
 var Jsonp = /** @class */ (function (_super) {
-    Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__extends"])(Jsonp, _super);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"])(Jsonp, _super);
     function Jsonp(backend, defaultOptions) {
         return _super.call(this, backend, defaultOptions) || this;
     }
@@ -59284,14 +59403,10 @@ var Jsonp = /** @class */ (function (_super) {
         }
         return responseObservable;
     };
-    Jsonp.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"] }
-    ];
-    /** @nocollapse */
-    Jsonp.ctorParameters = function () { return [
-        { type: ConnectionBackend },
-        { type: RequestOptions }
-    ]; };
+    Jsonp = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])(),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [ConnectionBackend, RequestOptions])
+    ], Jsonp);
     return Jsonp;
 }(Http));
 
@@ -59319,20 +59434,20 @@ function jsonpFactory(jsonpBackend, requestOptions) {
 var HttpModule = /** @class */ (function () {
     function HttpModule() {
     }
-    HttpModule.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"], args: [{
-                    providers: [
-                        // TODO(pascal): use factory type annotations once supported in DI
-                        // issue: https://github.com/angular/angular/issues/3183
-                        { provide: Http, useFactory: httpFactory, deps: [XHRBackend, RequestOptions] },
-                        BrowserXhr,
-                        { provide: RequestOptions, useClass: BaseRequestOptions },
-                        { provide: ResponseOptions, useClass: BaseResponseOptions },
-                        XHRBackend,
-                        { provide: XSRFStrategy, useFactory: _createDefaultCookieXSRFStrategy },
-                    ],
-                },] }
-    ];
+    HttpModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
+            providers: [
+                // TODO(pascal): use factory type annotations once supported in DI
+                // issue: https://github.com/angular/angular/issues/3183
+                { provide: Http, useFactory: httpFactory, deps: [XHRBackend, RequestOptions] },
+                BrowserXhr,
+                { provide: RequestOptions, useClass: BaseRequestOptions },
+                { provide: ResponseOptions, useClass: BaseResponseOptions },
+                XHRBackend,
+                { provide: XSRFStrategy, useFactory: _createDefaultCookieXSRFStrategy },
+            ],
+        })
+    ], HttpModule);
     return HttpModule;
 }());
 /**
@@ -59343,19 +59458,19 @@ var HttpModule = /** @class */ (function () {
 var JsonpModule = /** @class */ (function () {
     function JsonpModule() {
     }
-    JsonpModule.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"], args: [{
-                    providers: [
-                        // TODO(pascal): use factory type annotations once supported in DI
-                        // issue: https://github.com/angular/angular/issues/3183
-                        { provide: Jsonp, useFactory: jsonpFactory, deps: [JSONPBackend, RequestOptions] },
-                        BrowserJsonp,
-                        { provide: RequestOptions, useClass: BaseRequestOptions },
-                        { provide: ResponseOptions, useClass: BaseResponseOptions },
-                        JSONPBackend,
-                    ],
-                },] }
-    ];
+    JsonpModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
+            providers: [
+                // TODO(pascal): use factory type annotations once supported in DI
+                // issue: https://github.com/angular/angular/issues/3183
+                { provide: Jsonp, useFactory: jsonpFactory, deps: [JSONPBackend, RequestOptions] },
+                BrowserJsonp,
+                { provide: RequestOptions, useClass: BaseRequestOptions },
+                { provide: ResponseOptions, useClass: BaseResponseOptions },
+                JSONPBackend,
+            ],
+        })
+    ], JsonpModule);
     return JsonpModule;
 }());
 
@@ -59369,7 +59484,7 @@ var JsonpModule = /** @class */ (function () {
 /**
  * @deprecated see https://angular.io/guide/http
  */
-var VERSION = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["Version"]('6.1.7');
+var VERSION = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["Version"]('6.1.10');
 
 /**
  * @license
@@ -59430,7 +59545,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
 /**
- * @license Angular v6.1.7
+ * @license Angular v6.1.10
  * (c) 2010-2018 Google, Inc. https://angular.io/
  * License: MIT
  */
@@ -59786,9 +59901,9 @@ var ResourceLoaderImpl = /** @class */ (function (_super) {
         xhr.send();
         return promise;
     };
-    ResourceLoaderImpl.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"] }
-    ];
+    ResourceLoaderImpl = Object(tslib__WEBPACK_IMPORTED_MODULE_2__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])()
+    ], ResourceLoaderImpl);
     return ResourceLoaderImpl;
 }(_angular_compiler__WEBPACK_IMPORTED_MODULE_0__["ResourceLoader"]));
 
@@ -59859,7 +59974,7 @@ var CachedResourceLoader = /** @class */ (function (_super) {
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-var VERSION = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["Version"]('6.1.7');
+var VERSION = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["Version"]('6.1.10');
 
 /**
  * @license
@@ -59966,7 +60081,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /**
- * @license Angular v6.1.7
+ * @license Angular v6.1.10
  * (c) 2010-2018 Google, Inc. https://angular.io/
  * License: MIT
  */
@@ -60584,13 +60699,11 @@ var BrowserPlatformLocation = /** @class */ (function (_super) {
     };
     BrowserPlatformLocation.prototype.forward = function () { this._history.forward(); };
     BrowserPlatformLocation.prototype.back = function () { this._history.back(); };
-    BrowserPlatformLocation.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Injectable"] }
-    ];
-    /** @nocollapse */
-    BrowserPlatformLocation.ctorParameters = function () { return [
-        { type: undefined, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Inject"], args: [DOCUMENT$1,] }] }
-    ]; };
+    BrowserPlatformLocation = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Injectable"])(),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(0, Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Inject"])(DOCUMENT$1)),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [Object])
+    ], BrowserPlatformLocation);
     return BrowserPlatformLocation;
 }(_angular_common__WEBPACK_IMPORTED_MODULE_1__["PlatformLocation"]));
 
@@ -60828,14 +60941,11 @@ var EventManager = /** @class */ (function () {
         }
         throw new Error("No event manager plugin found for event " + eventName);
     };
-    EventManager.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Injectable"] }
-    ];
-    /** @nocollapse */
-    EventManager.ctorParameters = function () { return [
-        { type: Array, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Inject"], args: [EVENT_MANAGER_PLUGINS,] }] },
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["NgZone"] }
-    ]; };
+    EventManager = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Injectable"])(),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(0, Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Inject"])(EVENT_MANAGER_PLUGINS)),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [Array, _angular_core__WEBPACK_IMPORTED_MODULE_2__["NgZone"]])
+    ], EventManager);
     return EventManager;
 }());
 var EventManagerPlugin = /** @class */ (function () {
@@ -60877,9 +60987,9 @@ var SharedStylesHost = /** @class */ (function () {
     };
     SharedStylesHost.prototype.onStylesAdded = function (additions) { };
     SharedStylesHost.prototype.getAllStyles = function () { return Array.from(this._stylesSet); };
-    SharedStylesHost.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Injectable"] }
-    ];
+    SharedStylesHost = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Injectable"])()
+    ], SharedStylesHost);
     return SharedStylesHost;
 }());
 var DomSharedStylesHost = /** @class */ (function (_super) {
@@ -60910,13 +61020,11 @@ var DomSharedStylesHost = /** @class */ (function (_super) {
         this._hostNodes.forEach(function (hostNode) { return _this._addStylesToHost(additions, hostNode); });
     };
     DomSharedStylesHost.prototype.ngOnDestroy = function () { this._styleNodes.forEach(function (styleNode) { return getDOM().remove(styleNode); }); };
-    DomSharedStylesHost.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Injectable"] }
-    ];
-    /** @nocollapse */
-    DomSharedStylesHost.ctorParameters = function () { return [
-        { type: undefined, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Inject"], args: [DOCUMENT$1,] }] }
-    ]; };
+    DomSharedStylesHost = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Injectable"])(),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(0, Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Inject"])(DOCUMENT$1)),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [Object])
+    ], DomSharedStylesHost);
     return DomSharedStylesHost;
 }(SharedStylesHost));
 
@@ -61004,14 +61112,10 @@ var DomRendererFactory2 = /** @class */ (function () {
     };
     DomRendererFactory2.prototype.begin = function () { };
     DomRendererFactory2.prototype.end = function () { };
-    DomRendererFactory2.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Injectable"] }
-    ];
-    /** @nocollapse */
-    DomRendererFactory2.ctorParameters = function () { return [
-        { type: EventManager },
-        { type: DomSharedStylesHost }
-    ]; };
+    DomRendererFactory2 = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Injectable"])(),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [EventManager, DomSharedStylesHost])
+    ], DomRendererFactory2);
     return DomRendererFactory2;
 }());
 var DefaultDomRenderer2 = /** @class */ (function () {
@@ -61370,15 +61474,12 @@ var DomEventsPlugin = /** @class */ (function (_super) {
             target[NATIVE_REMOVE_LISTENER].apply(target, [eventName, callback, false]);
         }
     };
-    DomEventsPlugin.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Injectable"] }
-    ];
-    /** @nocollapse */
-    DomEventsPlugin.ctorParameters = function () { return [
-        { type: undefined, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Inject"], args: [DOCUMENT$1,] }] },
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["NgZone"] },
-        { type: undefined, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Optional"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Inject"], args: [_angular_core__WEBPACK_IMPORTED_MODULE_2__["PLATFORM_ID"],] }] }
-    ]; };
+    DomEventsPlugin = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Injectable"])(),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(0, Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Inject"])(DOCUMENT$1)),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(2, Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Optional"])()), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(2, Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Inject"])(_angular_core__WEBPACK_IMPORTED_MODULE_2__["PLATFORM_ID"])),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [Object, _angular_core__WEBPACK_IMPORTED_MODULE_2__["NgZone"], Object])
+    ], DomEventsPlugin);
     return DomEventsPlugin;
 }(EventManagerPlugin));
 
@@ -61484,9 +61585,9 @@ var HammerGestureConfig = /** @class */ (function () {
         }
         return mc;
     };
-    HammerGestureConfig.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Injectable"] }
-    ];
+    HammerGestureConfig = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Injectable"])()
+    ], HammerGestureConfig);
     return HammerGestureConfig;
 }());
 var HammerGesturesPlugin = /** @class */ (function (_super) {
@@ -61552,20 +61653,23 @@ var HammerGesturesPlugin = /** @class */ (function (_super) {
                 zone.runGuarded(function () { handler(eventObj); });
             };
             mc.on(eventName, callback);
-            return function () { return mc.off(eventName, callback); };
+            return function () {
+                mc.off(eventName, callback);
+                // destroy mc to prevent memory leak
+                if (typeof mc.destroy === 'function') {
+                    mc.destroy();
+                }
+            };
         });
     };
     HammerGesturesPlugin.prototype.isCustomEvent = function (eventName) { return this._config.events.indexOf(eventName) > -1; };
-    HammerGesturesPlugin.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Injectable"] }
-    ];
-    /** @nocollapse */
-    HammerGesturesPlugin.ctorParameters = function () { return [
-        { type: undefined, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Inject"], args: [DOCUMENT$1,] }] },
-        { type: HammerGestureConfig, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Inject"], args: [HAMMER_GESTURE_CONFIG,] }] },
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵConsole"] },
-        { type: undefined, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Optional"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Inject"], args: [HAMMER_LOADER,] }] }
-    ]; };
+    HammerGesturesPlugin = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Injectable"])(),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(0, Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Inject"])(DOCUMENT$1)),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(1, Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Inject"])(HAMMER_GESTURE_CONFIG)),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(3, Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Optional"])()), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(3, Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Inject"])(HAMMER_LOADER)),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [Object, HammerGestureConfig, _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵConsole"], Object])
+    ], HammerGesturesPlugin);
     return HammerGesturesPlugin;
 }(EventManagerPlugin));
 
@@ -61603,12 +61707,13 @@ var KeyEventsPlugin = /** @class */ (function (_super) {
     function KeyEventsPlugin(doc) {
         return _super.call(this, doc) || this;
     }
+    KeyEventsPlugin_1 = KeyEventsPlugin;
     /**
       * Reports whether a named key event is supported.
       * @param eventName The event name to query.
       * @return True if the named key event is supported.
      */
-    KeyEventsPlugin.prototype.supports = function (eventName) { return KeyEventsPlugin.parseEventName(eventName) != null; };
+    KeyEventsPlugin.prototype.supports = function (eventName) { return KeyEventsPlugin_1.parseEventName(eventName) != null; };
     /**
      * Registers a handler for a specific element and key event.
      * @param element The HTML element to receive event notifications.
@@ -61618,8 +61723,8 @@ var KeyEventsPlugin = /** @class */ (function (_super) {
      * @returns The key event that was registered.
     */
     KeyEventsPlugin.prototype.addEventListener = function (element, eventName, handler) {
-        var parsedEvent = KeyEventsPlugin.parseEventName(eventName);
-        var outsideHandler = KeyEventsPlugin.eventCallback(parsedEvent['fullKey'], handler, this.manager.getZone());
+        var parsedEvent = KeyEventsPlugin_1.parseEventName(eventName);
+        var outsideHandler = KeyEventsPlugin_1.eventCallback(parsedEvent['fullKey'], handler, this.manager.getZone());
         return this.manager.getZone().runOutsideAngular(function () {
             return getDOM().onAndCancel(element, parsedEvent['domEventName'], outsideHandler);
         });
@@ -61630,7 +61735,7 @@ var KeyEventsPlugin = /** @class */ (function (_super) {
         if ((parts.length === 0) || !(domEventName === 'keydown' || domEventName === 'keyup')) {
             return null;
         }
-        var key = KeyEventsPlugin._normalizeKey(parts.pop());
+        var key = KeyEventsPlugin_1._normalizeKey(parts.pop());
         var fullKey = '';
         MODIFIER_KEYS.forEach(function (modifierName) {
             var index = parts.indexOf(modifierName);
@@ -61679,7 +61784,7 @@ var KeyEventsPlugin = /** @class */ (function (_super) {
      */
     KeyEventsPlugin.eventCallback = function (fullKey, handler, zone) {
         return function (event /** TODO #9100 */) {
-            if (KeyEventsPlugin.getEventFullKey(event) === fullKey) {
+            if (KeyEventsPlugin_1.getEventFullKey(event) === fullKey) {
                 zone.runGuarded(function () { return handler(event); });
             }
         };
@@ -61694,13 +61799,12 @@ var KeyEventsPlugin = /** @class */ (function (_super) {
                 return keyName;
         }
     };
-    KeyEventsPlugin.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Injectable"] }
-    ];
-    /** @nocollapse */
-    KeyEventsPlugin.ctorParameters = function () { return [
-        { type: undefined, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Inject"], args: [DOCUMENT$1,] }] }
-    ]; };
+    var KeyEventsPlugin_1;
+    KeyEventsPlugin = KeyEventsPlugin_1 = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Injectable"])(),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(0, Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Inject"])(DOCUMENT$1)),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [Object])
+    ], KeyEventsPlugin);
     return KeyEventsPlugin;
 }(EventManagerPlugin));
 
@@ -61805,13 +61909,11 @@ var DomSanitizerImpl = /** @class */ (function (_super) {
     DomSanitizerImpl.prototype.bypassSecurityTrustResourceUrl = function (value) {
         return new SafeResourceUrlImpl(value);
     };
-    DomSanitizerImpl.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Injectable"] }
-    ];
-    /** @nocollapse */
-    DomSanitizerImpl.ctorParameters = function () { return [
-        { type: undefined, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Inject"], args: [DOCUMENT$1,] }] }
-    ]; };
+    DomSanitizerImpl = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Injectable"])(),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(0, Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Inject"])(DOCUMENT$1)),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [Object])
+    ], DomSanitizerImpl);
     return DomSanitizerImpl;
 }(DomSanitizer));
 var SafeValueImpl = /** @class */ (function () {
@@ -61931,7 +62033,11 @@ var BROWSER_MODULE_PROVIDERS = [
     ELEMENT_PROBE_PROVIDERS,
 ];
 /**
- * The ng module for the browser.
+ * Exports required infrastructure for all Angular apps.
+ * Included by defaults in all Angular apps created with the CLI
+ * `new` command.
+ * Re-exports `CommonModule` and `ApplicationModule`, making their
+ * exports and providers available to all apps.
  *
  *
  */
@@ -61941,16 +62047,20 @@ var BrowserModule = /** @class */ (function () {
             throw new Error("BrowserModule has already been loaded. If you need access to common directives such as NgIf and NgFor from a lazy loaded module, import CommonModule instead.");
         }
     }
+    BrowserModule_1 = BrowserModule;
     /**
-     * Configures a browser-based application to transition from a server-rendered app, if
-     * one is present on the page. The specified parameters must include an application id,
-     * which must match between the client and server applications.
+     * Configures a browser-based app to transition from a server-rendered app, if
+     * one is present on the page.
+     *
+     * @param params An object containing an identifier for the app to transition.
+     * The ID must match between the client and server versions of the app.
+     * @returns The reconfigured `BrowserModule` to import into the app's root `AppModule`.
      *
      * @experimental
      */
     BrowserModule.withServerTransition = function (params) {
         return {
-            ngModule: BrowserModule,
+            ngModule: BrowserModule_1,
             providers: [
                 { provide: _angular_core__WEBPACK_IMPORTED_MODULE_2__["APP_ID"], useValue: params.appId },
                 { provide: TRANSITION_ID, useExisting: _angular_core__WEBPACK_IMPORTED_MODULE_2__["APP_ID"] },
@@ -61958,23 +62068,15 @@ var BrowserModule = /** @class */ (function () {
             ],
         };
     };
-    BrowserModule.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"], args: [{ providers: BROWSER_MODULE_PROVIDERS, exports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _angular_core__WEBPACK_IMPORTED_MODULE_2__["ApplicationModule"]] },] }
-    ];
-    /** @nocollapse */
-    BrowserModule.ctorParameters = function () { return [
-        { type: undefined, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Optional"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["SkipSelf"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Inject"], args: [BrowserModule,] }] }
-    ]; };
+    var BrowserModule_1;
+    BrowserModule = BrowserModule_1 = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({ providers: BROWSER_MODULE_PROVIDERS, exports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _angular_core__WEBPACK_IMPORTED_MODULE_2__["ApplicationModule"]] }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(0, Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Optional"])()), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(0, Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["SkipSelf"])()), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(0, Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Inject"])(BrowserModule_1)),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [Object])
+    ], BrowserModule);
     return BrowserModule;
 }());
 
-/**
- * @license
- * Copyright Google Inc. All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
 /**
  * Factory to create Meta service.
  */
@@ -62066,24 +62168,15 @@ var Meta = /** @class */ (function () {
         var _this = this;
         return Object.keys(tag).every(function (key) { return _this._dom.getAttribute(elem, key) === tag[key]; });
     };
-    Meta.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Injectable"], args: [{ providedIn: 'root', useFactory: createMeta, deps: [] },] }
-    ];
-    /** @nocollapse */
-    Meta.ctorParameters = function () { return [
-        { type: undefined, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Inject"], args: [DOCUMENT$1,] }] }
-    ]; };
     Meta.ngInjectableDef = Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["defineInjectable"])({ factory: createMeta, token: Meta, providedIn: "root" });
+    Meta = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Injectable"])({ providedIn: 'root', useFactory: createMeta, deps: [] }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(0, Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Inject"])(DOCUMENT$1)),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [Object])
+    ], Meta);
     return Meta;
 }());
 
-/**
- * @license
- * Copyright Google Inc. All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
 /**
  * Factory to create Title service.
  */
@@ -62113,14 +62206,12 @@ var Title = /** @class */ (function () {
      * @param newTitle
      */
     Title.prototype.setTitle = function (newTitle) { getDOM().setTitle(this._doc, newTitle); };
-    Title.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Injectable"], args: [{ providedIn: 'root', useFactory: createTitle, deps: [] },] }
-    ];
-    /** @nocollapse */
-    Title.ctorParameters = function () { return [
-        { type: undefined, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Inject"], args: [DOCUMENT$1,] }] }
-    ]; };
     Title.ngInjectableDef = Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["defineInjectable"])({ factory: createTitle, token: Title, providedIn: "root" });
+    Title = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Injectable"])({ providedIn: 'root', useFactory: createTitle, deps: [] }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(0, Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Inject"])(DOCUMENT$1)),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [Object])
+    ], Title);
     return Title;
 }());
 
@@ -62298,9 +62389,10 @@ var TransferState = /** @class */ (function () {
         this.store = {};
         this.onSerializeCallbacks = {};
     }
+    TransferState_1 = TransferState;
     /** @internal */
     TransferState.init = function (initState) {
-        var transferState = new TransferState();
+        var transferState = new TransferState_1();
         transferState.store = initState;
         return transferState;
     };
@@ -62345,9 +62437,10 @@ var TransferState = /** @class */ (function () {
         }
         return JSON.stringify(this.store);
     };
-    TransferState.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Injectable"] }
-    ];
+    var TransferState_1;
+    TransferState = TransferState_1 = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Injectable"])()
+    ], TransferState);
     return TransferState;
 }());
 function initTransferState(doc, appId) {
@@ -62374,11 +62467,11 @@ function initTransferState(doc, appId) {
 var BrowserTransferStateModule = /** @class */ (function () {
     function BrowserTransferStateModule() {
     }
-    BrowserTransferStateModule.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"], args: [{
-                    providers: [{ provide: TransferState, useFactory: initTransferState, deps: [DOCUMENT$1, _angular_core__WEBPACK_IMPORTED_MODULE_2__["APP_ID"]] }],
-                },] }
-    ];
+    BrowserTransferStateModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
+            providers: [{ provide: TransferState, useFactory: initTransferState, deps: [DOCUMENT$1, _angular_core__WEBPACK_IMPORTED_MODULE_2__["APP_ID"]] }],
+        })
+    ], BrowserTransferStateModule);
     return BrowserTransferStateModule;
 }());
 
@@ -62400,7 +62493,8 @@ var By = /** @class */ (function () {
     /**
      * Match all elements.
      *
-     * ## Example
+     * @usageNotes
+     * ### Example
      *
      * {@example platform-browser/dom/debug/ts/by/by.ts region='by_all'}
      */
@@ -62408,7 +62502,8 @@ var By = /** @class */ (function () {
     /**
      * Match elements by the given CSS selector.
      *
-     * ## Example
+     * @usageNotes
+     * ### Example
      *
      * {@example platform-browser/dom/debug/ts/by/by.ts region='by_css'}
      */
@@ -62422,7 +62517,8 @@ var By = /** @class */ (function () {
     /**
      * Match elements that have the given directive present.
      *
-     * ## Example
+     * @usageNotes
+     * ### Example
      *
      * {@example platform-browser/dom/debug/ts/by/by.ts region='by_directive'}
      */
@@ -62447,7 +62543,7 @@ var By = /** @class */ (function () {
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-var VERSION = new _angular_core__WEBPACK_IMPORTED_MODULE_2__["Version"]('6.1.7');
+var VERSION = new _angular_core__WEBPACK_IMPORTED_MODULE_2__["Version"]('6.1.10');
 
 /**
  * @license
@@ -62564,7 +62660,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
 /**
- * @license Angular v6.1.7
+ * @license Angular v6.1.10
  * (c) 2010-2018 Google, Inc. https://angular.io/
  * License: MIT
  */
@@ -63026,9 +63122,9 @@ var Scroll = /** @class */ (function () {
 var EmptyOutletComponent = /** @class */ (function () {
     function EmptyOutletComponent() {
     }
-    EmptyOutletComponent.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"], args: [{ template: "<router-outlet></router-outlet>" }] }
-    ];
+    EmptyOutletComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({ template: "<router-outlet></router-outlet>" })
+    ], EmptyOutletComponent);
     return EmptyOutletComponent;
 }());
 
@@ -63388,6 +63484,7 @@ function containsSegmentGroupHelper(container, containee, containeePaths) {
  * serialized tree.
  * UrlTree is a data structure that provides a lot of affordances in dealing with URLs
  *
+ * @usageNotes
  * ### Example
  *
  * ```
@@ -63477,7 +63574,8 @@ var UrlSegmentGroup = /** @class */ (function () {
  * A UrlSegment is a part of a URL between the two slashes. It contains a path and the matrix
  * parameters associated with the segment.
  *
- * ## Example
+ * @usageNotes
+ * ### Example
  *
  * ```
  * @Component({templateUrl:'template.html'})
@@ -64411,6 +64509,7 @@ function nodeChildrenAsMap(node) {
  * RouterState is a tree of activated routes. Every node in this tree knows about the "consumed" URL
  * segments, the extracted parameters, and the resolved data.
  *
+ * @usageNotes
  * ### Example
  *
  * ```
@@ -64724,6 +64823,7 @@ var ActivatedRouteSnapshot = /** @class */ (function () {
  * This is a tree of activated route snapshots. Every node in this tree knows about
  * the "consumed" URL segments, the extracted parameters, and the resolved data.
  *
+ * @usageNotes
  * ### Example
  *
  * ```
@@ -66032,11 +66132,13 @@ var Router = /** @class */ (function () {
         configurable: true
     });
     /** @internal */
-    Router.prototype.triggerEvent = function (e) { this.events.next(e); };
+    Router.prototype.triggerEvent = function (event) { this.events.next(event); };
     /**
      * Resets the configuration used for navigation and generating links.
      *
-     * ### Usage
+     * @usageNotes
+     *
+     * ### Example
      *
      * ```
      * router.resetConfig([
@@ -66068,7 +66170,9 @@ var Router = /** @class */ (function () {
      * When given an activate route, applies the given commands starting from the route.
      * When not given a route, applies the given command starting from the root.
      *
-     * ### Usage
+     * @usageNotes
+     *
+     * ### Example
      *
      * ```
      * // create /team/33/user/11
@@ -66140,7 +66244,9 @@ var Router = /** @class */ (function () {
      * - resolves to 'false' when navigation fails,
      * - is rejected when an error happens.
      *
-     * ### Usage
+     * @usageNotes
+     *
+     * ### Example
      *
      * ```
      * router.navigateByUrl("/team/33/user/11");
@@ -66149,8 +66255,10 @@ var Router = /** @class */ (function () {
      * router.navigateByUrl("/team/33/user/11", { skipLocationChange: true });
      * ```
      *
-     * In opposite to `navigate`, `navigateByUrl` takes a whole URL
-     * and does not apply any delta to the current one.
+     * Since `navigateByUrl()` takes an absolute URL as the first parameter,
+     * it will not apply any delta to the current URL and ignores any properties
+     * in the second parameter (the `NavigationExtras`) that would change the
+     * provided URL.
      */
     Router.prototype.navigateByUrl = function (url, extras) {
         if (extras === void 0) { extras = { skipLocationChange: false }; }
@@ -66170,7 +66278,9 @@ var Router = /** @class */ (function () {
      * - resolves to 'false' when navigation fails,
      * - is rejected when an error happens.
      *
-     * ### Usage
+     * @usageNotes
+     *
+     * ### Example
      *
      * ```
      * router.navigate(['team', 33, 'user', 11], {relativeTo: route});
@@ -66179,8 +66289,9 @@ var Router = /** @class */ (function () {
      * router.navigate(['team', 33, 'user', 11], {relativeTo: route, skipLocationChange: true});
      * ```
      *
-     * In opposite to `navigateByUrl`, `navigate` always takes a delta that is applied to the current
-     * URL.
+     * The first parameter of `navigate()` is a delta to be applied to the current URL
+     * or the one provided in the `relativeTo` property of the second parameter (the
+     * `NavigationExtras`).
      */
     Router.prototype.navigate = function (commands, extras) {
         if (extras === void 0) { extras = { skipLocationChange: false }; }
@@ -66611,6 +66722,7 @@ var ActivateRoutes = /** @class */ (function () {
                 else {
                     var config = parentLoadedConfig(future.snapshot);
                     var cmpFactoryResolver = config ? config.module.componentFactoryResolver : null;
+                    context.attachRef = null;
                     context.route = future;
                     context.resolver = cmpFactoryResolver;
                     if (context.outlet) {
@@ -66788,28 +66900,51 @@ var RouterLink = /** @class */ (function () {
         enumerable: true,
         configurable: true
     });
-    RouterLink.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"], args: [{ selector: ':not(a)[routerLink]' },] }
-    ];
-    /** @nocollapse */
-    RouterLink.ctorParameters = function () { return [
-        { type: Router },
-        { type: ActivatedRoute },
-        { type: String, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Attribute"], args: ['tabindex',] }] },
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"] },
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"] }
-    ]; };
-    RouterLink.propDecorators = {
-        queryParams: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"] }],
-        fragment: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"] }],
-        queryParamsHandling: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"] }],
-        preserveFragment: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"] }],
-        skipLocationChange: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"] }],
-        replaceUrl: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"] }],
-        routerLink: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"] }],
-        preserveQueryParams: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"] }],
-        onClick: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["HostListener"], args: ['click',] }]
-    };
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)
+    ], RouterLink.prototype, "queryParams", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)
+    ], RouterLink.prototype, "fragment", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)
+    ], RouterLink.prototype, "queryParamsHandling", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Boolean)
+    ], RouterLink.prototype, "preserveFragment", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Boolean)
+    ], RouterLink.prototype, "skipLocationChange", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Boolean)
+    ], RouterLink.prototype, "replaceUrl", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [Object])
+    ], RouterLink.prototype, "routerLink", null);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Boolean),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [Boolean])
+    ], RouterLink.prototype, "preserveQueryParams", null);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["HostListener"])('click'),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Function),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", []),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:returntype", Boolean)
+    ], RouterLink.prototype, "onClick", null);
+    RouterLink = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"])({ selector: ':not(a)[routerLink]' }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(2, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Attribute"])('tabindex')),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [Router, ActivatedRoute, String, _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"]])
+    ], RouterLink);
     return RouterLink;
 }());
 /**
@@ -66891,28 +67026,59 @@ var RouterLinkWithHref = /** @class */ (function () {
         enumerable: true,
         configurable: true
     });
-    RouterLinkWithHref.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"], args: [{ selector: 'a[routerLink]' },] }
-    ];
-    /** @nocollapse */
-    RouterLinkWithHref.ctorParameters = function () { return [
-        { type: Router },
-        { type: ActivatedRoute },
-        { type: _angular_common__WEBPACK_IMPORTED_MODULE_4__["LocationStrategy"] }
-    ]; };
-    RouterLinkWithHref.propDecorators = {
-        target: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["HostBinding"], args: ['attr.target',] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"] }],
-        queryParams: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"] }],
-        fragment: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"] }],
-        queryParamsHandling: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"] }],
-        preserveFragment: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"] }],
-        skipLocationChange: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"] }],
-        replaceUrl: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"] }],
-        href: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["HostBinding"] }],
-        routerLink: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"] }],
-        preserveQueryParams: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"] }],
-        onClick: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["HostListener"], args: ['click', ['$event.button', '$event.ctrlKey', '$event.metaKey', '$event.shiftKey'],] }]
-    };
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["HostBinding"])('attr.target'), Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)
+    ], RouterLinkWithHref.prototype, "target", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)
+    ], RouterLinkWithHref.prototype, "queryParams", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)
+    ], RouterLinkWithHref.prototype, "fragment", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)
+    ], RouterLinkWithHref.prototype, "queryParamsHandling", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Boolean)
+    ], RouterLinkWithHref.prototype, "preserveFragment", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Boolean)
+    ], RouterLinkWithHref.prototype, "skipLocationChange", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Boolean)
+    ], RouterLinkWithHref.prototype, "replaceUrl", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["HostBinding"])(),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)
+    ], RouterLinkWithHref.prototype, "href", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [Object])
+    ], RouterLinkWithHref.prototype, "routerLink", null);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Boolean),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [Boolean])
+    ], RouterLinkWithHref.prototype, "preserveQueryParams", null);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["HostListener"])('click', ['$event.button', '$event.ctrlKey', '$event.metaKey', '$event.shiftKey']),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Function),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [Number, Boolean, Boolean, Boolean]),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:returntype", Boolean)
+    ], RouterLinkWithHref.prototype, "onClick", null);
+    RouterLinkWithHref = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"])({ selector: 'a[routerLink]' }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [Router, ActivatedRoute,
+            _angular_common__WEBPACK_IMPORTED_MODULE_4__["LocationStrategy"]])
+    ], RouterLinkWithHref);
     return RouterLinkWithHref;
 }());
 function attrBoolValue(s) {
@@ -67044,25 +67210,31 @@ var RouterLinkActive = /** @class */ (function () {
         return this.links.some(this.isLinkActive(this.router)) ||
             this.linksWithHrefs.some(this.isLinkActive(this.router));
     };
-    RouterLinkActive.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"], args: [{
-                    selector: '[routerLinkActive]',
-                    exportAs: 'routerLinkActive',
-                },] }
-    ];
-    /** @nocollapse */
-    RouterLinkActive.ctorParameters = function () { return [
-        { type: Router },
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"] },
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"] },
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"] }
-    ]; };
-    RouterLinkActive.propDecorators = {
-        links: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ContentChildren"], args: [RouterLink, { descendants: true },] }],
-        linksWithHrefs: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ContentChildren"], args: [RouterLinkWithHref, { descendants: true },] }],
-        routerLinkActiveOptions: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"] }],
-        routerLinkActive: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"] }]
-    };
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ContentChildren"])(RouterLink, { descendants: true }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["QueryList"])
+    ], RouterLinkActive.prototype, "links", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ContentChildren"])(RouterLinkWithHref, { descendants: true }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["QueryList"])
+    ], RouterLinkActive.prototype, "linksWithHrefs", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)
+    ], RouterLinkActive.prototype, "routerLinkActiveOptions", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [Object])
+    ], RouterLinkActive.prototype, "routerLinkActive", null);
+    RouterLinkActive = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"])({
+            selector: '[routerLinkActive]',
+            exportAs: 'routerLinkActive',
+        }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [Router, _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"],
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"]])
+    ], RouterLinkActive);
     return RouterLinkActive;
 }());
 
@@ -67277,21 +67449,20 @@ var RouterOutlet = /** @class */ (function () {
         this.changeDetector.markForCheck();
         this.activateEvents.emit(this.activated.instance);
     };
-    RouterOutlet.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"], args: [{ selector: 'router-outlet', exportAs: 'outlet' },] }
-    ];
-    /** @nocollapse */
-    RouterOutlet.ctorParameters = function () { return [
-        { type: ChildrenOutletContexts },
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"] },
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ComponentFactoryResolver"] },
-        { type: String, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Attribute"], args: ['name',] }] },
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"] }
-    ]; };
-    RouterOutlet.propDecorators = {
-        activateEvents: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"], args: ['activate',] }],
-        deactivateEvents: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"], args: ['deactivate',] }]
-    };
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])('activate'),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)
+    ], RouterOutlet.prototype, "activateEvents", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])('deactivate'),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)
+    ], RouterOutlet.prototype, "deactivateEvents", void 0);
+    RouterOutlet = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"])({ selector: 'router-outlet', exportAs: 'outlet' }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(3, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Attribute"])('name')),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [ChildrenOutletContexts, _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"],
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ComponentFactoryResolver"], String, _angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"]])
+    ], RouterOutlet);
     return RouterOutlet;
 }());
 var OutletInjector = /** @class */ (function () {
@@ -67441,17 +67612,11 @@ var RouterPreloader = /** @class */ (function () {
             }));
         });
     };
-    RouterPreloader.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"] }
-    ];
-    /** @nocollapse */
-    RouterPreloader.ctorParameters = function () { return [
-        { type: Router },
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModuleFactoryLoader"] },
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Compiler"] },
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Injector"] },
-        { type: PreloadingStrategy }
-    ]; };
+    RouterPreloader = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])(),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [Router, _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModuleFactoryLoader"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Compiler"],
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["Injector"], PreloadingStrategy])
+    ], RouterPreloader);
     return RouterPreloader;
 }());
 
@@ -67646,6 +67811,7 @@ var RouterModule = /** @class */ (function () {
     // Note: We are injecting the Router so it gets created eagerly...
     function RouterModule(guard, router) {
     }
+    RouterModule_1 = RouterModule;
     /**
      * Creates a module with all the router providers and directives. It also optionally sets up an
      * application listener to perform an initial navigation.
@@ -67664,7 +67830,7 @@ var RouterModule = /** @class */ (function () {
      */
     RouterModule.forRoot = function (routes, config) {
         return {
-            ngModule: RouterModule,
+            ngModule: RouterModule_1,
             providers: [
                 ROUTER_PROVIDERS,
                 provideRoutes(routes),
@@ -67700,20 +67866,18 @@ var RouterModule = /** @class */ (function () {
      * Creates a module with all the router directives and a provider registering routes.
      */
     RouterModule.forChild = function (routes) {
-        return { ngModule: RouterModule, providers: [provideRoutes(routes)] };
+        return { ngModule: RouterModule_1, providers: [provideRoutes(routes)] };
     };
-    RouterModule.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"], args: [{
-                    declarations: ROUTER_DIRECTIVES,
-                    exports: ROUTER_DIRECTIVES,
-                    entryComponents: [EmptyOutletComponent]
-                },] }
-    ];
-    /** @nocollapse */
-    RouterModule.ctorParameters = function () { return [
-        { type: undefined, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Optional"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"], args: [ROUTER_FORROOT_GUARD,] }] },
-        { type: Router, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Optional"] }] }
-    ]; };
+    var RouterModule_1;
+    RouterModule = RouterModule_1 = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
+            declarations: ROUTER_DIRECTIVES,
+            exports: ROUTER_DIRECTIVES,
+            entryComponents: [EmptyOutletComponent]
+        }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(0, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Optional"])()), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(0, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(ROUTER_FORROOT_GUARD)), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(1, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Optional"])()),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [Object, Router])
+    ], RouterModule);
     return RouterModule;
 }());
 function createRouterScroller(router, viewportScroller, config) {
@@ -67738,6 +67902,7 @@ function provideForRootGuard(router) {
  *
  * Registers routes.
  *
+ * @usageNotes
  * ### Example
  *
  * ```
@@ -67878,13 +68043,10 @@ var RouterInitializer = /** @class */ (function () {
     RouterInitializer.prototype.isLegacyDisabled = function (opts) {
         return opts.initialNavigation === 'legacy_disabled' || opts.initialNavigation === false;
     };
-    RouterInitializer.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"] }
-    ];
-    /** @nocollapse */
-    RouterInitializer.ctorParameters = function () { return [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Injector"] }
-    ]; };
+    RouterInitializer = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])(),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injector"]])
+    ], RouterInitializer);
     return RouterInitializer;
 }());
 function getAppInitializer(r) {
@@ -67920,7 +68082,7 @@ function provideRouterInitializer() {
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-var VERSION = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["Version"]('6.1.7');
+var VERSION = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["Version"]('6.1.10');
 
 /**
  * @license
