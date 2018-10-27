@@ -56,3 +56,4 @@ now open up a web browser and got to localhost:8080
 
 When you  run NODEMON. if you get an error that says "nodemon internal watch failed" run the following command:
 sudo sysctl fs.inotify.max_user_watches=582222 && sudo sysctl -p
+a
