@@ -17,6 +17,8 @@ import { ValidateService } from './services/validate.service';
 import { AuthService } from './services/auth.service';
 import { FlashMessagesModule } from 'angular2-flash-messages';
 import { InventoryComponent } from './components/inventory/inventory.component';
+import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.component';
+import { CheckoutComponent } from './components/checkout/checkout.component';
 
 
 const appRoutes: Routes = [
@@ -26,7 +28,8 @@ const appRoutes: Routes = [
   {path:'dashboard',component: DashboardComponent},
   {path:'profile',component: ProfileComponent},
   {path:'inventory',component: InventoryComponent},
-
+  {path:'shopping-cart',component:ShoppingCartComponent},
+  {path:'checkout',component:CheckoutComponent}
 ]
 
 @NgModule({
@@ -38,7 +41,9 @@ const appRoutes: Routes = [
     HomeComponent,
     DashboardComponent,
     ProfileComponent,
-    InventoryComponent
+    InventoryComponent,
+    ShoppingCartComponent,
+    CheckoutComponent
   ],
   imports: [
     BrowserModule,
