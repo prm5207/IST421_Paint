@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import {HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
@@ -19,6 +19,9 @@ import { FlashMessagesModule } from 'angular2-flash-messages';
 import { InventoryComponent } from './components/inventory/inventory.component';
 import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.component';
 import { CheckoutComponent } from './components/checkout/checkout.component';
+import { BrushComponent } from './components/brush/brush.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatInputModule, MatPaginatorModule, MatProgressSpinnerModule, MatSortModule, MatTableModule, MatIconModule, MatButtonModule, MatCardModule, MatFormFieldModule } from "@angular/material";
 
 
 const appRoutes: Routes = [
@@ -29,9 +32,9 @@ const appRoutes: Routes = [
   {path:'profile',component: ProfileComponent},
   {path:'inventory',component: InventoryComponent},
   {path:'shopping-cart',component:ShoppingCartComponent},
-  {path:'checkout',component:CheckoutComponent}
+  {path:'checkout',component:CheckoutComponent},
+  {path: 'brush', component:BrushComponent, data: {title: 'Brush List'}}
 ]
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,7 +46,8 @@ const appRoutes: Routes = [
     ProfileComponent,
     InventoryComponent,
     ShoppingCartComponent,
-    CheckoutComponent
+    CheckoutComponent,
+    BrushComponent
   ],
   imports: [
     BrowserModule,
@@ -52,6 +56,16 @@ const appRoutes: Routes = [
     HttpClientModule,
     RouterModule.forRoot(appRoutes),
     FlashMessagesModule.forRoot(),
+    BrowserAnimationsModule,
+    MatInputModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
+    MatProgressSpinnerModule,
+    MatIconModule,
+    MatButtonModule,
+    MatCardModule,
+    MatFormFieldModule
   ],
   providers: [ValidateService, AuthService],
   bootstrap: [AppComponent]
