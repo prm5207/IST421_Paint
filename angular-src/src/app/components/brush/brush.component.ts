@@ -17,7 +17,8 @@ export class BrushComponent implements OnInit {
 
   ngOnInit() {
     this.api.getBrushes()
-      .subscribe(res => {
+      .subscribe(res =>{
+        this.brushes = res;
         console.log(res);
         this.brushes = res;
       }, err => {

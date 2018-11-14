@@ -6,7 +6,7 @@ import { catchError, tap, map } from 'rxjs/operators';
 const httpOptions = {
   headers: new HttpHeaders({'Content-Type': 'application/json'})
 };
-const apiUrl = "/api";
+const apiBrush = "/brush";
 
 @Injectable({
   providedIn: 'root'
@@ -36,27 +36,27 @@ export class ApiService {
   }
 
   getBrushes(): Observable<any> {
-    return this.http.get(apiUrl, httpOptions).pipe(
+    return this.http.get(apiBrush, httpOptions).pipe(
       map(this.extractData),
       catchError(this.handleError));
   }
 
   getBrush(id: string): Observable<any> {
-    const url = `${apiUrl}/${id}`;
+    const url = `${apiBrush}/${id}`;
     return this.http.get(url, httpOptions).pipe(
       map(this.extractData),
       catchError(this.handleError));
   }
 
   postBrush(data): Observable<any> {
-    return this.http.post(apiUrl, data, httpOptions)
+    return this.http.post(apiBrush, data, httpOptions)
       .pipe(
         catchError(this.handleError)
       );
   }
 
   updateBrush(id: string, data): Observable<any> {
-    const url = `${apiUrl}/${id}`;
+    const url = `${apiBrush}/${id}`;
     return this.http.put(url, data, httpOptions)
       .pipe(
         catchError(this.handleError)
@@ -64,7 +64,7 @@ export class ApiService {
   }
 
   deleteBrush(id: string): Observable<{}> {
-    const url = `${apiUrl}/${id}`;
+    const url = `${apiBrush}/${id}`;
     return this.http.delete(url, httpOptions)
       .pipe(
         catchError(this.handleError)
