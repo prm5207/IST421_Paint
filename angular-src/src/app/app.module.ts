@@ -22,6 +22,7 @@ import { CheckoutComponent } from './components/checkout/checkout.component';
 import { BrushComponent } from './components/brush/brush.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatInputModule, MatPaginatorModule, MatProgressSpinnerModule, MatSortModule, MatTableModule, MatIconModule, MatButtonModule, MatCardModule, MatFormFieldModule } from "@angular/material";
+import { PaintComponent } from './components/paint/paint.component';
 
 
 const appRoutes: Routes = [
@@ -33,8 +34,9 @@ const appRoutes: Routes = [
   {path:'inventory',component: InventoryComponent},
   {path:'shopping-cart',component:ShoppingCartComponent},
   {path:'checkout',component:CheckoutComponent},
-  {path: 'brush', component:BrushComponent, data: {title: 'Brush List'}}
-]
+  {path: 'brush', component:BrushComponent, data: {title: 'Brush List'}},
+  {path: 'paint', component:PaintComponent}
+  ]
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,7 +49,8 @@ const appRoutes: Routes = [
     InventoryComponent,
     ShoppingCartComponent,
     CheckoutComponent,
-    BrushComponent
+    BrushComponent,
+    PaintComponent
   ],
   imports: [
     BrowserModule,

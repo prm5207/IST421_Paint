@@ -7,7 +7,7 @@ const mongoose = require('mongoose');
 const config = require('./config/database');
 
 var apiBrush = require('./routes/brush')
-
+var apiPaint = require('./routes/paint')
 // Connect To Database (NEW) But not working!!!!!!!!!! (because of secret in db.js!!!!!)
 //const db = require('./config/database');
 // Map global promise - get rid of warning
@@ -55,6 +55,7 @@ require('./config/passport')(passport);
 
 app.use('/users', users);
 app.use('/brush', apiBrush);
+app.use('/paint', apiPaint);
 
 // Index Route
 app.get('/', (req, res) => {
