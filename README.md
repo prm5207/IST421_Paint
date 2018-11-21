@@ -1,6 +1,6 @@
 # IST421_Paint
 Author: Patrick
-GIT UPDATED ON: 9/29/18
+GIT UPDATED ON: 11/21/18
 
 
 This document include a list of commands to get this MEAN stack applciation running on a freash install of unbuntu
