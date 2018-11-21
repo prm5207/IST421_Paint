@@ -7,6 +7,7 @@ const httpOptions = {
   headers: new HttpHeaders({'Content-Type': 'application/json'})
 };
 const apiBrush = "/brush";
+const apiPaint = "/paint";
 
 @Injectable({
   providedIn: 'root'
@@ -65,6 +66,41 @@ export class ApiService {
 
   deleteBrush(id: string): Observable<{}> {
     const url = `${apiBrush}/${id}`;
+    return this.http.delete(url, httpOptions)
+      .pipe(
+        catchError(this.handleError)
+      );
+  }
+  getPaints(): Observable<any> {
+    return this.http.get(apiPaint, httpOptions).pipe(
+      map(this.extractData),
+      catchError(this.handleError));
+  }
+
+  getPaint(id: string): Observable<any> {
+    const url = `${apiPaint}/${id}`;
+    return this.http.get(url, httpOptions).pipe(
+      map(this.extractData),
+      catchError(this.handleError));
+  }
+
+  postPaint(data): Observable<any> {
+    return this.http.post(apiPaint, data, httpOptions)
+      .pipe(
+        catchError(this.handleError)
+      );
+  }
+
+  updatePaint(id: string, data): Observable<any> {
+    const url = `${apiPaint}/${id}`;
+    return this.http.put(url, data, httpOptions)
+      .pipe(
+        catchError(this.handleError)
+      );
+  }
+
+  deletePaint(id: string): Observable<{}> {
+    const url = `${apiPaint}/${id}`;
     return this.http.delete(url, httpOptions)
       .pipe(
         catchError(this.handleError)
