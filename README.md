@@ -1,54 +1,46 @@
 # IST421_Paint
 Author: Patrick
 GIT UPDATED ON: 9/29/18
-// = comments
 
-//This document include a list of commands to get this MEAN stack applciation running on a freash install of unbuntu
 
-//Need to install dependincies
+This document include a list of commands to get this MEAN stack applciation running on a freash install of unbuntu
+
+###### Need to install dependincies
 sudo apt-get update
 sudo apt-get install git
 sudo apt-get install nodejs
 sudo apt-get install npm
 
-//Check Versions
+###### Check Versions
 nodejs -v
 npm -v
 git --version
 
-//Set Git information
+###### Set Git information
 git config --global user.email "EMAIL ADDRESS"
 git config --global user.name "NAME"
 
-//Install nodemon - allows for backend server to be updated without shuting down server
+###### Install nodemon - allows for backend server to be updated without shuting down server
 sudo npm install -g nodemon
 
-//Install a text editor - I recommend VS Code
-//Open a web browser and download vs code for ubuntu 64bit
-//When promted save the file, DO NOT OPEN
-In a terminal
-cd Downloads
-sudo dpkg -i <filename>.deb //Just hit tab when you get to the file name. It will autofill
-sudo apt-get install -f
-cd /home/<your-name>
 
-//Install angular-cli and ng globaly
+###### Install angular-cli and ng globaly
 sudo npm install -g @angular/cli@latest
 sudo npm install -g ng-common
 
-//Now clone my git repository from your home directory. In a terminal type pwd to confirm /home/<user-name>
+###### Now clone my git repository from your home directory. In a terminal type pwd to confirm /home/<user-name>
 git clone https://github.com/prm5207/IST421_Paint.git
 
-//Verify it was cloned
+###### Verify it was cloned
 ls
 
-//Geting Everything Working
+###### Geting Everything Working
 cd IST421_Paint
 sudo npm install
 cd angular-src
 sudo npm install
 
-//OPEN TERMINAL
+###### OPEN TERMINAL
 TERMINAL 1: cd IST421_Paint
 TERMINAL 1: nodemon //Server should start
 
