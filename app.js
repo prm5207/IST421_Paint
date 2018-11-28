@@ -6,6 +6,7 @@ const passport = require('passport');
 const mongoose = require('mongoose');
 const config = require('./config/database');
 
+var apiRoller = require('./routes/roller')
 var apiBrush = require('./routes/brush')
 var apiPaint = require('./routes/paint')
 // Connect To Database (NEW) But not working!!!!!!!!!! (because of secret in db.js!!!!!)
@@ -56,6 +57,7 @@ require('./config/passport')(passport);
 app.use('/users', users);
 app.use('/brush', apiBrush);
 app.use('/paint', apiPaint);
+app.use('/roller', apiRoller);
 
 // Index Route
 app.get('/', (req, res) => {

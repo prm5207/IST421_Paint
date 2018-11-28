@@ -735,7 +735,7 @@ module.exports = ".example-container {\r\n  display: flex;\r\n  flex-direction: 
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"button-row\">\r\n  <a mat-raised-button color=\"primary\" [routerLink]=\"['/paint-create']\"><mat-icon>add</mat-icon></a>\r\n</div>\r\n\r\n<div class=\"example-container mat-elevation-z8\">\r\n  <table mat-table #table [dataSource]=\"dataSourcePaint\">\r\n\r\n    <!-- Title Colum -->\r\n    <ng-container matColumnDef=\"itemNumber\">\r\n      <th mat-header-cell *matHeaderCellDef> Item Number </th>\r\n      <td mat-cell *matCellDef=\"let element\" class=\"isbn-col\"> {{element.itemNumber}} </td>\r\n    </ng-container>\r\n\r\n    <!-- Title Column -->\r\n    <ng-container matColumnDef=\"color\">\r\n      <th mat-header-cell *matHeaderCellDef> Color </th>\r\n      <td mat-cell *matCellDef=\"let element\"> {{element.color}} </td>\r\n    </ng-container>\r\n\r\n    <!-- Author Column -->\r\n    <ng-container matColumnDef=\"quantity\">\r\n      <th mat-header-cell *matHeaderCellDef> Quantity </th>\r\n      <td mat-cell *matCellDef=\"let element\"> {{element.quantity}} </td>\r\n    </ng-container>\r\n\r\n    <!-- Size Column -->\r\n    <ng-container matColumnDef=\"price\">\r\n      <th mat-header-cell *matHeaderCellDef> Price </th>\r\n      <td mat-cell *matCellDef=\"let element\"> {{element.price}} </td>\r\n    </ng-container>\r\n\r\n\r\n    <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\r\n    <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\" [routerLink]=\"['/paint-details/', row._id]\"></tr>\r\n\r\n  </table>\r\n</div>\r\n"
+module.exports = "<div class=\"button-row\">\n  <a mat-raised-button color=\"primary\" [routerLink]=\"['/paint-create']\"><mat-icon>add</mat-icon></a>\n</div>\n\n<div class=\"example-container mat-elevation-z8\">\n  <table mat-table #table [dataSource]=\"dataSourcePaint\">\n\n    <!-- Title Colum -->\n    <ng-container matColumnDef=\"itemNumber\">\n      <th mat-header-cell *matHeaderCellDef> Item Number </th>\n      <td mat-cell *matCellDef=\"let element\" class=\"isbn-col\"> {{element.itemNumber}} </td>\n    </ng-container>\n\n    <!-- Title Column -->\n    <ng-container matColumnDef=\"color\">\n      <th mat-header-cell *matHeaderCellDef> Color </th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.color}} </td>\n    </ng-container>\n\n    <!-- Author Column -->\n    <ng-container matColumnDef=\"quantity\">\n      <th mat-header-cell *matHeaderCellDef> Quantity </th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.quantity}} </td>\n    </ng-container>\n\n    <!-- Size Column -->\n    <ng-container matColumnDef=\"price\">\n      <th mat-header-cell *matHeaderCellDef> Price </th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.price}} </td>\n    </ng-container>\n\n\n    <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n    <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\" [routerLink]=\"['/paint-details/', row._id]\"></tr>\n\n  </table>\n</div>\n"
 
 /***/ }),
 
@@ -1340,7 +1340,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_2__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\Patrick\Desktop\IST421_Paint\angular-src\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! C:\Users\Nurul\Documents\IST421_Paint\angular-src\src\main.ts */"./src/main.ts");
 
 
 /***/ })

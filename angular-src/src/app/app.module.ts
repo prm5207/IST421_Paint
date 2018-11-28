@@ -23,6 +23,10 @@ import { BrushComponent } from './components/brush/brush.component';
 import { PaintComponent } from './components/paint/paint.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatInputModule, MatPaginatorModule, MatProgressSpinnerModule, MatSortModule, MatTableModule, MatIconModule, MatButtonModule, MatCardModule, MatFormFieldModule } from "@angular/material";
+import { RollerComponent } from './components/roller/roller.component';
+import { RollerDetailComponent } from './components/roller-detail/roller-detail.component';
+import { RollerCreateComponent } from './components/roller-create/roller-create.component';
+import { RollerEditComponent } from './components/roller-edit/roller-edit.component';
 
 
 const appRoutes: Routes = [
@@ -35,8 +39,12 @@ const appRoutes: Routes = [
   {path:'shopping-cart',component:ShoppingCartComponent},
   {path:'checkout',component:CheckoutComponent},
   {path: 'brush', component:BrushComponent, data: {title: 'Brush List'}},
-  {path: 'paint', component:PaintComponent, data: {title: 'Paint List'}}
-  ]
+  {path: 'paint', component:PaintComponent, data: {title: 'Paint List'}},
+  {path: 'roller', component:RollerComponent, data: {title: 'Roller List'}},
+  {path: 'roller-create', component:RollerCreateComponent, data: {title: 'Create Roller'}},
+  {path: 'roller-edit', component:RollerEditComponent, data: {title: 'Edit Roller'}},
+
+   ]
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,6 +59,10 @@ const appRoutes: Routes = [
     CheckoutComponent,
     BrushComponent,
     PaintComponent,
+    RollerComponent,
+    RollerDetailComponent,
+    RollerCreateComponent,
+    RollerEditComponent,
   ],
   imports: [
     BrowserModule,
