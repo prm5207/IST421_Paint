@@ -13,7 +13,7 @@ export class DashboardComponent implements OnInit {
   constructor(private _cartService:CartService) {
     // this.addItem=_cartService.addItem
    }
-   brushes = data.brushes
+   items = data.items
    paintColors = data.paintColors
 
   ngOnInit() {
