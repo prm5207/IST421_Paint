@@ -27,13 +27,14 @@ import { RollerComponent } from './components/roller/roller.component';
 import { RollerDetailComponent } from './components/roller-detail/roller-detail.component';
 import { RollerCreateComponent } from './components/roller-create/roller-create.component';
 import { RollerEditComponent } from './components/roller-edit/roller-edit.component';
+import { CartService } from './services/items.service';
 
 
 const appRoutes: Routes = [
   {path:'',component: HomeComponent},
   {path:'register',component: RegisterComponent},
   {path:'login',component: LoginComponent},
-  {path:'dashboard',component: DashboardComponent},
+  {path:'dashboard',component: DashboardComponent, data:{cart:ShoppingCartComponent}},
   {path:'profile',component: ProfileComponent},
   {path:'inventory',component: InventoryComponent},
   {path:'shopping-cart',component:ShoppingCartComponent},
@@ -82,7 +83,7 @@ const appRoutes: Routes = [
     MatCardModule,
     MatFormFieldModule
   ],
-  providers: [ValidateService, AuthService],
+  providers: [ValidateService, AuthService, CartService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

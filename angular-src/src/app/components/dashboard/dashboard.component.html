@@ -1,70 +1,32 @@
-
 <h2 class="page-header" align="center">Welcome to Smith's Paint Shop</h2>
 <div class="row">
     <div class="col-md-4 list-group">
         <h3 style="text-align:center">Paint Colors</h3>
-        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+        <a  *ngFor="let color of paintColors" class="list-group-item list-group-item-action flex-column align-items-start">
             <div class="d-flex w-100 justify-content-between">
-                <h5 class="mb-1">Pure White</h5>
+                <h5 class="mb-1">{{color.name}}</h5>
             </div>
             <ul style="list-style-type:none">
-                <li>Color: White</li>
-                <li>Container Size: 1 Quart</li>
-                <li>Price: $9.34</li>
+                <li>Color: {{color.color}}</li>
+                <li>Container Size: {{color.size}}</li>
+                <li>Price: {{color.price}}</li>
             </ul>
-        </a>
-        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
-            <div class="d-flex w-100 justify-content-between">
-                <h5 class="mb-1">Crimison Red</h5>
-            </div>
-            <ul style="list-style-type:none">
-                <li>Color: Red</li>
-                <li>Container Size: 1 Quart</li>
-                <li>Price: $8.67</li>
-            </ul>
-        </a>
-        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
-            <div class="d-flex w-100 justify-content-between">
-                <h5 class="mb-1">Lime Green</h5>
-            </div>
-            <ul style="list-style-type:none">
-                <li>Color: Green</li>
-                <li>Container Size: 1 Quart</li>
-                <li>Price: $8.57</li>
-            </ul>
+            <button (click)="addToCart(color)">Add to Cart</button>
         </a>
     </div>
     <div class="col-md-4 list-group">
         <h3 style="text-align:center">Brushes</h3>
-        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+        <a  *ngFor="let brush of brushes" class="list-group-item list-group-item-action flex-column align-items-start">
             <div class="d-flex w-100 justify-content-between">
-                <h5 class="mb-1">4 in. Chip Brush</h5>
+                <h5 class="mb-1">{{brush.name}}</h5>
             </div>
             <ul style="list-style-type:none">
-                <li>Brush Size: 4 inches</li>
+                <li>Brush Size: {{brush.size}}</li>
                 <li>Handle Material: Wood</li>
-                <li>Price: $3.44</li>
+                <li>Price: {{brush.price}}</li>
+
             </ul>
-        </a>
-        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
-            <div class="d-flex w-100 justify-content-between">
-                <h5 class="mb-1">3 in. Flat Brush</h5>
-            </div>
-            <ul style="list-style-type:none">
-                <li>Brush Size: 3 inches</li>
-                <li>Handle Material: Plastic</li>
-                <li>Price: $7.94</li>
-            </ul>
-        </a>
-        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
-            <div class="d-flex w-100 justify-content-between">
-                <h5 class="mb-1">1 in. Chip Brush</h5>
-            </div>
-            <ul style="list-style-type:none">
-                <li>Brush Size: 1 inches</li>
-                <li>Handle Material: Plastic</li>
-                <li>Price: $7.94</li>
-            </ul>
+            <button (click)="addToCart(brush)">Add to Cart</button>
         </a>
     </div>
     <div class="col-md-4 list-group">
