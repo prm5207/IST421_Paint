@@ -119,12 +119,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_roller_detail_roller_detail_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./components/roller-detail/roller-detail.component */ "./src/app/components/roller-detail/roller-detail.component.ts");
 /* harmony import */ var _components_roller_create_roller_create_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./components/roller-create/roller-create.component */ "./src/app/components/roller-create/roller-create.component.ts");
 /* harmony import */ var _components_roller_edit_roller_edit_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./components/roller-edit/roller-edit.component */ "./src/app/components/roller-edit/roller-edit.component.ts");
+/* harmony import */ var _components_paint_create_paint_create_component__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./components/paint-create/paint-create.component */ "./src/app/components/paint-create/paint-create.component.ts");
+/* harmony import */ var _components_paint_edit_paint_edit_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./components/paint-edit/paint-edit.component */ "./src/app/components/paint-edit/paint-edit.component.ts");
+/* harmony import */ var _components_paint_detail_paint_detail_component__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./components/paint-detail/paint-detail.component */ "./src/app/components/paint-detail/paint-detail.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
+
 
 
 
@@ -166,6 +172,31 @@ var appRoutes = [
     { path: 'roller', component: _components_roller_roller_component__WEBPACK_IMPORTED_MODULE_23__["RollerComponent"], data: { title: 'Roller List' } },
     { path: 'roller-create', component: _components_roller_create_roller_create_component__WEBPACK_IMPORTED_MODULE_25__["RollerCreateComponent"], data: { title: 'Create Roller' } },
     { path: 'roller-edit', component: _components_roller_edit_roller_edit_component__WEBPACK_IMPORTED_MODULE_26__["RollerEditComponent"], data: { title: 'Edit Roller' } },
+    {
+        path: 'paints',
+        component: _components_paint_paint_component__WEBPACK_IMPORTED_MODULE_20__["PaintComponent"],
+        data: { title: 'Paint List' }
+    },
+    {
+        path: 'paint-details/:id',
+        component: _components_paint_detail_paint_detail_component__WEBPACK_IMPORTED_MODULE_29__["PaintDetailComponent"],
+        data: { title: 'Paint Details' }
+    },
+    {
+        path: 'paint-create',
+        component: _components_paint_create_paint_create_component__WEBPACK_IMPORTED_MODULE_27__["PaintCreateComponent"],
+        data: { title: 'Create Paint' }
+    },
+    {
+        path: 'paint-edit/:id',
+        component: _components_paint_edit_paint_edit_component__WEBPACK_IMPORTED_MODULE_28__["PaintEditComponent"],
+        data: { title: 'Edit Paint' }
+    },
+    {
+        path: '',
+        redirectTo: '/paints',
+        pathMatch: 'full'
+    }
 ];
 var AppModule = /** @class */ (function () {
     function AppModule() {
@@ -189,10 +220,14 @@ var AppModule = /** @class */ (function () {
                 _components_roller_detail_roller_detail_component__WEBPACK_IMPORTED_MODULE_24__["RollerDetailComponent"],
                 _components_roller_create_roller_create_component__WEBPACK_IMPORTED_MODULE_25__["RollerCreateComponent"],
                 _components_roller_edit_roller_edit_component__WEBPACK_IMPORTED_MODULE_26__["RollerEditComponent"],
+                _components_paint_create_paint_create_component__WEBPACK_IMPORTED_MODULE_27__["PaintCreateComponent"],
+                _components_paint_edit_paint_edit_component__WEBPACK_IMPORTED_MODULE_28__["PaintEditComponent"],
+                _components_paint_detail_paint_detail_component__WEBPACK_IMPORTED_MODULE_29__["PaintDetailComponent"],
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"],
+                _angular_forms__WEBPACK_IMPORTED_MODULE_2__["ReactiveFormsModule"],
                 _angular_http__WEBPACK_IMPORTED_MODULE_3__["HttpModule"],
                 _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClientModule"],
                 _angular_router__WEBPACK_IMPORTED_MODULE_5__["RouterModule"].forRoot(appRoutes),
@@ -405,7 +440,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\r\n<h2 class=\"page-header\" align=\"center\">Welcome to Smith's Paint Shop</h2>\r\n<div class=\"row\">\r\n    <div class=\"col-md-4 list-group\">\r\n        <h3 style=\"text-align:center\">Paint Colors</h3>\r\n        <a href=\"#\" class=\"list-group-item list-group-item-action flex-column align-items-start\">\r\n            <div class=\"d-flex w-100 justify-content-between\">\r\n                <h5 class=\"mb-1\">Pure White</h5>\r\n            </div>\r\n            <ul style=\"list-style-type:none\">\r\n                <li>Color: White</li>\r\n                <li>Container Size: 1 Quart</li>\r\n                <li>Price: $9.34</li>\r\n            </ul>\r\n        </a>\r\n        <a href=\"#\" class=\"list-group-item list-group-item-action flex-column align-items-start\">\r\n            <div class=\"d-flex w-100 justify-content-between\">\r\n                <h5 class=\"mb-1\">Crimison Red</h5>\r\n            </div>\r\n            <ul style=\"list-style-type:none\">\r\n                <li>Color: Red</li>\r\n                <li>Container Size: 1 Quart</li>\r\n                <li>Price: $8.67</li>\r\n            </ul>\r\n        </a>\r\n        <a href=\"#\" class=\"list-group-item list-group-item-action flex-column align-items-start\">\r\n            <div class=\"d-flex w-100 justify-content-between\">\r\n                <h5 class=\"mb-1\">Lime Green</h5>\r\n            </div>\r\n            <ul style=\"list-style-type:none\">\r\n                <li>Color: Green</li>\r\n                <li>Container Size: 1 Quart</li>\r\n                <li>Price: $8.57</li>\r\n            </ul>\r\n        </a>\r\n    </div>\r\n    <div class=\"col-md-4 list-group\">\r\n        <h3 style=\"text-align:center\">Brushes</h3>\r\n        <a href=\"#\" class=\"list-group-item list-group-item-action flex-column align-items-start\">\r\n            <div class=\"d-flex w-100 justify-content-between\">\r\n                <h5 class=\"mb-1\">4 in. Chip Brush</h5>\r\n            </div>\r\n            <ul style=\"list-style-type:none\">\r\n                <li>Brush Size: 4 inches</li>\r\n                <li>Handle Material: Wood</li>\r\n                <li>Price: $3.44</li>\r\n            </ul>\r\n        </a>\r\n        <a href=\"#\" class=\"list-group-item list-group-item-action flex-column align-items-start\">\r\n            <div class=\"d-flex w-100 justify-content-between\">\r\n                <h5 class=\"mb-1\">3 in. Flat Brush</h5>\r\n            </div>\r\n            <ul style=\"list-style-type:none\">\r\n                <li>Brush Size: 3 inches</li>\r\n                <li>Handle Material: Plastic</li>\r\n                <li>Price: $7.94</li>\r\n            </ul>\r\n        </a>\r\n        <a href=\"#\" class=\"list-group-item list-group-item-action flex-column align-items-start\">\r\n            <div class=\"d-flex w-100 justify-content-between\">\r\n                <h5 class=\"mb-1\">1 in. Chip Brush</h5>\r\n            </div>\r\n            <ul style=\"list-style-type:none\">\r\n                <li>Brush Size: 1 inches</li>\r\n                <li>Handle Material: Plastic</li>\r\n                <li>Price: $7.94</li>\r\n            </ul>\r\n        </a>\r\n    </div>\r\n    <div class=\"col-md-4 list-group\">\r\n        <h3 style=\"text-align:center\">Rollers</h3>\r\n\r\n    </div>\r\n  </div>\r\n\r\n\r\n"
+module.exports = "<div class=\"row\">\r\n\r\n  <div class=\"col-lg-4 col-md-6 mb-4\">\r\n    <div class=\"card h-100\">\r\n      <img class=\"card-img-top\" src=\"https://mobileimages.lowes.com/product/converted/042397/042397610066lg.jpg\" alt=\"\">\r\n      <div class=\"card-body\">\r\n        <h4 class=\"card-title\">\r\n          Valspar Signature Flat Latex Paint\r\n        </h4>\r\n        <h5>$32.98</h5>\r\n        <p class=\"card-text\">Easily covers existing colors and provides a smooth, even finish. Ideal for low-traffic areas of your home such as living rooms, dinning rooms and bedrooms\r\n        </p>\r\n      </div>\r\n      <div class=\"card-footer\">\r\n        <small class=\"text-muted\">&#9733; &#9733; &#9733; &#9733; &#9734;</small>\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-lg-4 col-md-6 mb-4\">\r\n    <div class=\"card h-100\">\r\n      <img class=\"card-img-top\" src=\"https://mobileimages.lowes.com/product/converted/042397/042397593710lg.jpg\" alt=\"\">\r\n      <div class=\"card-body\">\r\n        <h4 class=\"card-title\">\r\n          Valspar 2000 Eggshell Pastel Base Latex Paint\r\n        </h4>\r\n        <h5>$35.98</h5>\r\n        <p class=\"card-text\">Durable paint + primer offers great coverage over existing colors, with time-saving primer built right in.</p>\r\n      </div>\r\n      <div class=\"card-footer\">\r\n        <small class=\"text-muted\">&#9733; &#9733; &#9733; &#9733; &#9734;</small>\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-lg-4 col-md-6 mb-4\">\r\n    <div class=\"card h-100\">\r\n      <img class=\"card-img-top\" src=\"https://mobileimages.lowes.com/product/converted/035777/035777879658lg.jpg\" alt=\"\">\r\n      <div class=\"card-body\">\r\n        <h4 class=\"card-title\">\r\n          Sherwin-Williams Semi-gloss Tint Base Paint\r\n        </h4>\r\n        <h5>$38.99</h5>\r\n        <p class=\"card-text\"> Ideal for high-moisture, high traffic areas of your home such as kitchens, bathrooms and laundry rooms. Applies easily in just one coat, guaranteed; One-coat coverage backed by our Lifetime Warranty</p>\r\n      </div>\r\n      <div class=\"card-footer\">\r\n        <small class=\"text-muted\">&#9733; &#9733; &#9733; &#9733; &#9734;</small>\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-lg-4 col-md-6 mb-4\">\r\n    <div class=\"card h-100\">\r\n      <img class=\"card-img-top\" src=\"https://mobileimages.lowes.com/product/converted/732087/732087909142lg.jpg\" alt=\"\">\r\n      <div class=\"card-body\">\r\n        <h4 class=\"card-title\">\r\n         Blue Hawk 3-Pack Polyester Flat And Angle 2.5-in Paint Brush\r\n        </h4>\r\n        <h5>$14.50</h5>\r\n        <p class=\"card-text\">Professional quality tapered filaments for smooth painted finish</p>\r\n      </div>\r\n      <div class=\"card-footer\">\r\n        <small class=\"text-muted\">&#9733; &#9733; &#9733; &#9733; &#9734;</small>\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-lg-4 col-md-6 mb-4\">\r\n    <div class=\"card h-100\">\r\n      <img class=\"card-img-top\" src=\"https://mobileimages.lowes.com/product/converted/692773/6927732900337.jpg\" alt=\"\">\r\n      <div class=\"card-body\">\r\n        <h4 class=\"card-title\">\r\n          Project Source 9-Pack Foam Flat 3-in Paint Brush\r\n        </h4>\r\n        <h5>$5.98</h5>\r\n        <p class=\"card-text\">Set includes three each of a 1-in, 2-in and 3-in brushes. Brush head equipped for better paint absorption. Can be used with all types of paints and stains.</p>\r\n      </div>\r\n      <div class=\"card-footer\">\r\n        <small class=\"text-muted\">&#9733; &#9733; &#9733; &#9733; &#9734;</small>\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-lg-4 col-md-6 mb-4\">\r\n    <div class=\"card h-100\">\r\n      <img class=\"card-img-top\" src=\"https://mobileimages.lowes.com/product/converted/692773/6927732970149lg.jpg\" alt=\"\">\r\n      <div class=\"card-body\">\r\n        <h4 class=\"card-title\">\r\n          Project Source 3-Pack Utility Polyester Flat And Angle 3-in Paint Brush\r\n        </h4>\r\n        <h5>$8.97</h5>\r\n        <p class=\"card-text\">Can be used with all types of paints and stains. Set contains a 2-in. angle brush, a 2-in. flat cut brush and a 3-in. flat cut brush. Ideal for medium projects touch ups.</p>\r\n      </div>\r\n      <div class=\"card-footer\">\r\n        <small class=\"text-muted\">&#9733; &#9733; &#9733; &#9733; &#9734;</small>\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-lg-4 col-md-6 mb-4\">\r\n    <div class=\"card h-100\">\r\n      <img class=\"card-img-top\" src=\"https://mobileimages.lowes.com/product/converted/024964/024964224685.jpg\" alt=\"\">\r\n      <div class=\"card-body\">\r\n        <h4 class=\"card-title\">\r\n          Wagner Smart Roller 7.25-in Inner-Fed Paint Roller\r\n        </h4>\r\n        <h5>$24.99</h5>\r\n        <p class=\"card-text\">Plastic handle has an integrated paint reservoir that eliminates need for paint tray. Polyester knit roller cover is compatible with water-based and oil-based paints and stains. Internally fed 9 inches x 3/8 inches roller provides continuous, even paint coverage\r\n        </p>\r\n      </div>\r\n      <div class=\"card-footer\">\r\n        <small class=\"text-muted\">&#9733; &#9733; &#9733; &#9733; &#9734;</small>\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-lg-4 col-md-6 mb-4\">\r\n    <div class=\"card h-100\">\r\n      <img class=\"card-img-top\" src=\"https://mobileimages.lowes.com/product/converted/732087/732087976465.jpg\" alt=\"\">\r\n      <div class=\"card-body\">\r\n        <h4 class=\"card-title\">\r\n          WHIZZ 6-in Cabinet and Door Foam Mini Paint Roller\r\n        </h4>\r\n        <h5>$5.98</h5>\r\n        <p class=\"card-text\">Ideal for use on cabinets and doors. Provides for a smooth finish. Made with high density foam</p>\r\n      </div>\r\n      <div class=\"card-footer\">\r\n        <small class=\"text-muted\">&#9733; &#9733; &#9733; &#9733; &#9734;</small>\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-lg-4 col-md-6 mb-4\">\r\n    <div class=\"card h-100\">\r\n      <img class=\"card-img-top\" src=\"https://mobileimages.lowes.com/product/converted/732087/732087960006.jpg\" alt=\"\">\r\n      <div class=\"card-body\">\r\n        <h4 class=\"card-title\">WHIZZ 4-in MICROLON Walls and Ceilings Synthetic Blend Mini Paint Roller</h4>\r\n        <h5>14.98</h5>\r\n        <p class=\"card-text\">MICROLON™ is new fabric technology that can only be found on WHIZZ rollers. Engineered for today's premium paints and paint plus primers. Works great with all primers and are a great choice when using flat, eggshell and satin sheens</p>\r\n      </div>\r\n      <div class=\"card-footer\">\r\n        <small class=\"text-muted\">&#9733; &#9733; &#9733; &#9733; &#9734;</small>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -457,7 +492,7 @@ var DashboardComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = "\r\n"
 
 /***/ }),
 
@@ -468,7 +503,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"jumbotron text-center\">\r\n  <h1>Smith's Paint Shop</h1>\r\n  <p class=\"lead\">Welcome to our custom Paint Company ERP</p>\r\n  <div>\r\n    <a class=\"btn btn-primary\" [routerLink]=\"['/register']\">Register</a>\r\n    <a class=\"btn btn-info\" [routerLink]=\"['/login']\">Login</a>\r\n  </div>\r\n  <div class=\"row\">\r\n    <a class=\"btn btn-danger\" [routerLink]=\"['/brush']\">Brush</a>\r\n    <a class=\"btn btn-danger\" [routerLink]=\"['/paint']\">Paint</a>\r\n    <a class=\"btn btn-danger\" [routerLink]=\"['/roller']\">Roller</a>\r\n  </div>\r\n</div>\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-md-4\">\r\n    <h3>MEAN Stack</h3>\r\n    <p>Sed neque diam, hendrerit eget elementum lobortis, egestas sed elit. Sed vel interdum turpis. Sed vestibulum urna vel quam facilisis pellentesque. Integer faucibus ornare lobortis. Nam ut nulla sodales, tristique metus in, iaculis dolor. Donec volutpat tellus id purus feugiat sagittis. Fusce ut tempor justo, nec auctor purus. Cras nisl metus, malesuada in dui vitae, malesuada blandit mauris.</p>\r\n  </div>\r\n  <div class=\"col-md-4\">\r\n    <h3>CRUD</h3>\r\n    <p>Sed neque diam, hendrerit eget elementum lobortis, egestas sed elit. Sed vel interdum turpis. Sed vestibulum urna vel quam facilisis pellentesque. Integer faucibus ornare lobortis. Nam ut nulla sodales, tristique metus in, iaculis dolor. Donec volutpat tellus id purus feugiat sagittis. Fusce ut tempor justo, nec auctor purus. Cras nisl metus, malesuada in dui vitae, malesuada blandit mauris.</p>\r\n  </div>\r\n  <div class=\"col-md-4\">\r\n    <h3>IST 421</h3>\r\n    <p>Sed neque diam, hendrerit eget elementum lobortis, egestas sed elit. Sed vel interdum turpis. Sed vestibulum urna vel quam facilisis pellentesque. Integer faucibus ornare lobortis. Nam ut nulla sodales, tristique metus in, iaculis dolor. Donec volutpat tellus id purus feugiat sagittis. Fusce ut tempor justo, nec auctor purus. Cras nisl metus, malesuada in dui vitae, malesuada blandit mauris.</p>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<div class=\"jumbotron text-center\">\r\n  <h1>Smith's Paint Shop</h1>\r\n  <p class=\"lead\">Welcome to our custom Paint Company ERP</p>\r\n  <div>\r\n    <a class=\"btn btn-primary\" [routerLink]=\"['/register']\">Register</a>\r\n    <a class=\"btn btn-info\" [routerLink]=\"['/login']\">Login</a>\r\n  </div>\r\n  <div>\r\n    <a class=\"btn btn-danger\" [routerLink]=\"['/inventory']\">Inventory</a>\r\n  </div>\r\n</div>\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-md-4\">\r\n    <h3>MEAN Stack</h3>\r\n    <p>Sed neque diam, hendrerit eget elementum lobortis, egestas sed elit. Sed vel interdum turpis. Sed vestibulum urna vel quam facilisis pellentesque. Integer faucibus ornare lobortis. Nam ut nulla sodales, tristique metus in, iaculis dolor. Donec volutpat tellus id purus feugiat sagittis. Fusce ut tempor justo, nec auctor purus. Cras nisl metus, malesuada in dui vitae, malesuada blandit mauris.</p>\r\n  </div>\r\n  <div class=\"col-md-4\">\r\n    <h3>CRUD</h3>\r\n    <p>Sed neque diam, hendrerit eget elementum lobortis, egestas sed elit. Sed vel interdum turpis. Sed vestibulum urna vel quam facilisis pellentesque. Integer faucibus ornare lobortis. Nam ut nulla sodales, tristique metus in, iaculis dolor. Donec volutpat tellus id purus feugiat sagittis. Fusce ut tempor justo, nec auctor purus. Cras nisl metus, malesuada in dui vitae, malesuada blandit mauris.</p>\r\n  </div>\r\n  <div class=\"col-md-4\">\r\n    <h3>IST 421</h3>\r\n    <p>Sed neque diam, hendrerit eget elementum lobortis, egestas sed elit. Sed vel interdum turpis. Sed vestibulum urna vel quam facilisis pellentesque. Integer faucibus ornare lobortis. Nam ut nulla sodales, tristique metus in, iaculis dolor. Donec volutpat tellus id purus feugiat sagittis. Fusce ut tempor justo, nec auctor purus. Cras nisl metus, malesuada in dui vitae, malesuada blandit mauris.</p>\r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -531,7 +566,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\r\n\r\n \r\n  <h2>Our Inventory</h2>\r\n \r\n  <br>\r\n  <table style=\"width:50%; float:left\">\r\n    <caption>Paint Collection</caption>\r\n    <tr>\r\n      <th>ItemID</th>\r\n      <th>ItemName</th>\r\n      <th>Size(/Gal)</th> \r\n      <th>Price(/Gal)</th>\r\n    </tr>\r\n    <tr>\r\n      <td>110</td>\r\n      <td>Paint123</td>\r\n      <td>10</td>\r\n      <td>1.75</td>\r\n    </tr>\r\n    <tr>\r\n      <td>111</td>\r\n      <td>Red234</td>\r\n      <td>12</td>\r\n      <td>1.50</td>\r\n    </tr>\r\n    <tr>\r\n      <td>112</td>\r\n      <td>Gray987</td>\r\n      <td>10</td>\r\n      <td>1.75</td>\r\n    </tr>\r\n    </table>\r\n    <table style=\"width:50%;float:right\">\r\n      <caption>Brush Collection</caption>\r\n      <tr>\r\n        <td>ItemID</td>\r\n        <th>ItemName</th>\r\n        <th>ItemID</th> \r\n        <th>Price(/Gal)</th>\r\n      </tr>\r\n      <tr>\r\n          <td>210</td>\r\n        <td>Brush123</td>\r\n        <td>12345</td>\r\n        <td>1.15</td>\r\n      </tr>\r\n      <tr>\r\n          <td>220</td>\r\n        <td>Brush1234</td>\r\n        <td>12</td>\r\n        <td>1.50</td>\r\n      </tr>\r\n      <tr>\r\n        <td>230</td>\r\n        <td>Brush987</td>\r\n        <td>15</td>\r\n        <td>1.75</td>\r\n      </tr>\r\n    </table>\r\n    <table style=\"width:50%;float:right\">\r\n      <caption>Roller Collection</caption>\r\n      <tr>\r\n        <td>ItemID</td>\r\n        <th>ItemName</th>\r\n        <th>ItemID</th> \r\n        <th>Price(/Gal)</th>\r\n      </tr>\r\n      <tr>\r\n          <td>310</td>\r\n        <td>Roller123</td>\r\n        <td>15</td>\r\n        <td>1.2</td>\r\n      </tr>\r\n      <tr>\r\n        <td>320</td>\r\n        <td>Roller345</td>\r\n        <td>10</td>\r\n        <td>1.2</td>\r\n      </tr>\r\n      <tr>\r\n        <td>330</td>\r\n        <td>Roller987</td>\r\n        <td>12</td>\r\n        <td>1.0</td>\r\n      </tr>\r\n    </table>\r\n    <table style=\"width:50%; float:left\">\r\n      <caption>Roller Pan Collection</caption>\r\n      <tr>\r\n        <td>ItemID</td>\r\n        <th>ItemName</th>\r\n        <th>ItemID</th> \r\n        <th>Price(/Gal)</th>\r\n      </tr>\r\n      <tr>\r\n          <td>410</td>\r\n        <td>RollerPan1234</td>\r\n        <td>10</td>\r\n        <td>1.68</td>\r\n      </tr>\r\n      <tr>\r\n          <td>420</td>\r\n        <td>RollerPan987</td>\r\n        <td>12</td>\r\n        <td>1.25</td>\r\n      </tr>\r\n      <tr>\r\n          <td>430</td>\r\n        <td>RollerPan987</td>\r\n        <td>12</td>\r\n        <td>1.75</td>\r\n      </tr>\r\n      </table>\r\n \r\n   "
+module.exports = "\r\n<div class=\"jumbotron text-center\">\r\n  <h1>Smith's Paint Inventory</h1>\r\n  <p class=\"lead\">Welcome to our custom Paint Company ERP</p>\r\n  <div>\r\n    <a class=\"btn btn-danger\" [routerLink]=\"['/brush']\">Brush</a>\r\n    <a class=\"btn btn-danger\" [routerLink]=\"['/paint']\">Paint</a>\r\n    <a class=\"btn btn-danger\" [routerLink]=\"['/roller']\">Roller</a>\r\n  </div>\r\n</div>\r\n\r\n \r\n"
 
 /***/ }),
 
@@ -726,6 +761,247 @@ var NavbarComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [])
     ], NavbarComponent);
     return NavbarComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/components/paint-create/paint-create.component.css":
+/*!********************************************************************!*\
+  !*** ./src/app/components/paint-create/paint-create.component.css ***!
+  \********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".example-form {\r\n  min-width: 150px;\r\n  max-width: 500px;\r\n  width: 100%;\r\n}\r\n\r\n.example-full-width {\r\n  width: 100%;\r\n}\r\n\r\n.button-row {\r\n  margin: 10px 0;\r\n}\r\n"
+
+/***/ }),
+
+/***/ "./src/app/components/paint-create/paint-create.component.html":
+/*!*********************************************************************!*\
+  !*** ./src/app/components/paint-create/paint-create.component.html ***!
+  \*********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"button-row\">\n  <a mat-raised-button color=\"primary\" [routerLink]=\"['/paint']\"><mat-icon>list</mat-icon></a>\n</div>\n<form [formGroup]=\"paintForm\" (ngSubmit)=\"onFormSubmit(paintForm.value)\">\n  <mat-form-field class=\"example-full-width\">\n    <input matInput placeholder=\"itemNumber\" formControlName=\"itemNumber\">\n  </mat-form-field>\n\n  <mat-form-field class=\"example-full-width\">\n    <input matInput placeholder=\"color\" formControlName=\"color\">\n  </mat-form-field>\n\n  <mat-form-field class=\"example-full-width\">\n    <input matInput placeholder=\"quantity\" formControlName=\"quantity\">\n  </mat-form-field>\n\n  <mat-form-field class=\"example-full-width\">\n    <input matInput placeholder=\"Price\" formControlName=\"price\">\n  </mat-form-field>\n  <div class=\"button-row\">\n    <button type=\"submit\" [disabled]=\"!paintForm.valid\" mat-raised-button color=\"primary\"><mat-icon>save</mat-icon></button>\n  </div>\n</form>\n"
+
+/***/ }),
+
+/***/ "./src/app/components/paint-create/paint-create.component.ts":
+/*!*******************************************************************!*\
+  !*** ./src/app/components/paint-create/paint-create.component.ts ***!
+  \*******************************************************************/
+/*! exports provided: PaintCreateComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PaintCreateComponent", function() { return PaintCreateComponent; });
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _services_api_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../services/api.service */ "./src/app/services/api.service.ts");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var PaintCreateComponent = /** @class */ (function () {
+    function PaintCreateComponent(router, api, formBuilder) {
+        this.router = router;
+        this.api = api;
+        this.formBuilder = formBuilder;
+        this.color = '';
+    }
+    PaintCreateComponent.prototype.ngOnInit = function () {
+        this.paintForm = this.formBuilder.group({
+            'itemNumber': [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            'color': [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            'quantity': [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            'price': [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required]
+        });
+    };
+    PaintCreateComponent.prototype.onFormSubmit = function (form) {
+        var _this = this;
+        this.api.postPaint(form)
+            .subscribe(function (res) {
+            var id = res['_id'];
+            _this.router.navigate(['/paint-details', id]);
+        }, function (err) {
+            console.log(err);
+        });
+    };
+    PaintCreateComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-paint-create',
+            template: __webpack_require__(/*! ./paint-create.component.html */ "./src/app/components/paint-create/paint-create.component.html"),
+            styles: [__webpack_require__(/*! ./paint-create.component.css */ "./src/app/components/paint-create/paint-create.component.css")]
+        }),
+        __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_0__["Router"], _services_api_service__WEBPACK_IMPORTED_MODULE_2__["ApiService"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormBuilder"]])
+    ], PaintCreateComponent);
+    return PaintCreateComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/components/paint-detail/paint-detail.component.css":
+/*!********************************************************************!*\
+  !*** ./src/app/components/paint-detail/paint-detail.component.css ***!
+  \********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".example-card {\r\n  max-width: 500px;\r\n}\r\n\r\n.button-row {\r\n  margin: 10px 0;\r\n}\r\n"
+
+/***/ }),
+
+/***/ "./src/app/components/paint-detail/paint-detail.component.html":
+/*!*********************************************************************!*\
+  !*** ./src/app/components/paint-detail/paint-detail.component.html ***!
+  \*********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"button-row\">\n  <a mat-raised-button color=\"primary\" [routerLink]=\"['/paint']\"><mat-icon>list</mat-icon></a>\n</div>\n<mat-card class=\"example-card\">\n  <mat-card-header>\n    <mat-card-title><h2>{{paint['itemNumber']}}</h2></mat-card-title>\n\n  </mat-card-header>\n  <mat-card-content>\n    <dl>\n      <dt>ItemNumber:</dt>\n      <dd>{{paint.itemNumber}}</dd>\n      <dt>Color:</dt>\n      <dd>{{paint.color}}</dd>\n      <dt>Quantity:</dt>\n      <dd>{{paint.quantity}}</dd>\n      <dt>Price:</dt>\n      <dd>{{paint.price}}</dd>\n    </dl>\n  </mat-card-content>\n  <mat-card-actions>\n    <a mat-raised-button color=\"primary\" [routerLink]=\"['/paint-edit', paint._id]\"><mat-icon>edit</mat-icon></a>\n    <a mat-raised-button color=\"warn\" (click)=\"deletePaint(paint._id)\"><mat-icon>delete</mat-icon></a>\n  </mat-card-actions>\n</mat-card>\n"
+
+/***/ }),
+
+/***/ "./src/app/components/paint-detail/paint-detail.component.ts":
+/*!*******************************************************************!*\
+  !*** ./src/app/components/paint-detail/paint-detail.component.ts ***!
+  \*******************************************************************/
+/*! exports provided: PaintDetailComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PaintDetailComponent", function() { return PaintDetailComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _services_api_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../services/api.service */ "./src/app/services/api.service.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var PaintDetailComponent = /** @class */ (function () {
+    function PaintDetailComponent(route, api, router) {
+        this.route = route;
+        this.api = api;
+        this.router = router;
+        this.paint = {};
+    }
+    PaintDetailComponent.prototype.ngOnInit = function () {
+        this.getPaintDetails(this.route.snapshot.params['id']);
+    };
+    PaintDetailComponent.prototype.getPaintDetails = function (id) {
+        var _this = this;
+        this.api.getPaint(id)
+            .subscribe(function (data) {
+            console.log(data);
+            _this.paint = data;
+        });
+    };
+    PaintDetailComponent.prototype.deletePaint = function (id) {
+        var _this = this;
+        this.api.deletePaint(id)
+            .subscribe(function (res) {
+            _this.router.navigate(['/paints']);
+        }, function (err) {
+            console.log(err);
+        });
+    };
+    PaintDetailComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-paint-detail',
+            template: __webpack_require__(/*! ./paint-detail.component.html */ "./src/app/components/paint-detail/paint-detail.component.html"),
+            styles: [__webpack_require__(/*! ./paint-detail.component.css */ "./src/app/components/paint-detail/paint-detail.component.css")]
+        }),
+        __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"], _services_api_service__WEBPACK_IMPORTED_MODULE_2__["ApiService"], _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"]])
+    ], PaintDetailComponent);
+    return PaintDetailComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/components/paint-edit/paint-edit.component.css":
+/*!****************************************************************!*\
+  !*** ./src/app/components/paint-edit/paint-edit.component.css ***!
+  \****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/components/paint-edit/paint-edit.component.html":
+/*!*****************************************************************!*\
+  !*** ./src/app/components/paint-edit/paint-edit.component.html ***!
+  \*****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  paint-edit works!\n</p>\n"
+
+/***/ }),
+
+/***/ "./src/app/components/paint-edit/paint-edit.component.ts":
+/*!***************************************************************!*\
+  !*** ./src/app/components/paint-edit/paint-edit.component.ts ***!
+  \***************************************************************/
+/*! exports provided: PaintEditComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PaintEditComponent", function() { return PaintEditComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var PaintEditComponent = /** @class */ (function () {
+    function PaintEditComponent() {
+    }
+    PaintEditComponent.prototype.ngOnInit = function () {
+    };
+    PaintEditComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-paint-edit',
+            template: __webpack_require__(/*! ./paint-edit.component.html */ "./src/app/components/paint-edit/paint-edit.component.html"),
+            styles: [__webpack_require__(/*! ./paint-edit.component.css */ "./src/app/components/paint-edit/paint-edit.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], PaintEditComponent);
+    return PaintEditComponent;
 }());
 
 

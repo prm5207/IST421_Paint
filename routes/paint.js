@@ -3,7 +3,7 @@ var router = express.Router();
 var mongoose = require('mongoose');
 var Paint = require('../models/paint.js');
 
-/* GET ALL BOOKS */
+/* GET ALL PAINTS */
 router.get('/', function(req, res, next) {
     Paint.find(function (err, products) {
         if (err) return next(err);
@@ -11,7 +11,7 @@ router.get('/', function(req, res, next) {
     });
 });
 
-/* GET SINGLE BOOK BY ID */
+/* GET SINGLE PAINT BY ID */
 router.get('/:id', function(req, res, next) {
     Paint.findById(req.params.id, function (err, post) {
         if (err) return next(err);
@@ -19,7 +19,7 @@ router.get('/:id', function(req, res, next) {
     });
 });
 
-/* SAVE BOOK */
+/* SAVE PAINT */
 router.post('/', function(req, res, next) {
     Paint.create(req.body, function (err, post) {
         if (err) return next(err);
@@ -27,7 +27,7 @@ router.post('/', function(req, res, next) {
     });
 });
 
-/* UPDATE BOOK */
+/* UPDATE PAINT */
 router.put('/:id', function(req, res, next) {
     Paint.findByIdAndUpdate(req.params.id, req.body, function (err, post) {
         if (err) return next(err);
@@ -35,7 +35,7 @@ router.put('/:id', function(req, res, next) {
     });
 });
 
-/* DELETE BOOK */
+/* DELETE PAINT */
 router.delete('/:id', function(req, res, next) {
     Paint.findByIdAndRemove(req.params.id, req.body, function (err, post) {
         if (err) return next(err);
