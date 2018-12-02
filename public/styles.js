@@ -48,7 +48,7 @@ module.exports = ".mat-badge-content{font-weight:600;font-size:12px;font-family:
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/* You can add global styles to this file, and also import other style files */\n\nhtml, body { height: 100%; }\n\nbody { margin: 0; font-family: Roboto, \"Helvetica Neue\", sans-serif; }\n"
+module.exports = "/* You can add global styles to this file, and also import other style files */\r\n\r\nhtml, body { height: 100%; }\r\n\r\nbody { margin: 0; font-family: Roboto, \"Helvetica Neue\", sans-serif; }\r\n"
 
 /***/ }),
 
@@ -580,8 +580,13 @@ if(false) {}
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
+<<<<<<< HEAD
 __webpack_require__(/*! /home/jhalak/IST421_Paint/angular-src/node_modules/@angular/material/prebuilt-themes/indigo-pink.css */"./node_modules/@angular/material/prebuilt-themes/indigo-pink.css");
 module.exports = __webpack_require__(/*! /home/jhalak/IST421_Paint/angular-src/src/styles.css */"./src/styles.css");
+=======
+__webpack_require__(/*! C:\Users\cvoeu\IST421_Paint\angular-src\node_modules\@angular\material\prebuilt-themes\indigo-pink.css */"./node_modules/@angular/material/prebuilt-themes/indigo-pink.css");
+module.exports = __webpack_require__(/*! C:\Users\cvoeu\IST421_Paint\angular-src\src\styles.css */"./src/styles.css");
+>>>>>>> 7ee6e33e2e89c576ed8b87fe329c17c357d9a94f
 
 
 /***/ })

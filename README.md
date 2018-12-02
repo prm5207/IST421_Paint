@@ -3,9 +3,9 @@ Author: Patrick
 GIT UPDATED ON: 11/21/18
 
 
-This document include a list of commands to get this MEAN stack applciation running on a freash install of unbuntu
+This document include a list of commands to get this MEAN stack application running on a fresh install of Ubuntu
 
-###### Need to install dependincies
+###### Need to install dependencies
 ```
 sudo apt-get update
 sudo apt-get install git
