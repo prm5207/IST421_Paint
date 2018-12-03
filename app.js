@@ -9,6 +9,7 @@ const config = require('./config/database');
 var apiRoller = require('./routes/roller')
 var apiBrush = require('./routes/brush')
 var apiPaint = require('./routes/paint')
+var apiRollerPan = require('./routes/rollerPan')
 // Connect To Database (NEW) But not working!!!!!!!!!! (because of secret in db.js!!!!!)
 //const db = require('./config/database');
 // Map global promise - get rid of warning
@@ -16,7 +17,7 @@ var apiPaint = require('./routes/paint')
 // Connect to mongoose
 //mongoose.connect(db.mongoURI, {
     //useMongoClient: true
-//})
+//}
 //.then(() => console.log('MongoDB Connected...'))
 //.catch(err => console.log(err));
 
@@ -47,6 +48,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Body Parser Middleware
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded( { extended: false }));
 
 // Passport Middleware
 app.use(passport.initialize());
@@ -58,7 +60,7 @@ app.use('/users', users);
 app.use('/brush', apiBrush);
 app.use('/paint', apiPaint);
 app.use('/roller', apiRoller);
-
+app.use('/rollerpan', apiRollerPan)
 // Index Route
 app.get('/', (req, res) => {
   res.send('invaild endpoint');

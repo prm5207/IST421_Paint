@@ -9,6 +9,7 @@ const httpOptions = {
 const apiBrush = "/brush";
 const apiPaint = "/paint";
 const apiRoller = "/roller";
+const apiRollerPan = "/rollerpan"
 
 @Injectable({
   providedIn: 'root'
@@ -141,5 +142,40 @@ export class ApiService {
         catchError(this.handleError)
       );
   }
-  
+
+  getRollerPans(): Observable<any> {
+      return this.http.get(apiRollerPan, httpOptions).pipe(
+        map(this.extractData),
+        catchError(this.handleError));
+    }
+
+    getRollerPan(id: string): Observable<any> {
+      const url = `${apiRollerPan}/${id}`;
+      return this.http.get(url, httpOptions).pipe(
+        map(this.extractData),
+        catchError(this.handleError));
+    }
+
+    postRollerPan(data): Observable<any> {
+      return this.http.post(apiRollerPan, data, httpOptions)
+        .pipe(
+          catchError(this.handleError)
+        );
+    }
+
+    updateRollerPan(id: string, data): Observable<any> {
+      const url = `${apiRollerPan}/${id}`;
+      return this.http.put(url, data, httpOptions)
+        .pipe(
+          catchError(this.handleError)
+        );
+    }
+
+    deleteRollerPan(id: string): Observable<{}> {
+      const url = `${apiRollerPan}/${id}`;
+      return this.http.delete(url, httpOptions)
+        .pipe(
+          catchError(this.handleError)
+        );
+    }
 }
