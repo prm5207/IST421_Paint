@@ -41,7 +41,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<app-navbar></app-navbar>\r\n<div class=\"\">\r\n    <flash-messages></flash-messages>\r\n    <router-outlet></router-outlet>\r\n</div>\r\n"
+module.exports = "<app-navbar></app-navbar>\n<div class=\"\">\n    <flash-messages></flash-messages>\n    <router-outlet></router-outlet>\n</div>\n"
 
 /***/ }),
 
@@ -119,10 +119,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_roller_detail_roller_detail_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./components/roller-detail/roller-detail.component */ "./src/app/components/roller-detail/roller-detail.component.ts");
 /* harmony import */ var _components_roller_create_roller_create_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./components/roller-create/roller-create.component */ "./src/app/components/roller-create/roller-create.component.ts");
 /* harmony import */ var _components_roller_edit_roller_edit_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./components/roller-edit/roller-edit.component */ "./src/app/components/roller-edit/roller-edit.component.ts");
+<<<<<<< HEAD
+/* harmony import */ var _services_items_service__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./services/items.service */ "./src/app/services/items.service.ts");
+=======
 /* harmony import */ var _components_paint_create_paint_create_component__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./components/paint-create/paint-create.component */ "./src/app/components/paint-create/paint-create.component.ts");
 /* harmony import */ var _components_paint_edit_paint_edit_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./components/paint-edit/paint-edit.component */ "./src/app/components/paint-edit/paint-edit.component.ts");
 /* harmony import */ var _components_paint_detail_paint_detail_component__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./components/paint-detail/paint-detail.component */ "./src/app/components/paint-detail/paint-detail.component.ts");
 /* harmony import */ var _components_brush_create_brush_create_component__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./components/brush-create/brush-create.component */ "./src/app/components/brush-create/brush-create.component.ts");
+>>>>>>> f7cc4f3c50d7a6095a3c9799d1a0a370f4829779
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -157,14 +161,17 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+<<<<<<< HEAD
+=======
 
 
 
+>>>>>>> f7cc4f3c50d7a6095a3c9799d1a0a370f4829779
 var appRoutes = [
     { path: '', component: _components_home_home_component__WEBPACK_IMPORTED_MODULE_10__["HomeComponent"] },
     { path: 'register', component: _components_register_register_component__WEBPACK_IMPORTED_MODULE_9__["RegisterComponent"] },
     { path: 'login', component: _components_login_login_component__WEBPACK_IMPORTED_MODULE_8__["LoginComponent"] },
-    { path: 'dashboard', component: _components_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_11__["DashboardComponent"] },
+    { path: 'dashboard', component: _components_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_11__["DashboardComponent"], data: { cart: _components_shopping_cart_shopping_cart_component__WEBPACK_IMPORTED_MODULE_17__["ShoppingCartComponent"] } },
     { path: 'profile', component: _components_profile_profile_component__WEBPACK_IMPORTED_MODULE_12__["ProfileComponent"] },
     { path: 'inventory', component: _components_inventory_inventory_component__WEBPACK_IMPORTED_MODULE_16__["InventoryComponent"] },
     { path: 'shopping-cart', component: _components_shopping_cart_shopping_cart_component__WEBPACK_IMPORTED_MODULE_17__["ShoppingCartComponent"] },
@@ -247,7 +254,7 @@ var AppModule = /** @class */ (function () {
                 _angular_material__WEBPACK_IMPORTED_MODULE_22__["MatCardModule"],
                 _angular_material__WEBPACK_IMPORTED_MODULE_22__["MatFormFieldModule"]
             ],
-            providers: [_services_validate_service__WEBPACK_IMPORTED_MODULE_13__["ValidateService"], _services_auth_service__WEBPACK_IMPORTED_MODULE_14__["AuthService"]],
+            providers: [_services_validate_service__WEBPACK_IMPORTED_MODULE_13__["ValidateService"], _services_auth_service__WEBPACK_IMPORTED_MODULE_14__["AuthService"], _services_items_service__WEBPACK_IMPORTED_MODULE_27__["CartService"]],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"]]
         })
     ], AppModule);
@@ -276,7 +283,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h2 class=\"page-header\">Register</h2>\n<form (submit)=\"onBrushCreate()\">\n  <div class=\"form-group\">\n    <label for=\"\">Part Number</label>\n    <input type=\"text\" [(ngModel)]=\"PartNumber\" name=\"PartNumber\" class=\"form-control\">\n  </div>\n  <div class=\"form-group\">\n    <label for=\"\">Material</label>\n    <input type=\"text\" [(ngModel)]=\"Material\" name=\"Material\" class=\"form-control\">\n  </div>\n  <div class=\"form-group\">\n    <label for=\"\">Quantity</label>\n    <input type=\"text\" [(ngModel)]=\"Quantity\" name=\"Quantity\" class=\"form-control\">\n  </div>\n  <div class=\"form-group\">\n    <label for=\"\">Price</label>\n    <input type=\"text\" [(ngModel)]=\"Price\" name=\"Price\" class=\"form-control\">\n  </div>\n  <div class=\"form-group\">\n    <label for=\"\">Size</label>\n    <input type=\"text\" [(ngModel)]=\"Size\" name=\"Size\" class=\"form-control\">\n  </div>\n  <input type=\"submit\" class=\"btn btn-primary\" value=\"Submit\">\n</form>\n"
+module.exports = "<h2 class=\"page-header\">Register</h2>\r\n<form (submit)=\"onBrushCreate()\">\r\n  <div class=\"form-group\">\r\n    <label for=\"\">Part Number</label>\r\n    <input type=\"text\" [(ngModel)]=\"PartNumber\" name=\"PartNumber\" class=\"form-control\">\r\n  </div>\r\n  <div class=\"form-group\">\r\n    <label for=\"\">Material</label>\r\n    <input type=\"text\" [(ngModel)]=\"Material\" name=\"Material\" class=\"form-control\">\r\n  </div>\r\n  <div class=\"form-group\">\r\n    <label for=\"\">Quantity</label>\r\n    <input type=\"text\" [(ngModel)]=\"Quantity\" name=\"Quantity\" class=\"form-control\">\r\n  </div>\r\n  <div class=\"form-group\">\r\n    <label for=\"\">Price</label>\r\n    <input type=\"text\" [(ngModel)]=\"Price\" name=\"Price\" class=\"form-control\">\r\n  </div>\r\n  <div class=\"form-group\">\r\n    <label for=\"\">Size</label>\r\n    <input type=\"text\" [(ngModel)]=\"Size\" name=\"Size\" class=\"form-control\">\r\n  </div>\r\n  <input type=\"submit\" class=\"btn btn-primary\" value=\"Submit\">\r\n</form>\r\n"
 
 /***/ }),
 
@@ -370,7 +377,7 @@ var BrushCreateComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".example-container {\r\n  display: flex;\r\n  flex-direction: column;\r\n  max-height: 500px;\r\n  min-width: 300px;\r\n  overflow: auto;\r\n}\r\n\r\n.isbn-col {\r\n  flex: 0 0 100px !important;\r\n  white-space: unset !important;\r\n}\r\n\r\n.button-row {\r\n  margin: 10px 0;\r\n}\r\n"
+module.exports = ".example-container {\n  display: flex;\n  flex-direction: column;\n  max-height: 500px;\n  min-width: 300px;\n  overflow: auto;\n}\n\n.isbn-col {\n  flex: 0 0 100px !important;\n  white-space: unset !important;\n}\n\n.button-row {\n  margin: 10px 0;\n}\n"
 
 /***/ }),
 
@@ -381,7 +388,7 @@ module.exports = ".example-container {\r\n  display: flex;\r\n  flex-direction: 
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"button-row\">\r\n  <a mat-raised-button color=\"primary\" [routerLink]=\"['/brush-create']\"><mat-icon>add</mat-icon></a>\r\n</div>\r\n\r\n<div class=\"example-container mat-elevation-z8\">\r\n  <table mat-table #table [dataSource]=\"dataSource\">\r\n\r\n    <!--- Note that these columns can be defined in any order.\r\n          The actual rendered columns are set as a property on the row definition\" -->\r\n\r\n    <!-- Title Column -->\r\n    <ng-container matColumnDef=\"PartNumber\">\r\n      <th mat-header-cell *matHeaderCellDef> Part Number </th>\r\n      <td mat-cell *matCellDef=\"let element\" class=\"isbn-col\"> {{element.PartNumber}} </td>\r\n    </ng-container>\r\n\r\n    <!-- Title Column -->\r\n    <ng-container matColumnDef=\"Brand\">\r\n      <th mat-header-cell *matHeaderCellDef> Brand </th>\r\n      <td mat-cell *matCellDef=\"let element\"> {{element.Brand}} </td>\r\n    </ng-container>\r\n\r\n    <!-- Author Column -->\r\n    <ng-container matColumnDef=\"Material\">\r\n      <th mat-header-cell *matHeaderCellDef> Material </th>\r\n      <td mat-cell *matCellDef=\"let element\"> {{element.Material}} </td>\r\n    </ng-container>\r\n\r\n    <!-- Size Column -->\r\n    <ng-container matColumnDef=\"Size\">\r\n      <th mat-header-cell *matHeaderCellDef> Size </th>\r\n      <td mat-cell *matCellDef=\"let element\"> {{element.Size}} </td>\r\n    </ng-container>\r\n\r\n    <!-- Quantity Column -->\r\n    <ng-container matColumnDef=\"Quantity\">\r\n      <th mat-header-cell *matHeaderCellDef> Quantity </th>\r\n      <td mat-cell *matCellDef=\"let element\"> {{element.Quantity}} </td>\r\n    </ng-container>\r\n\r\n    <!-- Price Column -->\r\n    <ng-container matColumnDef=\"Price\">\r\n      <th mat-header-cell *matHeaderCellDef> Price </th>\r\n      <td mat-cell *matCellDef=\"let element\"> {{element.Price}} </td>\r\n    </ng-container>\r\n\r\n    <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\r\n    <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\" [routerLink]=\"['/book-details/', row._id]\"></tr>\r\n  </table>\r\n</div>\r\n"
+module.exports = "<div class=\"button-row\">\n  <a mat-raised-button color=\"primary\" [routerLink]=\"['/brush-create']\"><mat-icon>add</mat-icon></a>\n</div>\n\n<div class=\"example-container mat-elevation-z8\">\n  <table mat-table #table [dataSource]=\"dataSource\">\n\n    <!--- Note that these columns can be defined in any order.\n          The actual rendered columns are set as a property on the row definition\" -->\n\n    <!-- Title Column -->\n    <ng-container matColumnDef=\"PartNumber\">\n      <th mat-header-cell *matHeaderCellDef> Part Number </th>\n      <td mat-cell *matCellDef=\"let element\" class=\"isbn-col\"> {{element.PartNumber}} </td>\n    </ng-container>\n\n    <!-- Title Column -->\n    <ng-container matColumnDef=\"Brand\">\n      <th mat-header-cell *matHeaderCellDef> Brand </th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.Brand}} </td>\n    </ng-container>\n\n    <!-- Author Column -->\n    <ng-container matColumnDef=\"Material\">\n      <th mat-header-cell *matHeaderCellDef> Material </th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.Material}} </td>\n    </ng-container>\n\n    <!-- Size Column -->\n    <ng-container matColumnDef=\"Size\">\n      <th mat-header-cell *matHeaderCellDef> Size </th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.Size}} </td>\n    </ng-container>\n\n    <!-- Quantity Column -->\n    <ng-container matColumnDef=\"Quantity\">\n      <th mat-header-cell *matHeaderCellDef> Quantity </th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.Quantity}} </td>\n    </ng-container>\n\n    <!-- Price Column -->\n    <ng-container matColumnDef=\"Price\">\n      <th mat-header-cell *matHeaderCellDef> Price </th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.Price}} </td>\n    </ng-container>\n\n    <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n    <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\" [routerLink]=\"['/book-details/', row._id]\"></tr>\n  </table>\n</div>\n"
 
 /***/ }),
 
@@ -486,7 +493,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\r\n  checkout works!\r\n</p>\r\n"
+module.exports = "<p>\n  checkout works!\n</p>\n"
 
 /***/ }),
 
@@ -549,7 +556,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\r\n\r\n  <div class=\"col-lg-4 col-md-6 mb-4\">\r\n    <div class=\"card h-100\">\r\n      <img class=\"card-img-top\" src=\"https://mobileimages.lowes.com/product/converted/042397/042397610066lg.jpg\" alt=\"\">\r\n      <div class=\"card-body\">\r\n        <h4 class=\"card-title\">\r\n          Valspar Signature Flat Latex Paint\r\n        </h4>\r\n        <h5>$32.98</h5>\r\n        <p class=\"card-text\">Easily covers existing colors and provides a smooth, even finish. Ideal for low-traffic areas of your home such as living rooms, dinning rooms and bedrooms\r\n        </p>\r\n      </div>\r\n      <div class=\"card-footer\">\r\n        <small class=\"text-muted\">&#9733; &#9733; &#9733; &#9733; &#9734;</small>\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-lg-4 col-md-6 mb-4\">\r\n    <div class=\"card h-100\">\r\n      <img class=\"card-img-top\" src=\"https://mobileimages.lowes.com/product/converted/042397/042397593710lg.jpg\" alt=\"\">\r\n      <div class=\"card-body\">\r\n        <h4 class=\"card-title\">\r\n          Valspar 2000 Eggshell Pastel Base Latex Paint\r\n        </h4>\r\n        <h5>$35.98</h5>\r\n        <p class=\"card-text\">Durable paint + primer offers great coverage over existing colors, with time-saving primer built right in.</p>\r\n      </div>\r\n      <div class=\"card-footer\">\r\n        <small class=\"text-muted\">&#9733; &#9733; &#9733; &#9733; &#9734;</small>\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-lg-4 col-md-6 mb-4\">\r\n    <div class=\"card h-100\">\r\n      <img class=\"card-img-top\" src=\"https://mobileimages.lowes.com/product/converted/035777/035777879658lg.jpg\" alt=\"\">\r\n      <div class=\"card-body\">\r\n        <h4 class=\"card-title\">\r\n          Sherwin-Williams Semi-gloss Tint Base Paint\r\n        </h4>\r\n        <h5>$38.99</h5>\r\n        <p class=\"card-text\"> Ideal for high-moisture, high traffic areas of your home such as kitchens, bathrooms and laundry rooms. Applies easily in just one coat, guaranteed; One-coat coverage backed by our Lifetime Warranty</p>\r\n      </div>\r\n      <div class=\"card-footer\">\r\n        <small class=\"text-muted\">&#9733; &#9733; &#9733; &#9733; &#9734;</small>\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-lg-4 col-md-6 mb-4\">\r\n    <div class=\"card h-100\">\r\n      <img class=\"card-img-top\" src=\"https://mobileimages.lowes.com/product/converted/732087/732087909142lg.jpg\" alt=\"\">\r\n      <div class=\"card-body\">\r\n        <h4 class=\"card-title\">\r\n         Blue Hawk 3-Pack Polyester Flat And Angle 2.5-in Paint Brush\r\n        </h4>\r\n        <h5>$14.50</h5>\r\n        <p class=\"card-text\">Professional quality tapered filaments for smooth painted finish</p>\r\n      </div>\r\n      <div class=\"card-footer\">\r\n        <small class=\"text-muted\">&#9733; &#9733; &#9733; &#9733; &#9734;</small>\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-lg-4 col-md-6 mb-4\">\r\n    <div class=\"card h-100\">\r\n      <img class=\"card-img-top\" src=\"https://mobileimages.lowes.com/product/converted/692773/6927732900337.jpg\" alt=\"\">\r\n      <div class=\"card-body\">\r\n        <h4 class=\"card-title\">\r\n          Project Source 9-Pack Foam Flat 3-in Paint Brush\r\n        </h4>\r\n        <h5>$5.98</h5>\r\n        <p class=\"card-text\">Set includes three each of a 1-in, 2-in and 3-in brushes. Brush head equipped for better paint absorption. Can be used with all types of paints and stains.</p>\r\n      </div>\r\n      <div class=\"card-footer\">\r\n        <small class=\"text-muted\">&#9733; &#9733; &#9733; &#9733; &#9734;</small>\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-lg-4 col-md-6 mb-4\">\r\n    <div class=\"card h-100\">\r\n      <img class=\"card-img-top\" src=\"https://mobileimages.lowes.com/product/converted/692773/6927732970149lg.jpg\" alt=\"\">\r\n      <div class=\"card-body\">\r\n        <h4 class=\"card-title\">\r\n          Project Source 3-Pack Utility Polyester Flat And Angle 3-in Paint Brush\r\n        </h4>\r\n        <h5>$8.97</h5>\r\n        <p class=\"card-text\">Can be used with all types of paints and stains. Set contains a 2-in. angle brush, a 2-in. flat cut brush and a 3-in. flat cut brush. Ideal for medium projects touch ups.</p>\r\n      </div>\r\n      <div class=\"card-footer\">\r\n        <small class=\"text-muted\">&#9733; &#9733; &#9733; &#9733; &#9734;</small>\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-lg-4 col-md-6 mb-4\">\r\n    <div class=\"card h-100\">\r\n      <img class=\"card-img-top\" src=\"https://mobileimages.lowes.com/product/converted/024964/024964224685.jpg\" alt=\"\">\r\n      <div class=\"card-body\">\r\n        <h4 class=\"card-title\">\r\n          Wagner Smart Roller 7.25-in Inner-Fed Paint Roller\r\n        </h4>\r\n        <h5>$24.99</h5>\r\n        <p class=\"card-text\">Plastic handle has an integrated paint reservoir that eliminates need for paint tray. Polyester knit roller cover is compatible with water-based and oil-based paints and stains. Internally fed 9 inches x 3/8 inches roller provides continuous, even paint coverage\r\n        </p>\r\n      </div>\r\n      <div class=\"card-footer\">\r\n        <small class=\"text-muted\">&#9733; &#9733; &#9733; &#9733; &#9734;</small>\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-lg-4 col-md-6 mb-4\">\r\n    <div class=\"card h-100\">\r\n      <img class=\"card-img-top\" src=\"https://mobileimages.lowes.com/product/converted/732087/732087976465.jpg\" alt=\"\">\r\n      <div class=\"card-body\">\r\n        <h4 class=\"card-title\">\r\n          WHIZZ 6-in Cabinet and Door Foam Mini Paint Roller\r\n        </h4>\r\n        <h5>$5.98</h5>\r\n        <p class=\"card-text\">Ideal for use on cabinets and doors. Provides for a smooth finish. Made with high density foam</p>\r\n      </div>\r\n      <div class=\"card-footer\">\r\n        <small class=\"text-muted\">&#9733; &#9733; &#9733; &#9733; &#9734;</small>\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-lg-4 col-md-6 mb-4\">\r\n    <div class=\"card h-100\">\r\n      <img class=\"card-img-top\" src=\"https://mobileimages.lowes.com/product/converted/732087/732087960006.jpg\" alt=\"\">\r\n      <div class=\"card-body\">\r\n        <h4 class=\"card-title\">WHIZZ 4-in MICROLON Walls and Ceilings Synthetic Blend Mini Paint Roller</h4>\r\n        <h5>14.98</h5>\r\n        <p class=\"card-text\">MICROLON™ is new fabric technology that can only be found on WHIZZ rollers. Engineered for today's premium paints and paint plus primers. Works great with all primers and are a great choice when using flat, eggshell and satin sheens</p>\r\n      </div>\r\n      <div class=\"card-footer\">\r\n        <small class=\"text-muted\">&#9733; &#9733; &#9733; &#9733; &#9734;</small>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
+module.exports = "\n<!-- <h2 class=\"page-header\" align=\"center\">Welcome to Smith's Paint Shop</h2>\n<div class=\"row\">\n    <div class=\"col-md-4 list-group\">\n        <h3 style=\"text-align:center\">Paint Colors</h3>\n        <a  *ngFor=\"let color of paintColors\" class=\"list-group-item list-group-item-action flex-column align-items-start\">\n            <div class=\"d-flex w-100 justify-content-between\">\n                <h5 class=\"mb-1\">{{color.name}}</h5>\n            </div>\n            <ul style=\"list-style-type:none\">\n                <li>Color: {{color.color}}</li>\n                <li>Container Size: {{color.size}}</li>\n                <li>Price: {{color.price}}</li>\n            </ul>\n            <button (click)=\"addToCart(color)\">Add to Cart</button>\n        </a>\n    </div>\n    <div class=\"col-md-4 list-group\">\n        <h3 style=\"text-align:center\">Brushes</h3>\n        <a  *ngFor=\"let brush of brushes\" class=\"list-group-item list-group-item-action flex-column align-items-start\">\n            <div class=\"d-flex w-100 justify-content-between\">\n                <h5 class=\"mb-1\">{{brush.name}}</h5>\n            </div>\n            <ul style=\"list-style-type:none\">\n                <li>Brush Size: {{brush.size}}</li>\n                <li>Handle Material: Wood</li>\n                <li>Price: {{brush.price}}</li>\n\n            </ul>\n            <button (click)=\"addToCart(brush)\">Add to Cart</button>\n        </a> -->\n<div class=\"row\">\n\n  <div class=\"col-lg-4 col-md-6 mb-4\" *ngFor=\"let item of items\">\n    <div class=\"card h-100\">\n      <img class=\"card-img-top\" src='{{item.image}}' alt=\"\">\n      <div class=\"card-body\">\n        <h4 class=\"card-title\">\n          {{item.title}}\n        </h4>\n        <h5>${{item.price}}</h5>\n        <p class=\"card-text\"> {{item.description}}\n        </p>\n      </div>\n      <div class=\"card-footer\">\n        <small class=\"text-muted\">&#9733; &#9733; &#9733; &#9733; &#9734;</small>\n        \n      </div>\n      <button class=\"btn btn-primary\" (click)=\"addToCart(item)\">Add to Cart</button>\n    </div>\n  </div>\n  <div class=\"col-sm-12 col-md-12 text-right\" style=\"position: fixed; bottom: 0;\">\n      <button class=\"btn btn-lg btn-block btn-success text-uppercase\" [routerLink]=\"['/shopping-cart']\" >Shopping Cart</button>\n  </div>\n\n</div>\n"
 
 /***/ }),
 
@@ -564,6 +571,8 @@ module.exports = "<div class=\"row\">\r\n\r\n  <div class=\"col-lg-4 col-md-6 mb
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DashboardComponent", function() { return DashboardComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var src_app_services_items_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/app/services/items.service */ "./src/app/services/items.service.ts");
+/* harmony import */ var _data__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./data */ "./src/app/components/dashboard/data.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -574,10 +583,19 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
+
 var DashboardComponent = /** @class */ (function () {
-    function DashboardComponent() {
+    function DashboardComponent(_cartService) {
+        this._cartService = _cartService;
+        this.items = _data__WEBPACK_IMPORTED_MODULE_2__["default"].items;
+        this.paintColors = _data__WEBPACK_IMPORTED_MODULE_2__["default"].paintColors;
+        // this.addItem=_cartService.addItem
     }
     DashboardComponent.prototype.ngOnInit = function () {
+    };
+    DashboardComponent.prototype.addToCart = function (item) {
+        this._cartService.addItem(item);
     };
     DashboardComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -585,12 +603,102 @@ var DashboardComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./dashboard.component.html */ "./src/app/components/dashboard/dashboard.component.html"),
             styles: [__webpack_require__(/*! ./dashboard.component.css */ "./src/app/components/dashboard/dashboard.component.css")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [src_app_services_items_service__WEBPACK_IMPORTED_MODULE_1__["CartService"]])
     ], DashboardComponent);
     return DashboardComponent;
 }());
 
 
+
+/***/ }),
+
+/***/ "./src/app/components/dashboard/data.js":
+/*!**********************************************!*\
+  !*** ./src/app/components/dashboard/data.js ***!
+  \**********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ({
+    items:[
+        {
+            title:'Valspar Signature Flat Latex Paint',
+            price: 32.98,
+            description: 'Easily covers existing colors and provides a smooth, even finish. Ideal for low-traffic areas of your home such as living rooms, dinning rooms and bedrooms',
+            image: 'https://mobileimages.lowes.com/product/converted/042397/042397610066lg.jpg'
+        },
+        {
+            title:'Valspar 2000 Eggshell Pastel Base Latex Paint',
+            price: 35.98,
+            description: 'Durable paint + primer offers great coverage over existing colors, with time-saving primer built right in.',
+            image: 'https://mobileimages.lowes.com/product/converted/042397/042397593710lg.jpg'
+        },
+        {
+            title:'Sherwin-Williams Semi-gloss Tint Base Paint ',
+            price: 38.99,
+            description: 'Ideal for high-moisture, high traffic areas of your home such as kitchens, bathrooms and laundry rooms. Applies easily in just one coat, guaranteed; One-coat coverage backed by our Lifetime Warranty',
+            image: 'https://mobileimages.lowes.com/product/converted/035777/035777879658lg.jpg'
+        },
+        {
+            title:'Blue Hawk 3-Pack Polyester Flat And Angle 2.5-in Paint Brush',
+            price: 14.50,
+            description: 'Professional quality tapered filaments for smooth painted finish',
+            image: 'https://mobileimages.lowes.com/product/converted/732087/732087909142lg.jpg'
+        },
+        {
+            title:'Project Source 9-Pack Foam Flat 3-in Paint Brush',
+            price: 5.98,
+            description: 'Set includes three each of a 1-in, 2-in and 3-in brushes. Brush head equipped for better paint absorption. Can be used with all types of paints and stains.',
+            image: 'https://mobileimages.lowes.com/product/converted/692773/6927732900337.jpg'
+        },
+        {
+            title:'Project Source 3-Pack Utility Polyester Flat And Angle 3-in Paint Brush ',
+            price: 8.97,
+            description: 'Can be used with all types of paints and stains. Set contains a 2-in. angle brush, a 2-in. flat cut brush and a 3-in. flat cut brush. Ideal for medium projects touch ups.',
+            image: 'https://mobileimages.lowes.com/product/converted/692773/6927732970149lg.jpg'
+        },
+        {
+            title:'Wagner Smart Roller 7.25-in Inner-Fed Paint Roller ',
+            price: 24.99,
+            description: 'Plastic handle has an integrated paint reservoir that eliminates need for paint tray. Polyester knit roller cover is compatible with water-based and oil-based paints and stains. Internally fed 9 inches x 3/8 inches roller provides continuous, even paint coverage',
+            image: 'https://mobileimages.lowes.com/product/converted/024964/024964224685.jpg'
+        },
+        {
+            title:' WHIZZ 6-in Cabinet and Door Foam Mini Paint Roller ',
+            price: 5.98,
+            description: 'Ideal for use on cabinets and doors. Provides for a smooth finish. Made with high density foam',
+            image: 'https://mobileimages.lowes.com/product/converted/732087/732087976465.jpg'
+        },
+        {
+            title:' WHIZZ 4-in MICROLON Walls and Ceilings Synthetic Blend Mini Paint Roller',
+            price: 14.98,
+            description: `MICROLON™ is new fabric technology that can only be found on WHIZZ rollers. Engineered for today's premium paints and paint plus primers. Works great with all primers and are a great choice when using flat, eggshell and satin sheens`,
+            image: 'https://mobileimages.lowes.com/product/converted/732087/732087960006.jpg'
+        },
+    ],
+    brushes:[
+        {
+            title:'Valspar Signature Flat Latex Paint',
+            price: 1.97,
+            material: 'wood',
+            size: '3 inches'
+        },
+        {
+            name:'brush 2',
+            price: 1.99,
+            material: 'wood',
+            size: '3 inches'
+        },
+        {
+            name:'brush 3',
+            price: 2.99,
+            material: 'wood',
+            size: '3 inches'
+        }
+    ]
+});
 
 /***/ }),
 
@@ -601,7 +709,7 @@ var DashboardComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\r\n"
+module.exports = "\n"
 
 /***/ }),
 
@@ -612,7 +720,11 @@ module.exports = "\r\n"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"jumbotron text-center\">\r\n  <h1>Smith's Paint Shop</h1>\r\n  <p class=\"lead\">Welcome to our custom Paint Company ERP</p>\r\n  <div>\r\n    <a class=\"btn btn-primary\" [routerLink]=\"['/register']\">Register</a>\r\n    <a class=\"btn btn-info\" [routerLink]=\"['/login']\">Login</a>\r\n  </div>\r\n  <div>\r\n    <a class=\"btn btn-danger\" [routerLink]=\"['/inventory']\">Inventory</a>\r\n  </div>\r\n</div>\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-md-4\">\r\n    <h3>MEAN Stack</h3>\r\n    <p>Sed neque diam, hendrerit eget elementum lobortis, egestas sed elit. Sed vel interdum turpis. Sed vestibulum urna vel quam facilisis pellentesque. Integer faucibus ornare lobortis. Nam ut nulla sodales, tristique metus in, iaculis dolor. Donec volutpat tellus id purus feugiat sagittis. Fusce ut tempor justo, nec auctor purus. Cras nisl metus, malesuada in dui vitae, malesuada blandit mauris.</p>\r\n  </div>\r\n  <div class=\"col-md-4\">\r\n    <h3>CRUD</h3>\r\n    <p>Sed neque diam, hendrerit eget elementum lobortis, egestas sed elit. Sed vel interdum turpis. Sed vestibulum urna vel quam facilisis pellentesque. Integer faucibus ornare lobortis. Nam ut nulla sodales, tristique metus in, iaculis dolor. Donec volutpat tellus id purus feugiat sagittis. Fusce ut tempor justo, nec auctor purus. Cras nisl metus, malesuada in dui vitae, malesuada blandit mauris.</p>\r\n  </div>\r\n  <div class=\"col-md-4\">\r\n    <h3>IST 421</h3>\r\n    <p>Sed neque diam, hendrerit eget elementum lobortis, egestas sed elit. Sed vel interdum turpis. Sed vestibulum urna vel quam facilisis pellentesque. Integer faucibus ornare lobortis. Nam ut nulla sodales, tristique metus in, iaculis dolor. Donec volutpat tellus id purus feugiat sagittis. Fusce ut tempor justo, nec auctor purus. Cras nisl metus, malesuada in dui vitae, malesuada blandit mauris.</p>\r\n  </div>\r\n</div>\r\n"
+<<<<<<< HEAD
+module.exports = "<div class=\"jumbotron text-center\">\n  <h1>Smith's Paint Shop</h1>\n  <p class=\"lead\">Welcome to our custom Paint Company ERP test</p>\n  <div>\n    <a class=\"btn btn-primary\" [routerLink]=\"['/register']\">Register</a>\n    <a class=\"btn btn-info\" [routerLink]=\"['/login']\">Login</a>\n  </div>\n  <div>\n    <a class=\"btn btn-danger\" [routerLink]=\"['/inventory']\">Inventory</a>\n  </div>\n</div>\n\n<div class=\"row\">\n  <div class=\"col-md-4\">\n    <h3>MEAN Stack</h3>\n    <p>Sed neque diam, hendrerit eget elementum lobortis, egestas sed elit. Sed vel interdum turpis. Sed vestibulum urna vel quam facilisis pellentesque. Integer faucibus ornare lobortis. Nam ut nulla sodales, tristique metus in, iaculis dolor. Donec volutpat tellus id purus feugiat sagittis. Fusce ut tempor justo, nec auctor purus. Cras nisl metus, malesuada in dui vitae, malesuada blandit mauris.</p>\n  </div>\n  <div class=\"col-md-4\">\n    <h3>CRUD</h3>\n    <p>Sed neque diam, hendrerit eget elementum lobortis, egestas sed elit. Sed vel interdum turpis. Sed vestibulum urna vel quam facilisis pellentesque. Integer faucibus ornare lobortis. Nam ut nulla sodales, tristique metus in, iaculis dolor. Donec volutpat tellus id purus feugiat sagittis. Fusce ut tempor justo, nec auctor purus. Cras nisl metus, malesuada in dui vitae, malesuada blandit mauris.</p>\n  </div>\n  <div class=\"col-md-4\">\n    <h3>IST 421</h3>\n    <p>Sed neque diam, hendrerit eget elementum lobortis, egestas sed elit. Sed vel interdum turpis. Sed vestibulum urna vel quam facilisis pellentesque. Integer faucibus ornare lobortis. Nam ut nulla sodales, tristique metus in, iaculis dolor. Donec volutpat tellus id purus feugiat sagittis. Fusce ut tempor justo, nec auctor purus. Cras nisl metus, malesuada in dui vitae, malesuada blandit mauris.</p>\n  </div>\n</div>\n"
+=======
+module.exports = "<div class=\"jumbotron text-center\">\r\n  <h1>Smith's Paint Shop</h1>\r\n  <p class=\"lead\">Welcome to our custom Paint Company ERP</p>\r\n  <div>\r\n    <a class=\"btn btn-primary\" [routerLink]=\"['/register']\">Register</a>\r\n    <a class=\"btn btn-info\" [routerLink]=\"['/login']\">Login</a>\r\n  </div>\r\n  <div>\r\n    <a class=\"btn btn-danger\" [routerLink]=\"['/inventory']\">Inventory</a>\r\n  </div>\r\n</div>\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-md-4\">\r\n    <h3>Who we are</h3>\r\n    <p>Smith's Paint Shop founded in 2018 by Patrick, Rafael, Soeb, Jhalak, Chanrath, and Amrish. Starting in Abington as a single location, we have expanded to over 4 locations across the Philadelphia area. We are a customer service based company with expert service who can help you bring your design to life with our premium brand paint and paint accessories.  </p>\r\n  </div>\r\n  <div class=\"col-md-4\">\r\n    <h3>Our mission</h3>\r\n    <p>Provide premium paint and paint accessories to both families and businesses all over the United States.</p>\r\n  </div>\r\n  <div class=\"col-md-4\">\r\n    <h3>Partnered Brands</h3>\r\n    <p>We have various premium brands to decorate your house or business including Valspar, Sherwin-Williams, Blue Hawk, Project Source, Wagner, and Whizz</p>\r\n  </div>\r\n</div>\r\n"
+>>>>>>> f7cc4f3c50d7a6095a3c9799d1a0a370f4829779
 
 /***/ }),
 
@@ -675,7 +787,11 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
+<<<<<<< HEAD
+module.exports = "\n<div class=\"jumbotron text-center\">\n  <h1>Smith's Paint Inventory</h1>\n  <p class=\"lead\">Welcome to our custom Paint Company ERP</p>\n  <div>\n    <a class=\"btn btn-danger\" [routerLink]=\"['/brush']\">Brush</a>\n    <a class=\"btn btn-danger\" [routerLink]=\"['/paint']\">Paint</a>\n    <a class=\"btn btn-danger\" [routerLink]=\"['/roller']\">Roller</a>\n  </div>\n</div>\n\n \n"
+=======
 module.exports = "\r\n<div class=\"jumbotron text-center\">\r\n  <h1>Smith's Paint Inventory</h1>\r\n  <p class=\"lead\">Welcome to our custom Paint Company ERP</p>\r\n  <div>\r\n    <a class=\"btn btn-danger\" [routerLink]=\"['/brush']\">Brush</a>\r\n    <a class=\"btn btn-danger\" [routerLink]=\"['/paint']\">Paint</a>\r\n    <a class=\"btn btn-danger\" [routerLink]=\"['/roller']\">Roller</a>\r\n    <a class=\"btn btn-danger\" [routerLink]=\"['/roller-pan']\">Roller Pan</a>\r\n  </div>\r\n</div>\r\n\r\n \r\n"
+>>>>>>> f7cc4f3c50d7a6095a3c9799d1a0a370f4829779
 
 /***/ }),
 
@@ -738,7 +854,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h2 class=\"page-header\" >Login</h2>\r\n<form class=\"form-signin\" (submit)=\"onLoginSubmit()\">\r\n        <div class=\"form-group\">\r\n          <label for=\"Username\">Username</label>\r\n          <input type=\"text\" class=\"form-control\" placeholder=\"Enter Username\" [(ngModel)]=\"username\" name=\"username\">\r\n        </div>\r\n        <div class=\"form-group\">\r\n        <label for=\"Password\">Password</label>\r\n        <input type=\"password\" class=\"form-control\" placeholder=\" Enter Password\" [(ngModel)]=\"password\" name=\"password\">\r\n        </div>\r\n        <div class=\"checkbox\">\r\n          <label>\r\n            <input type=\"checkbox\" value=\"remember-me\"> Remember me\r\n          </label>\r\n        </div>\r\n        <input class=\"btn btn-lg btn-primary\" type=\"submit\" value=\"Login\">\r\n</form>\r\n"
+module.exports = "<h2 class=\"page-header\" >Login</h2>\n<form class=\"form-signin\" (submit)=\"onLoginSubmit()\">\n        <div class=\"form-group\">\n          <label for=\"Username\">Username</label>\n          <input type=\"text\" class=\"form-control\" placeholder=\"Enter Username\" [(ngModel)]=\"username\" name=\"username\">\n        </div>\n        <div class=\"form-group\">\n        <label for=\"Password\">Password</label>\n        <input type=\"password\" class=\"form-control\" placeholder=\" Enter Password\" [(ngModel)]=\"password\" name=\"password\">\n        </div>\n        <div class=\"checkbox\">\n          <label>\n            <input type=\"checkbox\" value=\"remember-me\"> Remember me\n          </label>\n        </div>\n        <input class=\"btn btn-lg btn-primary\" type=\"submit\" value=\"Login\">\n</form>\n"
 
 /***/ }),
 
@@ -831,7 +947,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-expand-lg navbar-dark bg-primary\">\r\n    <div class=\"container\">\r\n      <div class=\"navbar-header\">\r\n        <a class=\"navbar-brand\" href=\"#\">Smith's Paint Shop</a>\r\n      </div>\r\n      <div id=\"navbar\" class=\"collapse navbar-collapse\">\r\n        <ul class=\"navbar-nav mr-auto\">\r\n          <li class=\"nav-item\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\"><a class=\"nav-link\" [routerLink] = \"['/']\">Home</a></li>\r\n        </ul>\r\n        <ul class=\"navbar-nav navbar-right\">\r\n          <li class=\"nav-item\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\"><a class=\"nav-link\" [routerLink] = \"['/login']\">Login</a></li>\r\n          <li class=\"nav-item\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\"><a class=\"nav-link\" [routerLink] = \"['/register']\">Register</a></li>\r\n          <li class=\"nav-item\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\"><a class=\"nav-link\" [routerLink] = \"['/shopping-cart']\">Shopping Cart</a></li>\r\n\r\n        </ul>\r\n      </div><!--/.nav-collapse -->\r\n    </div>\r\n  </nav>\r\n"
+module.exports = "<nav class=\"navbar navbar-expand-lg navbar-dark bg-primary\">\n    <div class=\"container\">\n      <div class=\"navbar-header\">\n        <a class=\"navbar-brand\" href=\"#\">Smith's Paint Shop</a>\n      </div>\n      <div id=\"navbar\" class=\"collapse navbar-collapse\">\n        <ul class=\"navbar-nav mr-auto\">\n          <li class=\"nav-item\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\"><a class=\"nav-link\" [routerLink] = \"['/']\">Home</a></li>\n        </ul>\n        <ul class=\"navbar-nav navbar-right\">\n          <li class=\"nav-item\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\"><a class=\"nav-link\" [routerLink] = \"['/login']\">Login</a></li>\n          <li class=\"nav-item\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\"><a class=\"nav-link\" [routerLink] = \"['/register']\">Register</a></li>\n          <li class=\"nav-item\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\"><a class=\"nav-link\" [routerLink] = \"['/shopping-cart']\">Shopping Cart</a></li>\n\n        </ul>\n      </div><!--/.nav-collapse -->\n    </div>\n  </nav>\n"
 
 /***/ }),
 
@@ -1168,7 +1284,7 @@ var PaintEditComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".example-container {\r\n  display: flex;\r\n  flex-direction: column;\r\n  max-height: 500px;\r\n  min-width: 300px;\r\n  overflow: auto;\r\n}\r\n\r\n.isbn-col {\r\n  flex: 0 0 100px !important;\r\n  white-space: unset !important;\r\n}\r\n\r\n.button-row {\r\n  margin: 10px 0;\r\n}\r\n"
+module.exports = ".example-container {\n  display: flex;\n  flex-direction: column;\n  max-height: 500px;\n  min-width: 300px;\n  overflow: auto;\n}\n\n.isbn-col {\n  flex: 0 0 100px !important;\n  white-space: unset !important;\n}\n\n.button-row {\n  margin: 10px 0;\n}\n"
 
 /***/ }),
 
@@ -1179,7 +1295,7 @@ module.exports = ".example-container {\r\n  display: flex;\r\n  flex-direction: 
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"button-row\">\r\n  <a mat-raised-button color=\"primary\" [routerLink]=\"['/paint-create']\"><mat-icon>add</mat-icon></a>\r\n</div>\r\n\r\n<div class=\"example-container mat-elevation-z8\">\r\n  <table mat-table #table [dataSource]=\"dataSourcePaint\">\r\n\r\n    <!-- Title Colum -->\r\n    <ng-container matColumnDef=\"itemNumber\">\r\n      <th mat-header-cell *matHeaderCellDef> Item Number </th>\r\n      <td mat-cell *matCellDef=\"let element\" class=\"isbn-col\"> {{element.itemNumber}} </td>\r\n    </ng-container>\r\n\r\n    <!-- Title Column -->\r\n    <ng-container matColumnDef=\"color\">\r\n      <th mat-header-cell *matHeaderCellDef> Color </th>\r\n      <td mat-cell *matCellDef=\"let element\"> {{element.color}} </td>\r\n    </ng-container>\r\n\r\n    <!-- Author Column -->\r\n    <ng-container matColumnDef=\"quantity\">\r\n      <th mat-header-cell *matHeaderCellDef> Quantity </th>\r\n      <td mat-cell *matCellDef=\"let element\"> {{element.quantity}} </td>\r\n    </ng-container>\r\n\r\n    <!-- Size Column -->\r\n    <ng-container matColumnDef=\"price\">\r\n      <th mat-header-cell *matHeaderCellDef> Price </th>\r\n      <td mat-cell *matCellDef=\"let element\"> {{element.price}} </td>\r\n    </ng-container>\r\n\r\n\r\n    <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\r\n    <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\" [routerLink]=\"['/paint-details/', row._id]\"></tr>\r\n\r\n  </table>\r\n</div>\r\n"
+module.exports = "<div class=\"button-row\">\n  <a mat-raised-button color=\"primary\" [routerLink]=\"['/paint-create']\"><mat-icon>add</mat-icon></a>\n</div>\n\n<div class=\"example-container mat-elevation-z8\">\n  <table mat-table #table [dataSource]=\"dataSourcePaint\">\n\n    <!-- Title Colum -->\n    <ng-container matColumnDef=\"itemNumber\">\n      <th mat-header-cell *matHeaderCellDef> Item Number </th>\n      <td mat-cell *matCellDef=\"let element\" class=\"isbn-col\"> {{element.itemNumber}} </td>\n    </ng-container>\n\n    <!-- Title Column -->\n    <ng-container matColumnDef=\"color\">\n      <th mat-header-cell *matHeaderCellDef> Color </th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.color}} </td>\n    </ng-container>\n\n    <!-- Author Column -->\n    <ng-container matColumnDef=\"quantity\">\n      <th mat-header-cell *matHeaderCellDef> Quantity </th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.quantity}} </td>\n    </ng-container>\n\n    <!-- Size Column -->\n    <ng-container matColumnDef=\"price\">\n      <th mat-header-cell *matHeaderCellDef> Price </th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.price}} </td>\n    </ng-container>\n\n\n    <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n    <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\" [routerLink]=\"['/paint-details/', row._id]\"></tr>\n\n  </table>\n</div>\n"
 
 /***/ }),
 
@@ -1284,7 +1400,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\r\n  profile works!\r\n</p>\r\n"
+module.exports = "<p>\n  profile works!\n</p>\n"
 
 /***/ }),
 
@@ -1347,7 +1463,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h2 class=\"page-header\">Register</h2>\r\n<form (submit)=\"onRegisterSubmit()\">\r\n  <div class=\"form-group\">\r\n    <label for=\"\">Name</label>\r\n    <input type=\"text\" [(ngModel)]=\"name\" name=\"name\" class=\"form-control\">\r\n  </div>\r\n  <div class=\"form-group\">\r\n    <label for=\"\">Username</label>\r\n    <input type=\"text\" [(ngModel)]=\"username\" name=\"username\" class=\"form-control\">\r\n  </div>\r\n  <div class=\"form-group\">\r\n    <label for=\"\">Email</label>\r\n    <input type=\"text\" [(ngModel)]=\"email\" name=\"email\" class=\"form-control\">\r\n  </div>\r\n  <div class=\"form-group\">\r\n    <label for=\"\">Password</label>\r\n    <input type=\"password\" [(ngModel)]=\"password\" name=\"password\" class=\"form-control\">\r\n  </div>\r\n  <input type=\"submit\" class=\"btn btn-primary\" value=\"Submit\">\r\n</form>"
+module.exports = "<h2 class=\"page-header\">Register</h2>\n<form (submit)=\"onRegisterSubmit()\">\n  <div class=\"form-group\">\n    <label for=\"\">Name</label>\n    <input type=\"text\" [(ngModel)]=\"name\" name=\"name\" class=\"form-control\">\n  </div>\n  <div class=\"form-group\">\n    <label for=\"\">Username</label>\n    <input type=\"text\" [(ngModel)]=\"username\" name=\"username\" class=\"form-control\">\n  </div>\n  <div class=\"form-group\">\n    <label for=\"\">Email</label>\n    <input type=\"text\" [(ngModel)]=\"email\" name=\"email\" class=\"form-control\">\n  </div>\n  <div class=\"form-group\">\n    <label for=\"\">Password</label>\n    <input type=\"password\" [(ngModel)]=\"password\" name=\"password\" class=\"form-control\">\n  </div>\n  <input type=\"submit\" class=\"btn btn-primary\" value=\"Submit\">\n</form>"
 
 /***/ }),
 
@@ -1456,7 +1572,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\r\n  roller-create works!\r\n</p>\r\n"
+module.exports = "<p>\n  roller-create works!\n</p>\n"
 
 /***/ }),
 
@@ -1519,7 +1635,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\r\n  roller-detail works!\r\n</p>\r\n"
+module.exports = "<p>\n  roller-detail works!\n</p>\n"
 
 /***/ }),
 
@@ -1582,7 +1698,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\r\n  roller-edit works!\r\n</p>\r\n"
+module.exports = "<p>\n  roller-edit works!\n</p>\n"
 
 /***/ }),
 
@@ -1634,7 +1750,7 @@ var RollerEditComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".example-container {\r\n    display: flex;\r\n    flex-direction: column;\r\n    max-height: 500px;\r\n    min-width: 300px;\r\n    overflow: auto;\r\n  }\r\n  \r\n  .isbn-col {\r\n    flex: 0 0 100px !important;\r\n    white-space: unset !important;\r\n  }\r\n  \r\n  .button-row {\r\n    margin: 10px 0;\r\n  }"
+module.exports = ".example-container {\n    display: flex;\n    flex-direction: column;\n    max-height: 500px;\n    min-width: 300px;\n    overflow: auto;\n  }\n  \n  .isbn-col {\n    flex: 0 0 100px !important;\n    white-space: unset !important;\n  }\n  \n  .button-row {\n    margin: 10px 0;\n  }"
 
 /***/ }),
 
@@ -1645,7 +1761,7 @@ module.exports = ".example-container {\r\n    display: flex;\r\n    flex-directi
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"button-row\">\r\n  <a mat-raised-button color=\"primary\" [routerLink]=\"['/roller-create']\"><mat-icon>add</mat-icon></a>\r\n</div>\r\n\r\n<div class=\"example-container mat-elevation-z8\">\r\n  <table mat-table #table [dataSource]=\"dataSource\">\r\n\r\n    <!--- Note that these columns can be defined in any order.\r\n          The actual rendered columns are set as a property on the row definition\" -->\r\n\r\n    <!-- Title Column -->\r\n    <ng-container matColumnDef=\"PartNumber\">\r\n      <th mat-header-cell *matHeaderCellDef> Part Number </th>\r\n      <td mat-cell *matCellDef=\"let element\" class=\"isbn-col\"> {{element.PartNumber}} </td>\r\n    </ng-container>\r\n\r\n    <!-- Title Column -->\r\n    <ng-container matColumnDef=\"Brand\">\r\n      <th mat-header-cell *matHeaderCellDef> Brand </th>\r\n      <td mat-cell *matCellDef=\"let element\"> {{element.Brand}} </td>\r\n    </ng-container>\r\n\r\n    <!-- Author Column -->\r\n    <ng-container matColumnDef=\"Material\">\r\n      <th mat-header-cell *matHeaderCellDef> Material </th>\r\n      <td mat-cell *matCellDef=\"let element\"> {{element.Material}} </td>\r\n    </ng-container>\r\n\r\n    <!-- Size Column -->\r\n    <ng-container matColumnDef=\"Size\">\r\n      <th mat-header-cell *matHeaderCellDef> Size </th>\r\n      <td mat-cell *matCellDef=\"let element\"> {{element.Size}} </td>\r\n    </ng-container>\r\n\r\n    <!-- Quantity Column -->\r\n    <ng-container matColumnDef=\"Quantity\">\r\n      <th mat-header-cell *matHeaderCellDef> Quantity </th>\r\n      <td mat-cell *matCellDef=\"let element\"> {{element.Quantity}} </td>\r\n    </ng-container>\r\n\r\n    <!-- Price Column -->\r\n    <ng-container matColumnDef=\"Price\">\r\n      <th mat-header-cell *matHeaderCellDef> Price </th>\r\n      <td mat-cell *matCellDef=\"let element\"> {{element.Price}} </td>\r\n    </ng-container>\r\n\r\n    <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\r\n    <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\" [routerLink]=\"['/book-details/', row._id]\"></tr>\r\n  </table>\r\n</div>\r\n"
+module.exports = "<div class=\"button-row\">\n  <a mat-raised-button color=\"primary\" [routerLink]=\"['/roller-create']\"><mat-icon>add</mat-icon></a>\n</div>\n\n<div class=\"example-container mat-elevation-z8\">\n  <table mat-table #table [dataSource]=\"dataSource\">\n\n    <!--- Note that these columns can be defined in any order.\n          The actual rendered columns are set as a property on the row definition\" -->\n\n    <!-- Title Column -->\n    <ng-container matColumnDef=\"PartNumber\">\n      <th mat-header-cell *matHeaderCellDef> Part Number </th>\n      <td mat-cell *matCellDef=\"let element\" class=\"isbn-col\"> {{element.PartNumber}} </td>\n    </ng-container>\n\n    <!-- Title Column -->\n    <ng-container matColumnDef=\"Brand\">\n      <th mat-header-cell *matHeaderCellDef> Brand </th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.Brand}} </td>\n    </ng-container>\n\n    <!-- Author Column -->\n    <ng-container matColumnDef=\"Material\">\n      <th mat-header-cell *matHeaderCellDef> Material </th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.Material}} </td>\n    </ng-container>\n\n    <!-- Size Column -->\n    <ng-container matColumnDef=\"Size\">\n      <th mat-header-cell *matHeaderCellDef> Size </th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.Size}} </td>\n    </ng-container>\n\n    <!-- Quantity Column -->\n    <ng-container matColumnDef=\"Quantity\">\n      <th mat-header-cell *matHeaderCellDef> Quantity </th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.Quantity}} </td>\n    </ng-container>\n\n    <!-- Price Column -->\n    <ng-container matColumnDef=\"Price\">\n      <th mat-header-cell *matHeaderCellDef> Price </th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.Price}} </td>\n    </ng-container>\n\n    <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n    <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\" [routerLink]=\"['/book-details/', row._id]\"></tr>\n  </table>\n</div>\n"
 
 /***/ }),
 
@@ -1749,7 +1865,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\r\n<h2 class=\"page-header\" align=\"center\">Shopping Cart</h2>\r\n<div class=\"row\">\r\n    <div class=\"col-md-4 list-group\">\r\n            <ul style=\"list-style-type:none\"></ul>\r\n            <li>Items in cart: </li>\r\n            <li>Subtotal: </li>\r\n            <li>Tax: </li>\r\n            <li>Estimated Delivery: </li>\r\n            <li>Total: </li>\r\n            <div>\r\n                <a class=\"btn btn-primary\" [routerLink]=\"['/checkout']\">Checkout</a>\r\n            </div>\r\n    </div>\r\n</div>\r\n\r\n\r\n\r\n\r\n"
+module.exports = "\n<h2 class=\"page-header\" align=\"center\">Shopping Cart</h2>\n\n\n\n<div class=\"row\">\n        <div class=\"col-12\">\n            <div class=\"table-responsive\">\n                <table class=\"table table-striped\">\n                    <thead>\n                        <tr>\n                            <th scope=\"col\"> </th>\n                            <th scope=\"col\">Product</th>\n                            <th scope=\"col\">Available</th>\n                            <th scope=\"col\" class=\"text-center\">Quantity</th>\n                            <th scope=\"col\" class=\"text-right\">Price</th>\n                        </tr>\n                    </thead>\n                    <h1 *ngIf=\"items.length==0\"></h1>\n                    <tbody *ngIf=\"items.length>0\">\n                        <tr *ngFor=\"let item of items\">\n                            <td><img style=\"height:40px;\" src=\"{{item.image}}\"> </td>\n                            <td>{{item.price}}</td>\n                            <td>In stock</td>\n                            <td>1</td>\n                            <td class=\"text-right\">${{item.price}}</td>\n                        </tr>\n                        <tr>\n                            <td></td>\n                            <td></td>\n                            <td></td>\n                            <td>Sub-Total</td>\n                            <td class=\"text-right\">{{totalPrice| number: '1.2-2'}}</td>\n                        </tr>\n                        <tr>\n                            <td></td>\n                            <td></td>\n                            <td></td>\n                            <td>Shipping</td>\n                            <td class=\"text-right\">$6.90 </td>\n                        </tr>\n                        <tr>\n                            <td></td>\n                            <td></td>\n                            <td></td>\n                            <td><strong>Total</strong></td>\n                            <td class=\"text-right\"><strong>{{totalPrice + 6.90| number: '1.2-2'}}</strong></td>\n                        </tr>\n                    </tbody>\n                </table>\n            </div>\n        </div>\n        <div class=\"col mb-2\">\n            <div class=\"row\">\n                <div class=\"col-sm-12  col-md-6\">\n                    <button class=\"btn btn-lg  btn-block btn-light\" [routerLink]=\"['/dashboard']\">Continue Shopping</button>\n                </div>\n                <div class=\"col-sm-12 col-md-6 text-right\">\n                    <button class=\"btn btn-lg btn-block btn-success text-uppercase\" [routerLink]=\"['/checkout']\" >Checkout</button>\n                </div>\n            </div>\n        </div>\n    </div>\n\n\n\n<!-- <div class=\"row\">\n    <div class=\"col-md-4 list-group\">\n            <ul style=\"list-style-type:none\" *ngFor=\"let item of items\">\n            <li>item:{{item.title}} </li>\n            <li>price: {{item.price}}</li>\n            </ul>\n            <li>Items in cart: {{totalItems}}</li>\n            <li>Total:{{totalPrice}} </li>\n            <div>\n                <a class=\"btn btn-primary\" [routerLink]=\"['/checkout']\">Checkout</a>\n            </div>\n    </div>\n</div>\n -->\n\n\n\n"
 
 /***/ }),
 
@@ -1764,6 +1880,7 @@ module.exports = "\r\n<h2 class=\"page-header\" align=\"center\">Shopping Cart</
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ShoppingCartComponent", function() { return ShoppingCartComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var src_app_services_items_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/app/services/items.service */ "./src/app/services/items.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1774,8 +1891,14 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
 var ShoppingCartComponent = /** @class */ (function () {
-    function ShoppingCartComponent() {
+    function ShoppingCartComponent(_cartService) {
+        var _this = this;
+        this.totalPrice = 0;
+        this.items = _cartService.getItems();
+        this.totalItems = this.items.length;
+        this.items.map(function (item) { return _this.totalPrice += item.price; });
     }
     ShoppingCartComponent.prototype.ngOnInit = function () {
     };
@@ -1785,7 +1908,7 @@ var ShoppingCartComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./shopping-cart.component.html */ "./src/app/components/shopping-cart/shopping-cart.component.html"),
             styles: [__webpack_require__(/*! ./shopping-cart.component.css */ "./src/app/components/shopping-cart/shopping-cart.component.css")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [src_app_services_items_service__WEBPACK_IMPORTED_MODULE_1__["CartService"]])
     ], ShoppingCartComponent);
     return ShoppingCartComponent;
 }());
@@ -2008,6 +2131,44 @@ var AuthService = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/services/items.service.ts":
+/*!*******************************************!*\
+  !*** ./src/app/services/items.service.ts ***!
+  \*******************************************/
+/*! exports provided: CartService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CartService", function() { return CartService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+var CartService = /** @class */ (function () {
+    function CartService() {
+        this.items = [];
+    }
+    CartService.prototype.addItem = function (item) {
+        this.items.push(item);
+    };
+    CartService.prototype.getItems = function () {
+        return this.items;
+    };
+    CartService = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])()
+    ], CartService);
+    return CartService;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/services/validate.service.ts":
 /*!**********************************************!*\
   !*** ./src/app/services/validate.service.ts ***!
@@ -2129,7 +2290,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_2__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\delfr\Desktop\IST421_Paint\angular-src\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /home/jhalak/IST421_Paint/angular-src/src/main.ts */"./src/main.ts");
 
 
 /***/ })

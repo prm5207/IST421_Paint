@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import {ShoppingCartComponent} from '../shopping-cart/shopping-cart.component'
+import { CartService } from 'src/app/services/items.service';
+import data from './data'
 
 @Component({
   selector: 'app-dashboard',
@@ -7,9 +10,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _cartService:CartService) {
+    // this.addItem=_cartService.addItem
+   }
+   items = data.items
+   paintColors = data.paintColors
 
   ngOnInit() {
+  }
+
+  addToCart(item) {
+    this._cartService.addItem(item)
+
   }
 
 }

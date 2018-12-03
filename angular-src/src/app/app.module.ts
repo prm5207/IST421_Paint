@@ -27,17 +27,21 @@ import { RollerComponent } from './components/roller/roller.component';
 import { RollerDetailComponent } from './components/roller-detail/roller-detail.component';
 import { RollerCreateComponent } from './components/roller-create/roller-create.component';
 import { RollerEditComponent } from './components/roller-edit/roller-edit.component';
+<<<<<<< HEAD
+import { CartService } from './services/items.service';
+=======
 import { PaintCreateComponent } from './components/paint-create/paint-create.component';
 import { PaintEditComponent } from './components/paint-edit/paint-edit.component';
 import { PaintDetailComponent } from './components/paint-detail/paint-detail.component';
 import { BrushCreateComponent } from './components/brush-create/brush-create.component';
+>>>>>>> f7cc4f3c50d7a6095a3c9799d1a0a370f4829779
 
 
 const appRoutes: Routes = [
   {path:'',component: HomeComponent},
   {path:'register',component: RegisterComponent},
   {path:'login',component: LoginComponent},
-  {path:'dashboard',component: DashboardComponent},
+  {path:'dashboard',component: DashboardComponent, data:{cart:ShoppingCartComponent}},
   {path:'profile',component: ProfileComponent},
   {path:'inventory',component: InventoryComponent},
   {path:'shopping-cart',component:ShoppingCartComponent},
@@ -119,7 +123,7 @@ const appRoutes: Routes = [
     MatCardModule,
     MatFormFieldModule
   ],
-  providers: [ValidateService, AuthService],
+  providers: [ValidateService, AuthService, CartService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
