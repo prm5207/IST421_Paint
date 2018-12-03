@@ -122,12 +122,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_paint_create_paint_create_component__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./components/paint-create/paint-create.component */ "./src/app/components/paint-create/paint-create.component.ts");
 /* harmony import */ var _components_paint_edit_paint_edit_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./components/paint-edit/paint-edit.component */ "./src/app/components/paint-edit/paint-edit.component.ts");
 /* harmony import */ var _components_paint_detail_paint_detail_component__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./components/paint-detail/paint-detail.component */ "./src/app/components/paint-detail/paint-detail.component.ts");
+/* harmony import */ var _components_brush_create_brush_create_component__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./components/brush-create/brush-create.component */ "./src/app/components/brush-create/brush-create.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -171,6 +173,7 @@ var appRoutes = [
     { path: 'paint', component: _components_paint_paint_component__WEBPACK_IMPORTED_MODULE_20__["PaintComponent"], data: { title: 'Paint List' } },
     { path: 'roller', component: _components_roller_roller_component__WEBPACK_IMPORTED_MODULE_23__["RollerComponent"], data: { title: 'Roller List' } },
     { path: 'roller-create', component: _components_roller_create_roller_create_component__WEBPACK_IMPORTED_MODULE_25__["RollerCreateComponent"], data: { title: 'Create Roller' } },
+    { path: 'brush-create', component: _components_brush_create_brush_create_component__WEBPACK_IMPORTED_MODULE_30__["BrushCreateComponent"], data: { title: 'Create Brush' } },
     { path: 'roller-edit', component: _components_roller_edit_roller_edit_component__WEBPACK_IMPORTED_MODULE_26__["RollerEditComponent"], data: { title: 'Edit Roller' } },
     {
         path: 'paints',
@@ -215,6 +218,7 @@ var AppModule = /** @class */ (function () {
                 _components_shopping_cart_shopping_cart_component__WEBPACK_IMPORTED_MODULE_17__["ShoppingCartComponent"],
                 _components_checkout_checkout_component__WEBPACK_IMPORTED_MODULE_18__["CheckoutComponent"],
                 _components_brush_brush_component__WEBPACK_IMPORTED_MODULE_19__["BrushComponent"],
+                _components_brush_create_brush_create_component__WEBPACK_IMPORTED_MODULE_30__["BrushCreateComponent"],
                 _components_paint_paint_component__WEBPACK_IMPORTED_MODULE_20__["PaintComponent"],
                 _components_roller_roller_component__WEBPACK_IMPORTED_MODULE_23__["RollerComponent"],
                 _components_roller_detail_roller_detail_component__WEBPACK_IMPORTED_MODULE_24__["RollerDetailComponent"],
@@ -248,6 +252,111 @@ var AppModule = /** @class */ (function () {
         })
     ], AppModule);
     return AppModule;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/components/brush-create/brush-create.component.css":
+/*!********************************************************************!*\
+  !*** ./src/app/components/brush-create/brush-create.component.css ***!
+  \********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/components/brush-create/brush-create.component.html":
+/*!*********************************************************************!*\
+  !*** ./src/app/components/brush-create/brush-create.component.html ***!
+  \*********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<h2 class=\"page-header\">Register</h2>\n<form (submit)=\"onBrushCreate()\">\n  <div class=\"form-group\">\n    <label for=\"\">Part Number</label>\n    <input type=\"text\" [(ngModel)]=\"PartNumber\" name=\"PartNumber\" class=\"form-control\">\n  </div>\n  <div class=\"form-group\">\n    <label for=\"\">Material</label>\n    <input type=\"text\" [(ngModel)]=\"Material\" name=\"Material\" class=\"form-control\">\n  </div>\n  <div class=\"form-group\">\n    <label for=\"\">Quantity</label>\n    <input type=\"text\" [(ngModel)]=\"Quantity\" name=\"Quantity\" class=\"form-control\">\n  </div>\n  <div class=\"form-group\">\n    <label for=\"\">Price</label>\n    <input type=\"text\" [(ngModel)]=\"Price\" name=\"Price\" class=\"form-control\">\n  </div>\n  <div class=\"form-group\">\n    <label for=\"\">Size</label>\n    <input type=\"text\" [(ngModel)]=\"Size\" name=\"Size\" class=\"form-control\">\n  </div>\n  <input type=\"submit\" class=\"btn btn-primary\" value=\"Submit\">\n</form>\n"
+
+/***/ }),
+
+/***/ "./src/app/components/brush-create/brush-create.component.ts":
+/*!*******************************************************************!*\
+  !*** ./src/app/components/brush-create/brush-create.component.ts ***!
+  \*******************************************************************/
+/*! exports provided: BrushCreateComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BrushCreateComponent", function() { return BrushCreateComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _services_validate_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../services/validate.service */ "./src/app/services/validate.service.ts");
+/* harmony import */ var angular2_flash_messages__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! angular2-flash-messages */ "./node_modules/angular2-flash-messages/module/index.js");
+/* harmony import */ var angular2_flash_messages__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(angular2_flash_messages__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _services_api_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../services/api.service */ "./src/app/services/api.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var BrushCreateComponent = /** @class */ (function () {
+    function BrushCreateComponent(validateService, flashMessage, api, router) {
+        this.validateService = validateService;
+        this.flashMessage = flashMessage;
+        this.api = api;
+        this.router = router;
+    }
+    BrushCreateComponent.prototype.ngOnInit = function () {
+    };
+    BrushCreateComponent.prototype.onBrushCreate = function () {
+        var _this = this;
+        var brush = {
+            PartNumber: this.PartNumber,
+            Material: this.Material,
+            Quantity: this.Quantity,
+            Price: this.Price,
+            Size: this.Size
+        };
+        //Required Fields
+        if (!this.validateService.validateBrush(brush)) {
+            this.flashMessage.show('Please fill in all fields', { cssClass: 'alert-danger', timeout: 3000 });
+            return false;
+        }
+        //Register user
+        this.api.postBrush(brush).subscribe(function (data) {
+            if (data.success) {
+                _this.flashMessage.show('Brush created successfully', { cssClass: 'alert-success', timeout: 3000 });
+                _this.router.navigate(['/brush']);
+            }
+            else {
+                _this.flashMessage.show('Something Went Wrong', { cssClass: 'alert-danger', timeout: 3000 });
+                _this.router.navigate(['/brush']);
+            }
+        });
+    };
+    BrushCreateComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-brush-create',
+            template: __webpack_require__(/*! ./brush-create.component.html */ "./src/app/components/brush-create/brush-create.component.html"),
+            styles: [__webpack_require__(/*! ./brush-create.component.css */ "./src/app/components/brush-create/brush-create.component.css")]
+        }),
+        __metadata("design:paramtypes", [_services_validate_service__WEBPACK_IMPORTED_MODULE_1__["ValidateService"],
+            angular2_flash_messages__WEBPACK_IMPORTED_MODULE_2__["FlashMessagesService"],
+            _services_api_service__WEBPACK_IMPORTED_MODULE_3__["ApiService"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"]])
+    ], BrushCreateComponent);
+    return BrushCreateComponent;
 }());
 
 
@@ -566,7 +675,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\r\n<div class=\"jumbotron text-center\">\r\n  <h1>Smith's Paint Inventory</h1>\r\n  <p class=\"lead\">Welcome to our custom Paint Company ERP</p>\r\n  <div>\r\n    <a class=\"btn btn-danger\" [routerLink]=\"['/brush']\">Brush</a>\r\n    <a class=\"btn btn-danger\" [routerLink]=\"['/paint']\">Paint</a>\r\n    <a class=\"btn btn-danger\" [routerLink]=\"['/roller']\">Roller</a>\r\n  </div>\r\n</div>\r\n\r\n \r\n"
+module.exports = "\r\n<div class=\"jumbotron text-center\">\r\n  <h1>Smith's Paint Inventory</h1>\r\n  <p class=\"lead\">Welcome to our custom Paint Company ERP</p>\r\n  <div>\r\n    <a class=\"btn btn-danger\" [routerLink]=\"['/brush']\">Brush</a>\r\n    <a class=\"btn btn-danger\" [routerLink]=\"['/paint']\">Paint</a>\r\n    <a class=\"btn btn-danger\" [routerLink]=\"['/roller']\">Roller</a>\r\n    <a class=\"btn btn-danger\" [routerLink]=\"['/roller-pan']\">Roller Pan</a>\r\n  </div>\r\n</div>\r\n\r\n \r\n"
 
 /***/ }),
 
@@ -785,7 +894,7 @@ module.exports = ".example-form {\r\n  min-width: 150px;\r\n  max-width: 500px;\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"button-row\">\n  <a mat-raised-button color=\"primary\" [routerLink]=\"['/paint']\"><mat-icon>list</mat-icon></a>\n</div>\n<form [formGroup]=\"paintForm\" (ngSubmit)=\"onFormSubmit(paintForm.value)\">\n  <mat-form-field class=\"example-full-width\">\n    <input matInput placeholder=\"itemNumber\" formControlName=\"itemNumber\">\n  </mat-form-field>\n\n  <mat-form-field class=\"example-full-width\">\n    <input matInput placeholder=\"color\" formControlName=\"color\">\n  </mat-form-field>\n\n  <mat-form-field class=\"example-full-width\">\n    <input matInput placeholder=\"quantity\" formControlName=\"quantity\">\n  </mat-form-field>\n\n  <mat-form-field class=\"example-full-width\">\n    <input matInput placeholder=\"Price\" formControlName=\"price\">\n  </mat-form-field>\n  <div class=\"button-row\">\n    <button type=\"submit\" [disabled]=\"!paintForm.valid\" mat-raised-button color=\"primary\"><mat-icon>save</mat-icon></button>\n  </div>\n</form>\n"
+module.exports = "<div class=\"button-row\">\r\n  <a mat-raised-button color=\"primary\" [routerLink]=\"['/paint']\"><mat-icon>list</mat-icon></a>\r\n</div>\r\n<form [formGroup]=\"paintForm\" (ngSubmit)=\"onFormSubmit(paintForm.value)\">\r\n  <mat-form-field class=\"example-full-width\">\r\n    <input matInput placeholder=\"itemNumber\" formControlName=\"itemNumber\">\r\n  </mat-form-field>\r\n\r\n  <mat-form-field class=\"example-full-width\">\r\n    <input matInput placeholder=\"color\" formControlName=\"color\">\r\n  </mat-form-field>\r\n\r\n  <mat-form-field class=\"example-full-width\">\r\n    <input matInput placeholder=\"quantity\" formControlName=\"quantity\">\r\n  </mat-form-field>\r\n\r\n  <mat-form-field class=\"example-full-width\">\r\n    <input matInput placeholder=\"Price\" formControlName=\"price\">\r\n  </mat-form-field>\r\n  <div class=\"button-row\">\r\n    <button type=\"submit\" [disabled]=\"!paintForm.valid\" mat-raised-button color=\"primary\"><mat-icon>save</mat-icon></button>\r\n  </div>\r\n</form>\r\n"
 
 /***/ }),
 
@@ -874,7 +983,7 @@ module.exports = ".example-card {\r\n  max-width: 500px;\r\n}\r\n\r\n.button-row
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"button-row\">\n  <a mat-raised-button color=\"primary\" [routerLink]=\"['/paint']\"><mat-icon>list</mat-icon></a>\n</div>\n<mat-card class=\"example-card\">\n  <mat-card-header>\n    <mat-card-title><h2>{{paint['itemNumber']}}</h2></mat-card-title>\n\n  </mat-card-header>\n  <mat-card-content>\n    <dl>\n      <dt>ItemNumber:</dt>\n      <dd>{{paint.itemNumber}}</dd>\n      <dt>Color:</dt>\n      <dd>{{paint.color}}</dd>\n      <dt>Quantity:</dt>\n      <dd>{{paint.quantity}}</dd>\n      <dt>Price:</dt>\n      <dd>{{paint.price}}</dd>\n    </dl>\n  </mat-card-content>\n  <mat-card-actions>\n    <a mat-raised-button color=\"primary\" [routerLink]=\"['/paint-edit', paint._id]\"><mat-icon>edit</mat-icon></a>\n    <a mat-raised-button color=\"warn\" (click)=\"deletePaint(paint._id)\"><mat-icon>delete</mat-icon></a>\n  </mat-card-actions>\n</mat-card>\n"
+module.exports = "<div class=\"button-row\">\r\n  <a mat-raised-button color=\"primary\" [routerLink]=\"['/paint']\"><mat-icon>list</mat-icon></a>\r\n</div>\r\n<mat-card class=\"example-card\">\r\n  <mat-card-header>\r\n    <mat-card-title><h2>{{paint['itemNumber']}}</h2></mat-card-title>\r\n\r\n  </mat-card-header>\r\n  <mat-card-content>\r\n    <dl>\r\n      <dt>ItemNumber:</dt>\r\n      <dd>{{paint.itemNumber}}</dd>\r\n      <dt>Color:</dt>\r\n      <dd>{{paint.color}}</dd>\r\n      <dt>Quantity:</dt>\r\n      <dd>{{paint.quantity}}</dd>\r\n      <dt>Price:</dt>\r\n      <dd>{{paint.price}}</dd>\r\n    </dl>\r\n  </mat-card-content>\r\n  <mat-card-actions>\r\n    <a mat-raised-button color=\"primary\" [routerLink]=\"['/paint-edit', paint._id]\"><mat-icon>edit</mat-icon></a>\r\n    <a mat-raised-button color=\"warn\" (click)=\"deletePaint(paint._id)\"><mat-icon>delete</mat-icon></a>\r\n  </mat-card-actions>\r\n</mat-card>\r\n"
 
 /***/ }),
 
@@ -963,7 +1072,7 @@ module.exports = ".example-form {\r\n  min-width: 150px;\r\n  max-width: 500px;\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"button-row\">\n  <a mat-raised-button color=\"primary\" [routerLink]=\"['/paint']\"><mat-icon>list</mat-icon></a>\n</div>\n<form [formGroup]=\"paintForm\" (ngSubmit)=\"onFormSubmit(paintForm.value)\">\n  <mat-form-field class=\"example-full-width\">\n    <input matInput placeholder=\"itemNumber\" formControlName=\"itemNumber\">\n  </mat-form-field>\n\n  <mat-form-field class=\"example-full-width\">\n    <input matInput placeholder=\"color\" formControlName=\"color\">\n  </mat-form-field>\n\n  <mat-form-field class=\"example-full-width\">\n    <input matInput placeholder=\"quantity\" formControlName=\"quantity\">\n  </mat-form-field>\n\n  <mat-form-field class=\"example-full-width\">\n    <input matInput placeholder=\"Price\" formControlName=\"price\">\n  </mat-form-field>\n  <div class=\"button-row\">\n    <button type=\"submit\" [disabled]=\"!paintForm.valid\" mat-raised-button color=\"primary\"><mat-icon>save</mat-icon></button>\n  </div>\n</form>\n"
+module.exports = "<div class=\"button-row\">\r\n  <a mat-raised-button color=\"primary\" [routerLink]=\"['/paint']\"><mat-icon>list</mat-icon></a>\r\n</div>\r\n<form [formGroup]=\"paintForm\" (ngSubmit)=\"onFormSubmit(paintForm.value)\">\r\n  <mat-form-field class=\"example-full-width\">\r\n    <input matInput placeholder=\"itemNumber\" formControlName=\"itemNumber\">\r\n  </mat-form-field>\r\n\r\n  <mat-form-field class=\"example-full-width\">\r\n    <input matInput placeholder=\"color\" formControlName=\"color\">\r\n  </mat-form-field>\r\n\r\n  <mat-form-field class=\"example-full-width\">\r\n    <input matInput placeholder=\"quantity\" formControlName=\"quantity\">\r\n  </mat-form-field>\r\n\r\n  <mat-form-field class=\"example-full-width\">\r\n    <input matInput placeholder=\"Price\" formControlName=\"price\">\r\n  </mat-form-field>\r\n  <div class=\"button-row\">\r\n    <button type=\"submit\" [disabled]=\"!paintForm.valid\" mat-raised-button color=\"primary\"><mat-icon>save</mat-icon></button>\r\n  </div>\r\n</form>\r\n"
 
 /***/ }),
 
@@ -1070,7 +1179,7 @@ module.exports = ".example-container {\r\n  display: flex;\r\n  flex-direction: 
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"button-row\">\n  <a mat-raised-button color=\"primary\" [routerLink]=\"['/paint-create']\"><mat-icon>add</mat-icon></a>\n</div>\n\n<div class=\"example-container mat-elevation-z8\">\n  <table mat-table #table [dataSource]=\"dataSourcePaint\">\n\n    <!-- Title Colum -->\n    <ng-container matColumnDef=\"itemNumber\">\n      <th mat-header-cell *matHeaderCellDef> Item Number </th>\n      <td mat-cell *matCellDef=\"let element\" class=\"isbn-col\"> {{element.itemNumber}} </td>\n    </ng-container>\n\n    <!-- Title Column -->\n    <ng-container matColumnDef=\"color\">\n      <th mat-header-cell *matHeaderCellDef> Color </th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.color}} </td>\n    </ng-container>\n\n    <!-- Author Column -->\n    <ng-container matColumnDef=\"quantity\">\n      <th mat-header-cell *matHeaderCellDef> Quantity </th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.quantity}} </td>\n    </ng-container>\n\n    <!-- Size Column -->\n    <ng-container matColumnDef=\"price\">\n      <th mat-header-cell *matHeaderCellDef> Price </th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.price}} </td>\n    </ng-container>\n\n\n    <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n    <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\" [routerLink]=\"['/paint-details/', row._id]\"></tr>\n\n  </table>\n</div>\n"
+module.exports = "<div class=\"button-row\">\r\n  <a mat-raised-button color=\"primary\" [routerLink]=\"['/paint-create']\"><mat-icon>add</mat-icon></a>\r\n</div>\r\n\r\n<div class=\"example-container mat-elevation-z8\">\r\n  <table mat-table #table [dataSource]=\"dataSourcePaint\">\r\n\r\n    <!-- Title Colum -->\r\n    <ng-container matColumnDef=\"itemNumber\">\r\n      <th mat-header-cell *matHeaderCellDef> Item Number </th>\r\n      <td mat-cell *matCellDef=\"let element\" class=\"isbn-col\"> {{element.itemNumber}} </td>\r\n    </ng-container>\r\n\r\n    <!-- Title Column -->\r\n    <ng-container matColumnDef=\"color\">\r\n      <th mat-header-cell *matHeaderCellDef> Color </th>\r\n      <td mat-cell *matCellDef=\"let element\"> {{element.color}} </td>\r\n    </ng-container>\r\n\r\n    <!-- Author Column -->\r\n    <ng-container matColumnDef=\"quantity\">\r\n      <th mat-header-cell *matHeaderCellDef> Quantity </th>\r\n      <td mat-cell *matCellDef=\"let element\"> {{element.quantity}} </td>\r\n    </ng-container>\r\n\r\n    <!-- Size Column -->\r\n    <ng-container matColumnDef=\"price\">\r\n      <th mat-header-cell *matHeaderCellDef> Price </th>\r\n      <td mat-cell *matCellDef=\"let element\"> {{element.price}} </td>\r\n    </ng-container>\r\n\r\n\r\n    <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\r\n    <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\" [routerLink]=\"['/paint-details/', row._id]\"></tr>\r\n\r\n  </table>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -1718,6 +1827,7 @@ var httpOptions = {
 var apiBrush = "/brush";
 var apiPaint = "/paint";
 var apiRoller = "/roller";
+var apiRollerPan = "/rollerpan";
 var ApiService = /** @class */ (function () {
     function ApiService(http) {
         this.http = http;
@@ -1801,6 +1911,27 @@ var ApiService = /** @class */ (function () {
     };
     ApiService.prototype.deleteRoller = function (id) {
         var url = apiRoller + "/" + id;
+        return this.http.delete(url, httpOptions)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(this.handleError));
+    };
+    ApiService.prototype.getRollerPans = function () {
+        return this.http.get(apiRollerPan, httpOptions).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(this.extractData), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(this.handleError));
+    };
+    ApiService.prototype.getRollerPan = function (id) {
+        var url = apiRollerPan + "/" + id;
+        return this.http.get(url, httpOptions).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(this.extractData), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(this.handleError));
+    };
+    ApiService.prototype.postRollerPan = function (data) {
+        return this.http.post(apiRollerPan, data, httpOptions)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(this.handleError));
+    };
+    ApiService.prototype.updateRollerPan = function (id, data) {
+        var url = apiRollerPan + "/" + id;
+        return this.http.put(url, data, httpOptions)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(this.handleError));
+    };
+    ApiService.prototype.deleteRollerPan = function (id) {
+        var url = apiRollerPan + "/" + id;
         return this.http.delete(url, httpOptions)
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(this.handleError));
     };
@@ -1909,6 +2040,14 @@ var ValidateService = /** @class */ (function () {
             return true;
         }
     };
+    ValidateService.prototype.validateBrush = function (brush) {
+        if (!brush.PartNumber || !brush.Price || !brush.Material || !brush.Quantity || !brush.Size) {
+            return false;
+        }
+        else {
+            return true;
+        }
+    };
     ValidateService.prototype.validateEmail = function (email) {
         var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         return re.test(String(email).toLowerCase());
@@ -1990,7 +2129,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_2__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\Nurul\Documents\IST421_Paint\angular-src\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! C:\Users\delfr\Desktop\IST421_Paint\angular-src\src\main.ts */"./src/main.ts");
 
 
 /***/ })

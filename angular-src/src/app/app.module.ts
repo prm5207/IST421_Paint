@@ -30,6 +30,7 @@ import { RollerEditComponent } from './components/roller-edit/roller-edit.compon
 import { PaintCreateComponent } from './components/paint-create/paint-create.component';
 import { PaintEditComponent } from './components/paint-edit/paint-edit.component';
 import { PaintDetailComponent } from './components/paint-detail/paint-detail.component';
+import { BrushCreateComponent } from './components/brush-create/brush-create.component';
 
 
 const appRoutes: Routes = [
@@ -45,7 +46,9 @@ const appRoutes: Routes = [
   {path: 'paint', component:PaintComponent, data: {title: 'Paint List'}},
   {path: 'roller', component:RollerComponent, data: {title: 'Roller List'}},
   {path: 'roller-create', component:RollerCreateComponent, data: {title: 'Create Roller'}},
+  {path: 'brush-create', component:BrushCreateComponent, data: {title: 'Create Brush'}},
   {path: 'roller-edit', component:RollerEditComponent, data: {title: 'Edit Roller'}},
+
   {
     path: 'paints',
     component: PaintComponent,
@@ -86,6 +89,7 @@ const appRoutes: Routes = [
     ShoppingCartComponent,
     CheckoutComponent,
     BrushComponent,
+    BrushCreateComponent,
     PaintComponent,
     RollerComponent,
     RollerDetailComponent,
