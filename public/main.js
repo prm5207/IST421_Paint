@@ -119,7 +119,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_roller_detail_roller_detail_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./components/roller-detail/roller-detail.component */ "./src/app/components/roller-detail/roller-detail.component.ts");
 /* harmony import */ var _components_roller_create_roller_create_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./components/roller-create/roller-create.component */ "./src/app/components/roller-create/roller-create.component.ts");
 /* harmony import */ var _components_roller_edit_roller_edit_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./components/roller-edit/roller-edit.component */ "./src/app/components/roller-edit/roller-edit.component.ts");
+<<<<<<< HEAD
 /* harmony import */ var _services_items_service__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./services/items.service */ "./src/app/services/items.service.ts");
+=======
+/* harmony import */ var _components_paint_create_paint_create_component__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./components/paint-create/paint-create.component */ "./src/app/components/paint-create/paint-create.component.ts");
+/* harmony import */ var _components_paint_edit_paint_edit_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./components/paint-edit/paint-edit.component */ "./src/app/components/paint-edit/paint-edit.component.ts");
+/* harmony import */ var _components_paint_detail_paint_detail_component__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./components/paint-detail/paint-detail.component */ "./src/app/components/paint-detail/paint-detail.component.ts");
+/* harmony import */ var _components_brush_create_brush_create_component__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./components/brush-create/brush-create.component */ "./src/app/components/brush-create/brush-create.component.ts");
+>>>>>>> f7cc4f3c50d7a6095a3c9799d1a0a370f4829779
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -154,6 +161,12 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> f7cc4f3c50d7a6095a3c9799d1a0a370f4829779
 var appRoutes = [
     { path: '', component: _components_home_home_component__WEBPACK_IMPORTED_MODULE_10__["HomeComponent"] },
     { path: 'register', component: _components_register_register_component__WEBPACK_IMPORTED_MODULE_9__["RegisterComponent"] },
@@ -167,7 +180,33 @@ var appRoutes = [
     { path: 'paint', component: _components_paint_paint_component__WEBPACK_IMPORTED_MODULE_20__["PaintComponent"], data: { title: 'Paint List' } },
     { path: 'roller', component: _components_roller_roller_component__WEBPACK_IMPORTED_MODULE_23__["RollerComponent"], data: { title: 'Roller List' } },
     { path: 'roller-create', component: _components_roller_create_roller_create_component__WEBPACK_IMPORTED_MODULE_25__["RollerCreateComponent"], data: { title: 'Create Roller' } },
+    { path: 'brush-create', component: _components_brush_create_brush_create_component__WEBPACK_IMPORTED_MODULE_30__["BrushCreateComponent"], data: { title: 'Create Brush' } },
     { path: 'roller-edit', component: _components_roller_edit_roller_edit_component__WEBPACK_IMPORTED_MODULE_26__["RollerEditComponent"], data: { title: 'Edit Roller' } },
+    {
+        path: 'paints',
+        component: _components_paint_paint_component__WEBPACK_IMPORTED_MODULE_20__["PaintComponent"],
+        data: { title: 'Paint List' }
+    },
+    {
+        path: 'paint-details/:id',
+        component: _components_paint_detail_paint_detail_component__WEBPACK_IMPORTED_MODULE_29__["PaintDetailComponent"],
+        data: { title: 'Paint Details' }
+    },
+    {
+        path: 'paint-create',
+        component: _components_paint_create_paint_create_component__WEBPACK_IMPORTED_MODULE_27__["PaintCreateComponent"],
+        data: { title: 'Create Paint' }
+    },
+    {
+        path: 'paint-edit/:id',
+        component: _components_paint_edit_paint_edit_component__WEBPACK_IMPORTED_MODULE_28__["PaintEditComponent"],
+        data: { title: 'Edit Paint' }
+    },
+    {
+        path: '',
+        redirectTo: '/paints',
+        pathMatch: 'full'
+    }
 ];
 var AppModule = /** @class */ (function () {
     function AppModule() {
@@ -186,15 +225,20 @@ var AppModule = /** @class */ (function () {
                 _components_shopping_cart_shopping_cart_component__WEBPACK_IMPORTED_MODULE_17__["ShoppingCartComponent"],
                 _components_checkout_checkout_component__WEBPACK_IMPORTED_MODULE_18__["CheckoutComponent"],
                 _components_brush_brush_component__WEBPACK_IMPORTED_MODULE_19__["BrushComponent"],
+                _components_brush_create_brush_create_component__WEBPACK_IMPORTED_MODULE_30__["BrushCreateComponent"],
                 _components_paint_paint_component__WEBPACK_IMPORTED_MODULE_20__["PaintComponent"],
                 _components_roller_roller_component__WEBPACK_IMPORTED_MODULE_23__["RollerComponent"],
                 _components_roller_detail_roller_detail_component__WEBPACK_IMPORTED_MODULE_24__["RollerDetailComponent"],
                 _components_roller_create_roller_create_component__WEBPACK_IMPORTED_MODULE_25__["RollerCreateComponent"],
                 _components_roller_edit_roller_edit_component__WEBPACK_IMPORTED_MODULE_26__["RollerEditComponent"],
+                _components_paint_create_paint_create_component__WEBPACK_IMPORTED_MODULE_27__["PaintCreateComponent"],
+                _components_paint_edit_paint_edit_component__WEBPACK_IMPORTED_MODULE_28__["PaintEditComponent"],
+                _components_paint_detail_paint_detail_component__WEBPACK_IMPORTED_MODULE_29__["PaintDetailComponent"],
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"],
+                _angular_forms__WEBPACK_IMPORTED_MODULE_2__["ReactiveFormsModule"],
                 _angular_http__WEBPACK_IMPORTED_MODULE_3__["HttpModule"],
                 _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClientModule"],
                 _angular_router__WEBPACK_IMPORTED_MODULE_5__["RouterModule"].forRoot(appRoutes),
@@ -215,6 +259,111 @@ var AppModule = /** @class */ (function () {
         })
     ], AppModule);
     return AppModule;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/components/brush-create/brush-create.component.css":
+/*!********************************************************************!*\
+  !*** ./src/app/components/brush-create/brush-create.component.css ***!
+  \********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/components/brush-create/brush-create.component.html":
+/*!*********************************************************************!*\
+  !*** ./src/app/components/brush-create/brush-create.component.html ***!
+  \*********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<h2 class=\"page-header\">Register</h2>\r\n<form (submit)=\"onBrushCreate()\">\r\n  <div class=\"form-group\">\r\n    <label for=\"\">Part Number</label>\r\n    <input type=\"text\" [(ngModel)]=\"PartNumber\" name=\"PartNumber\" class=\"form-control\">\r\n  </div>\r\n  <div class=\"form-group\">\r\n    <label for=\"\">Material</label>\r\n    <input type=\"text\" [(ngModel)]=\"Material\" name=\"Material\" class=\"form-control\">\r\n  </div>\r\n  <div class=\"form-group\">\r\n    <label for=\"\">Quantity</label>\r\n    <input type=\"text\" [(ngModel)]=\"Quantity\" name=\"Quantity\" class=\"form-control\">\r\n  </div>\r\n  <div class=\"form-group\">\r\n    <label for=\"\">Price</label>\r\n    <input type=\"text\" [(ngModel)]=\"Price\" name=\"Price\" class=\"form-control\">\r\n  </div>\r\n  <div class=\"form-group\">\r\n    <label for=\"\">Size</label>\r\n    <input type=\"text\" [(ngModel)]=\"Size\" name=\"Size\" class=\"form-control\">\r\n  </div>\r\n  <input type=\"submit\" class=\"btn btn-primary\" value=\"Submit\">\r\n</form>\r\n"
+
+/***/ }),
+
+/***/ "./src/app/components/brush-create/brush-create.component.ts":
+/*!*******************************************************************!*\
+  !*** ./src/app/components/brush-create/brush-create.component.ts ***!
+  \*******************************************************************/
+/*! exports provided: BrushCreateComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BrushCreateComponent", function() { return BrushCreateComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _services_validate_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../services/validate.service */ "./src/app/services/validate.service.ts");
+/* harmony import */ var angular2_flash_messages__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! angular2-flash-messages */ "./node_modules/angular2-flash-messages/module/index.js");
+/* harmony import */ var angular2_flash_messages__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(angular2_flash_messages__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _services_api_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../services/api.service */ "./src/app/services/api.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var BrushCreateComponent = /** @class */ (function () {
+    function BrushCreateComponent(validateService, flashMessage, api, router) {
+        this.validateService = validateService;
+        this.flashMessage = flashMessage;
+        this.api = api;
+        this.router = router;
+    }
+    BrushCreateComponent.prototype.ngOnInit = function () {
+    };
+    BrushCreateComponent.prototype.onBrushCreate = function () {
+        var _this = this;
+        var brush = {
+            PartNumber: this.PartNumber,
+            Material: this.Material,
+            Quantity: this.Quantity,
+            Price: this.Price,
+            Size: this.Size
+        };
+        //Required Fields
+        if (!this.validateService.validateBrush(brush)) {
+            this.flashMessage.show('Please fill in all fields', { cssClass: 'alert-danger', timeout: 3000 });
+            return false;
+        }
+        //Register user
+        this.api.postBrush(brush).subscribe(function (data) {
+            if (data.success) {
+                _this.flashMessage.show('Brush created successfully', { cssClass: 'alert-success', timeout: 3000 });
+                _this.router.navigate(['/brush']);
+            }
+            else {
+                _this.flashMessage.show('Something Went Wrong', { cssClass: 'alert-danger', timeout: 3000 });
+                _this.router.navigate(['/brush']);
+            }
+        });
+    };
+    BrushCreateComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-brush-create',
+            template: __webpack_require__(/*! ./brush-create.component.html */ "./src/app/components/brush-create/brush-create.component.html"),
+            styles: [__webpack_require__(/*! ./brush-create.component.css */ "./src/app/components/brush-create/brush-create.component.css")]
+        }),
+        __metadata("design:paramtypes", [_services_validate_service__WEBPACK_IMPORTED_MODULE_1__["ValidateService"],
+            angular2_flash_messages__WEBPACK_IMPORTED_MODULE_2__["FlashMessagesService"],
+            _services_api_service__WEBPACK_IMPORTED_MODULE_3__["ApiService"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"]])
+    ], BrushCreateComponent);
+    return BrushCreateComponent;
 }());
 
 
@@ -571,7 +720,11 @@ module.exports = "\n"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
+<<<<<<< HEAD
 module.exports = "<div class=\"jumbotron text-center\">\n  <h1>Smith's Paint Shop</h1>\n  <p class=\"lead\">Welcome to our custom Paint Company ERP test</p>\n  <div>\n    <a class=\"btn btn-primary\" [routerLink]=\"['/register']\">Register</a>\n    <a class=\"btn btn-info\" [routerLink]=\"['/login']\">Login</a>\n  </div>\n  <div>\n    <a class=\"btn btn-danger\" [routerLink]=\"['/inventory']\">Inventory</a>\n  </div>\n</div>\n\n<div class=\"row\">\n  <div class=\"col-md-4\">\n    <h3>MEAN Stack</h3>\n    <p>Sed neque diam, hendrerit eget elementum lobortis, egestas sed elit. Sed vel interdum turpis. Sed vestibulum urna vel quam facilisis pellentesque. Integer faucibus ornare lobortis. Nam ut nulla sodales, tristique metus in, iaculis dolor. Donec volutpat tellus id purus feugiat sagittis. Fusce ut tempor justo, nec auctor purus. Cras nisl metus, malesuada in dui vitae, malesuada blandit mauris.</p>\n  </div>\n  <div class=\"col-md-4\">\n    <h3>CRUD</h3>\n    <p>Sed neque diam, hendrerit eget elementum lobortis, egestas sed elit. Sed vel interdum turpis. Sed vestibulum urna vel quam facilisis pellentesque. Integer faucibus ornare lobortis. Nam ut nulla sodales, tristique metus in, iaculis dolor. Donec volutpat tellus id purus feugiat sagittis. Fusce ut tempor justo, nec auctor purus. Cras nisl metus, malesuada in dui vitae, malesuada blandit mauris.</p>\n  </div>\n  <div class=\"col-md-4\">\n    <h3>IST 421</h3>\n    <p>Sed neque diam, hendrerit eget elementum lobortis, egestas sed elit. Sed vel interdum turpis. Sed vestibulum urna vel quam facilisis pellentesque. Integer faucibus ornare lobortis. Nam ut nulla sodales, tristique metus in, iaculis dolor. Donec volutpat tellus id purus feugiat sagittis. Fusce ut tempor justo, nec auctor purus. Cras nisl metus, malesuada in dui vitae, malesuada blandit mauris.</p>\n  </div>\n</div>\n"
+=======
+module.exports = "<div class=\"jumbotron text-center\">\r\n  <h1>Smith's Paint Shop</h1>\r\n  <p class=\"lead\">Welcome to our custom Paint Company ERP</p>\r\n  <div>\r\n    <a class=\"btn btn-primary\" [routerLink]=\"['/register']\">Register</a>\r\n    <a class=\"btn btn-info\" [routerLink]=\"['/login']\">Login</a>\r\n  </div>\r\n  <div>\r\n    <a class=\"btn btn-danger\" [routerLink]=\"['/inventory']\">Inventory</a>\r\n  </div>\r\n</div>\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-md-4\">\r\n    <h3>Who we are</h3>\r\n    <p>Smith's Paint Shop founded in 2018 by Patrick, Rafael, Soeb, Jhalak, Chanrath, and Amrish. Starting in Abington as a single location, we have expanded to over 4 locations across the Philadelphia area. We are a customer service based company with expert service who can help you bring your design to life with our premium brand paint and paint accessories.  </p>\r\n  </div>\r\n  <div class=\"col-md-4\">\r\n    <h3>Our mission</h3>\r\n    <p>Provide premium paint and paint accessories to both families and businesses all over the United States.</p>\r\n  </div>\r\n  <div class=\"col-md-4\">\r\n    <h3>Partnered Brands</h3>\r\n    <p>We have various premium brands to decorate your house or business including Valspar, Sherwin-Williams, Blue Hawk, Project Source, Wagner, and Whizz</p>\r\n  </div>\r\n</div>\r\n"
+>>>>>>> f7cc4f3c50d7a6095a3c9799d1a0a370f4829779
 
 /***/ }),
 
@@ -634,7 +787,11 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
+<<<<<<< HEAD
 module.exports = "\n<div class=\"jumbotron text-center\">\n  <h1>Smith's Paint Inventory</h1>\n  <p class=\"lead\">Welcome to our custom Paint Company ERP</p>\n  <div>\n    <a class=\"btn btn-danger\" [routerLink]=\"['/brush']\">Brush</a>\n    <a class=\"btn btn-danger\" [routerLink]=\"['/paint']\">Paint</a>\n    <a class=\"btn btn-danger\" [routerLink]=\"['/roller']\">Roller</a>\n  </div>\n</div>\n\n \n"
+=======
+module.exports = "\r\n<div class=\"jumbotron text-center\">\r\n  <h1>Smith's Paint Inventory</h1>\r\n  <p class=\"lead\">Welcome to our custom Paint Company ERP</p>\r\n  <div>\r\n    <a class=\"btn btn-danger\" [routerLink]=\"['/brush']\">Brush</a>\r\n    <a class=\"btn btn-danger\" [routerLink]=\"['/paint']\">Paint</a>\r\n    <a class=\"btn btn-danger\" [routerLink]=\"['/roller']\">Roller</a>\r\n    <a class=\"btn btn-danger\" [routerLink]=\"['/roller-pan']\">Roller Pan</a>\r\n  </div>\r\n</div>\r\n\r\n \r\n"
+>>>>>>> f7cc4f3c50d7a6095a3c9799d1a0a370f4829779
 
 /***/ }),
 
@@ -829,6 +986,291 @@ var NavbarComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [])
     ], NavbarComponent);
     return NavbarComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/components/paint-create/paint-create.component.css":
+/*!********************************************************************!*\
+  !*** ./src/app/components/paint-create/paint-create.component.css ***!
+  \********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".example-form {\r\n  min-width: 150px;\r\n  max-width: 500px;\r\n  width: 100%;\r\n}\r\n\r\n.example-full-width {\r\n  width: 100%;\r\n}\r\n\r\n.button-row {\r\n  margin: 10px 0;\r\n}\r\n"
+
+/***/ }),
+
+/***/ "./src/app/components/paint-create/paint-create.component.html":
+/*!*********************************************************************!*\
+  !*** ./src/app/components/paint-create/paint-create.component.html ***!
+  \*********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"button-row\">\r\n  <a mat-raised-button color=\"primary\" [routerLink]=\"['/paint']\"><mat-icon>list</mat-icon></a>\r\n</div>\r\n<form [formGroup]=\"paintForm\" (ngSubmit)=\"onFormSubmit(paintForm.value)\">\r\n  <mat-form-field class=\"example-full-width\">\r\n    <input matInput placeholder=\"itemNumber\" formControlName=\"itemNumber\">\r\n  </mat-form-field>\r\n\r\n  <mat-form-field class=\"example-full-width\">\r\n    <input matInput placeholder=\"color\" formControlName=\"color\">\r\n  </mat-form-field>\r\n\r\n  <mat-form-field class=\"example-full-width\">\r\n    <input matInput placeholder=\"quantity\" formControlName=\"quantity\">\r\n  </mat-form-field>\r\n\r\n  <mat-form-field class=\"example-full-width\">\r\n    <input matInput placeholder=\"Price\" formControlName=\"price\">\r\n  </mat-form-field>\r\n  <div class=\"button-row\">\r\n    <button type=\"submit\" [disabled]=\"!paintForm.valid\" mat-raised-button color=\"primary\"><mat-icon>save</mat-icon></button>\r\n  </div>\r\n</form>\r\n"
+
+/***/ }),
+
+/***/ "./src/app/components/paint-create/paint-create.component.ts":
+/*!*******************************************************************!*\
+  !*** ./src/app/components/paint-create/paint-create.component.ts ***!
+  \*******************************************************************/
+/*! exports provided: PaintCreateComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PaintCreateComponent", function() { return PaintCreateComponent; });
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _services_api_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../services/api.service */ "./src/app/services/api.service.ts");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var PaintCreateComponent = /** @class */ (function () {
+    function PaintCreateComponent(router, api, formBuilder) {
+        this.router = router;
+        this.api = api;
+        this.formBuilder = formBuilder;
+        this.color = '';
+    }
+    PaintCreateComponent.prototype.ngOnInit = function () {
+        this.paintForm = this.formBuilder.group({
+            'itemNumber': [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            'color': [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            'quantity': [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            'price': [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required]
+        });
+    };
+    PaintCreateComponent.prototype.onFormSubmit = function (form) {
+        var _this = this;
+        this.api.postPaint(form)
+            .subscribe(function (res) {
+            var id = res['_id'];
+            _this.router.navigate(['/paint-details', id]);
+        }, function (err) {
+            console.log(err);
+        });
+    };
+    PaintCreateComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-paint-create',
+            template: __webpack_require__(/*! ./paint-create.component.html */ "./src/app/components/paint-create/paint-create.component.html"),
+            styles: [__webpack_require__(/*! ./paint-create.component.css */ "./src/app/components/paint-create/paint-create.component.css")]
+        }),
+        __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_0__["Router"], _services_api_service__WEBPACK_IMPORTED_MODULE_2__["ApiService"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormBuilder"]])
+    ], PaintCreateComponent);
+    return PaintCreateComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/components/paint-detail/paint-detail.component.css":
+/*!********************************************************************!*\
+  !*** ./src/app/components/paint-detail/paint-detail.component.css ***!
+  \********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".example-card {\r\n  max-width: 500px;\r\n}\r\n\r\n.button-row {\r\n  margin: 10px 0;\r\n}\r\n"
+
+/***/ }),
+
+/***/ "./src/app/components/paint-detail/paint-detail.component.html":
+/*!*********************************************************************!*\
+  !*** ./src/app/components/paint-detail/paint-detail.component.html ***!
+  \*********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"button-row\">\r\n  <a mat-raised-button color=\"primary\" [routerLink]=\"['/paint']\"><mat-icon>list</mat-icon></a>\r\n</div>\r\n<mat-card class=\"example-card\">\r\n  <mat-card-header>\r\n    <mat-card-title><h2>{{paint['itemNumber']}}</h2></mat-card-title>\r\n\r\n  </mat-card-header>\r\n  <mat-card-content>\r\n    <dl>\r\n      <dt>ItemNumber:</dt>\r\n      <dd>{{paint.itemNumber}}</dd>\r\n      <dt>Color:</dt>\r\n      <dd>{{paint.color}}</dd>\r\n      <dt>Quantity:</dt>\r\n      <dd>{{paint.quantity}}</dd>\r\n      <dt>Price:</dt>\r\n      <dd>{{paint.price}}</dd>\r\n    </dl>\r\n  </mat-card-content>\r\n  <mat-card-actions>\r\n    <a mat-raised-button color=\"primary\" [routerLink]=\"['/paint-edit', paint._id]\"><mat-icon>edit</mat-icon></a>\r\n    <a mat-raised-button color=\"warn\" (click)=\"deletePaint(paint._id)\"><mat-icon>delete</mat-icon></a>\r\n  </mat-card-actions>\r\n</mat-card>\r\n"
+
+/***/ }),
+
+/***/ "./src/app/components/paint-detail/paint-detail.component.ts":
+/*!*******************************************************************!*\
+  !*** ./src/app/components/paint-detail/paint-detail.component.ts ***!
+  \*******************************************************************/
+/*! exports provided: PaintDetailComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PaintDetailComponent", function() { return PaintDetailComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _services_api_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../services/api.service */ "./src/app/services/api.service.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var PaintDetailComponent = /** @class */ (function () {
+    function PaintDetailComponent(route, api, router) {
+        this.route = route;
+        this.api = api;
+        this.router = router;
+        this.paint = {};
+    }
+    PaintDetailComponent.prototype.ngOnInit = function () {
+        this.getPaintDetails(this.route.snapshot.params['id']);
+    };
+    PaintDetailComponent.prototype.getPaintDetails = function (id) {
+        var _this = this;
+        this.api.getPaint(id)
+            .subscribe(function (data) {
+            console.log(data);
+            _this.paint = data;
+        });
+    };
+    PaintDetailComponent.prototype.deletePaint = function (id) {
+        var _this = this;
+        this.api.deletePaint(id)
+            .subscribe(function (res) {
+            _this.router.navigate(['/paints']);
+        }, function (err) {
+            console.log(err);
+        });
+    };
+    PaintDetailComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-paint-detail',
+            template: __webpack_require__(/*! ./paint-detail.component.html */ "./src/app/components/paint-detail/paint-detail.component.html"),
+            styles: [__webpack_require__(/*! ./paint-detail.component.css */ "./src/app/components/paint-detail/paint-detail.component.css")]
+        }),
+        __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"], _services_api_service__WEBPACK_IMPORTED_MODULE_2__["ApiService"], _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"]])
+    ], PaintDetailComponent);
+    return PaintDetailComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/components/paint-edit/paint-edit.component.css":
+/*!****************************************************************!*\
+  !*** ./src/app/components/paint-edit/paint-edit.component.css ***!
+  \****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".example-form {\r\n  min-width: 150px;\r\n  max-width: 500px;\r\n  width: 100%;\r\n}\r\n\r\n.example-full-width {\r\n  width: 100%;\r\n}\r\n\r\n.button-row {\r\n  margin: 10px 0;\r\n}\r\n"
+
+/***/ }),
+
+/***/ "./src/app/components/paint-edit/paint-edit.component.html":
+/*!*****************************************************************!*\
+  !*** ./src/app/components/paint-edit/paint-edit.component.html ***!
+  \*****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"button-row\">\r\n  <a mat-raised-button color=\"primary\" [routerLink]=\"['/paint']\"><mat-icon>list</mat-icon></a>\r\n</div>\r\n<form [formGroup]=\"paintForm\" (ngSubmit)=\"onFormSubmit(paintForm.value)\">\r\n  <mat-form-field class=\"example-full-width\">\r\n    <input matInput placeholder=\"itemNumber\" formControlName=\"itemNumber\">\r\n  </mat-form-field>\r\n\r\n  <mat-form-field class=\"example-full-width\">\r\n    <input matInput placeholder=\"color\" formControlName=\"color\">\r\n  </mat-form-field>\r\n\r\n  <mat-form-field class=\"example-full-width\">\r\n    <input matInput placeholder=\"quantity\" formControlName=\"quantity\">\r\n  </mat-form-field>\r\n\r\n  <mat-form-field class=\"example-full-width\">\r\n    <input matInput placeholder=\"Price\" formControlName=\"price\">\r\n  </mat-form-field>\r\n  <div class=\"button-row\">\r\n    <button type=\"submit\" [disabled]=\"!paintForm.valid\" mat-raised-button color=\"primary\"><mat-icon>save</mat-icon></button>\r\n  </div>\r\n</form>\r\n"
+
+/***/ }),
+
+/***/ "./src/app/components/paint-edit/paint-edit.component.ts":
+/*!***************************************************************!*\
+  !*** ./src/app/components/paint-edit/paint-edit.component.ts ***!
+  \***************************************************************/
+/*! exports provided: PaintEditComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PaintEditComponent", function() { return PaintEditComponent; });
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _services_api_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../services/api.service */ "./src/app/services/api.service.ts");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var PaintEditComponent = /** @class */ (function () {
+    function PaintEditComponent(router, route, api, formBuilder) {
+        this.router = router;
+        this.route = route;
+        this.api = api;
+        this.formBuilder = formBuilder;
+        this.id = '';
+        this.color = '';
+    }
+    PaintEditComponent.prototype.ngOnInit = function () {
+        this.getPaint(this.route.snapshot.params['id']);
+        this.paintForm = this.formBuilder.group({
+            'itemNumber': [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            'color': [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            'quantity': [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            'price': [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required]
+        });
+    };
+    PaintEditComponent.prototype.getPaint = function (id) {
+        var _this = this;
+        this.api.getPaint(id).subscribe(function (data) {
+            _this.id = data._id;
+            _this.paintForm.setValue({
+                itemNumber: data.itemNumber,
+                color: data.color,
+                quantity: data.quantity,
+                price: data.price
+            });
+        });
+    };
+    PaintEditComponent.prototype.onFormSubmit = function (form) {
+        var _this = this;
+        this.api.updatePaint(this.id, form)
+            .subscribe(function (res) {
+            var id = res['_id'];
+            _this.router.navigate(['/paint-details', id]);
+        }, function (err) {
+            console.log(err);
+        });
+    };
+    PaintEditComponent.prototype.paintDetails = function () {
+        this.router.navigate(['/paint-details', this.id]);
+    };
+    PaintEditComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-paint-edit',
+            template: __webpack_require__(/*! ./paint-edit.component.html */ "./src/app/components/paint-edit/paint-edit.component.html"),
+            styles: [__webpack_require__(/*! ./paint-edit.component.css */ "./src/app/components/paint-edit/paint-edit.component.css")]
+        }),
+        __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_0__["Router"], _angular_router__WEBPACK_IMPORTED_MODULE_0__["ActivatedRoute"], _services_api_service__WEBPACK_IMPORTED_MODULE_2__["ApiService"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormBuilder"]])
+    ], PaintEditComponent);
+    return PaintEditComponent;
 }());
 
 
@@ -1508,6 +1950,7 @@ var httpOptions = {
 var apiBrush = "/brush";
 var apiPaint = "/paint";
 var apiRoller = "/roller";
+var apiRollerPan = "/rollerpan";
 var ApiService = /** @class */ (function () {
     function ApiService(http) {
         this.http = http;
@@ -1591,6 +2034,27 @@ var ApiService = /** @class */ (function () {
     };
     ApiService.prototype.deleteRoller = function (id) {
         var url = apiRoller + "/" + id;
+        return this.http.delete(url, httpOptions)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(this.handleError));
+    };
+    ApiService.prototype.getRollerPans = function () {
+        return this.http.get(apiRollerPan, httpOptions).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(this.extractData), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(this.handleError));
+    };
+    ApiService.prototype.getRollerPan = function (id) {
+        var url = apiRollerPan + "/" + id;
+        return this.http.get(url, httpOptions).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(this.extractData), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(this.handleError));
+    };
+    ApiService.prototype.postRollerPan = function (data) {
+        return this.http.post(apiRollerPan, data, httpOptions)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(this.handleError));
+    };
+    ApiService.prototype.updateRollerPan = function (id, data) {
+        var url = apiRollerPan + "/" + id;
+        return this.http.put(url, data, httpOptions)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(this.handleError));
+    };
+    ApiService.prototype.deleteRollerPan = function (id) {
+        var url = apiRollerPan + "/" + id;
         return this.http.delete(url, httpOptions)
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(this.handleError));
     };
@@ -1731,6 +2195,14 @@ var ValidateService = /** @class */ (function () {
     }
     ValidateService.prototype.validateRegister = function (user) {
         if (user.name == undefined || user.email == undefined || user.username == undefined || user.password == undefined) {
+            return false;
+        }
+        else {
+            return true;
+        }
+    };
+    ValidateService.prototype.validateBrush = function (brush) {
+        if (!brush.PartNumber || !brush.Price || !brush.Material || !brush.Quantity || !brush.Size) {
             return false;
         }
         else {
