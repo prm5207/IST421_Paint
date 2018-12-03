@@ -952,7 +952,7 @@ var PaintDetailComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = ".example-form {\r\n  min-width: 150px;\r\n  max-width: 500px;\r\n  width: 100%;\r\n}\r\n\r\n.example-full-width {\r\n  width: 100%;\r\n}\r\n\r\n.button-row {\r\n  margin: 10px 0;\r\n}\r\n"
 
 /***/ }),
 
@@ -963,7 +963,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  paint-edit works!\n</p>\n"
+module.exports = "<div class=\"button-row\">\n  <a mat-raised-button color=\"primary\" [routerLink]=\"['/paint']\"><mat-icon>list</mat-icon></a>\n</div>\n<form [formGroup]=\"paintForm\" (ngSubmit)=\"onFormSubmit(paintForm.value)\">\n  <mat-form-field class=\"example-full-width\">\n    <input matInput placeholder=\"itemNumber\" formControlName=\"itemNumber\">\n  </mat-form-field>\n\n  <mat-form-field class=\"example-full-width\">\n    <input matInput placeholder=\"color\" formControlName=\"color\">\n  </mat-form-field>\n\n  <mat-form-field class=\"example-full-width\">\n    <input matInput placeholder=\"quantity\" formControlName=\"quantity\">\n  </mat-form-field>\n\n  <mat-form-field class=\"example-full-width\">\n    <input matInput placeholder=\"Price\" formControlName=\"price\">\n  </mat-form-field>\n  <div class=\"button-row\">\n    <button type=\"submit\" [disabled]=\"!paintForm.valid\" mat-raised-button color=\"primary\"><mat-icon>save</mat-icon></button>\n  </div>\n</form>\n"
 
 /***/ }),
 
@@ -977,7 +977,10 @@ module.exports = "<p>\n  paint-edit works!\n</p>\n"
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PaintEditComponent", function() { return PaintEditComponent; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _services_api_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../services/api.service */ "./src/app/services/api.service.ts");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -988,18 +991,59 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
+
+
 var PaintEditComponent = /** @class */ (function () {
-    function PaintEditComponent() {
+    function PaintEditComponent(router, route, api, formBuilder) {
+        this.router = router;
+        this.route = route;
+        this.api = api;
+        this.formBuilder = formBuilder;
+        this.id = '';
+        this.color = '';
     }
     PaintEditComponent.prototype.ngOnInit = function () {
+        this.getPaint(this.route.snapshot.params['id']);
+        this.paintForm = this.formBuilder.group({
+            'itemNumber': [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            'color': [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            'quantity': [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            'price': [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required]
+        });
+    };
+    PaintEditComponent.prototype.getPaint = function (id) {
+        var _this = this;
+        this.api.getPaint(id).subscribe(function (data) {
+            _this.id = data._id;
+            _this.paintForm.setValue({
+                itemNumber: data.itemNumber,
+                color: data.color,
+                quantity: data.quantity,
+                price: data.price
+            });
+        });
+    };
+    PaintEditComponent.prototype.onFormSubmit = function (form) {
+        var _this = this;
+        this.api.updatePaint(this.id, form)
+            .subscribe(function (res) {
+            var id = res['_id'];
+            _this.router.navigate(['/paint-details', id]);
+        }, function (err) {
+            console.log(err);
+        });
+    };
+    PaintEditComponent.prototype.paintDetails = function () {
+        this.router.navigate(['/paint-details', this.id]);
     };
     PaintEditComponent = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-paint-edit',
             template: __webpack_require__(/*! ./paint-edit.component.html */ "./src/app/components/paint-edit/paint-edit.component.html"),
             styles: [__webpack_require__(/*! ./paint-edit.component.css */ "./src/app/components/paint-edit/paint-edit.component.css")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_0__["Router"], _angular_router__WEBPACK_IMPORTED_MODULE_0__["ActivatedRoute"], _services_api_service__WEBPACK_IMPORTED_MODULE_2__["ApiService"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormBuilder"]])
     ], PaintEditComponent);
     return PaintEditComponent;
 }());
