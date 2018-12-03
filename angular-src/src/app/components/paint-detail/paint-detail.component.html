@@ -1,0 +1,25 @@
+<div class="button-row">
+  <a mat-raised-button color="primary" [routerLink]="['/paint']"><mat-icon>list</mat-icon></a>
+</div>
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title><h2>{{paint['itemNumber']}}</h2></mat-card-title>
+
+  </mat-card-header>
+  <mat-card-content>
+    <dl>
+      <dt>ItemNumber:</dt>
+      <dd>{{paint.itemNumber}}</dd>
+      <dt>Color:</dt>
+      <dd>{{paint.color}}</dd>
+      <dt>Quantity:</dt>
+      <dd>{{paint.quantity}}</dd>
+      <dt>Price:</dt>
+      <dd>{{paint.price}}</dd>
+    </dl>
+  </mat-card-content>
+  <mat-card-actions>
+    <a mat-raised-button color="primary" [routerLink]="['/paint-edit', paint._id]"><mat-icon>edit</mat-icon></a>
+    <a mat-raised-button color="warn" (click)="deletePaint(paint._id)"><mat-icon>delete</mat-icon></a>
+  </mat-card-actions>
+</mat-card>

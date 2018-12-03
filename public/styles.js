@@ -580,8 +580,8 @@ if(false) {}
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\cvoeu\IST421_Paint\angular-src\node_modules\@angular\material\prebuilt-themes\indigo-pink.css */"./node_modules/@angular/material/prebuilt-themes/indigo-pink.css");
-module.exports = __webpack_require__(/*! C:\Users\cvoeu\IST421_Paint\angular-src\src\styles.css */"./src/styles.css");
+__webpack_require__(/*! C:\Users\delfr\Desktop\IST421_Paint\angular-src\node_modules\@angular\material\prebuilt-themes\indigo-pink.css */"./node_modules/@angular/material/prebuilt-themes/indigo-pink.css");
+module.exports = __webpack_require__(/*! C:\Users\delfr\Desktop\IST421_Paint\angular-src\src\styles.css */"./src/styles.css");
 
 
 /***/ })

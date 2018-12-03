@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import {HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
@@ -27,6 +27,10 @@ import { RollerComponent } from './components/roller/roller.component';
 import { RollerDetailComponent } from './components/roller-detail/roller-detail.component';
 import { RollerCreateComponent } from './components/roller-create/roller-create.component';
 import { RollerEditComponent } from './components/roller-edit/roller-edit.component';
+import { PaintCreateComponent } from './components/paint-create/paint-create.component';
+import { PaintEditComponent } from './components/paint-edit/paint-edit.component';
+import { PaintDetailComponent } from './components/paint-detail/paint-detail.component';
+import { BrushCreateComponent } from './components/brush-create/brush-create.component';
 
 
 const appRoutes: Routes = [
@@ -42,9 +46,36 @@ const appRoutes: Routes = [
   {path: 'paint', component:PaintComponent, data: {title: 'Paint List'}},
   {path: 'roller', component:RollerComponent, data: {title: 'Roller List'}},
   {path: 'roller-create', component:RollerCreateComponent, data: {title: 'Create Roller'}},
+  {path: 'brush-create', component:BrushCreateComponent, data: {title: 'Create Brush'}},
   {path: 'roller-edit', component:RollerEditComponent, data: {title: 'Edit Roller'}},
 
-   ]
+  {
+    path: 'paints',
+    component: PaintComponent,
+    data: { title: 'Paint List' }
+  },
+  {
+    path: 'paint-details/:id',
+    component: PaintDetailComponent,
+    data: { title: 'Paint Details' }
+  },
+  {
+    path: 'paint-create',
+    component: PaintCreateComponent,
+    data: { title: 'Create Paint' }
+  },
+  {
+    path: 'paint-edit/:id',
+    component: PaintEditComponent,
+    data: { title: 'Edit Paint' }
+  },
+  {
+    path: '',
+    redirectTo: '/paints',
+    pathMatch: 'full'
+  }
+  ]
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -58,15 +89,21 @@ const appRoutes: Routes = [
     ShoppingCartComponent,
     CheckoutComponent,
     BrushComponent,
+    BrushCreateComponent,
     PaintComponent,
     RollerComponent,
     RollerDetailComponent,
     RollerCreateComponent,
     RollerEditComponent,
+    PaintCreateComponent,
+    PaintEditComponent,
+    PaintDetailComponent,
+
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpModule,
     HttpClientModule,
     RouterModule.forRoot(appRoutes),
