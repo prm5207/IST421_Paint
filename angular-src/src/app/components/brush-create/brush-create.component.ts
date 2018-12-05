@@ -1,59 +1,42 @@
-
-import { Component, OnInit } from '@angular/core';
-import { ValidateService } from '../../services/validate.service';
-import { FlashMessagesService } from 'angular2-flash-messages';
-import { ApiService } from '../../services/api.service';
 import { Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../../services/api.service';
+import { FormControl, FormGroupDirective, FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-brush-create',
   templateUrl: './brush-create.component.html',
   styleUrls: ['./brush-create.component.css']
 })
-
 export class BrushCreateComponent implements OnInit {
-  PartNumber: String;
-  Material: String;
-  Quantity: Number;
-  Price: Number;
-  Size: String
+  brushForm: FormGroup;
+  PartNumber:string='';
+  Brand:string='';
+  Material:string='';
+  Size:string='';
+  Quantity:number;
+  Price:number;
 
-  constructor(
-    private validateService: ValidateService,
-    private flashMessage: FlashMessagesService,
-    private api: ApiService,
-    private router: Router
-    ) { }
+  constructor(private router: Router, private api: ApiService, private formBuilder: FormBuilder) { }
+
 
   ngOnInit() {
-  }
-
-  onBrushCreate(){
-    const brush = {
-      PartNumber: this.PartNumber,
-      Material: this.Material,
-      Quantity: this.Quantity,
-      Price: this.Price,
-      Size: this.Size
-    }
-
-    //Required Fields
-    if(!this.validateService.validateBrush(brush)){
-      this.flashMessage.show('Please fill in all fields', {cssClass: 'alert-danger', timeout: 3000});
-      return false
-    }
-
-
-    //Register user
-    this.api.postBrush(brush).subscribe(data=>{
-      if(data.success){
-        this.flashMessage.show('Brush created successfully', {cssClass: 'alert-success', timeout: 3000});
-        this.router.navigate(['/brush'])
-      }else{
-        this.flashMessage.show('Something Went Wrong', {cssClass: 'alert-danger', timeout: 3000});
-        this.router.navigate(['/brush'])
-      }
+    this.brushForm = this.formBuilder.group({
+      'PartNumber' : [null, Validators.required],
+      'Brand' : [null, Validators.required],
+      'Material' : [null, Validators.required],
+      'Size' : [null, Validators.required],
+      'Quantity' : [null, Validators.required],
+      'Price' : [null, Validators.required]
     });
   }
-
+  onFormSubmit(form:NgForm) {
+    this.api.postBrush(form)
+      .subscribe(res => {
+        let id = res['_id'];
+        this.router.navigate(['/brush-detail', id]);
+      }, (err) => {
+        console.log(err);
+      });
+  }
 }

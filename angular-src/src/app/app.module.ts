@@ -27,14 +27,18 @@ import { RollerComponent } from './components/roller/roller.component';
 import { RollerDetailComponent } from './components/roller-detail/roller-detail.component';
 import { RollerCreateComponent } from './components/roller-create/roller-create.component';
 import { RollerEditComponent } from './components/roller-edit/roller-edit.component';
-<<<<<<< HEAD
 import { CartService } from './services/items.service';
-=======
 import { PaintCreateComponent } from './components/paint-create/paint-create.component';
 import { PaintEditComponent } from './components/paint-edit/paint-edit.component';
 import { PaintDetailComponent } from './components/paint-detail/paint-detail.component';
 import { BrushCreateComponent } from './components/brush-create/brush-create.component';
->>>>>>> f7cc4f3c50d7a6095a3c9799d1a0a370f4829779
+import { BrushDetailComponent } from './components/brush-detail/brush-detail.component';
+import { BrushEditComponent } from './components/brush-edit/brush-edit.component';
+import { RollerPanComponent } from './components/roller-pan/roller-pan.component';
+import { RollerPanCreateComponent } from './components/roller-pan-create/roller-pan-create.component';
+import { RollerPanDetailComponent } from './components/roller-pan-detail/roller-pan-detail.component';
+import { RollerPanEditComponent } from './components/roller-pan-edit/roller-pan-edit.component';
+
 
 
 const appRoutes: Routes = [
@@ -47,37 +51,22 @@ const appRoutes: Routes = [
   {path:'shopping-cart',component:ShoppingCartComponent},
   {path:'checkout',component:CheckoutComponent},
   {path: 'brush', component:BrushComponent, data: {title: 'Brush List'}},
+  {path: 'brush-create', component:BrushCreateComponent, data: {title: 'Create Brush'}},
+  {path: 'brush-detail/:id', component:BrushDetailComponent, data: {title: 'Detail Brush'}},
+  {path: 'brush-edit/:id', component:BrushEditComponent, data: {title: 'Edit Brush'}},
   {path: 'paint', component:PaintComponent, data: {title: 'Paint List'}},
   {path: 'roller', component:RollerComponent, data: {title: 'Roller List'}},
   {path: 'roller-create', component:RollerCreateComponent, data: {title: 'Create Roller'}},
-  {path: 'brush-create', component:BrushCreateComponent, data: {title: 'Create Brush'}},
-  {path: 'roller-edit', component:RollerEditComponent, data: {title: 'Edit Roller'}},
-
-  {
-    path: 'paints',
-    component: PaintComponent,
-    data: { title: 'Paint List' }
-  },
-  {
-    path: 'paint-details/:id',
-    component: PaintDetailComponent,
-    data: { title: 'Paint Details' }
-  },
-  {
-    path: 'paint-create',
-    component: PaintCreateComponent,
-    data: { title: 'Create Paint' }
-  },
-  {
-    path: 'paint-edit/:id',
-    component: PaintEditComponent,
-    data: { title: 'Edit Paint' }
-  },
-  {
-    path: '',
-    redirectTo: '/paints',
-    pathMatch: 'full'
-  }
+  {path: 'roller-edit/:id', component:RollerEditComponent, data: {title: 'Edit Roller'}},
+  {path: 'roller-detail/:id',component: RollerDetailComponent,data: { title: 'Paint Details' }},
+  {path: 'paints',component: PaintComponent,data: { title: 'Paint List' }},
+  {path: 'paint-details/:id',component: PaintDetailComponent,data: { title: 'Paint Details' }},
+  {path: 'paint-create',component: PaintCreateComponent,data: { title: 'Create Paint' }},
+  {path: 'paint-edit/:id',component: PaintEditComponent,data: { title: 'Edit Paint' }},
+  {path: 'roller-pan',component: RollerPanComponent,data: { title: 'Roller List' }},
+  {path: 'roller-pan-detail/:id',component: RollerPanDetailComponent,data: { title: 'Roller Details' }},
+  {path: 'roller-pan-create',component: RollerPanCreateComponent,data: { title: 'Create Roller' }},
+  {path: 'roller-pan-edit/:id',component: RollerPanEditComponent,data: { title: 'Edit Roller' }},
   ]
 
 @NgModule({
@@ -102,6 +91,12 @@ const appRoutes: Routes = [
     PaintCreateComponent,
     PaintEditComponent,
     PaintDetailComponent,
+    BrushDetailComponent,
+    BrushEditComponent,
+    RollerPanComponent,
+    RollerPanCreateComponent,
+    RollerPanDetailComponent,
+    RollerPanEditComponent,
 
   ],
   imports: [

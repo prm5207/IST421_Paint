@@ -1,0 +1,29 @@
+<div class="button-row">
+  <a mat-raised-button color="primary" [routerLink]="['/brush']"><mat-icon>list</mat-icon></a>
+</div>
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title><h2>{{brush['PartNumber']}}</h2></mat-card-title>
+
+  </mat-card-header>
+  <mat-card-content>
+    <dl>
+      <dt>PartNumber:</dt>
+      <dd>{{brush.PartNumber}}</dd>
+      <dt>Brand:</dt>
+      <dd>{{brush.Brand}}</dd>
+      <dt>Material:</dt>
+      <dd>{{brush.Material}}</dd>
+      <dt>Size:</dt>
+      <dd>{{brush.Size}}</dd>
+      <dt>Quantity:</dt>
+      <dd>{{brush.Quantity}}</dd>
+      <dt>Price:</dt>
+      <dd>{{brush.Price}}</dd>
+    </dl>
+  </mat-card-content>
+  <mat-card-actions>
+    <a mat-raised-button color="primary" [routerLink]="['/brush-edit', brush._id]"><mat-icon>edit</mat-icon></a>
+    <a mat-raised-button color="warn" (click)="deleteBrush(brush._id)"><mat-icon>delete</mat-icon></a>
+  </mat-card-actions>
+</mat-card>

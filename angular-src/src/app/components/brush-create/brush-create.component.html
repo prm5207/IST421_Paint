@@ -1,24 +1,31 @@
-<h2 class="page-header">Register</h2>
-<form (submit)="onBrushCreate()">
-  <div class="form-group">
-    <label for="">Part Number</label>
-    <input type="text" [(ngModel)]="PartNumber" name="PartNumber" class="form-control">
+<div class="button-row">
+  <a mat-raised-button color="primary" [routerLink]="['/brush']"><mat-icon>list</mat-icon></a>
+</div>
+<form [formGroup]="brushForm" (ngSubmit)="onFormSubmit(brushForm.value)">
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="PartNumber" formControlName="PartNumber">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Brand" formControlName="Brand">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Material" formControlName="Material">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Size" formControlName="Size">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Quantity" formControlName="Quantity">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Price" formControlName="Price">
+  </mat-form-field>
+  <div class="button-row">
+    <button type="submit" [disabled]="!brushForm.valid" mat-raised-button color="primary"><mat-icon>save</mat-icon></button>
   </div>
-  <div class="form-group">
-    <label for="">Material</label>
-    <input type="text" [(ngModel)]="Material" name="Material" class="form-control">
-  </div>
-  <div class="form-group">
-    <label for="">Quantity</label>
-    <input type="text" [(ngModel)]="Quantity" name="Quantity" class="form-control">
-  </div>
-  <div class="form-group">
-    <label for="">Price</label>
-    <input type="text" [(ngModel)]="Price" name="Price" class="form-control">
-  </div>
-  <div class="form-group">
-    <label for="">Size</label>
-    <input type="text" [(ngModel)]="Size" name="Size" class="form-control">
-  </div>
-  <input type="submit" class="btn btn-primary" value="Submit">
 </form>

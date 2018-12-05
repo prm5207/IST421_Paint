@@ -1,3 +1,29 @@
-<p>
-  roller-detail works!
-</p>
+<div class="button-row">
+  <a mat-raised-button color="primary" [routerLink]="['/roller']"><mat-icon>list</mat-icon></a>
+</div>
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title><h2>{{roller['PartNumber']}}</h2></mat-card-title>
+
+  </mat-card-header>
+  <mat-card-content>
+    <dl>
+      <dt>PartNumber:</dt>
+      <dd>{{roller.PartNumber}}</dd>
+      <dt>Brand:</dt>
+      <dd>{{roller.Brand}}</dd>
+      <dt>Material:</dt>
+      <dd>{{roller.Material}}</dd>
+      <dt>Size:</dt>
+      <dd>{{roller.Size}}</dd>
+      <dt>Quantity:</dt>
+      <dd>{{roller.Quantity}}</dd>
+      <dt>Price:</dt>
+      <dd>{{roller.Price}}</dd>
+    </dl>
+  </mat-card-content>
+  <mat-card-actions>
+    <a mat-raised-button color="primary" [routerLink]="['/roller-edit', roller._id]"><mat-icon>edit</mat-icon></a>
+    <a mat-raised-button color="warn" (click)="deleteRoller(roller._id)"><mat-icon>delete</mat-icon></a>
+  </mat-card-actions>
+</mat-card>

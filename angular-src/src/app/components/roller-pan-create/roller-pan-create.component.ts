@@ -4,14 +4,13 @@ import { ApiService } from '../../services/api.service';
 import { FormControl, FormGroupDirective, FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
 
 @Component({
-  selector: 'app-roller-create',
-  templateUrl: './roller-create.component.html',
-  styleUrls: ['./roller-create.component.css']
+  selector: 'app-roller-pan-create',
+  templateUrl: './roller-pan-create.component.html',
+  styleUrls: ['./roller-pan-create.component.css']
 })
-export class RollerCreateComponent implements OnInit {
-  rollerForm: FormGroup;
+export class RollerPanCreateComponent implements OnInit {
+  rollerpanForm: FormGroup;
   PartNumber:string='';
-  Brand:string='';
   Material:string='';
   Size:string='';
   Quantity:number;
@@ -21,9 +20,8 @@ export class RollerCreateComponent implements OnInit {
 
 
   ngOnInit() {
-      this.rollerForm = this.formBuilder.group({
+      this.rollerpanForm = this.formBuilder.group({
         'PartNumber' : [null, Validators.required],
-        'Brand' : [null, Validators.required],
         'Material' : [null, Validators.required],
         'Size' : [null, Validators.required],
         'Quantity' : [null, Validators.required],
@@ -31,10 +29,10 @@ export class RollerCreateComponent implements OnInit {
       });
     }
     onFormSubmit(form:NgForm) {
-      this.api.postRoller(form)
+      this.api.postRollerPan(form)
         .subscribe(res => {
           let id = res['_id'];
-          this.router.navigate(['/roller-detail', id]);
+          this.router.navigate(['/roller-pan-detail', id]);
         }, (err) => {
           console.log(err);
         });

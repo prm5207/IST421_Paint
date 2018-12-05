@@ -41,7 +41,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<app-navbar></app-navbar>\n<div class=\"\">\n    <flash-messages></flash-messages>\n    <router-outlet></router-outlet>\n</div>\n"
+module.exports = "<app-navbar></app-navbar>\r\n<div class=\"\">\r\n    <flash-messages></flash-messages>\r\n    <router-outlet></router-outlet>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -119,14 +119,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_roller_detail_roller_detail_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./components/roller-detail/roller-detail.component */ "./src/app/components/roller-detail/roller-detail.component.ts");
 /* harmony import */ var _components_roller_create_roller_create_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./components/roller-create/roller-create.component */ "./src/app/components/roller-create/roller-create.component.ts");
 /* harmony import */ var _components_roller_edit_roller_edit_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./components/roller-edit/roller-edit.component */ "./src/app/components/roller-edit/roller-edit.component.ts");
-<<<<<<< HEAD
 /* harmony import */ var _services_items_service__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./services/items.service */ "./src/app/services/items.service.ts");
-=======
-/* harmony import */ var _components_paint_create_paint_create_component__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./components/paint-create/paint-create.component */ "./src/app/components/paint-create/paint-create.component.ts");
-/* harmony import */ var _components_paint_edit_paint_edit_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./components/paint-edit/paint-edit.component */ "./src/app/components/paint-edit/paint-edit.component.ts");
-/* harmony import */ var _components_paint_detail_paint_detail_component__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./components/paint-detail/paint-detail.component */ "./src/app/components/paint-detail/paint-detail.component.ts");
-/* harmony import */ var _components_brush_create_brush_create_component__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./components/brush-create/brush-create.component */ "./src/app/components/brush-create/brush-create.component.ts");
->>>>>>> f7cc4f3c50d7a6095a3c9799d1a0a370f4829779
+/* harmony import */ var _components_paint_create_paint_create_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./components/paint-create/paint-create.component */ "./src/app/components/paint-create/paint-create.component.ts");
+/* harmony import */ var _components_paint_edit_paint_edit_component__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./components/paint-edit/paint-edit.component */ "./src/app/components/paint-edit/paint-edit.component.ts");
+/* harmony import */ var _components_paint_detail_paint_detail_component__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./components/paint-detail/paint-detail.component */ "./src/app/components/paint-detail/paint-detail.component.ts");
+/* harmony import */ var _components_brush_create_brush_create_component__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./components/brush-create/brush-create.component */ "./src/app/components/brush-create/brush-create.component.ts");
+/* harmony import */ var _components_brush_detail_brush_detail_component__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./components/brush-detail/brush-detail.component */ "./src/app/components/brush-detail/brush-detail.component.ts");
+/* harmony import */ var _components_brush_edit_brush_edit_component__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./components/brush-edit/brush-edit.component */ "./src/app/components/brush-edit/brush-edit.component.ts");
+/* harmony import */ var _components_roller_pan_roller_pan_component__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./components/roller-pan/roller-pan.component */ "./src/app/components/roller-pan/roller-pan.component.ts");
+/* harmony import */ var _components_roller_pan_create_roller_pan_create_component__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./components/roller-pan-create/roller-pan-create.component */ "./src/app/components/roller-pan-create/roller-pan-create.component.ts");
+/* harmony import */ var _components_roller_pan_detail_roller_pan_detail_component__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ./components/roller-pan-detail/roller-pan-detail.component */ "./src/app/components/roller-pan-detail/roller-pan-detail.component.ts");
+/* harmony import */ var _components_roller_pan_edit_roller_pan_edit_component__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! ./components/roller-pan-edit/roller-pan-edit.component */ "./src/app/components/roller-pan-edit/roller-pan-edit.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -161,12 +164,16 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> f7cc4f3c50d7a6095a3c9799d1a0a370f4829779
+
+
+
+
+
+
+
 var appRoutes = [
     { path: '', component: _components_home_home_component__WEBPACK_IMPORTED_MODULE_10__["HomeComponent"] },
     { path: 'register', component: _components_register_register_component__WEBPACK_IMPORTED_MODULE_9__["RegisterComponent"] },
@@ -177,36 +184,22 @@ var appRoutes = [
     { path: 'shopping-cart', component: _components_shopping_cart_shopping_cart_component__WEBPACK_IMPORTED_MODULE_17__["ShoppingCartComponent"] },
     { path: 'checkout', component: _components_checkout_checkout_component__WEBPACK_IMPORTED_MODULE_18__["CheckoutComponent"] },
     { path: 'brush', component: _components_brush_brush_component__WEBPACK_IMPORTED_MODULE_19__["BrushComponent"], data: { title: 'Brush List' } },
+    { path: 'brush-create', component: _components_brush_create_brush_create_component__WEBPACK_IMPORTED_MODULE_31__["BrushCreateComponent"], data: { title: 'Create Brush' } },
+    { path: 'brush-detail/:id', component: _components_brush_detail_brush_detail_component__WEBPACK_IMPORTED_MODULE_32__["BrushDetailComponent"], data: { title: 'Detail Brush' } },
+    { path: 'brush-edit/:id', component: _components_brush_edit_brush_edit_component__WEBPACK_IMPORTED_MODULE_33__["BrushEditComponent"], data: { title: 'Edit Brush' } },
     { path: 'paint', component: _components_paint_paint_component__WEBPACK_IMPORTED_MODULE_20__["PaintComponent"], data: { title: 'Paint List' } },
     { path: 'roller', component: _components_roller_roller_component__WEBPACK_IMPORTED_MODULE_23__["RollerComponent"], data: { title: 'Roller List' } },
     { path: 'roller-create', component: _components_roller_create_roller_create_component__WEBPACK_IMPORTED_MODULE_25__["RollerCreateComponent"], data: { title: 'Create Roller' } },
-    { path: 'brush-create', component: _components_brush_create_brush_create_component__WEBPACK_IMPORTED_MODULE_30__["BrushCreateComponent"], data: { title: 'Create Brush' } },
-    { path: 'roller-edit', component: _components_roller_edit_roller_edit_component__WEBPACK_IMPORTED_MODULE_26__["RollerEditComponent"], data: { title: 'Edit Roller' } },
-    {
-        path: 'paints',
-        component: _components_paint_paint_component__WEBPACK_IMPORTED_MODULE_20__["PaintComponent"],
-        data: { title: 'Paint List' }
-    },
-    {
-        path: 'paint-details/:id',
-        component: _components_paint_detail_paint_detail_component__WEBPACK_IMPORTED_MODULE_29__["PaintDetailComponent"],
-        data: { title: 'Paint Details' }
-    },
-    {
-        path: 'paint-create',
-        component: _components_paint_create_paint_create_component__WEBPACK_IMPORTED_MODULE_27__["PaintCreateComponent"],
-        data: { title: 'Create Paint' }
-    },
-    {
-        path: 'paint-edit/:id',
-        component: _components_paint_edit_paint_edit_component__WEBPACK_IMPORTED_MODULE_28__["PaintEditComponent"],
-        data: { title: 'Edit Paint' }
-    },
-    {
-        path: '',
-        redirectTo: '/paints',
-        pathMatch: 'full'
-    }
+    { path: 'roller-edit/:id', component: _components_roller_edit_roller_edit_component__WEBPACK_IMPORTED_MODULE_26__["RollerEditComponent"], data: { title: 'Edit Roller' } },
+    { path: 'roller-detail/:id', component: _components_roller_detail_roller_detail_component__WEBPACK_IMPORTED_MODULE_24__["RollerDetailComponent"], data: { title: 'Paint Details' } },
+    { path: 'paints', component: _components_paint_paint_component__WEBPACK_IMPORTED_MODULE_20__["PaintComponent"], data: { title: 'Paint List' } },
+    { path: 'paint-details/:id', component: _components_paint_detail_paint_detail_component__WEBPACK_IMPORTED_MODULE_30__["PaintDetailComponent"], data: { title: 'Paint Details' } },
+    { path: 'paint-create', component: _components_paint_create_paint_create_component__WEBPACK_IMPORTED_MODULE_28__["PaintCreateComponent"], data: { title: 'Create Paint' } },
+    { path: 'paint-edit/:id', component: _components_paint_edit_paint_edit_component__WEBPACK_IMPORTED_MODULE_29__["PaintEditComponent"], data: { title: 'Edit Paint' } },
+    { path: 'roller-pan', component: _components_roller_pan_roller_pan_component__WEBPACK_IMPORTED_MODULE_34__["RollerPanComponent"], data: { title: 'Roller List' } },
+    { path: 'roller-pan-detail/:id', component: _components_roller_pan_detail_roller_pan_detail_component__WEBPACK_IMPORTED_MODULE_36__["RollerPanDetailComponent"], data: { title: 'Roller Details' } },
+    { path: 'roller-pan-create', component: _components_roller_pan_create_roller_pan_create_component__WEBPACK_IMPORTED_MODULE_35__["RollerPanCreateComponent"], data: { title: 'Create Roller' } },
+    { path: 'roller-pan-edit/:id', component: _components_roller_pan_edit_roller_pan_edit_component__WEBPACK_IMPORTED_MODULE_37__["RollerPanEditComponent"], data: { title: 'Edit Roller' } },
 ];
 var AppModule = /** @class */ (function () {
     function AppModule() {
@@ -225,15 +218,21 @@ var AppModule = /** @class */ (function () {
                 _components_shopping_cart_shopping_cart_component__WEBPACK_IMPORTED_MODULE_17__["ShoppingCartComponent"],
                 _components_checkout_checkout_component__WEBPACK_IMPORTED_MODULE_18__["CheckoutComponent"],
                 _components_brush_brush_component__WEBPACK_IMPORTED_MODULE_19__["BrushComponent"],
-                _components_brush_create_brush_create_component__WEBPACK_IMPORTED_MODULE_30__["BrushCreateComponent"],
+                _components_brush_create_brush_create_component__WEBPACK_IMPORTED_MODULE_31__["BrushCreateComponent"],
                 _components_paint_paint_component__WEBPACK_IMPORTED_MODULE_20__["PaintComponent"],
                 _components_roller_roller_component__WEBPACK_IMPORTED_MODULE_23__["RollerComponent"],
                 _components_roller_detail_roller_detail_component__WEBPACK_IMPORTED_MODULE_24__["RollerDetailComponent"],
                 _components_roller_create_roller_create_component__WEBPACK_IMPORTED_MODULE_25__["RollerCreateComponent"],
                 _components_roller_edit_roller_edit_component__WEBPACK_IMPORTED_MODULE_26__["RollerEditComponent"],
-                _components_paint_create_paint_create_component__WEBPACK_IMPORTED_MODULE_27__["PaintCreateComponent"],
-                _components_paint_edit_paint_edit_component__WEBPACK_IMPORTED_MODULE_28__["PaintEditComponent"],
-                _components_paint_detail_paint_detail_component__WEBPACK_IMPORTED_MODULE_29__["PaintDetailComponent"],
+                _components_paint_create_paint_create_component__WEBPACK_IMPORTED_MODULE_28__["PaintCreateComponent"],
+                _components_paint_edit_paint_edit_component__WEBPACK_IMPORTED_MODULE_29__["PaintEditComponent"],
+                _components_paint_detail_paint_detail_component__WEBPACK_IMPORTED_MODULE_30__["PaintDetailComponent"],
+                _components_brush_detail_brush_detail_component__WEBPACK_IMPORTED_MODULE_32__["BrushDetailComponent"],
+                _components_brush_edit_brush_edit_component__WEBPACK_IMPORTED_MODULE_33__["BrushEditComponent"],
+                _components_roller_pan_roller_pan_component__WEBPACK_IMPORTED_MODULE_34__["RollerPanComponent"],
+                _components_roller_pan_create_roller_pan_create_component__WEBPACK_IMPORTED_MODULE_35__["RollerPanCreateComponent"],
+                _components_roller_pan_detail_roller_pan_detail_component__WEBPACK_IMPORTED_MODULE_36__["RollerPanDetailComponent"],
+                _components_roller_pan_edit_roller_pan_edit_component__WEBPACK_IMPORTED_MODULE_37__["RollerPanEditComponent"],
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
@@ -272,7 +271,7 @@ var AppModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = ".example-form {\r\n  min-width: 150px;\r\n  max-width: 500px;\r\n  width: 100%;\r\n}\r\n\r\n.example-full-width {\r\n  width: 100%;\r\n}\r\n\r\n.button-row {\r\n  margin: 10px 0;\r\n}\r\n"
 
 /***/ }),
 
@@ -283,7 +282,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h2 class=\"page-header\">Register</h2>\r\n<form (submit)=\"onBrushCreate()\">\r\n  <div class=\"form-group\">\r\n    <label for=\"\">Part Number</label>\r\n    <input type=\"text\" [(ngModel)]=\"PartNumber\" name=\"PartNumber\" class=\"form-control\">\r\n  </div>\r\n  <div class=\"form-group\">\r\n    <label for=\"\">Material</label>\r\n    <input type=\"text\" [(ngModel)]=\"Material\" name=\"Material\" class=\"form-control\">\r\n  </div>\r\n  <div class=\"form-group\">\r\n    <label for=\"\">Quantity</label>\r\n    <input type=\"text\" [(ngModel)]=\"Quantity\" name=\"Quantity\" class=\"form-control\">\r\n  </div>\r\n  <div class=\"form-group\">\r\n    <label for=\"\">Price</label>\r\n    <input type=\"text\" [(ngModel)]=\"Price\" name=\"Price\" class=\"form-control\">\r\n  </div>\r\n  <div class=\"form-group\">\r\n    <label for=\"\">Size</label>\r\n    <input type=\"text\" [(ngModel)]=\"Size\" name=\"Size\" class=\"form-control\">\r\n  </div>\r\n  <input type=\"submit\" class=\"btn btn-primary\" value=\"Submit\">\r\n</form>\r\n"
+module.exports = "<div class=\"button-row\">\r\n  <a mat-raised-button color=\"primary\" [routerLink]=\"['/brush']\"><mat-icon>list</mat-icon></a>\r\n</div>\r\n<form [formGroup]=\"brushForm\" (ngSubmit)=\"onFormSubmit(brushForm.value)\">\r\n  <mat-form-field class=\"example-full-width\">\r\n    <input matInput placeholder=\"PartNumber\" formControlName=\"PartNumber\">\r\n  </mat-form-field>\r\n\r\n  <mat-form-field class=\"example-full-width\">\r\n    <input matInput placeholder=\"Brand\" formControlName=\"Brand\">\r\n  </mat-form-field>\r\n\r\n  <mat-form-field class=\"example-full-width\">\r\n    <input matInput placeholder=\"Material\" formControlName=\"Material\">\r\n  </mat-form-field>\r\n\r\n  <mat-form-field class=\"example-full-width\">\r\n    <input matInput placeholder=\"Size\" formControlName=\"Size\">\r\n  </mat-form-field>\r\n\r\n  <mat-form-field class=\"example-full-width\">\r\n    <input matInput placeholder=\"Quantity\" formControlName=\"Quantity\">\r\n  </mat-form-field>\r\n\r\n  <mat-form-field class=\"example-full-width\">\r\n    <input matInput placeholder=\"Price\" formControlName=\"Price\">\r\n  </mat-form-field>\r\n  <div class=\"button-row\">\r\n    <button type=\"submit\" [disabled]=\"!brushForm.valid\" mat-raised-button color=\"primary\"><mat-icon>save</mat-icon></button>\r\n  </div>\r\n</form>\r\n"
 
 /***/ }),
 
@@ -297,12 +296,10 @@ module.exports = "<h2 class=\"page-header\">Register</h2>\r\n<form (submit)=\"on
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BrushCreateComponent", function() { return BrushCreateComponent; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _services_validate_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../services/validate.service */ "./src/app/services/validate.service.ts");
-/* harmony import */ var angular2_flash_messages__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! angular2-flash-messages */ "./node_modules/angular2-flash-messages/module/index.js");
-/* harmony import */ var angular2_flash_messages__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(angular2_flash_messages__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _services_api_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../services/api.service */ "./src/app/services/api.service.ts");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _services_api_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../services/api.service */ "./src/app/services/api.service.ts");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -316,54 +313,248 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
-
 var BrushCreateComponent = /** @class */ (function () {
-    function BrushCreateComponent(validateService, flashMessage, api, router) {
-        this.validateService = validateService;
-        this.flashMessage = flashMessage;
-        this.api = api;
+    function BrushCreateComponent(router, api, formBuilder) {
         this.router = router;
+        this.api = api;
+        this.formBuilder = formBuilder;
+        this.PartNumber = '';
+        this.Brand = '';
+        this.Material = '';
+        this.Size = '';
     }
     BrushCreateComponent.prototype.ngOnInit = function () {
+        this.brushForm = this.formBuilder.group({
+            'PartNumber': [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            'Brand': [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            'Material': [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            'Size': [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            'Quantity': [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            'Price': [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required]
+        });
     };
-    BrushCreateComponent.prototype.onBrushCreate = function () {
+    BrushCreateComponent.prototype.onFormSubmit = function (form) {
         var _this = this;
-        var brush = {
-            PartNumber: this.PartNumber,
-            Material: this.Material,
-            Quantity: this.Quantity,
-            Price: this.Price,
-            Size: this.Size
-        };
-        //Required Fields
-        if (!this.validateService.validateBrush(brush)) {
-            this.flashMessage.show('Please fill in all fields', { cssClass: 'alert-danger', timeout: 3000 });
-            return false;
-        }
-        //Register user
-        this.api.postBrush(brush).subscribe(function (data) {
-            if (data.success) {
-                _this.flashMessage.show('Brush created successfully', { cssClass: 'alert-success', timeout: 3000 });
-                _this.router.navigate(['/brush']);
-            }
-            else {
-                _this.flashMessage.show('Something Went Wrong', { cssClass: 'alert-danger', timeout: 3000 });
-                _this.router.navigate(['/brush']);
-            }
+        this.api.postBrush(form)
+            .subscribe(function (res) {
+            var id = res['_id'];
+            _this.router.navigate(['/brush-detail', id]);
+        }, function (err) {
+            console.log(err);
         });
     };
     BrushCreateComponent = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-brush-create',
             template: __webpack_require__(/*! ./brush-create.component.html */ "./src/app/components/brush-create/brush-create.component.html"),
             styles: [__webpack_require__(/*! ./brush-create.component.css */ "./src/app/components/brush-create/brush-create.component.css")]
         }),
-        __metadata("design:paramtypes", [_services_validate_service__WEBPACK_IMPORTED_MODULE_1__["ValidateService"],
-            angular2_flash_messages__WEBPACK_IMPORTED_MODULE_2__["FlashMessagesService"],
-            _services_api_service__WEBPACK_IMPORTED_MODULE_3__["ApiService"],
-            _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"]])
+        __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_0__["Router"], _services_api_service__WEBPACK_IMPORTED_MODULE_2__["ApiService"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormBuilder"]])
     ], BrushCreateComponent);
     return BrushCreateComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/components/brush-detail/brush-detail.component.css":
+/*!********************************************************************!*\
+  !*** ./src/app/components/brush-detail/brush-detail.component.css ***!
+  \********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".example-card {\r\n  max-width: 500px;\r\n}\r\n\r\n.button-row {\r\n  margin: 10px 0;\r\n}\r\n"
+
+/***/ }),
+
+/***/ "./src/app/components/brush-detail/brush-detail.component.html":
+/*!*********************************************************************!*\
+  !*** ./src/app/components/brush-detail/brush-detail.component.html ***!
+  \*********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"button-row\">\n  <a mat-raised-button color=\"primary\" [routerLink]=\"['/brush']\"><mat-icon>list</mat-icon></a>\n</div>\n<mat-card class=\"example-card\">\n  <mat-card-header>\n    <mat-card-title><h2>{{brush['PartNumber']}}</h2></mat-card-title>\n\n  </mat-card-header>\n  <mat-card-content>\n    <dl>\n      <dt>PartNumber:</dt>\n      <dd>{{brush.PartNumber}}</dd>\n      <dt>Brand:</dt>\n      <dd>{{brush.Brand}}</dd>\n      <dt>Material:</dt>\n      <dd>{{brush.Material}}</dd>\n      <dt>Size:</dt>\n      <dd>{{brush.Size}}</dd>\n      <dt>Quantity:</dt>\n      <dd>{{brush.Quantity}}</dd>\n      <dt>Price:</dt>\n      <dd>{{brush.Price}}</dd>\n    </dl>\n  </mat-card-content>\n  <mat-card-actions>\n    <a mat-raised-button color=\"primary\" [routerLink]=\"['/brush-edit', brush._id]\"><mat-icon>edit</mat-icon></a>\n    <a mat-raised-button color=\"warn\" (click)=\"deleteBrush(brush._id)\"><mat-icon>delete</mat-icon></a>\n  </mat-card-actions>\n</mat-card>\n"
+
+/***/ }),
+
+/***/ "./src/app/components/brush-detail/brush-detail.component.ts":
+/*!*******************************************************************!*\
+  !*** ./src/app/components/brush-detail/brush-detail.component.ts ***!
+  \*******************************************************************/
+/*! exports provided: BrushDetailComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BrushDetailComponent", function() { return BrushDetailComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _services_api_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../services/api.service */ "./src/app/services/api.service.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var BrushDetailComponent = /** @class */ (function () {
+    function BrushDetailComponent(route, api, router) {
+        this.route = route;
+        this.api = api;
+        this.router = router;
+        this.brush = {};
+    }
+    BrushDetailComponent.prototype.ngOnInit = function () {
+        this.getBrushDetails(this.route.snapshot.params['id']);
+    };
+    BrushDetailComponent.prototype.getBrushDetails = function (id) {
+        var _this = this;
+        this.api.getBrush(id)
+            .subscribe(function (data) {
+            console.log(data);
+            _this.brush = data;
+        });
+    };
+    BrushDetailComponent.prototype.deleteBrush = function (id) {
+        var _this = this;
+        this.api.deleteBrush(id)
+            .subscribe(function (res) {
+            _this.router.navigate(['/brush']);
+        }, function (err) {
+            console.log(err);
+        });
+    };
+    BrushDetailComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-brush-detail',
+            template: __webpack_require__(/*! ./brush-detail.component.html */ "./src/app/components/brush-detail/brush-detail.component.html"),
+            styles: [__webpack_require__(/*! ./brush-detail.component.css */ "./src/app/components/brush-detail/brush-detail.component.css")]
+        }),
+        __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"], _services_api_service__WEBPACK_IMPORTED_MODULE_2__["ApiService"], _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"]])
+    ], BrushDetailComponent);
+    return BrushDetailComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/components/brush-edit/brush-edit.component.css":
+/*!****************************************************************!*\
+  !*** ./src/app/components/brush-edit/brush-edit.component.css ***!
+  \****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".example-form {\r\n  min-width: 150px;\r\n  max-width: 500px;\r\n  width: 100%;\r\n}\r\n\r\n.example-full-width {\r\n  width: 100%;\r\n}\r\n\r\n.button-row {\r\n  margin: 10px 0;\r\n}\r\n"
+
+/***/ }),
+
+/***/ "./src/app/components/brush-edit/brush-edit.component.html":
+/*!*****************************************************************!*\
+  !*** ./src/app/components/brush-edit/brush-edit.component.html ***!
+  \*****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"button-row\">\n  <a mat-raised-button color=\"primary\" [routerLink]=\"['/brush']\"><mat-icon>list</mat-icon></a>\n</div>\n<form [formGroup]=\"brushForm\" (ngSubmit)=\"onFormSubmit(brushForm.value)\">\n  <mat-form-field class=\"example-full-width\">\n    <input matInput placeholder=\"PartNumber\" formControlName=\"PartNumber\">\n  </mat-form-field>\n\n  <mat-form-field class=\"example-full-width\">\n    <input matInput placeholder=\"Brand\" formControlName=\"Brand\">\n  </mat-form-field>\n\n  <mat-form-field class=\"example-full-width\">\n    <input matInput placeholder=\"Material\" formControlName=\"Material\">\n  </mat-form-field>\n\n  <mat-form-field class=\"example-full-width\">\n    <input matInput placeholder=\"Size\" formControlName=\"Size\">\n  </mat-form-field>\n\n  <mat-form-field class=\"example-full-width\">\n    <input matInput placeholder=\"Quantity\" formControlName=\"Quantity\">\n  </mat-form-field>\n\n  <mat-form-field class=\"example-full-width\">\n    <input matInput placeholder=\"Price\" formControlName=\"Price\">\n  </mat-form-field>\n  <div class=\"button-row\">\n    <button type=\"submit\" [disabled]=\"!brushForm.valid\" mat-raised-button color=\"primary\"><mat-icon>save</mat-icon></button>\n  </div>\n</form>\n\n"
+
+/***/ }),
+
+/***/ "./src/app/components/brush-edit/brush-edit.component.ts":
+/*!***************************************************************!*\
+  !*** ./src/app/components/brush-edit/brush-edit.component.ts ***!
+  \***************************************************************/
+/*! exports provided: BrushEditComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BrushEditComponent", function() { return BrushEditComponent; });
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _services_api_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../services/api.service */ "./src/app/services/api.service.ts");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var BrushEditComponent = /** @class */ (function () {
+    function BrushEditComponent(router, route, api, formBuilder) {
+        this.router = router;
+        this.route = route;
+        this.api = api;
+        this.formBuilder = formBuilder;
+        this.id = '';
+        this.PartNumber = '';
+        this.Brand = '';
+        this.Material = '';
+        this.Size = '';
+    }
+    BrushEditComponent.prototype.ngOnInit = function () {
+        this.getBrush(this.route.snapshot.params['id']);
+        this.brushForm = this.formBuilder.group({
+            'PartNumber': [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            'Brand': [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            'Material': [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            'Size': [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            'Quantity': [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            'Price': [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required]
+        });
+    };
+    BrushEditComponent.prototype.getBrush = function (id) {
+        var _this = this;
+        this.api.getBrush(id).subscribe(function (data) {
+            _this.id = data._id;
+            _this.brushForm.setValue({
+                PartNumber: data.PartNumber,
+                Brand: data.Brand,
+                Material: data.Material,
+                Size: data.Size,
+                Quantity: data.Quantity,
+                Price: data.Price,
+            });
+        });
+    };
+    BrushEditComponent.prototype.onFormSubmit = function (form) {
+        var _this = this;
+        this.api.updateBrush(this.id, form)
+            .subscribe(function (res) {
+            var id = res['_id'];
+            _this.router.navigate(['/brush-detail', id]);
+        }, function (err) {
+            console.log(err);
+        });
+    };
+    BrushEditComponent.prototype.paintDetails = function () {
+        this.router.navigate(['/brush-detail', this.id]);
+    };
+    BrushEditComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-brush-edit',
+            template: __webpack_require__(/*! ./brush-edit.component.html */ "./src/app/components/brush-edit/brush-edit.component.html"),
+            styles: [__webpack_require__(/*! ./brush-edit.component.css */ "./src/app/components/brush-edit/brush-edit.component.css")]
+        }),
+        __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_0__["Router"], _angular_router__WEBPACK_IMPORTED_MODULE_0__["ActivatedRoute"], _services_api_service__WEBPACK_IMPORTED_MODULE_2__["ApiService"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormBuilder"]])
+    ], BrushEditComponent);
+    return BrushEditComponent;
 }());
 
 
@@ -377,7 +568,7 @@ var BrushCreateComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".example-container {\n  display: flex;\n  flex-direction: column;\n  max-height: 500px;\n  min-width: 300px;\n  overflow: auto;\n}\n\n.isbn-col {\n  flex: 0 0 100px !important;\n  white-space: unset !important;\n}\n\n.button-row {\n  margin: 10px 0;\n}\n"
+module.exports = ".example-container {\r\n  display: flex;\r\n  flex-direction: column;\r\n  max-height: 500px;\r\n  min-width: 300px;\r\n  overflow: auto;\r\n}\r\n\r\n.isbn-col {\r\n  flex: 0 0 100px !important;\r\n  white-space: unset !important;\r\n}\r\n\r\n.button-row {\r\n  margin: 10px 0;\r\n}\r\n"
 
 /***/ }),
 
@@ -388,7 +579,7 @@ module.exports = ".example-container {\n  display: flex;\n  flex-direction: colu
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"button-row\">\n  <a mat-raised-button color=\"primary\" [routerLink]=\"['/brush-create']\"><mat-icon>add</mat-icon></a>\n</div>\n\n<div class=\"example-container mat-elevation-z8\">\n  <table mat-table #table [dataSource]=\"dataSource\">\n\n    <!--- Note that these columns can be defined in any order.\n          The actual rendered columns are set as a property on the row definition\" -->\n\n    <!-- Title Column -->\n    <ng-container matColumnDef=\"PartNumber\">\n      <th mat-header-cell *matHeaderCellDef> Part Number </th>\n      <td mat-cell *matCellDef=\"let element\" class=\"isbn-col\"> {{element.PartNumber}} </td>\n    </ng-container>\n\n    <!-- Title Column -->\n    <ng-container matColumnDef=\"Brand\">\n      <th mat-header-cell *matHeaderCellDef> Brand </th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.Brand}} </td>\n    </ng-container>\n\n    <!-- Author Column -->\n    <ng-container matColumnDef=\"Material\">\n      <th mat-header-cell *matHeaderCellDef> Material </th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.Material}} </td>\n    </ng-container>\n\n    <!-- Size Column -->\n    <ng-container matColumnDef=\"Size\">\n      <th mat-header-cell *matHeaderCellDef> Size </th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.Size}} </td>\n    </ng-container>\n\n    <!-- Quantity Column -->\n    <ng-container matColumnDef=\"Quantity\">\n      <th mat-header-cell *matHeaderCellDef> Quantity </th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.Quantity}} </td>\n    </ng-container>\n\n    <!-- Price Column -->\n    <ng-container matColumnDef=\"Price\">\n      <th mat-header-cell *matHeaderCellDef> Price </th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.Price}} </td>\n    </ng-container>\n\n    <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n    <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\" [routerLink]=\"['/book-details/', row._id]\"></tr>\n  </table>\n</div>\n"
+module.exports = "<div class=\"button-row\">\r\n  <a mat-raised-button color=\"primary\" [routerLink]=\"['/brush-create']\"><mat-icon>add</mat-icon></a>\r\n</div>\r\n\r\n<div class=\"example-container mat-elevation-z8\">\r\n  <table mat-table #table [dataSource]=\"dataSource\">\r\n\r\n    <!--- Note that these columns can be defined in any order.\r\n          The actual rendered columns are set as a property on the row definition\" -->\r\n\r\n    <!-- Title Column -->\r\n    <ng-container matColumnDef=\"PartNumber\">\r\n      <th mat-header-cell *matHeaderCellDef> Part Number </th>\r\n      <td mat-cell *matCellDef=\"let element\" class=\"isbn-col\"> {{element.PartNumber}} </td>\r\n    </ng-container>\r\n\r\n    <!-- Title Column -->\r\n    <ng-container matColumnDef=\"Brand\">\r\n      <th mat-header-cell *matHeaderCellDef> Brand </th>\r\n      <td mat-cell *matCellDef=\"let element\"> {{element.Brand}} </td>\r\n    </ng-container>\r\n\r\n    <!-- Author Column -->\r\n    <ng-container matColumnDef=\"Material\">\r\n      <th mat-header-cell *matHeaderCellDef> Material </th>\r\n      <td mat-cell *matCellDef=\"let element\"> {{element.Material}} </td>\r\n    </ng-container>\r\n\r\n    <!-- Size Column -->\r\n    <ng-container matColumnDef=\"Size\">\r\n      <th mat-header-cell *matHeaderCellDef> Size </th>\r\n      <td mat-cell *matCellDef=\"let element\"> {{element.Size}} </td>\r\n    </ng-container>\r\n\r\n    <!-- Quantity Column -->\r\n    <ng-container matColumnDef=\"Quantity\">\r\n      <th mat-header-cell *matHeaderCellDef> Quantity </th>\r\n      <td mat-cell *matCellDef=\"let element\"> {{element.Quantity}} </td>\r\n    </ng-container>\r\n\r\n    <!-- Price Column -->\r\n    <ng-container matColumnDef=\"Price\">\r\n      <th mat-header-cell *matHeaderCellDef> Price </th>\r\n      <td mat-cell *matCellDef=\"let element\"> {{element.Price}} </td>\r\n    </ng-container>\r\n\r\n    <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\r\n    <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\" [routerLink]=\"['/brush-detail/', row._id]\"></tr>  </table>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -493,7 +684,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  checkout works!\n</p>\n"
+module.exports = "<p>\r\n  checkout works!\r\n</p>\r\n"
 
 /***/ }),
 
@@ -556,7 +747,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n<!-- <h2 class=\"page-header\" align=\"center\">Welcome to Smith's Paint Shop</h2>\n<div class=\"row\">\n    <div class=\"col-md-4 list-group\">\n        <h3 style=\"text-align:center\">Paint Colors</h3>\n        <a  *ngFor=\"let color of paintColors\" class=\"list-group-item list-group-item-action flex-column align-items-start\">\n            <div class=\"d-flex w-100 justify-content-between\">\n                <h5 class=\"mb-1\">{{color.name}}</h5>\n            </div>\n            <ul style=\"list-style-type:none\">\n                <li>Color: {{color.color}}</li>\n                <li>Container Size: {{color.size}}</li>\n                <li>Price: {{color.price}}</li>\n            </ul>\n            <button (click)=\"addToCart(color)\">Add to Cart</button>\n        </a>\n    </div>\n    <div class=\"col-md-4 list-group\">\n        <h3 style=\"text-align:center\">Brushes</h3>\n        <a  *ngFor=\"let brush of brushes\" class=\"list-group-item list-group-item-action flex-column align-items-start\">\n            <div class=\"d-flex w-100 justify-content-between\">\n                <h5 class=\"mb-1\">{{brush.name}}</h5>\n            </div>\n            <ul style=\"list-style-type:none\">\n                <li>Brush Size: {{brush.size}}</li>\n                <li>Handle Material: Wood</li>\n                <li>Price: {{brush.price}}</li>\n\n            </ul>\n            <button (click)=\"addToCart(brush)\">Add to Cart</button>\n        </a> -->\n<div class=\"row\">\n\n  <div class=\"col-lg-4 col-md-6 mb-4\" *ngFor=\"let item of items\">\n    <div class=\"card h-100\">\n      <img class=\"card-img-top\" src='{{item.image}}' alt=\"\">\n      <div class=\"card-body\">\n        <h4 class=\"card-title\">\n          {{item.title}}\n        </h4>\n        <h5>${{item.price}}</h5>\n        <p class=\"card-text\"> {{item.description}}\n        </p>\n      </div>\n      <div class=\"card-footer\">\n        <small class=\"text-muted\">&#9733; &#9733; &#9733; &#9733; &#9734;</small>\n        \n      </div>\n      <button class=\"btn btn-primary\" (click)=\"addToCart(item)\">Add to Cart</button>\n    </div>\n  </div>\n  <div class=\"col-sm-12 col-md-12 text-right\" style=\"position: fixed; bottom: 0;\">\n      <button class=\"btn btn-lg btn-block btn-success text-uppercase\" [routerLink]=\"['/shopping-cart']\" >Shopping Cart</button>\n  </div>\n\n</div>\n"
+module.exports = "\r\n<!-- <h2 class=\"page-header\" align=\"center\">Welcome to Smith's Paint Shop</h2>\r\n<div class=\"row\">\r\n    <div class=\"col-md-4 list-group\">\r\n        <h3 style=\"text-align:center\">Paint Colors</h3>\r\n        <a  *ngFor=\"let color of paintColors\" class=\"list-group-item list-group-item-action flex-column align-items-start\">\r\n            <div class=\"d-flex w-100 justify-content-between\">\r\n                <h5 class=\"mb-1\">{{color.name}}</h5>\r\n            </div>\r\n            <ul style=\"list-style-type:none\">\r\n                <li>Color: {{color.color}}</li>\r\n                <li>Container Size: {{color.size}}</li>\r\n                <li>Price: {{color.price}}</li>\r\n            </ul>\r\n            <button (click)=\"addToCart(color)\">Add to Cart</button>\r\n        </a>\r\n    </div>\r\n    <div class=\"col-md-4 list-group\">\r\n        <h3 style=\"text-align:center\">Brushes</h3>\r\n        <a  *ngFor=\"let brush of brushes\" class=\"list-group-item list-group-item-action flex-column align-items-start\">\r\n            <div class=\"d-flex w-100 justify-content-between\">\r\n                <h5 class=\"mb-1\">{{brush.name}}</h5>\r\n            </div>\r\n            <ul style=\"list-style-type:none\">\r\n                <li>Brush Size: {{brush.size}}</li>\r\n                <li>Handle Material: Wood</li>\r\n                <li>Price: {{brush.price}}</li>\r\n\r\n            </ul>\r\n            <button (click)=\"addToCart(brush)\">Add to Cart</button>\r\n        </a> -->\r\n<div class=\"row\">\r\n\r\n  <div class=\"col-lg-4 col-md-6 mb-4\" *ngFor=\"let item of items\">\r\n    <div class=\"card h-100\">\r\n      <img class=\"card-img-top\" src='{{item.image}}' alt=\"\">\r\n      <div class=\"card-body\">\r\n        <h4 class=\"card-title\">\r\n          {{item.title}}\r\n        </h4>\r\n        <h5>${{item.price}}</h5>\r\n        <p class=\"card-text\"> {{item.description}}\r\n        </p>\r\n      </div>\r\n      <div class=\"card-footer\">\r\n        <small class=\"text-muted\">&#9733; &#9733; &#9733; &#9733; &#9734;</small>\r\n        \r\n      </div>\r\n      <button class=\"btn btn-primary\" (click)=\"addToCart(item)\">Add to Cart</button>\r\n    </div>\r\n  </div>\r\n  <div class=\"col-sm-12 col-md-12 text-right\" style=\"position: fixed; bottom: 0;\">\r\n      <button class=\"btn btn-lg btn-block btn-success text-uppercase\" [routerLink]=\"['/shopping-cart']\" >Shopping Cart</button>\r\n  </div>\r\n\r\n</div>\r\n"
 
 /***/ }),
 
@@ -709,7 +900,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n"
+module.exports = "\r\n"
 
 /***/ }),
 
@@ -720,11 +911,7 @@ module.exports = "\n"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-<<<<<<< HEAD
-module.exports = "<div class=\"jumbotron text-center\">\n  <h1>Smith's Paint Shop</h1>\n  <p class=\"lead\">Welcome to our custom Paint Company ERP test</p>\n  <div>\n    <a class=\"btn btn-primary\" [routerLink]=\"['/register']\">Register</a>\n    <a class=\"btn btn-info\" [routerLink]=\"['/login']\">Login</a>\n  </div>\n  <div>\n    <a class=\"btn btn-danger\" [routerLink]=\"['/inventory']\">Inventory</a>\n  </div>\n</div>\n\n<div class=\"row\">\n  <div class=\"col-md-4\">\n    <h3>MEAN Stack</h3>\n    <p>Sed neque diam, hendrerit eget elementum lobortis, egestas sed elit. Sed vel interdum turpis. Sed vestibulum urna vel quam facilisis pellentesque. Integer faucibus ornare lobortis. Nam ut nulla sodales, tristique metus in, iaculis dolor. Donec volutpat tellus id purus feugiat sagittis. Fusce ut tempor justo, nec auctor purus. Cras nisl metus, malesuada in dui vitae, malesuada blandit mauris.</p>\n  </div>\n  <div class=\"col-md-4\">\n    <h3>CRUD</h3>\n    <p>Sed neque diam, hendrerit eget elementum lobortis, egestas sed elit. Sed vel interdum turpis. Sed vestibulum urna vel quam facilisis pellentesque. Integer faucibus ornare lobortis. Nam ut nulla sodales, tristique metus in, iaculis dolor. Donec volutpat tellus id purus feugiat sagittis. Fusce ut tempor justo, nec auctor purus. Cras nisl metus, malesuada in dui vitae, malesuada blandit mauris.</p>\n  </div>\n  <div class=\"col-md-4\">\n    <h3>IST 421</h3>\n    <p>Sed neque diam, hendrerit eget elementum lobortis, egestas sed elit. Sed vel interdum turpis. Sed vestibulum urna vel quam facilisis pellentesque. Integer faucibus ornare lobortis. Nam ut nulla sodales, tristique metus in, iaculis dolor. Donec volutpat tellus id purus feugiat sagittis. Fusce ut tempor justo, nec auctor purus. Cras nisl metus, malesuada in dui vitae, malesuada blandit mauris.</p>\n  </div>\n</div>\n"
-=======
-module.exports = "<div class=\"jumbotron text-center\">\r\n  <h1>Smith's Paint Shop</h1>\r\n  <p class=\"lead\">Welcome to our custom Paint Company ERP</p>\r\n  <div>\r\n    <a class=\"btn btn-primary\" [routerLink]=\"['/register']\">Register</a>\r\n    <a class=\"btn btn-info\" [routerLink]=\"['/login']\">Login</a>\r\n  </div>\r\n  <div>\r\n    <a class=\"btn btn-danger\" [routerLink]=\"['/inventory']\">Inventory</a>\r\n  </div>\r\n</div>\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-md-4\">\r\n    <h3>Who we are</h3>\r\n    <p>Smith's Paint Shop founded in 2018 by Patrick, Rafael, Soeb, Jhalak, Chanrath, and Amrish. Starting in Abington as a single location, we have expanded to over 4 locations across the Philadelphia area. We are a customer service based company with expert service who can help you bring your design to life with our premium brand paint and paint accessories.  </p>\r\n  </div>\r\n  <div class=\"col-md-4\">\r\n    <h3>Our mission</h3>\r\n    <p>Provide premium paint and paint accessories to both families and businesses all over the United States.</p>\r\n  </div>\r\n  <div class=\"col-md-4\">\r\n    <h3>Partnered Brands</h3>\r\n    <p>We have various premium brands to decorate your house or business including Valspar, Sherwin-Williams, Blue Hawk, Project Source, Wagner, and Whizz</p>\r\n  </div>\r\n</div>\r\n"
->>>>>>> f7cc4f3c50d7a6095a3c9799d1a0a370f4829779
+module.exports = "<div class=\"jumbotron text-center\">\r\n  <h1>Smith's Paint Shop</h1>\r\n  <p class=\"lead\">Welcome to our custom Paint Company ERP test</p>\r\n  <div>\r\n    <a class=\"btn btn-primary\" [routerLink]=\"['/register']\">Register</a>\r\n    <a class=\"btn btn-info\" [routerLink]=\"['/login']\">Login</a>\r\n  </div>\r\n  <div>\r\n    <a class=\"btn btn-danger\" [routerLink]=\"['/inventory']\">Inventory</a>\r\n  </div>\r\n</div>\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-md-4\">\r\n    <h3>Who we are</h3>\r\n    <p>Smith's Paint Shop founded in 2018 by Patrick, Rafael, Soeb, Jhalak, Chanrath, and Amrish. Starting in Abington as a single location, we have expanded to over 4 locations across the Philadelphia area. We are a customer service based company with expert service who can help you bring your design to life with our premium brand paint and paint accessories.  </p>\r\n  </div>\r\n  <div class=\"col-md-4\">\r\n    <h3>Our mission</h3>\r\n    <p>Provide premium paint and paint accessories to both families and businesses all over the United States.</p>\r\n  </div>\r\n  <div class=\"col-md-4\">\r\n    <h3>Partnered Brands</h3>\r\n    <p>We have various premium brands to decorate your house or business including Valspar, Sherwin-Williams, Blue Hawk, Project Source, Wagner, and Whizz</p>\r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -787,11 +974,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-<<<<<<< HEAD
-module.exports = "\n<div class=\"jumbotron text-center\">\n  <h1>Smith's Paint Inventory</h1>\n  <p class=\"lead\">Welcome to our custom Paint Company ERP</p>\n  <div>\n    <a class=\"btn btn-danger\" [routerLink]=\"['/brush']\">Brush</a>\n    <a class=\"btn btn-danger\" [routerLink]=\"['/paint']\">Paint</a>\n    <a class=\"btn btn-danger\" [routerLink]=\"['/roller']\">Roller</a>\n  </div>\n</div>\n\n \n"
-=======
 module.exports = "\r\n<div class=\"jumbotron text-center\">\r\n  <h1>Smith's Paint Inventory</h1>\r\n  <p class=\"lead\">Welcome to our custom Paint Company ERP</p>\r\n  <div>\r\n    <a class=\"btn btn-danger\" [routerLink]=\"['/brush']\">Brush</a>\r\n    <a class=\"btn btn-danger\" [routerLink]=\"['/paint']\">Paint</a>\r\n    <a class=\"btn btn-danger\" [routerLink]=\"['/roller']\">Roller</a>\r\n    <a class=\"btn btn-danger\" [routerLink]=\"['/roller-pan']\">Roller Pan</a>\r\n  </div>\r\n</div>\r\n\r\n \r\n"
->>>>>>> f7cc4f3c50d7a6095a3c9799d1a0a370f4829779
 
 /***/ }),
 
@@ -854,7 +1037,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h2 class=\"page-header\" >Login</h2>\n<form class=\"form-signin\" (submit)=\"onLoginSubmit()\">\n        <div class=\"form-group\">\n          <label for=\"Username\">Username</label>\n          <input type=\"text\" class=\"form-control\" placeholder=\"Enter Username\" [(ngModel)]=\"username\" name=\"username\">\n        </div>\n        <div class=\"form-group\">\n        <label for=\"Password\">Password</label>\n        <input type=\"password\" class=\"form-control\" placeholder=\" Enter Password\" [(ngModel)]=\"password\" name=\"password\">\n        </div>\n        <div class=\"checkbox\">\n          <label>\n            <input type=\"checkbox\" value=\"remember-me\"> Remember me\n          </label>\n        </div>\n        <input class=\"btn btn-lg btn-primary\" type=\"submit\" value=\"Login\">\n</form>\n"
+module.exports = "<h2 class=\"page-header\" >Login</h2>\r\n<form class=\"form-signin\" (submit)=\"onLoginSubmit()\">\r\n        <div class=\"form-group\">\r\n          <label for=\"Username\">Username</label>\r\n          <input type=\"text\" class=\"form-control\" placeholder=\"Enter Username\" [(ngModel)]=\"username\" name=\"username\">\r\n        </div>\r\n        <div class=\"form-group\">\r\n        <label for=\"Password\">Password</label>\r\n        <input type=\"password\" class=\"form-control\" placeholder=\" Enter Password\" [(ngModel)]=\"password\" name=\"password\">\r\n        </div>\r\n        <div class=\"checkbox\">\r\n          <label>\r\n            <input type=\"checkbox\" value=\"remember-me\"> Remember me\r\n          </label>\r\n        </div>\r\n        <input class=\"btn btn-lg btn-primary\" type=\"submit\" value=\"Login\">\r\n</form>\r\n"
 
 /***/ }),
 
@@ -947,7 +1130,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-expand-lg navbar-dark bg-primary\">\n    <div class=\"container\">\n      <div class=\"navbar-header\">\n        <a class=\"navbar-brand\" href=\"#\">Smith's Paint Shop</a>\n      </div>\n      <div id=\"navbar\" class=\"collapse navbar-collapse\">\n        <ul class=\"navbar-nav mr-auto\">\n          <li class=\"nav-item\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\"><a class=\"nav-link\" [routerLink] = \"['/']\">Home</a></li>\n        </ul>\n        <ul class=\"navbar-nav navbar-right\">\n          <li class=\"nav-item\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\"><a class=\"nav-link\" [routerLink] = \"['/login']\">Login</a></li>\n          <li class=\"nav-item\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\"><a class=\"nav-link\" [routerLink] = \"['/register']\">Register</a></li>\n          <li class=\"nav-item\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\"><a class=\"nav-link\" [routerLink] = \"['/shopping-cart']\">Shopping Cart</a></li>\n\n        </ul>\n      </div><!--/.nav-collapse -->\n    </div>\n  </nav>\n"
+module.exports = "<nav class=\"navbar navbar-expand-lg navbar-dark bg-primary\">\r\n    <div class=\"container\">\r\n      <div class=\"navbar-header\">\r\n        <a class=\"navbar-brand\" href=\"#\">Smith's Paint Shop</a>\r\n      </div>\r\n      <div id=\"navbar\" class=\"collapse navbar-collapse\">\r\n        <ul class=\"navbar-nav mr-auto\">\r\n          <li class=\"nav-item\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\"><a class=\"nav-link\" [routerLink] = \"['/']\">Home</a></li>\r\n        </ul>\r\n        <ul class=\"navbar-nav navbar-right\">\r\n          <li class=\"nav-item\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\"><a class=\"nav-link\" [routerLink] = \"['/login']\">Login</a></li>\r\n          <li class=\"nav-item\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\"><a class=\"nav-link\" [routerLink] = \"['/register']\">Register</a></li>\r\n          <li class=\"nav-item\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\"><a class=\"nav-link\" [routerLink] = \"['/shopping-cart']\">Shopping Cart</a></li>\r\n\r\n        </ul>\r\n      </div><!--/.nav-collapse -->\r\n    </div>\r\n  </nav>\r\n"
 
 /***/ }),
 
@@ -1284,7 +1467,7 @@ var PaintEditComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".example-container {\n  display: flex;\n  flex-direction: column;\n  max-height: 500px;\n  min-width: 300px;\n  overflow: auto;\n}\n\n.isbn-col {\n  flex: 0 0 100px !important;\n  white-space: unset !important;\n}\n\n.button-row {\n  margin: 10px 0;\n}\n"
+module.exports = ".example-container {\r\n  display: flex;\r\n  flex-direction: column;\r\n  max-height: 500px;\r\n  min-width: 300px;\r\n  overflow: auto;\r\n}\r\n\r\n.isbn-col {\r\n  flex: 0 0 100px !important;\r\n  white-space: unset !important;\r\n}\r\n\r\n.button-row {\r\n  margin: 10px 0;\r\n}\r\n"
 
 /***/ }),
 
@@ -1295,7 +1478,7 @@ module.exports = ".example-container {\n  display: flex;\n  flex-direction: colu
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"button-row\">\n  <a mat-raised-button color=\"primary\" [routerLink]=\"['/paint-create']\"><mat-icon>add</mat-icon></a>\n</div>\n\n<div class=\"example-container mat-elevation-z8\">\n  <table mat-table #table [dataSource]=\"dataSourcePaint\">\n\n    <!-- Title Colum -->\n    <ng-container matColumnDef=\"itemNumber\">\n      <th mat-header-cell *matHeaderCellDef> Item Number </th>\n      <td mat-cell *matCellDef=\"let element\" class=\"isbn-col\"> {{element.itemNumber}} </td>\n    </ng-container>\n\n    <!-- Title Column -->\n    <ng-container matColumnDef=\"color\">\n      <th mat-header-cell *matHeaderCellDef> Color </th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.color}} </td>\n    </ng-container>\n\n    <!-- Author Column -->\n    <ng-container matColumnDef=\"quantity\">\n      <th mat-header-cell *matHeaderCellDef> Quantity </th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.quantity}} </td>\n    </ng-container>\n\n    <!-- Size Column -->\n    <ng-container matColumnDef=\"price\">\n      <th mat-header-cell *matHeaderCellDef> Price </th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.price}} </td>\n    </ng-container>\n\n\n    <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n    <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\" [routerLink]=\"['/paint-details/', row._id]\"></tr>\n\n  </table>\n</div>\n"
+module.exports = "<div class=\"button-row\">\r\n  <a mat-raised-button color=\"primary\" [routerLink]=\"['/paint-create']\"><mat-icon>add</mat-icon></a>\r\n</div>\r\n\r\n<div class=\"example-container mat-elevation-z8\">\r\n  <table mat-table #table [dataSource]=\"dataSourcePaint\">\r\n\r\n    <!-- Title Colum -->\r\n    <ng-container matColumnDef=\"itemNumber\">\r\n      <th mat-header-cell *matHeaderCellDef> Item Number </th>\r\n      <td mat-cell *matCellDef=\"let element\" class=\"isbn-col\"> {{element.itemNumber}} </td>\r\n    </ng-container>\r\n\r\n    <!-- Title Column -->\r\n    <ng-container matColumnDef=\"color\">\r\n      <th mat-header-cell *matHeaderCellDef> Color </th>\r\n      <td mat-cell *matCellDef=\"let element\"> {{element.color}} </td>\r\n    </ng-container>\r\n\r\n    <!-- Author Column -->\r\n    <ng-container matColumnDef=\"quantity\">\r\n      <th mat-header-cell *matHeaderCellDef> Quantity </th>\r\n      <td mat-cell *matCellDef=\"let element\"> {{element.quantity}} </td>\r\n    </ng-container>\r\n\r\n    <!-- Size Column -->\r\n    <ng-container matColumnDef=\"price\">\r\n      <th mat-header-cell *matHeaderCellDef> Price </th>\r\n      <td mat-cell *matCellDef=\"let element\"> {{element.price}} </td>\r\n    </ng-container>\r\n\r\n\r\n    <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\r\n    <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\" [routerLink]=\"['/paint-details/', row._id]\"></tr>\r\n\r\n  </table>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -1400,7 +1583,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  profile works!\n</p>\n"
+module.exports = "<p>\r\n  profile works!\r\n</p>\r\n"
 
 /***/ }),
 
@@ -1463,7 +1646,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h2 class=\"page-header\">Register</h2>\n<form (submit)=\"onRegisterSubmit()\">\n  <div class=\"form-group\">\n    <label for=\"\">Name</label>\n    <input type=\"text\" [(ngModel)]=\"name\" name=\"name\" class=\"form-control\">\n  </div>\n  <div class=\"form-group\">\n    <label for=\"\">Username</label>\n    <input type=\"text\" [(ngModel)]=\"username\" name=\"username\" class=\"form-control\">\n  </div>\n  <div class=\"form-group\">\n    <label for=\"\">Email</label>\n    <input type=\"text\" [(ngModel)]=\"email\" name=\"email\" class=\"form-control\">\n  </div>\n  <div class=\"form-group\">\n    <label for=\"\">Password</label>\n    <input type=\"password\" [(ngModel)]=\"password\" name=\"password\" class=\"form-control\">\n  </div>\n  <input type=\"submit\" class=\"btn btn-primary\" value=\"Submit\">\n</form>"
+module.exports = "<h2 class=\"page-header\">Register</h2>\r\n<form (submit)=\"onRegisterSubmit()\">\r\n  <div class=\"form-group\">\r\n    <label for=\"\">Name</label>\r\n    <input type=\"text\" [(ngModel)]=\"name\" name=\"name\" class=\"form-control\">\r\n  </div>\r\n  <div class=\"form-group\">\r\n    <label for=\"\">Username</label>\r\n    <input type=\"text\" [(ngModel)]=\"username\" name=\"username\" class=\"form-control\">\r\n  </div>\r\n  <div class=\"form-group\">\r\n    <label for=\"\">Email</label>\r\n    <input type=\"text\" [(ngModel)]=\"email\" name=\"email\" class=\"form-control\">\r\n  </div>\r\n  <div class=\"form-group\">\r\n    <label for=\"\">Password</label>\r\n    <input type=\"password\" [(ngModel)]=\"password\" name=\"password\" class=\"form-control\">\r\n  </div>\r\n  <input type=\"submit\" class=\"btn btn-primary\" value=\"Submit\">\r\n</form>"
 
 /***/ }),
 
@@ -1561,7 +1744,7 @@ var RegisterComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = ".example-form {\r\n  min-width: 150px;\r\n  max-width: 500px;\r\n  width: 100%;\r\n}\r\n\r\n.example-full-width {\r\n  width: 100%;\r\n}\r\n\r\n.button-row {\r\n  margin: 10px 0;\r\n}\r\n"
 
 /***/ }),
 
@@ -1572,7 +1755,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  roller-create works!\n</p>\n"
+module.exports = "<div class=\"button-row\">\r\n  <a mat-raised-button color=\"primary\" [routerLink]=\"['/roller']\"><mat-icon>list</mat-icon></a>\r\n</div>\r\n<form [formGroup]=\"rollerForm\" (ngSubmit)=\"onFormSubmit(rollerForm.value)\">\r\n  <mat-form-field class=\"example-full-width\">\r\n    <input matInput placeholder=\"PartNumber\" formControlName=\"PartNumber\">\r\n  </mat-form-field>\r\n\r\n  <mat-form-field class=\"example-full-width\">\r\n    <input matInput placeholder=\"Brand\" formControlName=\"Brand\">\r\n  </mat-form-field>\r\n\r\n  <mat-form-field class=\"example-full-width\">\r\n    <input matInput placeholder=\"Material\" formControlName=\"Material\">\r\n  </mat-form-field>\r\n\r\n  <mat-form-field class=\"example-full-width\">\r\n    <input matInput placeholder=\"Size\" formControlName=\"Size\">\r\n  </mat-form-field>\r\n\r\n  <mat-form-field class=\"example-full-width\">\r\n    <input matInput placeholder=\"Quantity\" formControlName=\"Quantity\">\r\n  </mat-form-field>\r\n\r\n  <mat-form-field class=\"example-full-width\">\r\n    <input matInput placeholder=\"Price\" formControlName=\"Price\">\r\n  </mat-form-field>\r\n  <div class=\"button-row\">\r\n    <button type=\"submit\" [disabled]=\"!rollerForm.valid\" mat-raised-button color=\"primary\"><mat-icon>save</mat-icon></button>\r\n  </div>\r\n</form>\r\n"
 
 /***/ }),
 
@@ -1586,7 +1769,10 @@ module.exports = "<p>\n  roller-create works!\n</p>\n"
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RollerCreateComponent", function() { return RollerCreateComponent; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _services_api_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../services/api.service */ "./src/app/services/api.service.ts");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1597,18 +1783,46 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
+
+
 var RollerCreateComponent = /** @class */ (function () {
-    function RollerCreateComponent() {
+    function RollerCreateComponent(router, api, formBuilder) {
+        this.router = router;
+        this.api = api;
+        this.formBuilder = formBuilder;
+        this.PartNumber = '';
+        this.Brand = '';
+        this.Material = '';
+        this.Size = '';
     }
     RollerCreateComponent.prototype.ngOnInit = function () {
+        this.rollerForm = this.formBuilder.group({
+            'PartNumber': [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            'Brand': [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            'Material': [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            'Size': [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            'Quantity': [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            'Price': [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required]
+        });
+    };
+    RollerCreateComponent.prototype.onFormSubmit = function (form) {
+        var _this = this;
+        this.api.postRoller(form)
+            .subscribe(function (res) {
+            var id = res['_id'];
+            _this.router.navigate(['/roller-detail', id]);
+        }, function (err) {
+            console.log(err);
+        });
     };
     RollerCreateComponent = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-roller-create',
             template: __webpack_require__(/*! ./roller-create.component.html */ "./src/app/components/roller-create/roller-create.component.html"),
             styles: [__webpack_require__(/*! ./roller-create.component.css */ "./src/app/components/roller-create/roller-create.component.css")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_0__["Router"], _services_api_service__WEBPACK_IMPORTED_MODULE_2__["ApiService"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormBuilder"]])
     ], RollerCreateComponent);
     return RollerCreateComponent;
 }());
@@ -1635,7 +1849,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  roller-detail works!\n</p>\n"
+module.exports = "<div class=\"button-row\">\r\n  <a mat-raised-button color=\"primary\" [routerLink]=\"['/roller']\"><mat-icon>list</mat-icon></a>\r\n</div>\r\n<mat-card class=\"example-card\">\r\n  <mat-card-header>\r\n    <mat-card-title><h2>{{roller['PartNumber']}}</h2></mat-card-title>\r\n\r\n  </mat-card-header>\r\n  <mat-card-content>\r\n    <dl>\r\n      <dt>PartNumber:</dt>\r\n      <dd>{{roller.PartNumber}}</dd>\r\n      <dt>Brand:</dt>\r\n      <dd>{{roller.Brand}}</dd>\r\n      <dt>Material:</dt>\r\n      <dd>{{roller.Material}}</dd>\r\n      <dt>Size:</dt>\r\n      <dd>{{roller.Size}}</dd>\r\n      <dt>Quantity:</dt>\r\n      <dd>{{roller.Quantity}}</dd>\r\n      <dt>Price:</dt>\r\n      <dd>{{roller.Price}}</dd>\r\n    </dl>\r\n  </mat-card-content>\r\n  <mat-card-actions>\r\n    <a mat-raised-button color=\"primary\" [routerLink]=\"['/roller-edit', roller._id]\"><mat-icon>edit</mat-icon></a>\r\n    <a mat-raised-button color=\"warn\" (click)=\"deleteRoller(roller._id)\"><mat-icon>delete</mat-icon></a>\r\n  </mat-card-actions>\r\n</mat-card>\r\n"
 
 /***/ }),
 
@@ -1650,6 +1864,8 @@ module.exports = "<p>\n  roller-detail works!\n</p>\n"
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RollerDetailComponent", function() { return RollerDetailComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _services_api_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../services/api.service */ "./src/app/services/api.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1660,10 +1876,34 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
+
 var RollerDetailComponent = /** @class */ (function () {
-    function RollerDetailComponent() {
+    function RollerDetailComponent(route, api, router) {
+        this.route = route;
+        this.api = api;
+        this.router = router;
+        this.roller = {};
     }
     RollerDetailComponent.prototype.ngOnInit = function () {
+        this.getRollerDetails(this.route.snapshot.params['id']);
+    };
+    RollerDetailComponent.prototype.getRollerDetails = function (id) {
+        var _this = this;
+        this.api.getRoller(id)
+            .subscribe(function (data) {
+            console.log(data);
+            _this.roller = data;
+        });
+    };
+    RollerDetailComponent.prototype.deleteRoller = function (id) {
+        var _this = this;
+        this.api.deleteRoller(id)
+            .subscribe(function (res) {
+            _this.router.navigate(['/roller']);
+        }, function (err) {
+            console.log(err);
+        });
     };
     RollerDetailComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -1671,7 +1911,7 @@ var RollerDetailComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./roller-detail.component.html */ "./src/app/components/roller-detail/roller-detail.component.html"),
             styles: [__webpack_require__(/*! ./roller-detail.component.css */ "./src/app/components/roller-detail/roller-detail.component.css")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"], _services_api_service__WEBPACK_IMPORTED_MODULE_2__["ApiService"], _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"]])
     ], RollerDetailComponent);
     return RollerDetailComponent;
 }());
@@ -1687,7 +1927,7 @@ var RollerDetailComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = ".example-form {\r\n  min-width: 150px;\r\n  max-width: 500px;\r\n  width: 100%;\r\n}\r\n\r\n.example-full-width {\r\n  width: 100%;\r\n}\r\n\r\n.button-row {\r\n  margin: 10px 0;\r\n}\r\n"
 
 /***/ }),
 
@@ -1698,7 +1938,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  roller-edit works!\n</p>\n"
+module.exports = "<div class=\"button-row\">\r\n  <a mat-raised-button color=\"primary\" [routerLink]=\"['/roller']\"><mat-icon>list</mat-icon></a>\r\n</div>\r\n<form [formGroup]=\"rollerForm\" (ngSubmit)=\"onFormSubmit(rollerForm.value)\">\r\n  <mat-form-field class=\"example-full-width\">\r\n    <input matInput placeholder=\"PartNumber\" formControlName=\"PartNumber\">\r\n  </mat-form-field>\r\n\r\n  <mat-form-field class=\"example-full-width\">\r\n    <input matInput placeholder=\"Brand\" formControlName=\"Brand\">\r\n  </mat-form-field>\r\n\r\n  <mat-form-field class=\"example-full-width\">\r\n    <input matInput placeholder=\"Material\" formControlName=\"Material\">\r\n  </mat-form-field>\r\n\r\n  <mat-form-field class=\"example-full-width\">\r\n    <input matInput placeholder=\"Size\" formControlName=\"Size\">\r\n  </mat-form-field>\r\n\r\n  <mat-form-field class=\"example-full-width\">\r\n    <input matInput placeholder=\"Quantity\" formControlName=\"Quantity\">\r\n  </mat-form-field>\r\n\r\n  <mat-form-field class=\"example-full-width\">\r\n    <input matInput placeholder=\"Price\" formControlName=\"Price\">\r\n  </mat-form-field>\r\n  <div class=\"button-row\">\r\n    <button type=\"submit\" [disabled]=\"!rollerForm.valid\" mat-raised-button color=\"primary\"><mat-icon>save</mat-icon></button>\r\n  </div>\r\n</form>\r\n\r\n"
 
 /***/ }),
 
@@ -1712,7 +1952,10 @@ module.exports = "<p>\n  roller-edit works!\n</p>\n"
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RollerEditComponent", function() { return RollerEditComponent; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _services_api_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../services/api.service */ "./src/app/services/api.service.ts");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1723,21 +1966,466 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
+
+
 var RollerEditComponent = /** @class */ (function () {
-    function RollerEditComponent() {
+    function RollerEditComponent(router, route, api, formBuilder) {
+        this.router = router;
+        this.route = route;
+        this.api = api;
+        this.formBuilder = formBuilder;
+        this.id = '';
+        this.PartNumber = '';
+        this.Brand = '';
+        this.Material = '';
+        this.Size = '';
     }
     RollerEditComponent.prototype.ngOnInit = function () {
+        this.getRoller(this.route.snapshot.params['id']);
+        this.rollerForm = this.formBuilder.group({
+            'PartNumber': [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            'Brand': [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            'Material': [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            'Size': [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            'Quantity': [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            'Price': [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required]
+        });
+    };
+    RollerEditComponent.prototype.getRoller = function (id) {
+        var _this = this;
+        this.api.getRoller(id).subscribe(function (data) {
+            _this.id = data._id;
+            _this.rollerForm.setValue({
+                PartNumber: data.PartNumber,
+                Brand: data.Brand,
+                Material: data.Material,
+                Size: data.Size,
+                Quantity: data.Quantity,
+                Price: data.Price,
+            });
+        });
+    };
+    RollerEditComponent.prototype.onFormSubmit = function (form) {
+        var _this = this;
+        this.api.updateRoller(this.id, form)
+            .subscribe(function (res) {
+            var id = res['_id'];
+            _this.router.navigate(['/roller-detail', id]);
+        }, function (err) {
+            console.log(err);
+        });
+    };
+    RollerEditComponent.prototype.rollerDetails = function () {
+        this.router.navigate(['/roller-detail', this.id]);
     };
     RollerEditComponent = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-roller-edit',
             template: __webpack_require__(/*! ./roller-edit.component.html */ "./src/app/components/roller-edit/roller-edit.component.html"),
             styles: [__webpack_require__(/*! ./roller-edit.component.css */ "./src/app/components/roller-edit/roller-edit.component.css")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_0__["Router"], _angular_router__WEBPACK_IMPORTED_MODULE_0__["ActivatedRoute"], _services_api_service__WEBPACK_IMPORTED_MODULE_2__["ApiService"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormBuilder"]])
     ], RollerEditComponent);
     return RollerEditComponent;
 }());
+
+
+
+/***/ }),
+
+/***/ "./src/app/components/roller-pan-create/roller-pan-create.component.css":
+/*!******************************************************************************!*\
+  !*** ./src/app/components/roller-pan-create/roller-pan-create.component.css ***!
+  \******************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".example-form {\r\n  min-width: 150px;\r\n  max-width: 500px;\r\n  width: 100%;\r\n}\r\n\r\n.example-full-width {\r\n  width: 100%;\r\n}\r\n\r\n.button-row {\r\n  margin: 10px 0;\r\n}\r\n"
+
+/***/ }),
+
+/***/ "./src/app/components/roller-pan-create/roller-pan-create.component.html":
+/*!*******************************************************************************!*\
+  !*** ./src/app/components/roller-pan-create/roller-pan-create.component.html ***!
+  \*******************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"button-row\">\n  <a mat-raised-button color=\"primary\" [routerLink]=\"['/roller-pan']\"><mat-icon>list</mat-icon></a>\n</div>\n<form [formGroup]=\"rollerpanForm\" (ngSubmit)=\"onFormSubmit(rollerpanForm.value)\">\n  <mat-form-field class=\"example-full-width\">\n    <input matInput placeholder=\"PartNumber\" formControlName=\"PartNumber\">\n  </mat-form-field>\n\n  <mat-form-field class=\"example-full-width\">\n    <input matInput placeholder=\"Material\" formControlName=\"Material\">\n  </mat-form-field>\n\n  <mat-form-field class=\"example-full-width\">\n    <input matInput placeholder=\"Size\" formControlName=\"Size\">\n  </mat-form-field>\n\n  <mat-form-field class=\"example-full-width\">\n    <input matInput placeholder=\"Quantity\" formControlName=\"Quantity\">\n  </mat-form-field>\n\n  <mat-form-field class=\"example-full-width\">\n    <input matInput placeholder=\"Price\" formControlName=\"Price\">\n  </mat-form-field>\n  <div class=\"button-row\">\n    <button type=\"submit\" [disabled]=\"!rollerpanForm.valid\" mat-raised-button color=\"primary\"><mat-icon>save</mat-icon></button>\n  </div>\n</form>\n"
+
+/***/ }),
+
+/***/ "./src/app/components/roller-pan-create/roller-pan-create.component.ts":
+/*!*****************************************************************************!*\
+  !*** ./src/app/components/roller-pan-create/roller-pan-create.component.ts ***!
+  \*****************************************************************************/
+/*! exports provided: RollerPanCreateComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RollerPanCreateComponent", function() { return RollerPanCreateComponent; });
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _services_api_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../services/api.service */ "./src/app/services/api.service.ts");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var RollerPanCreateComponent = /** @class */ (function () {
+    function RollerPanCreateComponent(router, api, formBuilder) {
+        this.router = router;
+        this.api = api;
+        this.formBuilder = formBuilder;
+        this.PartNumber = '';
+        this.Material = '';
+        this.Size = '';
+    }
+    RollerPanCreateComponent.prototype.ngOnInit = function () {
+        this.rollerpanForm = this.formBuilder.group({
+            'PartNumber': [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            'Material': [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            'Size': [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            'Quantity': [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            'Price': [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required]
+        });
+    };
+    RollerPanCreateComponent.prototype.onFormSubmit = function (form) {
+        var _this = this;
+        this.api.postRollerPan(form)
+            .subscribe(function (res) {
+            var id = res['_id'];
+            _this.router.navigate(['/roller-pan-detail', id]);
+        }, function (err) {
+            console.log(err);
+        });
+    };
+    RollerPanCreateComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-roller-pan-create',
+            template: __webpack_require__(/*! ./roller-pan-create.component.html */ "./src/app/components/roller-pan-create/roller-pan-create.component.html"),
+            styles: [__webpack_require__(/*! ./roller-pan-create.component.css */ "./src/app/components/roller-pan-create/roller-pan-create.component.css")]
+        }),
+        __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_0__["Router"], _services_api_service__WEBPACK_IMPORTED_MODULE_2__["ApiService"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormBuilder"]])
+    ], RollerPanCreateComponent);
+    return RollerPanCreateComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/components/roller-pan-detail/roller-pan-detail.component.css":
+/*!******************************************************************************!*\
+  !*** ./src/app/components/roller-pan-detail/roller-pan-detail.component.css ***!
+  \******************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/components/roller-pan-detail/roller-pan-detail.component.html":
+/*!*******************************************************************************!*\
+  !*** ./src/app/components/roller-pan-detail/roller-pan-detail.component.html ***!
+  \*******************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"button-row\">\n  <a mat-raised-button color=\"primary\" [routerLink]=\"['/roller-pan']\"><mat-icon>list</mat-icon></a>\n</div>\n<mat-card class=\"example-card\">\n  <mat-card-header>\n    <mat-card-title><h2>{{rollerpan['PartNumber']}}</h2></mat-card-title>\n\n  </mat-card-header>\n  <mat-card-content>\n    <dl>\n      <dt>PartNumber:</dt>\n      <dd>{{rollerpan.PartNumber}}</dd>\n      <dt>Material:</dt>\n      <dd>{{rollerpan.Material}}</dd>\n      <dt>Size:</dt>\n      <dd>{{rollerpan.Size}}</dd>\n      <dt>Quantity:</dt>\n      <dd>{{rollerpan.Quantity}}</dd>\n      <dt>Price:</dt>\n      <dd>{{rollerpan.Price}}</dd>\n    </dl>\n  </mat-card-content>\n  <mat-card-actions>\n    <a mat-raised-button color=\"primary\" [routerLink]=\"['/roller-pan-edit', rollerpan._id]\"><mat-icon>edit</mat-icon></a>\n    <a mat-raised-button color=\"warn\" (click)=\"deleteRollerPan(rollerpan._id)\"><mat-icon>delete</mat-icon></a>\n  </mat-card-actions>\n</mat-card>\n\n"
+
+/***/ }),
+
+/***/ "./src/app/components/roller-pan-detail/roller-pan-detail.component.ts":
+/*!*****************************************************************************!*\
+  !*** ./src/app/components/roller-pan-detail/roller-pan-detail.component.ts ***!
+  \*****************************************************************************/
+/*! exports provided: RollerPanDetailComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RollerPanDetailComponent", function() { return RollerPanDetailComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _services_api_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../services/api.service */ "./src/app/services/api.service.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var RollerPanDetailComponent = /** @class */ (function () {
+    function RollerPanDetailComponent(route, api, router) {
+        this.route = route;
+        this.api = api;
+        this.router = router;
+        this.rollerpan = {};
+    }
+    RollerPanDetailComponent.prototype.ngOnInit = function () {
+        this.getRollerPanDetails(this.route.snapshot.params['id']);
+    };
+    RollerPanDetailComponent.prototype.getRollerPanDetails = function (id) {
+        var _this = this;
+        this.api.getRollerPan(id)
+            .subscribe(function (data) {
+            console.log(data);
+            _this.rollerpan = data;
+        });
+    };
+    RollerPanDetailComponent.prototype.deleteRollerPan = function (id) {
+        var _this = this;
+        this.api.deleteRollerPan(id)
+            .subscribe(function (res) {
+            _this.router.navigate(['/roller-pan']);
+        }, function (err) {
+            console.log(err);
+        });
+    };
+    RollerPanDetailComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-roller-pan-detail',
+            template: __webpack_require__(/*! ./roller-pan-detail.component.html */ "./src/app/components/roller-pan-detail/roller-pan-detail.component.html"),
+            styles: [__webpack_require__(/*! ./roller-pan-detail.component.css */ "./src/app/components/roller-pan-detail/roller-pan-detail.component.css")]
+        }),
+        __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"], _services_api_service__WEBPACK_IMPORTED_MODULE_2__["ApiService"], _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"]])
+    ], RollerPanDetailComponent);
+    return RollerPanDetailComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/components/roller-pan-edit/roller-pan-edit.component.css":
+/*!**************************************************************************!*\
+  !*** ./src/app/components/roller-pan-edit/roller-pan-edit.component.css ***!
+  \**************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".example-form {\r\n  min-width: 150px;\r\n  max-width: 500px;\r\n  width: 100%;\r\n}\r\n\r\n.example-full-width {\r\n  width: 100%;\r\n}\r\n\r\n.button-row {\r\n  margin: 10px 0;\r\n}\r\n"
+
+/***/ }),
+
+/***/ "./src/app/components/roller-pan-edit/roller-pan-edit.component.html":
+/*!***************************************************************************!*\
+  !*** ./src/app/components/roller-pan-edit/roller-pan-edit.component.html ***!
+  \***************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"button-row\">\n  <a mat-raised-button color=\"primary\" [routerLink]=\"['/roller-pan']\"><mat-icon>list</mat-icon></a>\n</div>\n<form [formGroup]=\"rollerpanForm\" (ngSubmit)=\"onFormSubmit(rollerpanForm.value)\">\n  <mat-form-field class=\"example-full-width\">\n    <input matInput placeholder=\"PartNumber\" formControlName=\"PartNumber\">\n  </mat-form-field>\n\n  <mat-form-field class=\"example-full-width\">\n    <input matInput placeholder=\"Material\" formControlName=\"Material\">\n  </mat-form-field>\n\n  <mat-form-field class=\"example-full-width\">\n    <input matInput placeholder=\"Size\" formControlName=\"Size\">\n  </mat-form-field>\n\n  <mat-form-field class=\"example-full-width\">\n    <input matInput placeholder=\"Quantity\" formControlName=\"Quantity\">\n  </mat-form-field>\n\n  <mat-form-field class=\"example-full-width\">\n    <input matInput placeholder=\"Price\" formControlName=\"Price\">\n  </mat-form-field>\n  <div class=\"button-row\">\n    <button type=\"submit\" [disabled]=\"!rollerpanForm.valid\" mat-raised-button color=\"primary\"><mat-icon>save</mat-icon></button>\n  </div>\n</form>\n\n\n"
+
+/***/ }),
+
+/***/ "./src/app/components/roller-pan-edit/roller-pan-edit.component.ts":
+/*!*************************************************************************!*\
+  !*** ./src/app/components/roller-pan-edit/roller-pan-edit.component.ts ***!
+  \*************************************************************************/
+/*! exports provided: RollerPanEditComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RollerPanEditComponent", function() { return RollerPanEditComponent; });
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _services_api_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../services/api.service */ "./src/app/services/api.service.ts");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var RollerPanEditComponent = /** @class */ (function () {
+    function RollerPanEditComponent(router, route, api, formBuilder) {
+        this.router = router;
+        this.route = route;
+        this.api = api;
+        this.formBuilder = formBuilder;
+        this.id = '';
+        this.PartNumber = '';
+        this.Material = '';
+        this.Size = '';
+    }
+    RollerPanEditComponent.prototype.ngOnInit = function () {
+        this.getRollerPan(this.route.snapshot.params['id']);
+        this.rollerpanForm = this.formBuilder.group({
+            'PartNumber': [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            'Material': [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            'Size': [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            'Quantity': [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            'Price': [null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required]
+        });
+    };
+    RollerPanEditComponent.prototype.getRollerPan = function (id) {
+        var _this = this;
+        this.api.getRollerPan(id).subscribe(function (data) {
+            _this.id = data._id;
+            _this.rollerpanForm.setValue({
+                PartNumber: data.PartNumber,
+                Material: data.Material,
+                Size: data.Size,
+                Quantity: data.Quantity,
+                Price: data.Price,
+            });
+        });
+    };
+    RollerPanEditComponent.prototype.onFormSubmit = function (form) {
+        var _this = this;
+        this.api.updateRollerPan(this.id, form)
+            .subscribe(function (res) {
+            var id = res['_id'];
+            _this.router.navigate(['/roller-pan-detail', id]);
+        }, function (err) {
+            console.log(err);
+        });
+    };
+    RollerPanEditComponent.prototype.rollerPanDetails = function () {
+        this.router.navigate(['/roller-pan-detail', this.id]);
+    };
+    RollerPanEditComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-roller-pan-edit',
+            template: __webpack_require__(/*! ./roller-pan-edit.component.html */ "./src/app/components/roller-pan-edit/roller-pan-edit.component.html"),
+            styles: [__webpack_require__(/*! ./roller-pan-edit.component.css */ "./src/app/components/roller-pan-edit/roller-pan-edit.component.css")]
+        }),
+        __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_0__["Router"], _angular_router__WEBPACK_IMPORTED_MODULE_0__["ActivatedRoute"], _services_api_service__WEBPACK_IMPORTED_MODULE_2__["ApiService"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormBuilder"]])
+    ], RollerPanEditComponent);
+    return RollerPanEditComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/components/roller-pan/roller-pan.component.css":
+/*!****************************************************************!*\
+  !*** ./src/app/components/roller-pan/roller-pan.component.css ***!
+  \****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".example-container {\r\n  display: flex;\r\n  flex-direction: column;\r\n  max-height: 500px;\r\n  min-width: 300px;\r\n  overflow: auto;\r\n}\r\n\r\n.isbn-col {\r\n  flex: 0 0 100px !important;\r\n  white-space: unset !important;\r\n}\r\n\r\n.button-row {\r\n  margin: 10px 0;\r\n}\r\n"
+
+/***/ }),
+
+/***/ "./src/app/components/roller-pan/roller-pan.component.html":
+/*!*****************************************************************!*\
+  !*** ./src/app/components/roller-pan/roller-pan.component.html ***!
+  \*****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"button-row\">\n  <a mat-raised-button color=\"primary\" [routerLink]=\"['/roller-pan-create']\"><mat-icon>add</mat-icon></a>\n</div>\n\n<div class=\"example-container mat-elevation-z8\">\n  <table mat-table #table [dataSource]=\"dataSource\">\n\n    <!--- Note that these columns can be defined in any order.\n          The actual rendered columns are set as a property on the row definition\" -->\n\n    <!-- Title Column -->\n    <ng-container matColumnDef=\"PartNumber\">\n      <th mat-header-cell *matHeaderCellDef> Part Number </th>\n      <td mat-cell *matCellDef=\"let element\" class=\"isbn-col\"> {{element.PartNumber}} </td>\n    </ng-container>\n\n    <!-- Author Column -->\n    <ng-container matColumnDef=\"Material\">\n      <th mat-header-cell *matHeaderCellDef> Material </th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.Material}} </td>\n    </ng-container>\n\n    <!-- Size Column -->\n    <ng-container matColumnDef=\"Size\">\n      <th mat-header-cell *matHeaderCellDef> Size </th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.Size}} </td>\n    </ng-container>\n\n    <!-- Quantity Column -->\n    <ng-container matColumnDef=\"Quantity\">\n      <th mat-header-cell *matHeaderCellDef> Quantity </th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.Quantity}} </td>\n    </ng-container>\n\n    <!-- Price Column -->\n    <ng-container matColumnDef=\"Price\">\n      <th mat-header-cell *matHeaderCellDef> Price </th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.Price}} </td>\n    </ng-container>\n\n    <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n    <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\" [routerLink]=\"['/roller-pan-detail/', row._id]\"></tr>  </table>\n</div>\n\n"
+
+/***/ }),
+
+/***/ "./src/app/components/roller-pan/roller-pan.component.ts":
+/*!***************************************************************!*\
+  !*** ./src/app/components/roller-pan/roller-pan.component.ts ***!
+  \***************************************************************/
+/*! exports provided: RollerPanComponent, RollerPanDataSource */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RollerPanComponent", function() { return RollerPanComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RollerPanDataSource", function() { return RollerPanDataSource; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _services_api_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../services/api.service */ "./src/app/services/api.service.ts");
+/* harmony import */ var _angular_cdk_collections__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/cdk/collections */ "./node_modules/@angular/cdk/esm5/collections.es5.js");
+var __extends = (undefined && undefined.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var RollerPanComponent = /** @class */ (function () {
+    function RollerPanComponent(api) {
+        this.api = api;
+        this.displayedColumns = ['PartNumber', 'Material', 'Size', 'Quantity', 'Price'];
+        this.dataSource = new RollerPanDataSource(this.api);
+    }
+    RollerPanComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.api.getRollerPans()
+            .subscribe(function (res) {
+            _this.rollerpans = res;
+            console.log(res);
+            _this.rollerpans = res;
+        }, function (err) {
+            console.log(err);
+        });
+    };
+    RollerPanComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-roller-pan',
+            template: __webpack_require__(/*! ./roller-pan.component.html */ "./src/app/components/roller-pan/roller-pan.component.html"),
+            styles: [__webpack_require__(/*! ./roller-pan.component.css */ "./src/app/components/roller-pan/roller-pan.component.css")]
+        }),
+        __metadata("design:paramtypes", [_services_api_service__WEBPACK_IMPORTED_MODULE_1__["ApiService"]])
+    ], RollerPanComponent);
+    return RollerPanComponent;
+}());
+
+var RollerPanDataSource = /** @class */ (function (_super) {
+    __extends(RollerPanDataSource, _super);
+    function RollerPanDataSource(api) {
+        var _this = _super.call(this) || this;
+        _this.api = api;
+        return _this;
+    }
+    RollerPanDataSource.prototype.connect = function () {
+        return this.api.getRollerPans();
+    };
+    RollerPanDataSource.prototype.disconnect = function () {
+    };
+    return RollerPanDataSource;
+}(_angular_cdk_collections__WEBPACK_IMPORTED_MODULE_2__["DataSource"]));
 
 
 
@@ -1750,7 +2438,7 @@ var RollerEditComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".example-container {\n    display: flex;\n    flex-direction: column;\n    max-height: 500px;\n    min-width: 300px;\n    overflow: auto;\n  }\n  \n  .isbn-col {\n    flex: 0 0 100px !important;\n    white-space: unset !important;\n  }\n  \n  .button-row {\n    margin: 10px 0;\n  }"
+module.exports = ".example-container {\r\n    display: flex;\r\n    flex-direction: column;\r\n    max-height: 500px;\r\n    min-width: 300px;\r\n    overflow: auto;\r\n  }\r\n  \r\n  .isbn-col {\r\n    flex: 0 0 100px !important;\r\n    white-space: unset !important;\r\n  }\r\n  \r\n  .button-row {\r\n    margin: 10px 0;\r\n  }"
 
 /***/ }),
 
@@ -1761,7 +2449,7 @@ module.exports = ".example-container {\n    display: flex;\n    flex-direction: 
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"button-row\">\n  <a mat-raised-button color=\"primary\" [routerLink]=\"['/roller-create']\"><mat-icon>add</mat-icon></a>\n</div>\n\n<div class=\"example-container mat-elevation-z8\">\n  <table mat-table #table [dataSource]=\"dataSource\">\n\n    <!--- Note that these columns can be defined in any order.\n          The actual rendered columns are set as a property on the row definition\" -->\n\n    <!-- Title Column -->\n    <ng-container matColumnDef=\"PartNumber\">\n      <th mat-header-cell *matHeaderCellDef> Part Number </th>\n      <td mat-cell *matCellDef=\"let element\" class=\"isbn-col\"> {{element.PartNumber}} </td>\n    </ng-container>\n\n    <!-- Title Column -->\n    <ng-container matColumnDef=\"Brand\">\n      <th mat-header-cell *matHeaderCellDef> Brand </th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.Brand}} </td>\n    </ng-container>\n\n    <!-- Author Column -->\n    <ng-container matColumnDef=\"Material\">\n      <th mat-header-cell *matHeaderCellDef> Material </th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.Material}} </td>\n    </ng-container>\n\n    <!-- Size Column -->\n    <ng-container matColumnDef=\"Size\">\n      <th mat-header-cell *matHeaderCellDef> Size </th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.Size}} </td>\n    </ng-container>\n\n    <!-- Quantity Column -->\n    <ng-container matColumnDef=\"Quantity\">\n      <th mat-header-cell *matHeaderCellDef> Quantity </th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.Quantity}} </td>\n    </ng-container>\n\n    <!-- Price Column -->\n    <ng-container matColumnDef=\"Price\">\n      <th mat-header-cell *matHeaderCellDef> Price </th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.Price}} </td>\n    </ng-container>\n\n    <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n    <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\" [routerLink]=\"['/book-details/', row._id]\"></tr>\n  </table>\n</div>\n"
+module.exports = "<div class=\"button-row\">\r\n  <a mat-raised-button color=\"primary\" [routerLink]=\"['/roller-create']\"><mat-icon>add</mat-icon></a>\r\n</div>\r\n\r\n<div class=\"example-container mat-elevation-z8\">\r\n  <table mat-table #table [dataSource]=\"dataSource\">\r\n\r\n    <!--- Note that these columns can be defined in any order.\r\n          The actual rendered columns are set as a property on the row definition\" -->\r\n\r\n    <!-- Title Column -->\r\n    <ng-container matColumnDef=\"PartNumber\">\r\n      <th mat-header-cell *matHeaderCellDef> Part Number </th>\r\n      <td mat-cell *matCellDef=\"let element\" class=\"isbn-col\"> {{element.PartNumber}} </td>\r\n    </ng-container>\r\n\r\n    <!-- Title Column -->\r\n    <ng-container matColumnDef=\"Brand\">\r\n      <th mat-header-cell *matHeaderCellDef> Brand </th>\r\n      <td mat-cell *matCellDef=\"let element\"> {{element.Brand}} </td>\r\n    </ng-container>\r\n\r\n    <!-- Author Column -->\r\n    <ng-container matColumnDef=\"Material\">\r\n      <th mat-header-cell *matHeaderCellDef> Material </th>\r\n      <td mat-cell *matCellDef=\"let element\"> {{element.Material}} </td>\r\n    </ng-container>\r\n\r\n    <!-- Size Column -->\r\n    <ng-container matColumnDef=\"Size\">\r\n      <th mat-header-cell *matHeaderCellDef> Size </th>\r\n      <td mat-cell *matCellDef=\"let element\"> {{element.Size}} </td>\r\n    </ng-container>\r\n\r\n    <!-- Quantity Column -->\r\n    <ng-container matColumnDef=\"Quantity\">\r\n      <th mat-header-cell *matHeaderCellDef> Quantity </th>\r\n      <td mat-cell *matCellDef=\"let element\"> {{element.Quantity}} </td>\r\n    </ng-container>\r\n\r\n    <!-- Price Column -->\r\n    <ng-container matColumnDef=\"Price\">\r\n      <th mat-header-cell *matHeaderCellDef> Price </th>\r\n      <td mat-cell *matCellDef=\"let element\"> {{element.Price}} </td>\r\n    </ng-container>\r\n\r\n    <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\r\n    <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\" [routerLink]=\"['/roller-detail/', row._id]\"></tr>\r\n  </table>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -1865,7 +2553,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n<h2 class=\"page-header\" align=\"center\">Shopping Cart</h2>\n\n\n\n<div class=\"row\">\n        <div class=\"col-12\">\n            <div class=\"table-responsive\">\n                <table class=\"table table-striped\">\n                    <thead>\n                        <tr>\n                            <th scope=\"col\"> </th>\n                            <th scope=\"col\">Product</th>\n                            <th scope=\"col\">Available</th>\n                            <th scope=\"col\" class=\"text-center\">Quantity</th>\n                            <th scope=\"col\" class=\"text-right\">Price</th>\n                        </tr>\n                    </thead>\n                    <h1 *ngIf=\"items.length==0\"></h1>\n                    <tbody *ngIf=\"items.length>0\">\n                        <tr *ngFor=\"let item of items\">\n                            <td><img style=\"height:40px;\" src=\"{{item.image}}\"> </td>\n                            <td>{{item.price}}</td>\n                            <td>In stock</td>\n                            <td>1</td>\n                            <td class=\"text-right\">${{item.price}}</td>\n                        </tr>\n                        <tr>\n                            <td></td>\n                            <td></td>\n                            <td></td>\n                            <td>Sub-Total</td>\n                            <td class=\"text-right\">{{totalPrice| number: '1.2-2'}}</td>\n                        </tr>\n                        <tr>\n                            <td></td>\n                            <td></td>\n                            <td></td>\n                            <td>Shipping</td>\n                            <td class=\"text-right\">$6.90 </td>\n                        </tr>\n                        <tr>\n                            <td></td>\n                            <td></td>\n                            <td></td>\n                            <td><strong>Total</strong></td>\n                            <td class=\"text-right\"><strong>{{totalPrice + 6.90| number: '1.2-2'}}</strong></td>\n                        </tr>\n                    </tbody>\n                </table>\n            </div>\n        </div>\n        <div class=\"col mb-2\">\n            <div class=\"row\">\n                <div class=\"col-sm-12  col-md-6\">\n                    <button class=\"btn btn-lg  btn-block btn-light\" [routerLink]=\"['/dashboard']\">Continue Shopping</button>\n                </div>\n                <div class=\"col-sm-12 col-md-6 text-right\">\n                    <button class=\"btn btn-lg btn-block btn-success text-uppercase\" [routerLink]=\"['/checkout']\" >Checkout</button>\n                </div>\n            </div>\n        </div>\n    </div>\n\n\n\n<!-- <div class=\"row\">\n    <div class=\"col-md-4 list-group\">\n            <ul style=\"list-style-type:none\" *ngFor=\"let item of items\">\n            <li>item:{{item.title}} </li>\n            <li>price: {{item.price}}</li>\n            </ul>\n            <li>Items in cart: {{totalItems}}</li>\n            <li>Total:{{totalPrice}} </li>\n            <div>\n                <a class=\"btn btn-primary\" [routerLink]=\"['/checkout']\">Checkout</a>\n            </div>\n    </div>\n</div>\n -->\n\n\n\n"
+module.exports = "\r\n<h2 class=\"page-header\" align=\"center\">Shopping Cart</h2>\r\n\r\n\r\n\r\n<div class=\"row\">\r\n        <div class=\"col-12\">\r\n            <div class=\"table-responsive\">\r\n                <table class=\"table table-striped\">\r\n                    <thead>\r\n                        <tr>\r\n                            <th scope=\"col\"> </th>\r\n                            <th scope=\"col\">Product</th>\r\n                            <th scope=\"col\">Available</th>\r\n                            <th scope=\"col\" class=\"text-center\">Quantity</th>\r\n                            <th scope=\"col\" class=\"text-right\">Price</th>\r\n                        </tr>\r\n                    </thead>\r\n                    <h1 *ngIf=\"items.length==0\"></h1>\r\n                    <tbody *ngIf=\"items.length>0\">\r\n                        <tr *ngFor=\"let item of items\">\r\n                            <td><img style=\"height:40px;\" src=\"{{item.image}}\"> </td>\r\n                            <td>{{item.price}}</td>\r\n                            <td>In stock</td>\r\n                            <td>1</td>\r\n                            <td class=\"text-right\">${{item.price}}</td>\r\n                        </tr>\r\n                        <tr>\r\n                            <td></td>\r\n                            <td></td>\r\n                            <td></td>\r\n                            <td>Sub-Total</td>\r\n                            <td class=\"text-right\">{{totalPrice| number: '1.2-2'}}</td>\r\n                        </tr>\r\n                        <tr>\r\n                            <td></td>\r\n                            <td></td>\r\n                            <td></td>\r\n                            <td>Shipping</td>\r\n                            <td class=\"text-right\">$6.90 </td>\r\n                        </tr>\r\n                        <tr>\r\n                            <td></td>\r\n                            <td></td>\r\n                            <td></td>\r\n                            <td><strong>Total</strong></td>\r\n                            <td class=\"text-right\"><strong>{{totalPrice + 6.90| number: '1.2-2'}}</strong></td>\r\n                        </tr>\r\n                    </tbody>\r\n                </table>\r\n            </div>\r\n        </div>\r\n        <div class=\"col mb-2\">\r\n            <div class=\"row\">\r\n                <div class=\"col-sm-12  col-md-6\">\r\n                    <button class=\"btn btn-lg  btn-block btn-light\" [routerLink]=\"['/dashboard']\">Continue Shopping</button>\r\n                </div>\r\n                <div class=\"col-sm-12 col-md-6 text-right\">\r\n                    <button class=\"btn btn-lg btn-block btn-success text-uppercase\" [routerLink]=\"['/checkout']\" >Checkout</button>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n\r\n\r\n\r\n<!-- <div class=\"row\">\r\n    <div class=\"col-md-4 list-group\">\r\n            <ul style=\"list-style-type:none\" *ngFor=\"let item of items\">\r\n            <li>item:{{item.title}} </li>\r\n            <li>price: {{item.price}}</li>\r\n            </ul>\r\n            <li>Items in cart: {{totalItems}}</li>\r\n            <li>Total:{{totalPrice}} </li>\r\n            <div>\r\n                <a class=\"btn btn-primary\" [routerLink]=\"['/checkout']\">Checkout</a>\r\n            </div>\r\n    </div>\r\n</div>\r\n -->\r\n\r\n\r\n\r\n"
 
 /***/ }),
 
@@ -2290,7 +2978,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_2__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/jhalak/IST421_Paint/angular-src/src/main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! C:\Users\Patrick\Desktop\IST421_Paint\angular-src\src\main.ts */"./src/main.ts");
 
 
 /***/ })

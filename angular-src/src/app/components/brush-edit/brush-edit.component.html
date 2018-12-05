@@ -1,7 +1,7 @@
 <div class="button-row">
-  <a mat-raised-button color="primary" [routerLink]="['/roller']"><mat-icon>list</mat-icon></a>
+  <a mat-raised-button color="primary" [routerLink]="['/brush']"><mat-icon>list</mat-icon></a>
 </div>
-<form [formGroup]="rollerForm" (ngSubmit)="onFormSubmit(rollerForm.value)">
+<form [formGroup]="brushForm" (ngSubmit)="onFormSubmit(brushForm.value)">
   <mat-form-field class="example-full-width">
     <input matInput placeholder="PartNumber" formControlName="PartNumber">
   </mat-form-field>
@@ -26,7 +26,7 @@
     <input matInput placeholder="Price" formControlName="Price">
   </mat-form-field>
   <div class="button-row">
-    <button type="submit" [disabled]="!rollerForm.valid" mat-raised-button color="primary"><mat-icon>save</mat-icon></button>
+    <button type="submit" [disabled]="!brushForm.valid" mat-raised-button color="primary"><mat-icon>save</mat-icon></button>
   </div>
 </form>
 

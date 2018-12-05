@@ -1,3 +1,31 @@
-<p>
-  roller-create works!
-</p>
+<div class="button-row">
+  <a mat-raised-button color="primary" [routerLink]="['/roller']"><mat-icon>list</mat-icon></a>
+</div>
+<form [formGroup]="rollerForm" (ngSubmit)="onFormSubmit(rollerForm.value)">
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="PartNumber" formControlName="PartNumber">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Brand" formControlName="Brand">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Material" formControlName="Material">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Size" formControlName="Size">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Quantity" formControlName="Quantity">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Price" formControlName="Price">
+  </mat-form-field>
+  <div class="button-row">
+    <button type="submit" [disabled]="!rollerForm.valid" mat-raised-button color="primary"><mat-icon>save</mat-icon></button>
+  </div>
+</form>

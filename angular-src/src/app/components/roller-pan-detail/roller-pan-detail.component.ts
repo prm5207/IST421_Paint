@@ -3,29 +3,28 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { ApiService } from '../../services/api.service';
 
 @Component({
-  selector: 'app-roller-detail',
-  templateUrl: './roller-detail.component.html',
-  styleUrls: ['./roller-detail.component.css']
+  selector: 'app-roller-pan-detail',
+  templateUrl: './roller-pan-detail.component.html',
+  styleUrls: ['./roller-pan-detail.component.css']
 })
-export class RollerDetailComponent implements OnInit {
-
-  roller = {};
+export class RollerPanDetailComponent implements OnInit {
+  rollerpan = {};
   constructor(private route: ActivatedRoute, private api: ApiService, private router: Router) { }
 
   ngOnInit() {
-      this.getRollerDetails(this.route.snapshot.params['id']);
+      this.getRollerPanDetails(this.route.snapshot.params['id']);
     }
-    getRollerDetails(id) {
-      this.api.getRoller(id)
+    getRollerPanDetails(id) {
+      this.api.getRollerPan(id)
         .subscribe(data => {
           console.log(data);
-          this.roller = data;
+          this.rollerpan = data;
         });
     }
-    deleteRoller(id) {
-      this.api.deleteRoller(id)
+    deleteRollerPan(id) {
+      this.api.deleteRollerPan(id)
         .subscribe(res => {
-            this.router.navigate(['/roller']);
+            this.router.navigate(['/roller-pan']);
           }, (err) => {
             console.log(err);
           }
